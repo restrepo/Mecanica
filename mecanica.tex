@@ -1,4 +1,5 @@
 \documentclass[12pt,letterpaper]{book}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -6,18 +7,24 @@
 \usepackage{graphicx}
 \usepackage{cancel}
 \usepackage[svgnames]{xcolor}
-\usepackage[english]{babel}
+\usepackage[spanish]{babel}
+\spanishdecimal{.}
+\addto\captionsspanish{%
+\def\tablename{Tabla}%
+}
 \usepackage{bm}
 \usepackage{simplewick}
 \usepackage[toc,page]{appendix}
 \graphicspath{{figures/}}
 \usepackage{listings}
+%acroread /usr/share/doc/texlive-science-doc/latex/SIunits/SIunits.pdf
+\usepackage[squaren,mediumspace,mediumqspace]{SIunits} 
 \usepackage[displaymath,textmath,sections,graphics,floats]{preview}
-%%%%%%%%%
+%%%%%%%%% 
 \usepackage{comment}
 \includecomment{inprogress}
 \specialcomment{inprogress}
-{\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
+{\begingroup\itshape \medskip}{\medskip \endgroup}
 \excludecomment{inprogress}
 
 \includecomment{borrar}
@@ -37,7 +44,18 @@
 \specialcomment{frame}
 {\begingroup}{\endgroup}
 %\excludecomment{frame}
+%undef beamer envioroments
+%\renewenvironment{frame}{}{}
+\newenvironment{block}
+{\noindent\rule{1ex}{1ex}\hrulefill\\}
+{\hrulefill\rule{1ex}{1ex}\\}
+
+\newcommand{\only}[1]{#1} 
+%\newenvironment{block}{\hrulefill}{\hrulefill}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%beamer commands
+\newcommand{\alert}[1]{#1}
+%%%%%%%%%%%%%&
 %%%x-symbolo compatibility
 \newcommand{\timesm}{\times}
 
@@ -79,10 +97,21 @@
 ,texcl=true
 }
 %%%%%%%%%%%%%%%%%
-%%comment the aproppiate line
 \newcommand{\tofc}[1]{#1} % if full
+%%comment the following two lines for full document
 \renewcommand{\tofc}[1]{} %if  \includeonly{chapter1}
-\includeonly{cinematica}
+%\includeonly{preliminares}
+%\includeonly{intermov}
+%\includeonly{dinamica}
+%\includeonly{momentum}
+%\includeonly{energia}
+%\includeonly{cinematica}
+%\includeonly{rigido}
+%\includeonly{centrales}
+%\includeonly{oscilador}
+\includeonly{relatividad}
+
+
 %%%%%%%%%%%%%%%%%%%
 \begin{document}
 \tofc{
@@ -96,10 +125,30 @@
 \setcounter{page}{1}
 
 %$x^2$
-\include{introduction}
+\include{introduccion}
+\include{preliminares}
+\include{intermov}
+\include{dinamica}
+\include{momentum}
+\include{energia}
 \include{cinematica}
-%\include{bibliography}
+\include{rigido}
+\include{centrales}
+\include{oscilador}
+\include{relatividad}
+\include{problemasresueltos}
+%\include{bibliografia}
 
+
+\begin{thebibliography}{99}
+\bibitem{mit2003}
+\bibitem{mit2009} MIT OCW, Physics I, Classical Mechanics,  \url{http://goo.gl/jJSb3}\footnote{These MIT OpenCourseWare course materials have been translated into Spanish by DR. The MIT faculty authors, MIT, or MIT OpenCourseWare have not reviewed or approved these translations, and MIT and MIT OpenCourseWare makes no representations or warranties of any kind concerning the translated materials, express or implied, including, without limitation, warranties of merchantability, fitness for a particular purpose, non-infringement, or the absence of errors, whether or not discoverable. MIT OpenCourseWare bears no responsibility for any inaccuracies in translation. Any inaccuracies or other defects contained in this material, due to inaccuracies in language translation, are the sole responsibility of DR and not MIT OpenCourseWare.}
+\bibitem{Kleppner} D. Kleppner, R.J Kolenkow, An Introduction To Mechanics, McGrawHill
+\bibitem{Morin} David Morin, Introduction to Classical Mechanics, Cambridge
+\bibitem{Young} Young, Hugh D., Roger A. Freedman, and A. Lewis Ford.
+\bibitem{Sears} Sears and Zemansky's University Physics: with Modern Physics. 12th ed. San Francisco, CA: Addison-Wesley, 2007. ISBN: 9780805321876.
+\bibitem{MI} Ruth W. Chabay, Bruce A. Sherwood, Matter \& Interactions, Volume I: Moder Mechanics, John Wiley \& Sons, Inc, 3rd ed., 2011. ISBN: 9780470503478
+\end{thebibliography}
 
 \end{document}
 

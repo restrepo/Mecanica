@@ -1,0 +1,12 @@
+from pylab import *
+r=linspace(0.01,1.2,1000)
+plot(r,0.03/r**2,'g--',lw=2)
+plot(r,-1/r,'b-.',lw=2)
+plot(r,0.03/r**2-1/r,'r-')
+hlines(0,0.,1.2,colors='k', linestyles='solid')
+ylim(-10,10)
+xlim(0,1.2)
+ylabel(r'$U_{eff}(r)$',size=20)
+xlabel(r'$r$',size=20)
+savefig('diagener.pdf')
+show()

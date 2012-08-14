@@ -1,0 +1,512 @@
+
+\chapter{Relatividad Especial}
+
+\section{Principio de relatividad}
+El \emph{principio de relatividad} establece que:
+\begin{quote}
+  Las leyes de la física tienen la misma forma en todos los sistemas inerciales. 
+\end{quote}
+Esto generaliza lo que se conoce de la mecánica en donde si en un sistema inercial $S$ el principio de moméntum  es $\mathbf{F}=d\mathbf{P}/dt$, en un sistema inercial $S'$, será $\mathbf{F}'=d\mathbf{P}'/dt$.
+\section{Transformaciones de Lorentz}
+Sea el sistema de referencia $S'$ moviendose a lo largo del eje $x$ con rapidez $V$ relativa al sistema de referencia estacionario de referencia $S$ como se muestra en la figura~\ref{fig:lorentz}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.7]{lorentz}
+  \caption{Transformaciones entre sistemas inerciales}
+  \label{fig:lorentz}
+\end{figure}
+
+Cuando escribimos las transformaciones de Galileo
+\begin{align*}
+  x=Vt+x'\,,
+\end{align*}
+se ésta asumiendo que la regla de metro no cambia so longitud por estar en movimiento, pero esto no es del todo obvio. De los fenómenos electromagnéticos que las cargas eléctricas en reposo generan campos eléctricos, mientras que las cargas eléctricas en movimiento generan además campos magnéticos. Además con el movimiento los campos eléctricos se deforman. Como la fuerzas eléctricas son importante para moldear la estructura atómica de la materia, podría en principio esperarse que la forma de la regla de metro cambia su configuración y de aquí so forma (longitud) por estar en movimiento. 
+
+
+Entonces, admitiendo esta posibilidad, cambiaremos la Transformación de Galileo por la transformación más general:
+\begin{align}
+  \label{eq:gammafactor}
+  x=Vt+\frac{1}{\gamma(V^2)} x'\,,
+\end{align}
+donde el factor de escala $\gamma(V^2)$ de cuenta del posible cambio de longitud en la regla de metro en el sistema $S'$, como se ilustra en la Figura~\ref{fig:lorentz}. La dependencia de $\gamma$ en sólo la magnitud de la velocidad relativa dan cuenta del \emph{principio de relatividad} y de la isotropía del espacio. Además $\gamma$ debe ser adimensional.
+
+De la ec.\eqref{eq:gammafactor}
+\begin{align}
+\label{eq:genltxp}
+  x'=\gamma(V^2)(x-V t)\,.
+\end{align}
+El principio de relatividad nos dice que la misma relación se mantiene si las coordenadas primadas son cambiadas por las coordenadas sin primar, con $V$ reemplazado por $-V$, debido a que la velocidad de $S$ con respecto a $S'$ es $-V$. Además como en general las medidas de distancia en $S'$ son diferentes, no podemos asumir que el tiempo sea el mismo. Por consiguiente
+\begin{align*}
+    x=&\gamma(V^2)(x'+V t')\nonumber\\
+    =&\gamma\left[\gamma(x-V t)+V t'\right]
+\end{align*}
+Despejando en términos de $t'$ %detalles
+\begin{align}
+  \label{eq:genlttp}
+  t'=\gamma\left[t-\frac{1-\gamma^{-2}}{V}x\right]
+\end{align}
+Derivando \eqref{eq:genltxp}, \eqref{eq:genlttp} obtenemos la \emph{Ley de adición de velocidades} %detalles
+\begin{align*}
+  v_{x'}=\frac{v_x-V}{1-\frac{1-\gamma^{-2}}{V}v_x}
+\end{align*}
+la cual debe satisfacer el principio de relatividad, por lo tanto, al cambiar al sistema no primado debe mantener su forma ($V\to -V$)
+\begin{align}
+  \label{eq:adicionvel}
+  v_{x}=\frac{v_{x'}+V}{1+\frac{1-\gamma^{-2}}{V}v_{x'}}\,.
+\end{align}
+Definimos
+\begin{align*}
+  F(v_{x'},V)\equiv\frac{v_{x'}+V}{1+\frac{1-\gamma^{-2}}{V}v_{x'}}
+\end{align*}
+
+\subsection{Propiedades de $F(v_{x'},V)$}
+\begin{itemize}
+\item \textbf{Paridad:}
+  \begin{align}
+    \label{eq:paridad}
+    F(-v_{x'},-V)=-F(v_{x'},V)
+  \end{align}
+%demostración
+\item \textbf{Asociatividad}
+  \begin{align}
+    \label{eq:asociatividad}
+    v_{CA}=F(v_{CB},v_{BA})=-v_{AC}=-F(v_{AB},v_{BC})
+  \end{align}
+%demostración
+\item \textbf{Intercambio:}
+  \begin{align}
+    \label{eq:intercambio}
+    F(v_{CB},v_{BA})=F(v_{BA},v_{CB})
+  \end{align}
+\textbf{Demostración:} Usando ecs.~\eqref{eq:paridad}\eqref{eq:asociatividad}
+
+\end{itemize}
+
+\section{Soluciones}
+
+Entonces
+\begin{align*}
+  F(v_{x'},V)=F(V,v_{x'})\,.
+\end{align*}
+Obtenemos %detalles
+\begin{align*}
+  \Gamma=\frac{1-\gamma^{-2}}{V^2}
+\end{align*}
+Por las dimensiones de $\Gamma$ podemos definir
+\begin{align*}
+  \Gamma=\frac{1}{c^2}\,.
+\end{align*}
+
+\subsection{$\Gamma >0$}
+%detalles
+\begin{align*}
+  \gamma=&\frac{1}{\sqrt{1-\Gamma V^2}}\nonumber\\
+  =&\frac{1}{\sqrt{1-V^2/c^2}}\,,
+\end{align*}
+de modo que si $\Gamma>0$ entonces $\gamma>1$. las \emph{Transformaciones de Lorentz} quedan
+\begin{align}
+  \label{eq:lorentz}
+  x'=&\gamma(x-V t)\nonumber\\
+  t'=&\gamma\left(t-\frac{V}{c^2}x\right)
+\end{align}
+Mientras que las transformaciones inversas son
+\begin{align}
+  \label{eq:lorentzinv}
+  x=&\gamma(x'+V t')\nonumber\\
+  t=&\gamma\left(t'+\frac{V}{c^2}x'\right)\,.
+\end{align}
+
+
+Las Transformaciones de Lorentz  a lo largo del eje $x$ se pueden escribir en forma matricial como
+\begin{equation}
+\label{eq:147qft}
+  \begin{pmatrix}
+    ct\\
+    x\\
+    y\\
+    z
+  \end{pmatrix}\to
+  \begin{pmatrix}
+    ct'\\
+    x'\\
+    y'\\
+    z'
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \frac{ct-Vx}{\sqrt{1-V^2/c^2}}\\
+    \frac{x-Vct}{\sqrt{1-V^2/c^2}}\\
+    y\\
+    z
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \cosh\xi&\sinh\xi&0&0\\
+    \sinh\xi&\cosh\xi&0&0\\
+    0     &  0  &1&0\\
+    0     &  0  &0&1
+  \end{pmatrix}
+  \begin{pmatrix}
+    ct\\
+    x\\
+    y\\
+    z
+  \end{pmatrix}
+\end{equation}
+donde
+\begin{equation}
+  \cosh\xi=\gamma\qquad\sinh\xi=-\gamma V/c\,,
+\end{equation}
+\begin{align*}
+\cosh^2\xi-\sin^2\xi=&1\nonumber\\
+\gamma^2(1-V^2/c^2)=&1\nonumber\\
+ \gamma=&\frac{1}{\sqrt{1-V^2/c^2}}.
+\end{align*}
+y, por ejemplo:
+\begin{align}
+ct'=  ct\cosh{\xi}+x\sinh\xi=\gamma(ct-V x/c)=&c\frac{t-V x/c^2}{\sqrt{1-V^2/c^2}}\nonumber\\
+t'=  t\cosh{\xi}+x\sinh\xi=\gamma(ct-V x/c)/c=&\frac{t-V x/c^2}{\sqrt{1-V^2/c^2}}\nonumber\\
+x'=  ct\sinh{\xi}+x\cosh\xi=\gamma(-Vt+ x)=&\frac{x-Vt}{\sqrt{1-V^2/c^2}}\,.
+\end{align}
+
+\subsection{Ley de adición de velocidades}
+Teniendo en cuenta que
+\begin{align*}
+  \gamma^{-2}=1-\frac{V^2}{c^2}\,,
+\end{align*}
+la ley de adición de velocidades \eqref{eq:adicionvel} queda
+\begin{align*}
+  F(v_{x'},V)=v_{x}=&\frac{v_{x'}+V}{1+\frac{1-\gamma^{-2}}{V}v_{x'}}\nonumber\\
+  =&\frac{v_{x'}+V}{1+\frac{1-1+V^2/c^2}{V}v_{x'}}\nonumber\\
+  =&\frac{v_{x'}+V}{1+{Vv_{x'}}/{c^2}}\,,
+\end{align*}
+La relación inversa es por consiguiente
+\begin{align}
+  \label{eq:addvel}
+v_{x'}=\frac{v_x-V}{1-V v_x/c^2}\,.
+\end{align}
+En ausencia de una velocidad límite, es decir cuando $c\to \infty$, o equivalentemente, cuando $V\ll c$, obtenemos el resultado Galileano
+\begin{align}
+  \label{eq:galsumavel}
+  v_{x'}=v_x-V\,.
+\end{align}
+
+
+\begin{itemize}
+\item[\textbf{Ejemplo:}] En un futuro muy lejano, una nave espacial llamada Enterprise sale hacia una dirección en ele espacio exterior con una rapidez de $0.9c$, al mismo tiempo una nave llamada Fleagle sale en dirección opuesta con rapidez de $0.9c$. Calcular la velocidad relativa entre ellas.
+\item[\textbf{Solución}].  Sea $\mathbf{v}=v_x\hat{\mathbf{i}}=0.9c\,\hat{\mathbf{i}}$ la rapidez de la Enterprise relativa al piso, y $\mathbf{V}=-0.9c\,\hat{\mathbf{i}}$, la velocidad de Fleagle relativa al piso. La velocidad de la Entreprise relativa a la Fleage es $v_{x'}$. Si no existiese una velocidad límite, la velocidad relativa entre las naves sería (ver \eqref{eq:galsumavel}) de $v_{x'}=1.8\,c$. Sin embargo, usando la Ley de adición de velocidades \eqref{eq:addvel}
+  \begin{align*}
+    v_{x'}=&\frac{0.9c-(-0.9c)}{1-[(-0.9c)(0.9c)/c^2]}\nonumber\\
+    =&\frac{1.8c}{1.81}\nonumber\\
+    =&0.99c\,.
+  \end{align*}
+
+La velocidad relativa es menor que $c$. La transformaciones relativística de velocidades asegura que no podemos exceder la velocidad de la luz cambiando los sistemas de referencia. Cuando $v_{x}=c$, independiente de la rapidez $V$,
+\begin{align*}
+  v_{x'}=&\frac{c-v}{1-vc/c^2}\nonumber\\
+  =&\frac{c-v}{(c-v)/c}\nonumber\\
+  =c\,.
+\end{align*}
+
+Una consecuencia de la Ley de adición de velocidades es que:
+\begin{quote}
+  La velocidad límite $c$, es la misma para todos los observadores.
+\end{quote}
+
+
+\end{itemize}
+
+\subsection{Simultaneidad y orden de eventos}
+
+Un evento esta caracterizado por un conjunto de valores para las coordenadas $x,y,z,t$.  Con respecto a un sistema de coordenadas dado, dos eventos son \emph{simultáneos} si sus coordenadas temporales tienen el mismo valor
+
+\subsection{Contracción de Lorentz}
+Como hemos visto, la existencia de una velocidad límite en la naturaleza, la cual hemos identificaremos de ahora en adelante con la velocidad de la luz, afecta la forma de los cuerpos. Para ver las implicaciones de tener $\gamma>0$ en un cuerpo en movimiento primero definimos el sistema $S:(x,y,z,t)$ como sistema de laboratorio, y consideremos una varilla en reposo en el sistema $S':(x',y',z',t')$ que se mueve con velocidad rapidez $v$ respecto a $S$. 
+
+Definimos la longitud de la varilla como la distancia entre sus extremos en el mismo instante de tiempo. Los puntos finales deben ser determinados simultáneamente en el sistema de laboratorio; y debemos encontrar la relación entre $x'$ y $x$ para ese valor de $t$. Tenemos
+\begin{align*}
+  x'=\gamma(x-vt)\,.
+\end{align*}
+Para cada extremo de la varilla, al tiempo $t$ de los eventos simultáneos en los que se determina la posición de los extremos de la varilla desde el sistema de laboratorio, es
+\begin{align*}
+  x'_A=&\gamma(x_A-vt)\nonumber\\
+  x'_B=&\gamma(x_B-vt)\,,
+\end{align*}
+Restando ambas ecuaciones, obtenemos
+\begin{align*}
+  l'=l_0\equiv=x'_B-x'_A=\gamma(x_B-x_A)=\gamma l\,,
+\end{align*}
+donde $l_0$ es la longitud en reposo o \emph{propia} de la varilla, y $l$ es la longitud medida en el laboratorio para una varilla en movimiento a velocidad $v$. Entonces
+\begin{align*}
+  l=\frac{l_0}{\gamma}=l_0\sqrt{1-\frac{v^2}{c^2}}\,,
+\end{align*}
+de modo que $l$ es más corta que $l_0$, la varilla se contrae. A medida que $v\to c$, $l\to 0$. Es importante notar que dicha longitud es relativa al observador en el sistema de laboratorio desde donde los extremos de la varilla se han medido simultáneamente. Un observador en reposo respecto a la varilla no nota ningún cambio en su longitud.
+\subsection{Dilatación temporal}
+Consideremos un reloj en reposo en el sistema $x',y',z'$ y considere dos eventos $A$ y $B$ ambos ocurriendo en el mismo punto $x_0'$:
+\begin{align*}
+  A:(x_0',t_A')\nonumber\\
+  B:(x_0',t_B')\nonumber\\
+\end{align*}
+El intervalo $\tau=t_B'-t_A'$ es el intervalo temporal entre los eventos en el sistema $S'$ donde el reloj está en reposo. Dicho sistema se mueve con rapidez $v$ respecto al sistema de laboratorio $S$, relacionado con $S'$ por (ec.~\eqref{eq:lorentzinv})
+\begin{align*}
+  t=\gamma\left(t'+\frac{V}{c^2}x'\right)
+\end{align*}
+de modo que
+\begin{align*}
+   t_A=&\gamma\left(t_A'+\frac{V}{c^2}x_0'\right)\nonumber\\
+   t_B=&\gamma\left(t_B'+\frac{V}{c^2}x_0'\right)\,,
+\end{align*}
+restando, encontramos
+\begin{align*}
+  T=t_B-t_A=&\gamma(t_B'-t_A')\nonumber\\
+  =&\gamma\tau\nonumber\\
+  =&\frac{\tau}{\sqrt{1-v^2/c^2}}\,.
+\end{align*}
+
+El intervalo temporal en el sistema de laboratorio es más grande que en el sistema en reposo, de modo que un reloj en movimiento se mueve más lento. Este efecto es conocido como la dilatación temporal y tiene importantes consecuencias prácticas.
+
+\begin{itemize}
+\item[\textbf{Ejemplo:}] \textbf{Decaimiento del muón} El muón decae a través de la interacciones débiles a un electrón, un neutrino muónico, y un antineutrino tau con un tiempo de vida media de $\tau=2.15\times 10^{-6}\second$. De modo que si decae en reposo recorre una distancia promedio de
+  \begin{align*}
+    d=c\tau\approx 3\times 10^8\times 2.15\times 10^{-6}=645\meter\,. 
+  \end{align*}
+Si un muón se genera en la atmósfera con un $\gamma=10$, ¿que distancia promedio recorre antes de decaer?.
+\item[\textbf{Solución:}] Cuando el muón se mueve rápidamente, el tiempo de vida $\tau'$ que se observa desde un laboratorio en la superficie de la tierra, se incrementa por la dilatación temporal. El tiempo de vida observado es
+  \begin{align*}
+    \tau'=&\gamma\tau\,,
+  \end{align*}
+de modo que
+\begin{align*}
+  d'=c\tau'=\gamma c\tau=10 c\tau\approx 6450\meter\,,
+\end{align*}
+la dilatación temporal permite que los muones puedan llegar a la superficie de la tierra a un tasa de 10,000 muones por metro cuadrado cada minuto ( Mark Wolverton (September 2007). "Muons for Peace: New Way to Spot Hidden Nukes Gets Ready to Debut". Scientific American 297 (3): 26–28.), a pesar de producirse en la partes altas de la atmósfera.
+\end{itemize}
+%otras soluciones
+
+\section{Momento energía}
+Supongamos que para una colisión
+\begin{align*}
+  p=m(v)\mathbf{v}
+\end{align*}
+donde $m(v)$ debe determinarse. Del estudio de colisiones
+\begin{align*}
+  m(v)=\gamma m_0\,,
+\end{align*}
+donde $m_0$ es la masa en reposo de la partícula.
+
+Para obtener la energía consideremos el trabajo
+\begin{align*}
+  K_b-K_a=&\int\frac{d\mathbf{p}}{dt}\cdot d\mathbf{r}\nonumber\\
+=&\mathbf{v}\cdot \mathbf{p}|_a^b-\int_a^b\mathbf{p}\cdot\mathbf{u}\nonumber\\
+=\left.\frac{m_0 v^2}{\sqrt{1-{v^2}/{c^2}}}\right|_a^b-\int_a^b\frac{m_0v dv}{\sqrt{1-v^2/c^2}}\nonumber\\
+=\left.\frac{m_0 v^2}{\sqrt{1-{v^2}/{c^2}}}\right|_a^b+\left.m_0 c^2\sqrt{1-\frac{v^2}{c^2}}\right|_a^b
+\end{align*}
+Sea $a$, tal que $v_a=0$, entonces
+\begin{align*}
+  K=&\frac{m_0c^2}{\sqrt{1-v^2/c^2}}-m_0 c^2
+  K=&mc^2-m_0 c^2
+\end{align*}
+O
+\begin{align*}
+  mc^2=&K+m_0c^2\nonumber\\
+=&\text{Trabajo hecho sobre la partículas}+m_0c^2
+\end{align*}
+donde $E=mc^2=\frac{m_0c^2}{\sqrt{1-v^2/c^2}}$, es la energía total de la partícula. Cuando $v\ll c$,
+\begin{align*}
+  K\approx \frac{1}{2}m_0 v^2\,.
+\end{align*}
+
+\section{Notación relativista}
+\label{sec:srn}
+Las transformaciones de Lorentz se definen como la transformaciones que dejan invariante al producto escalar en el espacio de Minkowski definido como
+\begin{equation}
+  \label{eq:146qft}
+  a^2=g_{\mu\nu}a^\mu a^\nu\equiv a_\nu a^\nu={a^0}^2-a^i a^i={a^0}^2-\mathbf{a}\cdot\mathbf{a}
+\end{equation}
+donde $\mu,\nu=0,1,2,3$, $i=1,2,3$ y se asume suma sobre índices repetidos. Además
+\begin{equation}
+\label{eq:149qft}
+  a_\nu\equiv g_{\mu\nu}a^\mu
+\end{equation}
+ Finalmente la métrica usada se define como
+\begin{equation}
+  \label{eq:gmunu}
+  \left\{ g_{\mu\nu} \right\}=
+  \begin{pmatrix}
+    1&0&0&0\\
+    0&-1&0&0\\
+    0&0&-1&0\\
+    0&0&0&-1
+  \end{pmatrix}
+\end{equation}
+donde $\left\{ g_{\mu\nu} \right\}$ denota la forma matricial del tensor $g_{\mu\nu}$.  
+
+El producto de dos cuadrivectores se define en forma similar como
+\begin{equation}
+\label{eq:157qft}
+  a_\nu b^\nu=g_{\mu\nu}a^\mu b^\nu=a^0b^0-\mathbf{a}\cdot\mathbf{b}
+\end{equation}
+El inverso de la métrica es
+\begin{equation}
+  \left\{ g^{\mu\nu} \right\}\equiv\left\{ g_{\mu\nu} \right\}^{-1}=\left\{ g_{\mu\nu} \right\}
+\end{equation}
+tal que
+\begin{equation}
+  g^{\mu\alpha}g_{\alpha\nu}=\delta^\mu_\nu\qquad\text{and}\qquad a^\mu=g^{\mu\nu}a_\nu
+\end{equation}
+
+Bajo una transformación de Lorentz.
+\begin{align}
+  a^\mu\to {a'}^\mu=&{\Lambda^\mu}_{\nu}a^\nu\\
+  a_\mu\to {a'}_\mu=&{\Lambda_\mu}^{\nu}a_\nu\nonumber
+\end{align}
+La invarianza del producto escalar en ec.~\eqref{eq:157qft}
+\begin{align}
+  {a'}^\mu{b'}_\mu=&a^\mu b_\mu\nonumber\\
+g_{\alpha\beta}{a'}^\alpha{b'}^\beta=g_{\mu\nu}a^\mu b^\nu\nonumber\\
+g_{\alpha\beta}{\Lambda^\alpha}_\mu{a}^\mu{\Lambda^\beta}_\nu{b}^\nu=g_{\mu\nu}a^\mu b^\nu\nonumber\\
+{\Lambda^\alpha}_\mu g_{\alpha\beta}{\Lambda^\beta}_\nu{a}^\mu{b}^\nu=g_{\mu\nu}a^\mu b^\nu\,,
+\end{align}
+da lugar a
+\begin{equation}
+  \label{eq:lrinv}
+  g_{\mu\nu}={\Lambda^\alpha}_{\mu}g_{\alpha\beta}{\Lambda^\beta}_{\nu}\qquad\text{or}\qquad 
+\left\{g_{\mu\nu}\right\}=\left\{{\Lambda_{\mu}}^{\alpha}\right\}^{\text{T}}\left\{g_{\alpha\beta}\right\}\left\{{\Lambda^\beta}_{\nu}\right\}.
+\end{equation}
+En notación matricial
+\begin{align}
+ g=\Lambda^T g \Lambda\,. 
+\end{align}
+From eq.~\eqref{eq:lrinv} we also have
+\begin{align}
+  g^{\rho\mu}g_{\mu\nu}=&g^{\rho\mu}{\Lambda^\alpha}_{\mu}g_{\alpha\beta}{\Lambda^\beta}_{\nu}\nonumber\\
+  \delta^\rho_\nu=&{\Lambda_\beta}^\rho{\Lambda^\beta}_{\nu}\,,
+\end{align}
+or
+\begin{align}
+  {\Lambda_\alpha}^\mu{\Lambda^\alpha}_{\nu}=\delta^\mu_\nu\,.
+\end{align}
+Since
+\begin{align}
+  {\left(\Lambda^{-1}\right)^\mu}_\alpha{\Lambda^\alpha}_{\nu}=\delta^\mu_\nu\,
+\end{align}
+the inverse of $\Lambda$ is
+\begin{align}
+  {\left(\Lambda^{-1}\right)^\mu}_\alpha={\Lambda_\alpha}^\mu\,,
+\end{align}
+or
+\begin{align}
+\label{eq:lambdainv}
+  {\left(\Lambda^{-1}\right)^\mu}_\nu={\Lambda_\nu}^\mu\,,
+\end{align}
+\begin{itemize}
+\item \textbf{Example:} Lorentz invariance
+  \begin{align}
+    a_\mu b^\mu\to a'_\mu{b'}^\mu=&{\Lambda_\mu}^\nu a_\nu{\Lambda^\mu}_\rho b^p \nonumber\\
+    =&{\Lambda_\mu}^\nu a_\nu{\Lambda^\mu}_\rho b^p \nonumber\\
+    =&{\left(\Lambda^{-1}\right)^\nu}_\mu{\Lambda^\mu}_\rho a_\nu b^p \nonumber\\
+    =&\delta^\nu_\rho a_\nu b^p \nonumber\\
+    =&a_\nu b^\nu \nonumber\,.
+  \end{align}
+
+\end{itemize}
+
+Como un ejemplo de Transformación de Lorentz considere un desplazamiento a lo largo del eje $x$
+\begin{equation}
+\label{eq:147qft}
+  \left\{x^\mu\right\}=\begin{pmatrix}
+    t\\
+    x\\
+    y\\
+    z
+  \end{pmatrix}\to
+  \begin{pmatrix}
+    t'\\
+    x'\\
+    y'\\
+    z'
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \frac{t+vx}{\sqrt{1-v^2}}\\
+    \frac{x+vt}{\sqrt{1-v^2}}\\
+    y\\
+    z
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \cosh\xi&\sinh\xi&0&0\\
+    \sinh\xi&\cosh\xi&0&0\\
+    0     &  0  &1&0\\
+    0     &  0  &0&1
+  \end{pmatrix}
+  \begin{pmatrix}
+    t\\
+    x\\
+    y\\
+    z
+  \end{pmatrix}=\left\{{\Lambda^\mu}_{\nu}\right\}\left\{x^\nu\right\},
+\end{equation}
+donde
+\begin{equation}
+  \cosh\xi=\gamma\qquad\sinh\xi=v\gamma,\qquad\text{and}\qquad \gamma=\frac{1}{\sqrt{1-v^2}}.
+\end{equation}
+y, por ejemplo:
+\begin{align}
+  t\cosh{\xi}+x\sinh\xi=\gamma(t+v x)=\frac{t+v x}{\sqrt{1-v^2}}\,.
+\end{align}
+El ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147qft} satisface la condición en ec.~\eqref{eq:148qft}, 
+\begin{align}
+  \Lambda^T g \Lambda=&\begin{pmatrix}
+    \cosh\xi&\sinh\xi&0&0\\
+    \sinh\xi&\cosh\xi&0&0\\
+    0     &  0  &1&0\\
+    0     &  0  &0&1
+  \end{pmatrix}
+  \begin{pmatrix}
+    1 & 0  & 0 &0\\
+    0 & -1 & 0 &0\\
+    0 & 0  & -1&0\\
+    0 & 0  & 0 &-1\\
+  \end{pmatrix}
+  \begin{pmatrix}
+    \cosh\xi&\sinh\xi&0&0\\
+    \sinh\xi&\cosh\xi&0&0\\
+    0     &  0  &1&0\\
+    0     &  0  &0&1
+  \end{pmatrix}\nonumber\\
+  =&\begin{pmatrix}
+       \cosh\xi&-\sinh\xi&0&0\\
+    \sinh\xi&-\cosh\xi&0&0\\
+    0     &  0  &-1&0\\
+    0     &  0  &0&-1
+  \end{pmatrix}
+ \begin{pmatrix}
+    \cosh\xi&\sinh\xi&0&0\\
+    \sinh\xi&\cosh\xi&0&0\\
+    0     &  0  &1&0\\
+    0     &  0  &0&1
+  \end{pmatrix}\nonumber\\
+  =&\begin{pmatrix}
+       \cosh^2\xi-\sinh^2\xi&\cosh\xi\sinh\xi-\cosh\xi\sinh\xi&0&0\\
+    \cosh\xi\sinh\xi-\cosh\xi\sinh\xi&\sinh^2\xi-\cosh^2\xi&0&0\\
+    0     &  0  &-1&0\\
+    0     &  0  &0&-1
+  \end{pmatrix}\nonumber\\
+=&g
+\end{align}
+
+Denotaremos los cuadrivectores con índices arriba como
+\begin{equation}
+  \label{eq:upindx}
+  a^\mu=(a^0,a^1,a^2,a^3)=(a^0,\mathbf{a})
+\end{equation}
+Entonces el correspondiente cuadrivector con índices abajo, usando la ec.~\eqref{eq:149qft}, es
+\begin{equation}
+  a_\mu=(a_0,a_1,a_2,a_3)=(a^0,-a^1,-a^2,-a^3)=(a^0,-\mathbf{a}).
+\end{equation}
+Con esta notación, el producto escalar de cuadrivectores puede expresarse como el producto escalar de los dos vectores de cuatro componente $a^\mu$ y $a_\mu$.
+
+
+%\left(\right)
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "mecanica"
+%%% End: 

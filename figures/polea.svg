@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:latexdraw="http://latexdraw.sourceforge.net/namespaces/latexdraw"
+    version="1.1" baseProfile="full">
+    <defs>
+        <linearGradient id="linearGradient241" x1="348.0" y1="81.0"
+            x2="348.0" y2="197.0" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#c9cbde"/>
+            <stop offset="1.0" stop-color="#86d7d7"/>
+        </linearGradient>
+        <marker overflow="visible" orient="auto" id="arrow2-247">
+            <path
+                d="M 0.0 0.0 L -7.452083333333333 2.6614583333333335 L -4.4712499999999995 0.0 L -7.452083333333333 -2.6614583333333335 z "
+                latexdraw:arrSizeNum="4.0" fill="black"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow1-261">
+            <path
+                d="M 0.5 -3.3819444444444446 L 0.5 3.3819444444444446 "
+                latexdraw:tbarSizeNum="5.0" stroke="black" fill="none" stroke-width="1.0"/>
+        </marker>
+        <marker overflow="visible" orient="auto" id="arrow2-261">
+            <path
+                d="M -0.5 -3.3819444444444446 L -0.5 3.3819444444444446 "
+                latexdraw:tbarSizeNum="5.0" stroke="black" fill="none" stroke-width="1.0"/>
+        </marker>
+    </defs>
+    <g>
+        <g latexdraw:type="circle" id="id241">
+            <circle cx="348.0" cy="139.0" r="57.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="url(#linearGradient241)"/>
+        </g>
+        <g latexdraw:type="line" id="id243">
+            <line x1="291.0" x2="295.0" y1="141.0" y2="296.0"
+                stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="line" id="id244">
+            <line x1="405.0" x2="410.0" y1="134.0" y2="435.0"
+                stroke-width="2.0" stroke="black" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="square" id="id245">
+            <rect x="396.0" y="436.0" width="31.0" height="31.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="#c7c3c3"/>
+        </g>
+        <g latexdraw:type="square" id="id246">
+            <rect x="281.0" y="297.0" width="31.0" height="31.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="#ceb8b8"/>
+        </g>
+        <g latexdraw:type="line" id="id247">
+            <line x1="347.0" x2="398.0" y1="143.0" y2="111.0"
+                stroke-width="2.0" stroke="black"
+                latexdraw:rotationAngle="0.0" marker-end="url(#arrow2-247)"/>
+        </g>
+        <g latexdraw:type="dot" id="id248" latexdraw:size="6.0"
+            latexdraw:dotShape="dot" latexdraw:position="348.0 143.0">
+            <circle r="3.0" fill="black" cx="348.0" cy="143.0"/>
+        </g>
+        <g latexdraw:type="rectangle" id="id249">
+            <rect x="249.0" y="25.0" width="205.0" height="1.0"
+                latexdraw:borderPos="outer" stroke-width="10.0"
+                stroke="black" fill="#cfb7b7"/>
+            <rect x="249.0" y="25.0" width="205.0" height="1.0"
+                stroke="white" stroke-width="6.0" fill="none" latexdraw:type="dbleborders"/>
+        </g>
+        <g latexdraw:type="text" id="id250" font-family="Dialog"
+            fill="black" font-size="18" latexdraw:x="384.0">
+            <text x="384.0" y="454.0"><![CDATA[$m_2$]]></text>
+        </g>
+        <g latexdraw:type="text" id="id253" font-family="Dialog"
+            fill="black" font-size="18" latexdraw:x="268.0">
+            <text x="268.0" y="317.0"><![CDATA[$m_1$]]></text>
+        </g>
+        <g latexdraw:type="text" id="id256" font-family="Dialog"
+            fill="black" font-size="18" latexdraw:x="359.0">
+            <text x="359.0" y="140.0"><![CDATA[$R$]]></text>
+        </g>
+        <g latexdraw:type="line" id="id259">
+            <line x1="214.0" x2="465.0" y1="318.0" y2="319.0"
+                stroke-width="2.0" stroke="black" stroke-linecap="round"
+                stroke-dasharray="1, 10.0" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="line" id="id260">
+            <line x1="215.0" x2="504.0" y1="458.0" y2="458.0"
+                stroke-width="2.0" stroke="black" stroke-linecap="round"
+                stroke-dasharray="1, 10.0" latexdraw:rotationAngle="0.0"/>
+        </g>
+        <g latexdraw:type="line" id="id261">
+            <line x1="477.0" x2="479.0" y1="311.0" y2="457.0"
+                stroke-width="2.0" stroke="black"
+                stroke-dasharray="8.0, 8.0"
+                latexdraw:rotationAngle="0.0"
+                marker-start="url(#arrow1-261)" marker-end="url(#arrow2-261)"/>
+        </g>
+        <g latexdraw:type="text" id="id262" font-family="Dialog"
+            fill="black" font-size="18" latexdraw:x="453.0">
+            <text x="453.0" y="392.0"><![CDATA[$h$]]></text>
+        </g>
+        <g latexdraw:type="rectangle" id="id265">
+            <rect x="344.0" y="22.0" width="6.0" height="122.0"
+                latexdraw:borderPos="outer" stroke-width="2.0"
+                stroke="black" fill="none" rx="1.5"/>
+        </g>
+    </g>
+    <metadata>
+        <latexdraw:metadata>
+            <latexdraw:displayBorders>false</latexdraw:displayBorders>
+            <latexdraw:autoAdjust>true</latexdraw:autoAdjust>
+            <latexdraw:ppc>50</latexdraw:ppc>
+            <latexdraw:zoom>1.0</latexdraw:zoom>
+            <latexdraw:unit>cm</latexdraw:unit>
+            <latexdraw:classicGrid>false</latexdraw:classicGrid>
+            <latexdraw:gridGap>10</latexdraw:gridGap>
+            <latexdraw:code>0</latexdraw:code>
+            <latexdraw:displayGrid>true</latexdraw:displayGrid>
+            <latexdraw:magneticGrid>false</latexdraw:magneticGrid>
+            <latexdraw:autoUpdate>true</latexdraw:autoUpdate>
+            <latexdraw:version>2.0.5</latexdraw:version>
+            <latexdraw:size>
+                <latexdraw:width>1280</latexdraw:width>
+                <latexdraw:height>752</latexdraw:height>
+            </latexdraw:size>
+            <latexdraw:position>
+                <latexdraw:x>0</latexdraw:x>
+                <latexdraw:y>24</latexdraw:y>
+            </latexdraw:position>
+            <latexdraw:dividerPosition>0.63359375</latexdraw:dividerPosition>
+            <latexdraw:displayCodePanel>true</latexdraw:displayCodePanel>
+            <latexdraw:displayXScale>true</latexdraw:displayXScale>
+            <latexdraw:displayYScale>true</latexdraw:displayYScale>
+            <latexdraw:delimitorOpacity>130</latexdraw:delimitorOpacity>
+        </latexdraw:metadata>
+    </metadata>
+</svg>
