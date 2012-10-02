@@ -1,48 +1,58 @@
 \chapter{Preliminares}
 
 \section{Medidas y unidades}
+Las cantidades básicas en mecánica son longitud [L], masa [M] y tiempo [T], en donde se ha usado una letra entre corchete para denotar el símbolo dimensional de la cantidad física. En el Sistema Internacional (SI) de unidades están cantidades se miden en metros ($\meter$), kilogramos ($\kilo\gram$) y segundos ($\second$).
+\begin{itemize}
+\item Un segundo es la duración de $9\ 192\ 631\ 770$ oscilaciones de la radiación emitida en la transición entre los dos niveles hiperfinos del estado fundamental del isótopo 133 del átomo de cesio (${}^{133}$Cs), a una temperatura de 0 K~\cite{wikipedia}
+\item Un metro es la distancia que recorre la luz en el vacío durante un intervalo de $1/299\ 792\ 458$ de segundo~\cite{wikipedia}
+\item Un kilogramo es la masa que tiene el prototipo internacional, compuesto de una aleación de platino e iridio, que se guarda en la Oficina Internacional de Pesas y Medidas (BIPM) en Sèvres, cerca de París (Francia)~\cite{wikipedia}.
+Es la única unidad del SI que todavía se define por un objeto patrón y no por una característica física fundamental.
+\end{itemize}
+
+
 
 
 
 \section{Vectores}
 \label{sec:vectores}
 
-Las cantidades completamente especificadaw por su magnitud se llaman escalares. Ejemplos de escalares son la masa, temperatura, rapidez, etc.
+Las cantidades completamente especificadas por su magnitud se llaman escalares. Ejemplos de escalares son la masa, temperatura, rapidez, etc.
 
-Hemos visto que tanto la posici\'on, como la velocidad y la aceleraci\'on, no s\'olo tienen asociadas una magnitud, sino tambi\'en una direcci\'on. Un ejemplo de vector corresponde al asociado a la aceleraci\'on gravitacional el cual tiene una magnitud de $9.8\ \text{m}/\text{s}^2$.
+Hemos visto que tanto la posición, como la velocidad y la aceleración, no sólo tienen asociadas una magnitud, sino también una dirección. Un ejemplo de vector corresponde al asociado a la aceleración gravitacional el cual tiene una magnitud de $9.8\ \text{m}/\text{s}^2$.
 
-\subsection{Aproximaci\'on geom\'etrica a vectores}
+\subsection{Aproximación geométrica a vectores}
 
 Ejemplos de vectores: magnitud y direcci\'on
 \begin{itemize}
-\item Desplazamiento
-\item Velocidadad
-\item Aceleraci\'on
-\item Fuerza
-\item Momentum
-\item Torque
+\item Desplazamiento [$\text{L}$]
+\item Velocidad [$\text{L/T}$] 
+\item Aceleración [$\text{L/T}^2$]
+\item Fuerza [$\text{M L/T}^2$]
+\item Moméntum [$\text{M L/T}$]
+\item Moméntum angular [$\text{M\,L}^2/\text{T}$]
+\item Torque [$\text{M\,L}^2/\text{T}^2$]
 \end{itemize}
-\begin{inprogress}
-  Ver ejemplo de desplazamiento en Inkscape
-\end{inprogress}
+
+Una característica muy importante de los vectores es que sus propiedades de magnitud y dirección son independientes del sistema de coordenadas elegido. En términos vectoriales, dos desplazamientos hacia el norte de 3 metros son completamente equivalentes. 
 
 
-Ejemplos de escalares: magnitud pero no direcci\'on
+
+Ejemplos de escalares: magnitud pero no dirección
 \begin{itemize}
-\item Longitud
-\item Tiempo
-\item Masa
-\item \'Area
-\item Volume
-\item Densidad
-\item Energ\'\i a
-\item Temperatura
+\item Longitud [$\text{L}$]
+\item Tiempo [$\text{T}$]
+\item Masa [$\text{M}$]
+\item Área [$\text{L}^2$]
+\item Volumen [$\text{L}^3$]
+\item Densidad [$\text{M/L}^3$]
+\item Energía [$\text{M\,L}^2/\text{T}^2$]
+\item Temperatura [$\mathcal{T}$]
 \end{itemize}
 
-\begin{align}
-  \mathbf{A}=&\mathbf{B} & \text{si}\quad |\mathbf{A}|=
-  |\mathbf{B}|\,.
-\end{align}
+\begin{align*}
+  \mathbf{A}=&\mathbf{B} &\qquad \text{si}\qquad |\mathbf{A}|&=|\mathbf{B}|\nonumber\\
+  &&|\mathbf{A}|&\parallel|\mathbf{B}|\,.
+\end{align*}
 Adem\'as
 \begin{align}
   A\equiv|\mathbf{A}|\,.
@@ -151,6 +161,22 @@ En t\'erminos de componentes:
 \end{align}
 \end{frame}
 
+%Ejemplo sonbre descomposición del peso en un plano inclinado
+
+\begin{figure}
+  \centering
+  \includegraphics{planopeso1}
+  \caption{Peso}
+  \label{fig:planopeso1}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics{planopeso2} \includegraphics{planopeso3} 
+  \caption{Peso}
+  \label{fig:planopeso2}
+\end{figure}
+
 \begin{frame}[fragile,allowframebreaks]
 Procedemos ahora a definir el \emph{producto escalar entre dos vectores} cuyo resultado es un escalar como:
 \begin{align}
@@ -188,6 +214,8 @@ $\beta$, se puede obtener como
   \cos\beta=\frac{\mathbf{A}\cdot\mathbf{B}}{|\mathbf{A}||\mathbf{B}|}\,.
 \end{align}
 \end{frame}
+
+%ejemplo trabajo
 
 \begin{frame}[fragile,allowframebreaks]
 El producto vectorial $\mathbf{C}=\mathbf{A}\timesm\mathbf{B}$, se define algebra\'\i camente como:
@@ -283,6 +311,19 @@ y entonces
 \end{align}
 \end{frame}
 
+\begin{itemize}
+\item[\textbf{Ejemplo:}] Sea $\mathbf{r}$ la distacia desde algún punto sobre la vertical de un círculo de radio $R$ hasta su punto más inferior: $P$, como se ilustra en la figura~\ref{fig:examplecross}. Calcule el producto escalar entre $\mathbf{r}$ y $\mathbf{f}$ cuando el punto sobre (a) la vertical está en en el centro del círculo ($C$),  (b) cuando está en el punto inferior $P$ y (c) cuando está en el punto superior. Índique claramente la dirección del vector resultante. Si $\mathbf{f}$ es una fuerza índique además el sentido del giro del círculo con un eje pasando por su centro.
+  \begin{figure}
+    \centering
+    \includegraphics{examplecross}
+    \caption{Ejemplo productor vectorial}
+    \label{fig:examplecross}
+  \end{figure}
+
+\textbf{Solución:} Para el eje $z$ saliendo de la página (a) $\mathbf{r}\times\mathbf{f}=-R f \hat{\mathbf{k}} $, dirección horaria de giro (b) $\mathbf{r}\times\mathbf{f}=\mathbf{0}\times\mathbf{f}=\mathbf{0}$ y (c) $\mathbf{r}\times\mathbf{f}=-2R f \hat{\mathbf{k}} $, dirección horaria de giro.
+
+\end{itemize}
+
 \subsection{Cambio en una cantidad}
 
 Frecuentemente queremos calcular el cambio en una cantidad. Por
@@ -291,6 +332,13 @@ objeto en movimiento, o el cambio en la velocidad durante un intervalo
 de tiempo. La letra $\Delta$ (delta mayúscula que sugiere una ``$d$ de
 diferencia'') se usa para denotar el cambio en una cantidad ya sea
 escalar o vectorial.
+
+\newpage
+
+
+\qquad
+
+\newpage
 
 %%% Local Variables: 
 %%% mode: latex

@@ -16,7 +16,7 @@ vector. A la magnitud de la velocidad se le llama rapidez.
 \subsection{Movimiento uniforme}
 Suponga que observa una roca moviéndose en el espacio exterior
 bastante alejada de cualquier objeto. No sabemos que la hizo mover la
-primera vez; presumiblemente hace mucho tiempo una interacción de dio
+primera vez; presumiblemente hace mucho tiempo una interacción le dio
 alguna velocidad y esta ha estado moviéndose desde entonces en el
 espacio vacio.
 
@@ -25,7 +25,7 @@ rapidez constante (que no cambia), en una línea recta. Su velocidad no
 cambia (ni su dirección ni su rapidez
 \begin{figure}
   \centering
-  \includegraphics[scale=0.3]{uniform}
+  \includegraphics[scale=0.2]{uniform}
   \caption{Movimiento uniforme: sin cambio en la rapidez o la dirección.}
   \label{fig:uniform}
 \end{figure}
@@ -33,44 +33,72 @@ cambia). A tal movimiento con
 velocidad constante le llamaremos movimiento uniforme y es ilustrado
 en la figura~\ref{fig:uniform}
 
-Ver presentación sobre Interacciones y movimiento donde se establece la Primera Ley de Newton en la página del curso.
+Si observamos un electrón cambiando la dirección de su velocidad, podemos atribuirlo al efecto de repulsión de un electrón cercano como se muestra en la figura~\ref{fig:repulsion2} (a). Mientras que si el electrón se está acelerando en línea recta, cambiando la magnitud de su velocidad pero manteniendo la dirección, lo podemos atribuir a otro electrón a lo largo de su línea de movimiento como se muestra en la figura~\ref{fig:repulsion2} (b)
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{repulsion2} \includegraphics[scale=0.3]{repulsion4}\\
+    (a) \hspace{5cm} (b)
+  \caption{Cambio en dirección}
+  \label{fig:repulsion2}
+\end{figure}
+
+Podemos establecer entonces,
+
+\begin{frame}
+  \begin{block}{Primera Ley de Newton:}
+    Un objeto se mueve en línea recta y a una rapidez constante
+    excepto en la medida que interactue con otros objetos
+  \end{block}
+\end{frame}
+
+En la naturaleza existen cuatro interacciones fundamentales
+\begin{itemize}
+\item Interacción gravitacional.
+\item Interacción electromagnética.
+\item Interacción débil.
+\item Interacción fuerte.
+\end{itemize}
+
+Las demás fuerzas como la fuerza nuclear, la fuerzas de Van der Waals, la fricción, la viscosidad, etc., son remanentes de la interacciones fundamentales. 
+
+%Ver presentación sobre Interacciones y movimiento donde se establece la Primera Ley de Newton en la página del curso.
 
 \section{Velocidad}
 
 \subsection{Rapidez promedio}
-La rapidez es un número y por consiguiente es una cantidad escalar:
+La rapidez es la magnitud del vector velocidad  y por consiguiente es una cantidad escalar:
 
 \begin{align}
   \label{eq:27}
-\bar{v}=\frac{d}{t}
+\bar{v}=\frac{d}{t}\,,
 \end{align}
 donde $\bar{v}$ es la \emph{rapidez promedio}, $d$ es la distancia
 recorrida durante un tiempo $t$. En SI (Système Internationale) de
 unidades, la rapidez promedio se mide en metros por segundo, y se
-abrevia con $m/s$.
+abrevia con $\meter\per\second$.
 
 De \eqref{eq:27}
 \begin{align}
   \label{eq:26}
   d=&\bar{v} t\nonumber\\
-  t=&\frac{d}{\bar{v}}
+  t=&\frac{d}{\bar{v}}\,.
 \end{align}
 
 Es importante notar que las ecuaciones \eqref{eq:26} son dimensionalmente correctas, por ejemplo
 \begin{align}
   [d]=&  \left[\bar{v}   \right] [t]\nonumber\\
   L=&\frac{L}{T}\times T\nonumber\\
-  L=&L
+  L=&L\,.
 \end{align}
 
 \subsection{Rapidez instantanea comparada a rapidez promedio}
 
-Si un carro se mueve a $70\ \text{Km/h}$ (Kolometros por hora) durante la primera hora y a $30\ \text{Km/h}$
-durante la segunda hora, este recorre en total 100~Km en 2 horas, con una velocidad promedio
+Si un carro se mueve a $70\ \text{Km/h}$ (Kilometros por hora) durante la primera hora y a $30\kilo\meter\per\hour$
+durante la segunda hora, este recorre en total 100~Km en 2 horas, con una rapidez promedio
 \begin{align}
-  \bar{v}=\frac{100\ \text{Km}}{2\ \text{h}}=50\ \text{Km/h}\,.
+  \bar{v}=\frac{100\kilo\meter}{2\hour}=50\kilo\meter\per\hour\,.
 \end{align}
-Note que durante el intervalo de dos horas el carro nunca fue viajando realmente a su velocidad promedio de 50~Km/h.
+Note que durante el intervalo de dos horas el carro nunca estuvo viajando realmente a su rapidez promedio de $50\kilo\meter\per\hour$.
 
 El movimiento es ilustrado en un gráfico de distancia contra tiempo en la figura~\ref{fig:vinstaprom3} (detalles en la presentación \href{http://goo.gl/3eqUa}{aquí})
 
@@ -84,27 +112,27 @@ El movimiento es ilustrado en un gráfico de distancia contra tiempo en la figur
 \end{frame}
 
 
-La rapidez instantánea es la rapidez del carro en un instante particular. Para encontrarla debemos observar una distancia corta que el carro se mueva en un intervalo de tiempo muy corto, digamos que una centesima de segundo. Si durante algún momento de la segunda hora el carro se mueve 0.0833 metros en 0.01 segundos, su rapidez instantanea es:
+La rapidez instantánea es la rapidez del carro en un instante particular. Para encontrarla debemos observar una distancia corta en la que el carro se mueva en un intervalo de tiempo muy corto, digamos que una centesima de segundo. Si durante algún momento de la segunda hora el carro se mueve 0.0833 metros en 0.01 segundos, su rapidez instantanea es:
 \begin{align}
-  v=0.0833/0.01=8.33 m/s\,,
+  v=0.0833/0.01=8.33 \meter\per\second\,,
 \end{align}
-que en Km/h corresponde a
+que en \kilo\meter\per\hour\ corresponde a
 \begin{align}
-  v=8.33\ \frac{\cancel{\text{m}}}{\cancel{\text{s}}}\frac{3600\ \cancel{\text{s}}}{1h}\frac{1\ \text{Km}}{1000\ \cancel{\text{m}}}=30\ \frac{\text{Km}}{\text{h}}\,.
+  v=8.33\ \frac{\cancel{\meter}}{\cancel{\second}}\frac{3600\ \cancel{\second}}{1\hour}\frac{1\ \kilo\meter}{1000\ \cancel{\meter}}=30\kilo\meter\per\hour\,.
 \end{align}
 
 
 
 \section{Movimiento en varias dimensiones}
 
-\subsection{Vector de Posici\'on}
+\subsection{Vector de Posición}
 Nuestra segunda aplicaci\'on de vectores ser\'a la descripci\'on  de la posici\'on y movimiento de un punto en el espacio en tres dimensiones. 
 
 La posici\'on de un punto en el espacio: $(x_1,y_1,z_1)$ no representa un vector. Sin embargo, si movemos el punto a alguna nueva posici\'on, $(x_2,y_2,z_2)$, entonces el desplazamiento define un vector 
 \begin{align}
   \Delta \mathbf{r}=\mathbf{r}_2-\mathbf{r}_1
 \end{align}
-$\Delta r$ significa ``cambio de $\mathbf{r}$'' o $\mathbf{r}_2-\mathbf{r}_1$ (desplazamiento)
+$\Delta\mathbf{r}$ significa ``cambio de $\mathbf{r}$'' o $\mathbf{r}_2-\mathbf{r}_1$ (desplazamiento)
 
 $\Delta t$ significa ``cambio de $t$'' or $t_2-t_1$ (intervalo de tiempo)
 
@@ -190,7 +218,7 @@ El desplazamiento de una part\'\i cula entre los tiempos $t$ y un tiempo posteri
     \Delta x=&x(t+\Delta t)-x(t)\nonumber\\
     \Delta y=&y(t+\Delta t)-y(t)\,.
   \end{align}
-  como se muestra en la figura~\cite{fig:deltar}
+  como se muestra en la figura~\ref{fig:deltar}
   \begin{figure}
     \centering
     \includegraphics[scale=0.55]{deltar}
@@ -202,17 +230,17 @@ El desplazamiento de una part\'\i cula entre los tiempos $t$ y un tiempo posteri
 
 \subsection{Velocidad instantánea}
 
-La curva en la figura \ref{fig:flyingball1a}. Los punto de color rojo marcan la posición de la bola a intervalos de tiempo de un segundo. Mientras que la bola está en el aire, su velocidad está constantemente cambiando, debido a las interacciones con la tierra (gravedad) y con el aire (resistencia del aire). 
+Considere la curva en la figura \ref{fig:flyingball1a}. Los punto de color rojo marcan la posición de una bola a intervalos de tiempo de un segundo. Mientras que la bola está en el aire, su velocidad está constantemente cambiando, debido a las interacciones con la tierra (gravedad) y con el aire (resistencia del aire). 
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{flyingball1a}
+  \includegraphics[scale=0.4]{flyingball1a}
   \caption{Moviemto de una bola}
   \label{fig:flyingball1a}
 \end{figure}
 
 Suponga que hacemos la pregunta: ¿cual es el valor de la velocidad en el instante preciso que alcanza el punto $B$?. Está cantidad debería llamarse la velocidad instantánea. Podemos aproximar la velocidad instantánea de la bola, encontrando su velocidad promedio sobre un intervalo de tiempo más grande. 
 
-La Tabla
+La Tabla muestra el vector de posición de la bola a diferentes tiempos en los puntos ilustrados en la figura~\ref{fig:flyingball1a}.
 
 \begin{table}
   \centering
@@ -225,7 +253,7 @@ La Tabla
     $E$ & $4.0$ &$(69.1,31.0,0)$ \\
     $F$ & $5.0$ &$(80.8,14.8,0)$ \\
   \end{tabular}
-  \caption{Tabla mostranto el tiempo transcurriod y la posición de la bola en cada posición de la figura \ref{fig:flyingball1a}}
+  \caption{Tabla mostrando el tiempo transcurrido y la posición de la bola en cada posición de la figura~\ref{fig:flyingball1a}}
   \label{tab:flyingball1a}
 \end{table}
 
@@ -241,27 +269,26 @@ La Tabla
   \mathbf{v}_{CB}=&\frac{\Delta \mathbf{r}_{CB}}{\Delta t}
 =\frac{\mathbf{\mathbf{r}_C-\mathbf{r}_B}}{t_C-t_B}=
 \frac{[(40.1,38.1,0)-(22.3,26,1,0)]\ \text{m}}{(2.0-1.0)\ \text{s}}\nonumber\\
-=&(17.8,12.0,0)\ \frac{\text{m}}{\text{s}}\nonumber\\
+=&(17.8,12.0,0)\ \frac{\text{m}}{\text{s}}\,,
 \end{align}
 
 \begin{align}
   v_{EB}=&15.7\ \frac{\text{m}}{\text{s}}\nonumber\\
   v_{DB}=&17.8\ \frac{\text{m}}{\text{s}}\nonumber\\
-  v_{CB}=&21.5\ \frac{\text{m}}{\text{s}}\nonumber\\
+  v_{CB}=&21.5\ \frac{\text{m}}{\text{s}}\,,
 \end{align}
-
 %mejorar redacción
 ¿cual aproxima mejor la velocidad instantánea (figura~\ref{fig:flyingball8})?
 
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{flyingball8}
+  \includegraphics[scale=0.4]{flyingball8}
   \caption{Moviemto de una bola}
   \label{fig:flyingball8}
 \end{figure}
 
 
-La velocidad $\mathbf{v}$ de la part\'\i cula a medida que \'esta se mueve a lo largo de una trayectoria se define como
+La velocidad $\mathbf{v}$ de la partícula a medida que ésta se mueve a lo largo de una trayectoria se define como
 \begin{align}
   \mathbf{v}=&\lim_{\Delta t\to0}\frac{\Delta\mathbf{r}}{\Delta t}\nonumber\\
   &=\frac{d\mathbf{r}}{dt}\,,
@@ -308,7 +335,7 @@ que llega a ser exacta en el l\'\i mite $\Delta t\to 0$, muestra que $\mathbf{v}
 \end{figure}
 
 \begin{itemize}
-\item[Ejemplo] \textbf{Encontrando $\mathbf{v}$ de $\mathbf{r}$}\\
+\item[Ejemplo] \textbf{Encontrando $\mathbf{v}$ a partir de $\mathbf{r}$}\\
 La posici\'on de una part\'\i cula est\'a dada por
 \begin{align}
   \mathbf{r}=A(e^{\alpha t}\hat{\mathbf{i}}+e^{-\alpha t}\hat{\mathbf{j}})\,,
@@ -332,7 +359,7 @@ La magnitud de $\mathbf{v}$ es
 \begin{inprogress}
   Pasar los ejemplo de MI desarrollados en el cuaderno
 \end{inprogress}
-En describir el movimiento de un punto, es usualmente \'util considerar los casos l\'\i mite:
+Al describir el movimiento de un punto, es usualmente útil considerar los casos l\'\i mite:
 \end{itemize}
 
 \subsection{Aceleración}
@@ -344,7 +371,7 @@ Aceleración promedio:
 
 Aceleración instantánea
 \begin{align}
-  \mathbf{a}_{\text{prom}}=&\lim_{\Delta t\to 0}\frac{\Delta \mathbf{v}}{\Delta t}=\frac{d\mathbf{v}}{dt}
+  \mathbf{a}=&\lim_{\Delta t\to 0}\frac{\Delta \mathbf{v}}{\Delta t}=\frac{d\mathbf{v}}{dt}
 \end{align}
 
 \subsection{Moméntum}
@@ -355,7 +382,11 @@ Momentúm o cantidad de movimiento instáneo de una partícula de masa $m$ movie
 \end{align}
 y $c\approx 3\times 10^8\ $m/s es la velocidad de la luz.
 
-Si $\gamma\approx1$, o equivalentemente, si $|\mathbf{v}|\ll c$, 
+Si $\gamma\approx1$, o equivalentemente, si $|\mathbf{v}|\ll c$:
+\begin{align}
+  \mathbf{p}\approx &m \mathbf{v}
+\end{align}
+
 
 
 %%% Local Variables: 

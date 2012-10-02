@@ -364,6 +364,21 @@ y $l=\left|\mathbf{R}_T\right|$ es la distancia entre los ejes de modo que
 \subsection{Esfera}
 
 
+\begin{itemize}
+\item[\textbf{Ejemplo}]     Un cilíndro de radio $R$ y masa $M$ rueda sin deslizar a lo largo
+    de una superficie debido a una cinta delgada enrollada en torno de
+    el, que pasa por una polea ideal y está conectada a un bloque de
+    masa $m$ como se muestra en la figura~\ref{fig:cilindropol}. Un estudiante obtiene la siguiente respuesta para la aceleración del cuerpo:
+    \begin{align*}
+      a_{\text{CM}}=\frac{4mg}{8m-3M}\,.
+    \end{align*}
+Justifique porqué dicha respuesta es incorrecta. 
+
+\item[\textbf{Solución:}] El cilindro podría moverse hacia la izquierda.
+
+
+\end{itemize}
+
 \section{Problemas resueltos}
 
 \begin{itemize}
@@ -823,6 +838,141 @@ Las condiciones iniciales en $t=0$, son que $\theta(t=0)=A=\theta_0$, y $d\theta
    \theta(t)=\theta_0\cos\left(\sqrt{\gamma/I_{\text{cm}}} t \right)\,.
 \end{align}
 \end{itemize}
+
+\section{Problemas resueltos}
+
+\begin{enumerate}
+\item (Tomado de \cite{gabriel}) Un bloque de masa $m$ desliza por la superficie del plano inclinado de ángulo $\theta$, mostrado en la figura. El coeficiente de fricción entre el bloque y la superficie es $\mu$. Por la acción de la cuerda, el cilindro macizo de masa $M$ y radio $R$ gira alrededor de un eje fijo que para por $C$.  La cuerda esta enrollada alrededor de un pequeño saliente de radio $r=0.1\ $m. Desprecie la fricción entre el volante y el eje alrededor del cual gira. 
+
+  \begin{minipage}{0.3\linewidth}
+    \includegraphics[scale=0.45]{poleasuple}
+  \end{minipage}
+  \begin{minipage}{0.7\linewidth}
+    \begin{enumerate}
+    \item Haga el diagrama de fuerzas que actúan sobre cada uno de los cuerpos.
+      \label{item:p3a}
+    \item Escriba las ecuaciones de movimiento para estos cuerpos.
+      \label{item:p3b}
+    \item Encuentre la tensión en la cuerda, la aceleración angular del volante y la aceleración del bloque. 
+      \label{item:p3c}
+    \item Hallar la energía cinética rotacional del sistema cuando el bloque ha recorrido una distancia $h$. 
+    \item Finalmente, calcule las cantidades anteriores para el caso particular de $m=5\ $Kg, $\mu=0.25$, $M=20\ $Kg, $R=0.2\ $m $r=0.1\ $m, $\theta=37^\circ$
+    \end{enumerate}
+  \end{minipage}
+%sln pag 183
+
+  \begin{itemize}
+  \item[\textbf{Solución}]
+  \item[\ref{item:p3b}] 
+    Para la polea, si el eje $z$ apunta hacia afuera de la página:
+    \begin{align*}
+      \boldsymbol{\tau}=&I\boldsymbol{\alpha}\nonumber\\
+      -rT=&-I_c\alpha\,.
+    \end{align*}
+    Para el bloque
+    \begin{align*}
+      mg\sin\theta-T-\mu N=&m a\nonumber\\
+      N=&mg\cos\theta\,.
+    \end{align*}
+  \item[\ref{item:p3c}]
+    Usando la ligadura
+    \begin{align*}
+      a=&r\alpha\,,
+    \end{align*}
+    Tenemos
+    \begin{align*}
+      T=\frac{I_c}{r^2}a
+    \end{align*}
+    y sustityendo en la ecuación de movimiento para el bloque
+    \begin{align*}
+      mg\sin\theta-\frac{I_c}{r^2}a-\mu g \cos\theta=&ma\,,
+    \end{align*}
+    podemos despejar $a$
+    \begin{align*}
+      a(m+I_c/r^2)=&mg(\sin\theta-\mu\cos\theta)\nonumber\\
+      a=&\frac{mg(\sin\theta-\mu\cos\theta)}{m+I_c/r^2}\nonumber\\
+      =&\frac{mg(\sin\theta-\mu\cos\theta)}{m+MR^2/(2r^2)}\nonumber\\
+      =&\frac{2r^2mg(\sin\theta-\mu\cos\theta)}{2r^2m+MR^2}\,,
+    \end{align*}
+    y reemplzando de nuevo en $T$
+    \begin{align*}
+      T=\frac{MR^2}{2r^2}a\,.
+    \end{align*}
+
+  \end{itemize}
+
+\item Un cilíndro de radio $R$ y masa $M$ rueda sin deslizar a lo largo
+    de una superficie debido a una cinta delgada enrollada en torno de
+    el, que pasa por una polea ideal y está conectada a un bloque de
+    masa $m$ como se muestra en la figura.
+
+
+\begin{minipage}{9 cm}
+
+\includegraphics[scale=0.8]{cilindropol}
+
+\end{minipage}
+\begin{minipage}{8 cm}
+\begin{enumerate}
+\item Haga un diagrama de cuerpo libre para cada cuerpo.
+      \label{item:r3a}
+\item Plantee las ecuaciones de movimiento para cada cuerpo.
+      \label{item:r3b}
+\item Halle la aceleración del cilindro y la aceleración del bloque
+      \label{item:r3c}
+\item Calcule la tensión en la cuerda para $M=1$ kg, $m=750$ g
+      \label{item:r3d}
+\end{enumerate}
+\end{minipage}
+%variaciones: plano inclinado pag 181,  y polea no ideal, pag. 185
+
+\begin{itemize}
+\item[\ref{item:r3b}] Para el cilíndro y tomando los torques con respecto al punto de contacto con la superficie
+  \begin{align*}
+    -T-f=&M a_{\text{CM}}\\
+    N=&Mg\\
+    2 R T=I_p \alpha\,,
+  \end{align*}
+Para el cuerpo
+\begin{align*}
+  T-m g=&-ma\,.
+\end{align*}
+\item[\ref{item:r3c}] La aceleración del cilindro $a_{\text{CM}}$, la aceleración angular $\alpha$, y la aceleración $a$ del bloque están relacionadas por
+  \begin{align*}
+    a=2\alpha R=2 a_{\text{CM}}
+  \end{align*}
+Entonces, de la ecuación de movimiento para el cilindro
+\begin{align*}
+  a_{\text{CM}}=&\alpha R\\
+  =&\frac{2 R^2 T}{I_p}\\
+  =&\frac{2 R^2 T}{\frac{3}{2}MR^2}\\
+  =&\frac{4 T}{3M}\,
+\end{align*}
+y para el cuerpo
+\begin{align*}
+  a=&\frac{mg-T}{m}\\
+  a_{\text{CM}}=\frac{a}{2}=&\frac{mg-T}{2m}\\
+  =&\frac{g}{2}-\frac{T}{2m}\,.
+\end{align*}
+Igualanado las expresiones podemos obtener la tensión
+\begin{align*}
+\frac{4 T}{3M}=&\frac{g}{2}-\frac{T}{2m}\\
+  \frac{4 T}{3M}+\frac{T}{2m}=&\frac{g}{2}\\
+  T  \left(\frac{4 }{3M}+\frac{1}{2m}\right)=&\frac{g}{2}\\
+  T  \left(\frac{8m+3M }{6Mm}\right)=&\frac{g}{2}\\
+  T=&\frac{3Mmg}{8m+3M}\,,
+\end{align*}
+finalmente, reemplazando en la primera expresión para $a_{\text{CM}}$
+\begin{align*}
+  a_{\text{CM}}=&\frac{4}{3M}\frac{3Mmg}{8m+3M}\\
+=&\frac{4mg}{8m+3M}\,.
+\end{align*}
+
+
+Por conservación de la energía...
+
+\end{itemize}
+\end{enumerate}
 
 %%% Local Variables: 
 %%% mode: latex

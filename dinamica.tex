@@ -1094,6 +1094,75 @@ La ley empírica de frenado de trenes es:
 donde $a$ es la desaceleración del tren, típicamente alrededor de $-2\ \text{m}/\text{s}^2$
 \end{itemize}
 
+\section{Problemas resueltos}
+
+\begin{enumerate}
+\item  (Tomado de \cite{gabriel}) Se coloca un bloque de masa $m_1$ sobre un bloque de masa $m_2$ (como se muestra en la figura). Los coeficientes de fricción cinético y estático entre los bloques son $\mu_k$ y $\mu_e$ respectivamente. Suponer que no hay fricción entre el bloque de masa $m_2$ y la superficie sobre la cual reposa. Se aplica una fuerza $\mathbf{F}$ horizontal al bloque de masa $m_2$
+
+  \begin{minipage}{0.4\linewidth}
+    \includegraphics[scale=0.95]{bloques}
+  \end{minipage}
+  \begin{minipage}{0.6\linewidth}
+    \begin{enumerate}
+    \item Dibujar todas las fuerzas que actúan sobre cada bloque.
+      \label{item:d1a}
+    \item Escribir las ecuaciones de movimiento para cada bloque
+      \label{item:d1b}
+    \item ¿Cuál es la máxima fuerza que puede aplicarse al bloque $m_2$ de modo que los bloques se muevan juntos?
+      \label{item:d1c}
+    \item ¿Cual es la aceleración cuando se aplica la fuerza máxima?
+      \label{item:d1d}
+    \item ¿Que distancia recorren los bloques a esa aceleración durante dos segundos?
+      \label{item:d1e}
+    \item Evalue sus respuestas para $m_1=3\ $Kg, $m_2=5\ $Kg, $\mu_k=0.1$, $\mu_e=0.2$
+      \label{item:d1f}
+    \end{enumerate}
+  \end{minipage}
+
+  \begin{itemize}
+  \item[\ref{item:d1b})] Para $m_1$
+    \begin{align}
+      \label{eq:d11}
+      m_1 a_1=&f & N_1-m_1 g=0
+    \end{align}
+Para $m_2$
+\begin{align*}
+  m_2 a_2=&F-f & N_2-N_1-m_2g=&0\,.
+\end{align*}
+    De modo que
+    \begin{align*}
+      a_1=&\frac{f}{m_1}& a_2=&\frac{F-f}{m_2}\,,
+    \end{align*}
+    y
+    \begin{align*}
+      f=\mu m_1 g\,.
+    \end{align*}
+  \item[\ref{item:d1c})]
+    La condición de que los bloques se muevan juntos corresponde a $a_1=a_2$:
+    \begin{align*}
+      \frac{f}{m_1}=&\frac{F-f}{m_2}\\
+      m_2 f =&m_1(F-f)\\
+      m_1F =&f(m_1+m_2)\\
+      m_1F =&\mu m_1 g(m_1+m_2)\\
+      F =&\mu g(m_1+m_2)\,. 
+    \end{align*}
+    $F$ es máxima cuando $\mu=\mu_e$
+    \begin{align*}
+      F_{\text{max}}=\mu_e g(m_1+m_2)\,. 
+    \end{align*}
+
+    \item[\ref{item:d1d})] La aceleracíon máxima se obtiene de \eqref{eq:d11}:
+      \begin{align*}
+        a=\frac{f}{m_1}=\mu_e g\,.
+      \end{align*}
+    \item[\ref{item:d1e})] Para $t=2\second$
+      \begin{align*}
+        x=&\frac{1}{2}a t^2
+      \end{align*}
+    \item[\ref{item:d1e})] $F=15.7\newton$, $a=1.96\meter\per\second^2$, $x=3.92\meter$
+
+    \end{itemize}
+\end{enumerate}
 
 %%% Local Variables: 
 %%% mode: latex

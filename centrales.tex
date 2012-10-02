@@ -582,6 +582,10 @@ El valor máximo y mínimo para $r$ se pueden obtener también de la ecuación d
   r_{\text{max}}=&a\frac{(1-\epsilon)(1+\epsilon)}{1-\epsilon}=a(1+\epsilon)\nonumber\\
   r_{\text{min}}=&a\frac{(1-\epsilon)(1+\epsilon)}{1+\epsilon}=a(1-\epsilon)\,.
 \end{align}
+\begin{align*}
+  \epsilon=\frac{r_{\text{max}}+r_{\text{min}}}{r_{\text{max}}-r_{\text{min}}}
+\end{align*}
+
 Como $r$ se mide con respecto al origen de coordenadas, la distancia del centro de la elipse, el cual se encuentra sobre el eje $x$, al origen de coordenadas es
 \begin{align}
 \label{eq:15}
@@ -1161,8 +1165,80 @@ Usando $F_{\text{fict}}=|\mathbf{F}_{\text{fict}}|=m A$, obtenemos
 que corresponde a la ec.~\eqref{eq:tensfic}
 \end{itemize}
 
+\section{Problemas resueltos}
+\begin{enumerate}
+\item Un satélite de masa $m=2 \times 10^3$ kg está en órbira elíptica alrededor de la tierra. En el perigeo (punto $p$) (punto de mayor cercanía a la tierra) su altitud es $h_p=1.1 \times 10^3$ km y en el apogeo (punto $a$) (punto de más alejado de la tierra) su altitud es $h_a=4.1 \times 10^3$ km. Recuerde que le eje mayor de la órbita $A=2a$ y la energía del sistema $E$ se relacionan mediante la ecuación: $A=-{C}/{E}=-{GM_{\text{tierra}}m}/{E}$, además el radio de la tierra es $R=6.4 \times 10^3$ km. 
+
+  \begin{minipage}{0.45\linewidth}
+    \includegraphics[scale=0.75]{orbita}
+  \end{minipage}
+  \begin{minipage}{0.55\linewidth}
+    \begin{enumerate}
+    \item Determine la energía necesaria para poner el satélite en órbita. Desprecie la pérdida de energía por la fricción con la atmósfera al subir el satélite desde la superficie terrestre.
+      \label{item:c1a}
+    \item Determine la excentricidad $e$ de la órbita.
+      \label{item:c1b}
+    \item Deterine la rapidez en el perigeo.
+      \label{item:c1c}
+    \end{enumerate}
+  \end{minipage}
+%sln pag 183
+
+  \begin{itemize}
+  \item[\textbf{Solución}]
+  \item[\ref{item:c1a})] Ya que $m\ll M_{\text{earth}}$ podemos tomar $\mu\approx m$ y asumir que la tierra está fija:
+    \begin{align*}
+      A=h_p+h_a+2R\,,
+    \end{align*}
+    además   
+    \begin{align*}
+      E=-\frac{C}{A}\,,
+    \end{align*}
+    donde
+
+    \begin{align*}
+      C=GM_{\text{tierra}}m=&\frac{GM_{\text{tierra}}}{R^2}R^2 m\nonumber\\
+      =&g m R^2\,,
+    \end{align*}
+    ya que
+    \begin{align*}
+      g=\frac{GM_{\text{tierra}}}{R^2}\,.
+    \end{align*}
+
+    La energía inicial antes de lanzar el satélite fue
+    \begin{align*}
+      E_i=&-\frac{GmM_{\text{tierra}}}{R}\nonumber\\
+      =&-\frac{C}{R}\,,
+    \end{align*}
+    La energía necesaria para poner el cuerpo en órbita es
+    \begin{align*}
+      \Delta E=E-E_i=&-\frac{C}{A}+\frac{C}{R}\nonumber\\
+      =&C\left( -\frac{1}{A}+\frac{1}{R}     \right)\nonumber\\
+      =&C\left( \frac{A-R}{AR}     \right)\nonumber\\
+      =&g m R^2\left( \frac{A-R}{AR}     \right)\nonumber\\
+      =&g m R\left( \frac{h_p+h_a+R}{h_p+h_a+2R}     \right)\nonumber\\
+      =&g m R\left[ \frac{1}{1+R/(h_p+h_a+R)}     \right]\nonumber\\
+      \approx&8.1\times 10^{10}\joule\,.
+    \end{align*}
+   \item[\ref{item:c1b})]
+     \begin{align*}
+       \epsilon=&\frac{r_{\text{max}}+r_{\text{min}}}{r_{\text{max}}-r_{\text{min}}}\nonumber\\
+       =&\frac{1}{6}
+     \end{align*}
+   \item[\ref{item:c1b})]
+     \begin{align*}
+       E=\frac{1}{2}mv^2-\frac{C}{r}
+     \end{align*}
+     \begin{align*}
+       E=\frac{1}{2}mv_p^2-\frac{C}{h_p}
+     \end{align*}
+     \begin{align*}
+       v_p=7900\meter\per\second\,.
+     \end{align*}
+    \end{itemize}
 
 
+\end{enumerate}
 %ejemplo pendulo oscilando en vagón
 
 

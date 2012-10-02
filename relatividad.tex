@@ -192,27 +192,33 @@ En ausencia de una velocidad límite, es decir cuando $c\to \infty$, o equivalen
 
 \begin{itemize}
 \item[\textbf{Ejemplo:}] En un futuro muy lejano, una nave espacial llamada Enterprise sale hacia una dirección en ele espacio exterior con una rapidez de $0.9c$, al mismo tiempo una nave llamada Fleagle sale en dirección opuesta con rapidez de $0.9c$. Calcular la velocidad relativa entre ellas.
-\item[\textbf{Solución}].  Sea $\mathbf{v}=v_x\hat{\mathbf{i}}=0.9c\,\hat{\mathbf{i}}$ la rapidez de la Enterprise relativa al piso, y $\mathbf{V}=-0.9c\,\hat{\mathbf{i}}$, la velocidad de Fleagle relativa al piso. La velocidad de la Entreprise relativa a la Fleage es $v_{x'}$, es decir, la velocidad con la cual un observador en la Fleagle ve alejarse a la Enterprise. Si no existiese una velocidad límite, la velocidad relativa entre las naves sería (ver \eqref{eq:galsumavel}) de $v_{x'}=1.8\,c$. Sin embargo, usando la Ley de adición de velocidades \eqref{eq:addvel}
+  \begin{figure}
+    \centering
+    \includegraphics{enterprise}
+    \caption{Sistemas de referencias en reposo $S$ y en movimiento $S'$. La nave Feagle está en el origen de $S'$.}
+    \label{fig:enterprise}    
+  \end{figure}
+\item[\textbf{Solución}].  Sea $\mathbf{v}=v_x\hat{\mathbf{i}}=0.9c\,\hat{\mathbf{i}}$ la velocidad de la Enterprise relativa a un sistema en reposo $S$, y $\mathbf{V}=-0.9c\,\hat{\mathbf{i}}$, la velocidad de Fleagle relativa al sistema $S$ como se muestra en la figura~\ref{fig:enterprise}. La velocidad de la Entreprise relativa a la Fleage es $v_{x'}$, es decir, la velocidad con la cual un observador en la Fleagle ve alejarse a la Enterprise. Si no existiese una velocidad límite, la velocidad relativa entre las naves sería (ver \eqref{eq:galsumavel}) de $v_{x'}=1.8\,c$. Sin embargo, usando la Ley de adición de velocidades \eqref{eq:addvel}
   \begin{align*}
     v_{x'}=&\frac{0.9c-(-0.9c)}{1-[(-0.9c)(0.9c)/c^2]}\nonumber\\
     =&\frac{1.8c}{1.81}\nonumber\\
     =&0.99c\,.
   \end{align*}
 
-La velocidad relativa es menor que $c$. La transformaciones relativística de velocidades asegura que no podemos exceder la velocidad de la luz cambiando los sistemas de referencia. Cuando $v_{x}=c$, independiente de la rapidez $V$,
-\begin{align*}
-  v_{x'}=&\frac{c-v}{1-vc/c^2}\nonumber\\
-  =&\frac{c-v}{(c-v)/c}\nonumber\\
-  =c\,.
-\end{align*}
-
-Una consecuencia de la Ley de adición de velocidades es que:
-\begin{quote}
-  La velocidad límite $c$, es la misma para todos los observadores.
-\end{quote}
-
-
+La velocidad relativa es menor que $c$. La transformaciones relativística de velocidades asegura que no podemos exceder la velocidad de la luz cambiando los sistemas de referencia. 
 \end{itemize}
+
+Sea $\mathbf{v}=v_{x}=c\,\hat{\mathbf{i}}$ la velocidad límite de un cuerpo relativa a un sistema en reposo $S$ como el que se ilustró en el ejemplo anterior en la figura~\ref{fig:enterprise}. Consideremos un observador en el origen de un sistema $S'$ que se muve con \emph{cualquier} rapidez $V$ que incluso podría ser $c$, y en cualquier sentido ($\pm V$). La velocidad con la cual el observador en $S'$ ve moverse el cuerpo es, de acuerdo a  la Ley de adición de velocidades \eqref{eq:addvel}:
+\begin{align*}
+  v_{x'}=&\frac{c-(\pm V)}{1-(\pm V)c/c^2}\nonumber\\
+  =&\frac{c\mp V}{1\mp V/c}\nonumber\\
+  =&\frac{c\mp V}{(c\mp V)/c}\nonumber\\
+  v_{x'}=&c\,.
+\end{align*}
+Por consiguiente, una consecuencia de la Ley de adición de velocidades es que:
+\begin{quote}
+  La velocidad límite $c$, es la misma para todos los observadores inerciales.
+\end{quote}
 
 \subsection{Simultaneidad y orden de eventos}
 
