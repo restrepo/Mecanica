@@ -1,4 +1,9 @@
 \documentclass[12pt,letterpaper]{book}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Force pdflatex processing even with "$ latex" (required by arXiv)
+\pdfoutput=1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -22,6 +27,11 @@
 \usepackage[displaymath,textmath,sections,graphics,floats]{preview}
 %%%%%%%%% 
 \usepackage{comment}
+\includecomment{extrapage}
+\specialcomment{extrapage}
+{\begingroup}{\endgroup}
+%\excludecomment{extrapage}
+
 \includecomment{inprogress}
 \specialcomment{inprogress}
 {\begingroup\itshape \medskip}{\medskip \endgroup}
@@ -101,9 +111,9 @@
 %%comment the following two lines for full document
 \renewcommand{\tofc}[1]{} %if  \includeonly{chapter1}
 %\includeonly{preliminares}
-\includeonly{intermov}
+%\includeonly{intermov}
 %\includeonly{dinamica}
-%\includeonly{momentum}
+\includeonly{momentum}
 %\includeonly{energia}
 %\includeonly{cinematica}
 %\includeonly{rigido}

@@ -1,7 +1,0 @@
-from pylab import *
-r=linspace(0.01,2,1000)
-plt.plot(r,0.08/r^2)
-plt.plot(r,-1/r)
-plot(r,-1/r+0.08/r**2)
-plt.ylim(-8,8)
-plt.show()
