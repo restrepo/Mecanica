@@ -27,12 +27,15 @@ Para calcular directamente la ecuación de trayectoria a partir de una determina
   \int_C \mathbf{F}(\mathbf{r})\cdot\,d\mathbf{r} = \int_{t_a}^{t_b} \mathbf{F}(\mathbf{r}(t))\cdot\frac{d\mathbf{r(t)}}{dt}\,dt.
 \end{align}
 donde $\mathbf{r}$ es el vector de posición desde un origen de coordenadas a cada uno de los segmento $d\mathbf{r}$ tangenciales a la trayectoria $C$, tal que $\mathbf{r}_a=\mathbf{r}(t_a)$ y $\mathbf{r}_b$ corresponden a las posiciones de los extremos de $C$. Aquí $\mathbf{F}(\mathbf{r})$ es una función vectorial general. Para visualizar la integral de línea, se divide la trayectoria desde la posición inicial $\mathbf{r}_a$ hasta la posición final $\mathbf{r}_b$ en $N$ segmentos cortos de longitud $\Delta \mathbf{r}_j$, donde $j$ es un índice que numera los segmentos.  Ver fig~\ref{fig:lineint}.
+
+\begin{frame}
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{lineint}
   \caption{Integral de línea}
   \label{fig:lineint}
 \end{figure}
+\end{frame}
 
 Si $\Delta \mathbf{r}_j$ es suficientemente pequeño, el integrando de la ec.~\eqref{eq:e12} puede escribirse como
 \begin{align}
@@ -150,7 +153,12 @@ donde $d\mathbf{R}=\mathbf{V}dt$ es el desplazamiento del centro de masa en un t
 En la naturaleza hay ciertas fuerzas, como la de la gravedad por ejemplo, que tienen una propiedad muy especial llamada \emph{conservativa}. Si calculamos el trabajo hecho por una fuerza al mover un objeto de un punto a otro a lo largo de una trayectoria curvada, en general el trabajo depende de la curva, pero en algunos casos especiales no. Si el trabajo no depende de la curva, decimos que la fuerza es conservativa. En otras palabras, si la integral de línea de la fuerza veces la distancia para ir de la posición 1 a 2 es calculada lo largo de una trayectoria $A$ y entonces a lo largo de $B$ y se obtiene lo mismo, y si es cierto para éste par de números a lo largo de \emph{todas las curvas}, y si pasa sin importar el par de números que usemos, entonces decimos que la fuerza es conservativa. En tales casos el trabajo se puede calcular de una manera simple, y podemos dar una fórmula para el resultado.
 
 Sea el trabajo de ir de un punto $P$ a otro punto del espacio: $-U(x,y,z)$, entonces si la fuerza es conservativa (manteniendo presente que tenemos integrales de línea)
-\begin{align}
+
+\begin{minipage}{0.5\linewidth}
+\includegraphics[scale=0.7]{paths}  
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+  \begin{align}
   \int_1^2 \mathbf{F}\cdot d\mathbf{r}
   =&\int_1^P \mathbf{F}\cdot d\mathbf{r}+\int_P^2 \mathbf{F}\cdot d\mathbf{r}\nonumber\\
   =&-\int_P^1 \mathbf{F}\cdot d\mathbf{r}+\int_P^2 \mathbf{F}\cdot d\mathbf{r}\nonumber\\
@@ -158,6 +166,8 @@ Sea el trabajo de ir de un punto $P$ a otro punto del espacio: $-U(x,y,z)$, ento
   =&U(x_1,y_1,z_1)-U(x_2,y_2,z_2)\nonumber\\
   =&U(\mathbf{r}_1)-U(\mathbf{r}_2)\,.
 \end{align}
+\end{minipage}
+
 La cantidad $U(\mathbf{r}_1)-U(\mathbf{r}_2)$ es llamada el cambio en \emph{energía potencial}, y llamaremos $U$ la energía potencial.
 
 Para el caso de fuerzas conservativas, la ec.~(\ref{eq:tte}) queda

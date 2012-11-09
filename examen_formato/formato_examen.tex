@@ -1,0 +1,317 @@
+\documentclass[12pt]{article}
+\newcommand{\tipoexamen}{Habilitaci\'on}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\spanishdecimal{.}
+\addto\captionsspanish{%
+\def\tablename{Tabla}%
+}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage[squaren,mediumspace,mediumqspace]{SIunits} 
+\usepackage{comment}
+\includecomment{comentario}
+\specialcomment{comentario}
+{\begingroup}{\endgroup}
+\excludecomment{comentario}
+
+\includecomment{solucion}
+\specialcomment{solucion}
+{\begingroup}{\endgroup}
+\excludecomment{solucion}
+
+
+\topmargin -2.5 cm
+\oddsidemargin -1.5 cm
+\textheight 23.5 cm
+\textwidth 18.5cm
+
+\newcommand{\abre}{\textquestiondown}
+
+\begin{document}
+\pagestyle{empty}
+\sffamily
+
+\begin{minipage}{6 cm}{\begin{center}
+\includegraphics[scale=0.7]{udea}\end{center}}\end{minipage}
+\begin{minipage}{12 cm}{
+\begin{flushright}\vspace*{0.2cm}\Large\textbf{Universidad de Antioquia}\\
+Facultad de Ciencias Exactas y Naturales\\
+Instituto de Física\\
+Mecánica. \tipoexamen{}\\
+
+\end{flushright}
+}
+\end{minipage}
+
+\vspace{0.4 cm}
+Nombre:$\underline{\hspace{8cm}}$Documento: $\underline{\hspace{3cm}}$\quad Grupo: \hrulefill
+
+\begin{enumerate} 
+
+\item Se coloca un bloque de masa $m_1$ sobre un bloque de masa $m_2$ (como se muestra en la figura). Los coeficientes de fricción cinético y estático entre los bloques son $\mu_k$ y $\mu_e$ respectivamente. Suponer que no hay fricción entre el bloque de masa $m_2$ y la superficie sobre la cual reposa. Se aplica una fuerza $\mathbf{F}$ horizontal al bloque de masa $m_2$
+
+  \begin{minipage}{0.4\linewidth}
+    \includegraphics[scale=0.95]{bloques}
+  \end{minipage}
+  \begin{minipage}{0.6\linewidth}
+    \begin{enumerate}
+    \item Dibujar todas las fuerzas que actúan sobre cada bloque.
+      \label{item:d1a}
+    \item Escribir las ecuaciones de movimiento para cada bloque
+      \label{item:d1b}
+    \item ¿Cuál es la máxima fuerza que puede aplicarse al bloque $m_2$ de modo que los bloques se muevan juntos?
+      \label{item:d1c}
+    \item ¿Cual es la aceleración cuando se aplica la fuerza máxima?
+      \label{item:d1d}
+    \item ¿Que distancia recorren los bloques a esa aceleración durante dos segundos?
+      \label{item:d1e}
+    \item Evalue sus respuestas para $m_1=3\ $Kg, $m_2=5\ $Kg, $\mu_k=0.1$, $\mu_e=0.2$
+      \label{item:d1f}
+    \end{enumerate}
+  \end{minipage}
+
+  \begin{itemize}
+  \item[\ref{item:d1b})] Para $m_1$
+    \begin{align}
+      \label{eq:d11}
+      m_1 a_1=&f & N_1-m_1 g=0
+    \end{align}
+Para $m_2$
+\begin{align*}
+  m_2 a_2=&F-f & N_2-N_1-m_2g=&0\,.
+\end{align*}
+    De modo que
+    \begin{align*}
+      a_1=&\frac{f}{m_1}& a_2=&\frac{F-f}{m_2}\,,
+    \end{align*}
+    y
+    \begin{align*}
+      f=\mu m_1 g\,.
+    \end{align*}
+  \item[\ref{item:d1c})]
+    La condición de que los bloques se muevan juntos corresponde a $a_1=a_2$:
+    \begin{align*}
+      \frac{f}{m_1}=&\frac{F-f}{m_2}\\
+      m_2 f =&m_1(F-f)\\
+      m_1F =&f(m_1+m_2)\\
+      m_1F =&\mu m_1 g(m_1+m_2)\\
+      F =&\mu g(m_1+m_2)\,. 
+    \end{align*}
+    $F$ es máxima cuando $\mu=\mu_e$
+    \begin{align*}
+      F_{\text{max}}=\mu_e g(m_1+m_2)\,. 
+    \end{align*}
+
+    \item[\ref{item:d1d})] La aceleracíon máxima se obtiene de \eqref{eq:d11}:
+      \begin{align*}
+        a=\frac{f}{m_1}=\mu_e g\,.
+      \end{align*}
+    \item[\ref{item:d1e})] Para $t=2\second$
+      \begin{align*}
+        x=&\frac{1}{2}a t^2
+      \end{align*}
+    \item[\ref{item:d1e})] $F=15.7\newton$, $a=1.96\meter\per\second^2$, $x=3.92\meter$
+
+    \end{itemize}
+
+
+\newpage
+
+\item Un cilíndro de radio $R$ y masa $M$
+rueda sin deslizar a lo largo de una superficie debido a una cuerda que pasas por una polea ideal y que está conectada a un bloque de masa $m$ como se muestra en la figura.
+  \begin{comentario}
+    % redacción alternativa
+    Un cilíndro de radio $R$ y masa $M$ rueda sin deslizar a lo largo
+    de una superficie debido a una cinta delgada enrollada en torno de
+    el, que pasa por una polea ideal y está conectada a un bloque de
+    masa $m$ como se muestra en la figura.
+  \end{comentario}
+
+
+\begin{minipage}{9 cm}
+
+\includegraphics[scale=0.8]{cilindropol}
+
+\end{minipage}
+\begin{minipage}{8 cm}
+\begin{enumerate}
+\item Haga un diagrama de cuerpo libre para cada cuerpo.
+      \label{item:r3a}
+\item Plantee las ecuaciones de movimiento para cada cuerpo.
+      \label{item:r3b}
+\item Halle la aceleración del cilindro y la aceleración del bloque
+      \label{item:r3c}
+\item Calcule la tensión en la cuerda para $M=1$ kg, $m=750$ g
+      \label{item:r3d}
+\end{enumerate}
+\end{minipage}
+%variaciones: plano inclinado pag 181,  y polea no ideal, pag. 185
+
+\begin{itemize}
+\item[\ref{item:r3b}] Para el cilíndro y tomando los torques con respecto al punto de contacto con la superficie
+  \begin{align*}
+    -T-f=&M a_{\text{CM}}\\
+    N=&Mg\\
+    2 R T=I_p \alpha\,,
+  \end{align*}
+Para el cuerpo
+\begin{align*}
+  T-m g=&-ma\,.
+\end{align*}
+\item[\ref{item:r3c}] La aceleración del cilindro $a_{\text{CM}}$, la aceleración angular $\alpha$, y la aceleración $a$ del bloque están relacionadas por
+  \begin{align*}
+    a=2\alpha R=2 a_{\text{CM}}
+  \end{align*}
+Entonces, de la ecuación de movimiento para el cilindro
+\begin{align*}
+  a_{\text{CM}}=&\alpha R\\
+  =&\frac{2 R^2 T}{I_p}\\
+  =&\frac{2 R^2 T}{\frac{3}{2}MR^2}\\
+  =&\frac{4 T}{3M}\,
+\end{align*}
+y para el cuerpo
+\begin{align*}
+  a=&\frac{mg-T}{m}\\
+  a_{\text{CM}}=\frac{a}{2}=&\frac{mg-T}{2m}\\
+  =&\frac{g}{2}-\frac{T}{2m}\,.
+\end{align*}
+Igualanado las expresiones podemos obtener la tensión
+\begin{align*}
+\frac{4 T}{3M}=&\frac{g}{2}-\frac{T}{2m}\\
+  \frac{4 T}{3M}+\frac{T}{2m}=&\frac{g}{2}\\
+  T  \left(\frac{4 }{3M}+\frac{1}{2m}\right)=&\frac{g}{2}\\
+  T  \left(\frac{8m+3M }{6Mm}\right)=&\frac{g}{2}\\
+  T=&\frac{3Mmg}{8m+3M}\,,
+\end{align*}
+finalmente, reemplazando en la primera expresión para $a_{\text{CM}}$
+\begin{align*}
+  a_{\text{CM}}=&\frac{4}{3M}\frac{3Mmg}{8m+3M}\\
+=&\frac{4mg}{8m+3M}\,.
+\end{align*}
+
+
+Por conservación de la energía...
+\end{itemize}
+
+
+\newpage
+\item Un proyectil de masa $m$ es disparado desde la superficie de la tierra formando un ángulo $\alpha$ con la vertical. La velocidad inicial es igual a $\sqrt{GM/R}$. ¿cuanto se eleva el proyectil si $\alpha=60^\circ$?. Desprecie la resistencia del aire y la rotación de la tierra. Calcule la excentricidad e la orbita descrita por el proyectil.
+ 
+\textbf{Solución:} Usando conservación de energía (asumiendo que la tierra permanece en reposo)
+  \begin{align}
+    \label{eq:21}
+    \frac{1}{2}m v_0^2-\frac{GMm}{R}=&\frac{1}{2}mv^2-\frac{GMm}{r_{\text{max}}}\nonumber\\
+    \frac{1}{2}v_0^2-\frac{GM}{R}=&\frac{1}{2}v^2-\frac{GM}{r_{\text{max}}}\,.
+  \end{align}
+Para aplicar la conservación del momento angular tenga en cuenta que al momento de lanzamiento el ángulo entre $\mathbf{r}$ y la velocidad incial es $\alpha$, mientras que en el punto de máxima altura, el ángulo entre los dos vectores es de $90^\circ$. Entonces
+  \begin{align}
+    \mu R v_0 \sin\alpha=&\mu v r_{\text{max}}\nonumber\\
+     R v_0 \sin\alpha=&v r_{\text{max}}\,,
+  \end{align}
+de donde
+\begin{align}
+  \label{eq:20}
+  v=\frac{R}{r_{\text{max}}}v_0 \sin\alpha\,.
+\end{align}
+(\ref{eq:20}) en (\ref{eq:21})
+\begin{align}
+  \frac{1}{2}v_0^2-\frac{1}{2}\frac{R^2}{r^2_{\text{max}}}v^2_0 \sin^2\alpha-\frac{GM}{R}+\frac{GM}{r_{\text{max}}}=0\,.
+\end{align}
+Usando
+\begin{align}
+  v_0^2=\frac{GM}{R}\,,
+\end{align}
+\begin{align}
+    \frac{1}{2}\frac{GM}{R}-\frac{1}{2}\frac{R^2}{r^2_{\text{max}}}\frac{GM}{R} \sin^2\alpha-\frac{GM}{R}+\frac{GM}{r_{\text{max}}}=&0\nonumber\\
+\end{align}
+\begin{align}
+      \frac{1}{2R}-\frac{R}{2r^2_{\text{max}}} \sin^2\alpha-\frac{1}{R}+\frac{1}{r_{\text{max}}}=&0\,.
+\end{align}
+multiplicando $2R r_{\text{max}}^2$ 
+\begin{align}
+ r_{\text{max}}^2-{R^2} \sin^2\alpha-2 r^2_{\text{max}}+2Rr_{\text{max}}=&0\nonumber\\
+   r_{\text{max}}^2-2Rr_{\text{max}}+R^2 \sin^2\alpha=&0\,.
+\end{align}
+Si $\alpha=\pi/3$
+\begin{align}
+r_{\text{max}}^2-2Rr_{\text{max}}+\frac{3}{4}R^2 =&0\nonumber\\
+(2r_{\text{max}}-3R)(2r_{\text{max}}-R)=&0\,.
+\end{align}
+La solución física es
+\begin{align}
+  r_{\text{max}}=\frac{3R}{2}\,.
+\end{align}
+Como el centro de la tierra está en un de los focos de la elipse, entonces la otra solución corresponde a $r_{\text{min}}$
+\begin{align}
+  r_{\text{min}}=\frac{R}{2}\,,
+\end{align}
+\begin{align*}
+  \epsilon=&\frac{r_{\text{max}}-r_{\text{min}}}{r_{\text{max}}+r_{\text{min}}}\\
+  =&\frac{\frac{3R}{2}-\frac{R}{2}}{\frac{3R}{2}+\frac{R}{2}}\\
+  =&\frac{R}{2 R}\\
+  =&\frac{1}{2}\,.
+\end{align*}
+
+
+\begin{comentario}
+    \item Un satélite de masa $m=2 \times 10^3$ kg está en órbira elíptica alrededor de la tierra. En el perigeo (punto $p$) (punto de mayor cercanía a la tierra) su altitud es $h_p=1.1 \times 10^3$ km y en el apogeo (punto $a$) (punto de más alejado de la tierra) su altitud es $h_a=4.1 \times 10^3$ km. Recuerde que le eje mayor de la órbita $A=2a$ y la energía del sistema $E$ se relacionan mediante la ecuación: $A=-\dfrac{C}{E}=-\dfrac{GmM_{\text{tierra}}}{E}$, además el radio de la tierra es $R=6.4 \times 10^3$ km. 
+
+\begin{enumerate}
+\item Determine la energía necesaria para poner el satélite en órbita. Desprecie la pérdida de energía por la fricción con la atmósfera al subir el satélite desde la superficie terrestre.
+\item Determine la excentricidad $e$ de la órbita.
+\item Deterine la rapidez en el perigeo.
+\end{enumerate}
+
+\includegraphics[scale=1.1]{orbita}
+
+  \end{comentario}
+\newpage
+
+\item Un cilindro macizo de radio $R$ y masa $m=0.3$ kg puede rodar sin deslizar sobre una superficie horizontal, mediante un mecanismo, donde su centro de masa está unido a un resorte de constante elástica k$=4.0$ N/m. Suponga que el cilindro se suelta a partir del reposo, en una posición en la cual el resorte está estirado una distancia $0.1$ m.
+
+%\includegraphics[scale=0.9]{cilindro}
+
+\begin{enumerate}
+\item Muestre que el cilindro ejecuta un Movimiento Armónico Simple. Halle el periodo. Recuerde que el momento de inercia del cilíndro respecto al centro de masa es $I=(1/2)mR^2$
+\item Halle la amplitud y la fase del movimiento y con ella escriba la ecuación cinemática de posición para el cilindro. 
+\end{enumerate}
+
+\includegraphics[scale=0.9]{cilindro}
+
+\newpage
+
+\begin{comentario}
+  
+\item Determine la velocidad relativa entre dos rayos de luz que se mueven en direcciones opuestas.
+
+\begin{solucion}
+    \textbf{Solucion:} Sea $\mathbf{v}=v_{x}=c\,\hat{\mathbf{i}}$ la velocidad límite de un cuerpo relativa a un sistema en reposo $S$ como el que se ilustra en la figura~\ref{fig:enterprise}. Consideremos un observador en el origen de un sistema $S'$ que se muve con \emph{cualquier} rapidez $V$ que incluso podría ser $c$, y en cualquier sentido ($\pm V$). La velocidad con la cual el observador en $S'$ ve moverse el cuerpo es, de acuerdo a  la Ley de adición de velocidades: 
+\begin{align*}
+  v_{x'}=&\frac{v_x-V}{1-V v_x/c^2}\nonumber\\
+  =&\frac{c-(\pm V)}{1-(\pm V)c/c^2}\nonumber\\
+  =&\frac{c\mp V}{1\mp V/c}\nonumber\\
+  =&\frac{c\mp V}{(c\mp V)/c}\nonumber\\
+  v_{x'}=&c\,.
+\end{align*}
+Por consiguiente, una consecuencia de la Ley de adición de velocidades es que:
+\begin{quote}
+  La velocidad límite $c$, es la misma para todos los observadores inerciales.
+\end{quote}
+  \begin{figure}
+    \centering
+    \includegraphics{enterprise}
+    \caption{Sistemas de referencias en reposo $S$ y en movimiento $S'$ con \emph{pulsos} en movimiento}
+    \label{fig:enterprise}    
+  \end{figure}
+
+\end{solucion}
+\end{comentario}
+
+\end{enumerate}
+\end{document}
