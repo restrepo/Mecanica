@@ -139,7 +139,11 @@ La ecuación (\ref{eq:linev2}) toma ahora la forma
   \label{eq:tte}
   W_{ba}=K_b-K_a\,.
 \end{align}
-donde $K$ es la energía cinética de la partícula de masa $m$ y una rapidez $v$ y esta dada por la ec.~\eqref{eq:K}.
+donde $K$ es la energía cinética de la partícula de masa $m$ y una rapidez $v$ y esta dada por la ec.~\eqref{eq:K},
+\begin{align*}
+  K=\tfrac{1}{2}m v^2\,.
+\end{align*}
+
 
 
 Para un sistema extendido
@@ -149,8 +153,144 @@ Para un sistema extendido
 donde $d\mathbf{R}=\mathbf{V}dt$ es el desplazamiento del centro de masa en un tiempo $t$.
 
 
+\section{Cálculo del trabajo}
+En el caso de movimiento en una dimensión
+\begin{align*}
+  \mathbf{F}=(F_x,0,0)
+\end{align*}
+la integral de línea se reduce a una integral normal
+\begin{align*}
+  \int_{\text{1-dim}}\mathbf{F}\cdot d\mathbf{R}=\int_{x_0}^{x}F_x(x)\,dx\,.
+\end{align*}
+
+
+\subsection{Fuerza gravitacional constante}
+Considere el trabajo que tiene que realizar la fuerza gravitacional
+para reducir la rapidez de una partícula que ha sido lanzada hacia
+arriba con rapidez $v_0$ hasta una rapidez $v$. Tomando el origen de coordenadas en la superficie de la tierra, tenemos
+\begin{align*}
+  \mathbf{F}=&(0,-mg,0)\nonumber\\
+  d\mathbf{r}=&(dx,dy,dz)\,.
+\end{align*}
+entonces
+\begin{align*}
+  W_{ba}=-mg\int_{y_0}^ydy=-mg(y-y_0)<0\,.
+\end{align*}
+y usando la ecuación (\ref{eq:linev2})
+\begin{align}
+  \label{eq:consrven}
+  mgy_0-mgy=\tfrac{1}{2}m v^2-\tfrac{1}{2}m v_0^2\,,
+\end{align}
+de donde
+\begin{align*}
+  v^2-v_0^2=-2g(y-y_0)\,,
+\end{align*}
+que corresponde a la ecuación de la trayectoria en la
+ecuación~\eqref{eq:trayl}. De modo que la Segunda ley de Newton en la
+forma del Teorema de trabajo y energía sirve para obtener directamente
+la ecuación de la trayectoria.
+
+Finalmente, podemos reescribir la ecuación~\eqref{eq:consrven} en la
+forma
+\begin{align}
+  \tfrac{1}{2}m v_0^2+mgy_0=\tfrac{1}{2}m v^2+mgy\,.
+\end{align}
+
+\subsection{Trabajo realizado por la fuerza de fricción}
+Considere el trabajo realizado por la fuerza de fricción para reducir
+la rapidez inicial de un cuerpo lanzado con rapidez inicial $v_0$
+sobre una superficie horizontal con coeficiente dinámico de fricción
+$\mu$, hasta una rapidez $v$. Tomando el origen de coordenadas en la
+superficie, tenemos
+\begin{align*}
+  \mathbf{f}=&(-\mu m g,0,0)\nonumber\\
+  d\mathbf{r}=&(dx,dy,dz)\,.
+\end{align*}
+entonces
+\begin{align*}
+  W_{ba}=-mg\int_{x_0}^x\,dx=-\mu mg(x-x_0)<0\,.
+\end{align*}
+y usando la ecuación (\ref{eq:linev2})
+\begin{align*}
+  \label{eq:consrven}
+  -\mu mg(x-x_0)=\tfrac{1}{2}m v^2-\tfrac{1}{2}m v_0^2\,.
+\end{align*}
+% y
+% \begin{align}
+%   \tfrac{1}{2}m v_0^2+\mu mg x_0=\tfrac{1}{2}m v^2+\mu mg x\,.
+% \end{align}
+La principal diferencia entre los dos movimientos estudiados es que
+cuando la velocidad final es igual a cero, el movimiento bajo una
+fuerza gravitacional constante continua (con la velocidad en sentido
+opuesto), mientras que en el caso de fuerza de fricción el movimiento
+se detiene completamente. Definiendo la energía potencial como
+\begin{align*}
+  U(y)=mg y\,,
+\end{align*}
+y la energía mecánica como
+\begin{align*}
+  E_{\text{mecánica}}=U(y)+\tfrac{1}{2}m v^2\,,
+\end{align*}
+podríamos explicar porque aparece la diferencia. Si asumimos que la
+energía mecánica se conserva entonces la energía cinética se debe ir
+convirtiendo en energía potencial para poder mantener la energía
+mecánica constante. En el punto de máxima altura la energía mecánica
+es sólo energía potencial y al siguiente instante la energía potencial
+debe disminuir, es decir, el cuerpo debe comenzar a caer, para que la
+energía potencial puede comenzar a generar de nuevo energía cinética. 
+
+En el caso de la fuerza de fricción, la energía cinética es cero pero
+no se ha convertido en ninguna otra forma de energía mecánica. Si
+insistimos en la \emph{conservación de energía}, entonces
+necesariamente la energía cinética se debe disipar en alguna otra
+forma de energía que no puede usarse para continuar el movimiento del
+bloque. Esta forma de energía se llama calor y se refleja en el
+calentamiento (aumento de temperatura) entre las
+superficies. Aceptando este postulado podríamos medir el calor en
+unidades de energía mecánica. La energía mecánica como la potencial o
+la cinética se miden en Joules en unidades SI, que se define como
+\begin{align*}
+  1\joule=\kilo\gram\; \meter^2\per\second^2\,.
+\end{align*}
+
+Precisamente fue el físico Británico James Prescott Joule el primer en
+apreciar que el calor en si mismo representa una forma de energía. A
+través de una serie de experimentos meticulosos sobre le calentamiento
+del agua por una rueda de paletas movidas por un cuerpo cayendo,
+mostró que la perdida de la energía mecánica por fricción estaba
+acompañada por la aparición de una cantidad de energía equivalente por
+fricción. Joule concluyó que el calor es una forma de energía y que la
+suma de la energía mecánica y la energía calórica de un sistema es
+conservada.
+
+Otra diferencia importante entre los dos sistemas es que el trabajo
+realizado por la fuerza gravitacional para el cambio de altura entre
+$y_0$ y $y$ es independiente de si el movimiento es puramente vertical
+o parabólico. Sin embargo, para el cuerpo desplazándose sobre la misma
+distancia en $x$ sobre una superficie con fricción pero siguiendo una
+trayectoria curva, la fuerza de fricción realiza un trabajo mayor y
+disipa más calor.
+
+
+
+
+
 \section{Fuerzas conservativas}
-En la naturaleza hay ciertas fuerzas, como la de la gravedad por ejemplo, que tienen una propiedad muy especial llamada \emph{conservativa}. Si calculamos el trabajo hecho por una fuerza al mover un objeto de un punto a otro a lo largo de una trayectoria curvada, en general el trabajo depende de la curva, pero en algunos casos especiales no. Si el trabajo no depende de la curva, decimos que la fuerza es conservativa. En otras palabras, si la integral de línea de la fuerza veces la distancia para ir de la posición 1 a 2 es calculada lo largo de una trayectoria $A$ y entonces a lo largo de $B$ y se obtiene lo mismo, y si es cierto para éste par de números a lo largo de \emph{todas las curvas}, y si pasa sin importar el par de números que usemos, entonces decimos que la fuerza es conservativa. En tales casos el trabajo se puede calcular de una manera simple, y podemos dar una fórmula para el resultado.
+En la naturaleza hay ciertas fuerzas, como la de la gravedad por
+ejemplo, que tienen una propiedad muy especial llamada
+\emph{conservativa}. Si calculamos el trabajo hecho por una fuerza al
+mover un objeto de un punto a otro a lo largo de una trayectoria
+curvada, en general (como en el caso de la fuerza de fricción) el
+trabajo depende de la curva, pero en algunos casos especiales no. Si
+el trabajo no depende de la curva, decimos que la fuerza es
+conservativa. En otras palabras, si la integral de línea de la fuerza
+veces la distancia para ir de la posición 1 a 2 es calculada lo largo
+de una trayectoria $A$ y entonces a lo largo de $B$ y se obtiene lo
+mismo, y si es cierto para éste par de números a lo largo de
+\emph{todas las curvas}, y si pasa sin importar el par de números que
+usemos, entonces decimos que la fuerza es conservativa. En tales casos
+el trabajo se puede calcular de una manera simple, y podemos dar una
+fórmula para el resultado.
 
 Sea el trabajo de ir de un punto $P$ a otro punto del espacio: $-U(x,y,z)$, entonces si la fuerza es conservativa (manteniendo presente que tenemos integrales de línea)
 
@@ -249,7 +389,7 @@ se llama \emph{gradiente} y convierte una función escalar en varias variables e
 \begin{align}
   \int_C\mathbf{F}\cdot d\mathbf{r}=U(\mathbf{r}_a)-U(\mathbf{r}_b)
 \end{align}
-Generalizando el caso de la integración normal en una variable000,
+Generalizando el caso de la integración normal en una variable,
 $-U(\mathbf{r})$ se podría ver como el ``antigradiente'' de
 $\mathbf{F}$. El concepto de fuerza conservativa tiene su contraparte
 matemática para establecer teoremas de integrabilidad de funciones de
@@ -349,53 +489,68 @@ de donde
 \end{itemize}
 
 
-\begin{itemize}
-\item[\textbf{Ejemplo:}] Un cuerpo de masa $m_1$ se desliza desde el
+\example{}
+\label{ex:polea}
+
+
+ Un cuerpo de masa $m_2$ se desliza desde el
   reposo sobre una mesa sin fricción debido al peso de un bloque de
-  masa $m_2>m_1$ que cae desde una altura $y_0$ y con el cual está
-  conectado a través de una polea ideal. % ver figura
+  masa $m_1>m_2$ que cae desde una altura $y_0$ y con el cual está
+  conectado a través de una polea ideal. Ver figura~\ref{fig:poleaideale}
 
 La conservación de energía se aplica al sistema completo:
 \begin{align}
   \text{Energía mecánica inicial de los dos bloques}=
 \text{Energía mecánica final de los dos bloques}
 \end{align}
-Como los dos bloque se mueven con la misma rapidez $v$, y asumiendo
-sin perdida de generalidad que la altura final del bloque 2 es cero,
-tenemos
-\begin{align}
-  m_2gy_0=&\tfrac{1}{2}m_1 v^2+\tfrac{1}{2}m_2 v^2\nonumber\\
-  =&\tfrac{1}{2}(m_1+m_2) v^2\,,
-\end{align}
+Como los dos bloques se mueven con la misma rapidez $v$, y asumiendo
+sin perdida de generalidad que la altura final del bloque 1 es cero,
+tenemos (asumiendo que la altura de la mesa es $h$)
+
+\begin{frame}
+  \begin{figure}
+    \centering
+    \includegraphics[scale=0.5]{poleaideal}
+    \caption{Polea ideal}
+    \label{fig:poleaideale}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{align*}
+  m_1gy_0+\cancel{m_2gh}=&\tfrac{1}{2}m_1 v^2+\tfrac{1}{2}m_2 v^2+\cancel{m_2gh}\phantom{\color{red}+Q}\nonumber\\
+ \phantom{\color{red}-\mu m_2 g y_0+}m_1gy_0=&\tfrac{1}{2}m_1 v^2+\tfrac{1}{2}m_2 v^2
+  =\tfrac{1}{2}(m_1+m_2) v^2\,,
+\end{align*}
 despejando $v$, obtenemos
-\begin{align}
-  v^2=\frac{2m_2}{m_1+m_2}gy_0\,.
-\end{align}
+\begin{align*}
+  v^2=2gy_0\,\frac{m_1\phantom{\color{red}-\mu m_2}}{m_1+m_2}\,.
+\end{align*}
 Para un movimiento bajo aceleración constante, y teniendo en cuenta que la altura final es cero
-\begin{align}
-  0=&y_0-\tfrac{1}{2}a\Delta t^2\nonumber\\
+\begin{align*}
+  0=&y_0-\tfrac{1}{2}a\Delta t^2\,,&
   v=&-a\Delta t\,,
-\end{align}
-tenemos
-\begin{align}
-  a^2 \Delta t^2=\frac{1}{2}\frac{2m_2}{m_1+m_2}ga\Delta t^2\,,
-\end{align}
+\end{align*}
+tenemos, de la última ecuación
+\begin{align*}
+  a^2 \Delta t^2=v^2
+  =&2gy_0\,\frac{m_1\phantom{\color{red}-\mu m_2}}{m_1+m_2}\nonumber\\
+  a^{\cancel{2}} \cancel{\Delta t^2}=&\frac{2}{2}g\,\cancel{a\Delta t^2}\,\frac{m_1\phantom{\color{red}-\mu m_2}}{m_1+m_2}\,,
+\end{align*}
 de donde
 \begin{align}
-  a=\frac{2m_2}{m_1+m_2}g
+\label{eq:acelfin}
+  a=g\,\frac{m_1\phantom{\color{red}-\mu m_2}}{m_1+m_2}
 \end{align}
 
-Usando directamente las leyes de Newton:
+\end{frame}
+Usando directamente las leyes de Newton, como hicimos en los problemas resueltos del capítulo de dinámica
 \begin{align}
-  T=&m_1 a\nonumber\\
-m_2g-T=&m_2 a\,,
+  T=&m_2 a\nonumber\\
+m_1g-T=&m_1 a\,,
 \end{align}
-donde $T$ es la tensión de la cuerda. Despejando $a$ obtenemos
-\begin{align}
-  a=\frac{m_2}{m_1+m_2}g\,.
-\end{align}
+donde $T$ es la tensión de la cuerda. Despejando $a$ obtuvimos el mismo resultado expresado en la ecuación \eqref{eq:polea} con $\mu=0$.
 
-\end{itemize}
 
 
 \begin{inprogress}
@@ -410,100 +565,6 @@ donde $T$ es la tensión de la cuerda. Despejando $a$ obtenemos
   \end{itemize}
 \end{inprogress}
 
-\subsection{Energía potencial de un resorte}
-Por sencillez consideremos el caso de un resorte que se mueve a lo largo del eje $x$. Para una elongación $x-x_0$ a partir de su posición de equilibrio $x_0$ la fuerza está dada por la Ley de Hooke
-\begin{align}
-  \mathbf{F}=-k(x-x_0)\hat{\mathbf{i}}\,.
-\end{align}
-El trabajo para ir de $a$ a $b$ es
-\begin{align}
-  W_{ab}=&\int \mathbf{F}\cdot d\mathbf{r}\nonumber\\
-  =&\int_{x_a}^{x_b} Fdx\nonumber\\
-  =&-k\int_{x_a}^{x_b} (x-x_o)dx\,.
-\end{align}
-
-De la siguiente energía potencial para el resorte:
-\begin{align}
-  U(x)=&\tfrac{1}{2}k{(x-x_0)^2}+C& C=&\text{contante}\,,
-\end{align}
-se puede obtener la fuerza conservativa
-\begin{align}
-  F=-\frac{\partial}{\partial x}U(x)=&-\frac{2}{2}k(x-x_0)\frac{\partial}{\partial x}(x-x_0)+0\nonumber\\
-=&-k(x-x_0)\,.
-\end{align}
-
-Por convención escogemos que la energía potencial sea cero en la posición de equilibrio:
-\begin{align}
-  U(x_0)=0=&\tfrac{1}{2}k{(x_0-x_0)^2}+C\nonumber\\
-  0=&C\,,
-\end{align}
-de modo que la energía potencial para el resorte es
-\begin{align}
-  U(x)=&\tfrac{1}{2}k{(x-x_0)^2}\,.
-\end{align}
-
-\begin{itemize}
-\item[\textbf{Ejemplo:}] En $t=0$ una masa atada a un resorte sobre
-  una superficie horizontal sin fricción, es
-  liberada desde el reposo a una distancia $x_i$ desde la posición de
-  equilibrio de un resorte. Encuentre la posición de la masa en
-  cualquier tiempo posterior. Asumamos sin perdida de generalidad que
-  la posición de equilibrio del resorte se encuentra en $x_0=0$
-
-Usando la conservación de la Energía Mecánica:
-\begin{align}
-  K_i+U_i=&K_f+U_f\nonumber\\
- \tfrac{1}{2}kx_i^2=&\tfrac{1}{2}m v^2+\tfrac{1}{2}kx^2\nonumber\\
- kx_i^2=&m v^2+kx^2\,,
-\end{align}
-despejando $v$:
-\begin{align}
-  v=\sqrt{\frac{k}{m}}\sqrt{x_i^2-x^2}
-\end{align}
-note que la conservación de energía implica que $x\le x_i$. Entonces
-\begin{align}
-  \frac{dx}{dt}=\sqrt{\frac{k}{m}}\sqrt{x_i^2-x^2}\,.
-\end{align}
-Reorganizando términos
-\begin{align}
-  \label{eq:intosc}
-  \frac{dx}{\sqrt{x_i^2-x^2}}=\omega dt\,,
-\end{align}
-donde hemos definido la frecuencia angula $\omega$ como:
-\begin{align}
-  \omega\equiv \sqrt{\frac{k}{m}}\,.
-\end{align}
-Integrando \eqref{eq:intosc}
-\begin{align}
-  \label{eq:intosc}
-  \int_{x_i}^x\frac{dx}{\sqrt{x_i^2-x^2}}=\omega\int_0^t dt\,,
-\end{align}
-\begin{align}
-\left.\sin^{-1}\left(\frac{x}{x_i}  \right)\right|_{x_i}^x=&\omega t\nonumber\\
-\sin^{-1}\left(\frac{x}{x_i} \right)-\sin^{-1}\left(1\right)=&\omega t\nonumber\\
-\sin^{-1}\left(\frac{x}{x_i} \right)-\frac{\pi}{2}=&\omega t\,,
-\end{align}
-despejando $x$, tenemos
-\begin{align}
-  x=x_i\sin\left(\omega t +\frac{\pi}{2}\right)
-\end{align}
-o
-\begin{align}
-  x=x_i\cos(\omega t)
-\end{align}
-
-  
-%\left(  \right)
-\end{itemize}
-
-\begin{inprogress}
-  \subsection{Estabilidad}
-
-\section{Diagramas de energía}
-
-\section{Oscilaciones pequeñas en un sistema ligado}
-
-\end{inprogress}
 
 \section{Fuerzas no conservativas}
 La fuerza total se puede escribir como
@@ -530,21 +591,230 @@ Si definimos la energía mecánica por
 \end{align}
 tenemos
 \begin{align}
-  E_a-E_a=-W_{ba}^{\text{nc}}\,.
+  E_b-E_a=W_{ba}^{\text{nc}}\,.
 \end{align}
+
 Si definimos $Q=-W_{ab}$ como la energía disipada: la diferencia entre
 la energía mecánica inicial y final
 \begin{align}
-   E_a-E_a=Q.
+  E_a=&E_b-W_{ba}^{\text{nc}}\nonumber\\
+   E_a=&E_b+Q.
 \end{align}
 En el caso por ejemplo de la un movimiento en presencia de una fuerza
 no conservativa como la fricción, $Q$ corresponde a la energía
 disipada en forma de calor.
+
+En el caso del ejemplo asociado a la figura~\ref{fig:poleaideale}, si consideremos que entre las dos superficies fricción, esta realiza un trabajo que se disipa en calor $Q$, a medida que el cuerpo de masa $m_1$ cae una distancia $y_0$ dado por
+\begin{align*}
+    {\color{red}Q}=-W_{ba}=&\int_C \mathbf{F}\cdot d\mathbf{r}\nonumber\\
+=&\int_C
+\begin{pmatrix}
+  -\mu m_2g,&0,&0
+\end{pmatrix}\cdot
+\begin{pmatrix}
+dx,&dy,&dz  
+\end{pmatrix}\nonumber\\
+=&-(-\mu m_2 g)\int_0^{y_0}dx\nonumber\\
+&={\color{red}\mu m_2g y_0\,,}
+\end{align*}
+donde $\mu$, es el coeficiente de fricción y hemos usado la ligadura
+que la distancia recorrida vertical es la misma que la distancia
+horizontal, pues la cuerda es ideal. Repitiendo los pasos que dieron
+lugar a la ec.\eqref{eq:acelfin}
+
+
+\begin{frame}
+\begin{align*}
+  m_1gy_0+\cancel{m_2gh}=&\tfrac{1}{2}m_1 v^2+\tfrac{1}{2}m_2 v^2+\cancel{m_2gh}{\color{red}+Q}\nonumber\\
+ {\color{red}-\mu m_2 g y_0+}m_1gy_0=&\tfrac{1}{2}m_1 v^2+\tfrac{1}{2}m_2 v^2
+  =\tfrac{1}{2}(m_1+m_2) v^2\,,
+\end{align*}
+despejando $v$, obtenemos
+\begin{align*}
+  v^2=2gy_0\,\frac{m_1{\color{red}-\mu m_2}}{m_1+m_2}\,.
+\end{align*}
+Para un movimiento bajo aceleración constante, y teniendo en cuenta que la altura final es cero
+\begin{align*}
+  0=&y_0-\tfrac{1}{2}a\Delta t^2\,,&
+  v=&-a\Delta t\,,
+\end{align*}
+tenemos, de la última ecuación
+\begin{align*}
+  a^2 \Delta t^2=v^2
+  =&2gy_0\,\frac{m_1{\color{red}-\mu m_2}}{m_1+m_2}\nonumber\\
+  a^{\cancel{2}} \cancel{\Delta t^2}=&\frac{2}{2}g\,\cancel{a\Delta t^2}\,\frac{m_1{\color{red}-\mu m_2}}{m_1+m_2}\,,
+\end{align*}
+de donde
+\begin{align}
+\label{eq:acelfinmu}
+  a=g\,\frac{m_1{\color{red}-\mu m_2}}{m_1+m_2}
+\end{align}
+
+\end{frame}
+
+\noindent
+que coincide exactamente con el resultado obtenido en la ecuación \eqref{eq:polea} utilizando las ecuaciones de la dinámica. 
+
+\begin{frame}
+  \begin{block}{Recomendación}
+    \emph{Siempre que pueda, resuelva los problemas por dos métodos diferentes y compruebe que obtiene la misma respuesta!}
+    \begin{center}
+          \begin{tabular}{cc}
+      Ecuaciones de movimiento & Teorema trabajo y energía\\
+      $\displaystyle a=g\,\frac{m_1{\color{red}-\mu m_2}}{m_1+m_2}$&
+      $\displaystyle a=g\,\frac{m_1{\color{red}-\mu m_2}}{m_1+m_2}$\\
+    \end{tabular}
+    \end{center}
+  \end{block}
+\end{frame}
+
 \begin{inprogress}
   \begin{itemize}
   \item[\textbf{Ejemplo:}] \textbf{Bloque deslizándose por un plano
       inclinado (Ejemplo 4.17 de Klepner)}\\
   \end{itemize}
+\end{inprogress}
+
+
+\subsection{Energía potencial de un resorte}
+Por sencillez consideremos el caso de un resorte que se mueve a lo largo del eje $x$, como se muestra en la figura~\ref{fig:resorte}. Para una elongación $x-x_0$ a partir de su posición de equilibrio $x_0$ la fuerza está dada por la Ley de Hooke
+\begin{align}
+  \mathbf{F}=-k(x-x_0)\hat{\mathbf{i}}\,.
+\end{align}
+\begin{frame}
+  \begin{figure}
+    \centering
+%\only<1>%
+{\includegraphics[scale=0.5]{resorte1}}
+%\only<2>{\includegraphics[scale=0.5]{resorte2}}%
+%\only<3>{\includegraphics[scale=0.5]{resorte3}}%
+    \caption{Resorte (Adapatado de Wikipedia)}
+    \label{fig:resorte}
+  \end{figure}
+\end{frame}
+
+El trabajo para ir de $a$ a $b$ es
+\begin{align}
+  W_{ab}=&\int \mathbf{F}\cdot d\mathbf{r}\nonumber\\
+  =&\int_{x_a}^{x_b} Fdx\nonumber\\
+  =&-k\int_{x_a}^{x_b} (x-x_0)dx\nonumber\\
+  =&-\tfrac{1}{2}k \left.
+    (x-x_0)^2\right|_{x_0}^x\nonumber\\
+  =&-\tfrac{1}{2}k (x-x_0)^2+0\nonumber\\
+  =&+0+C-(\tfrac{1}{2}k (x-x_0)^2+C)\nonumber\\
+  =&U(x_0)-U(x)\,.
+\end{align}
+Y viceversa: de la siguiente energía potencial para el resorte,
+\begin{align}
+  U(x)=&\tfrac{1}{2}k{(x-x_0)^2}+C& C=&\text{contante}\,,
+\end{align}
+se puede obtener la fuerza conservativa
+\begin{align}
+  F=-\frac{\partial}{\partial x}U(x)=&-\frac{2}{2}k(x-x_0)\frac{\partial}{\partial x}(x-x_0)+0\nonumber\\
+=&-k(x-x_0)\,.
+\end{align}
+
+Por convención escogemos que la energía potencial sea cero en la posición de equilibrio:
+\begin{align}
+  U(x_0)=0=&\tfrac{1}{2}k{(x_0-x_0)^2}+C\nonumber\\
+  0=&C\,,
+\end{align}
+de modo que la energía potencial para el resorte es
+\begin{align}
+  U(x)=&\tfrac{1}{2}k{(x-x_0)^2}\,.
+\end{align}
+
+\example{}
+\label{ex:resorte}
+
+En $t=0$ una masa atada a un resorte sobre
+una superficie horizontal sin fricción, es
+liberada desde el reposo a una distancia $x_i$ desde la posición de
+equilibrio de un resorte. Encuentre la posición de la masa en
+  cualquier tiempo posterior. Asumamos sin perdida de generalidad que
+  la posición de equilibrio del resorte se encuentra en $x_0=0$
+
+Usando la conservación de la Energía Mecánica:
+\begin{align}
+  K_i+U_i=&K_f+U_f\nonumber\\
+ \tfrac{1}{2}kx_i^2=&\tfrac{1}{2}m v^2+\tfrac{1}{2}kx^2\nonumber\\
+ kx_i^2=&m v^2+kx^2\,,
+\end{align}
+despejando $v$:
+\begin{align}
+  v=\sqrt{\frac{k}{m}}\sqrt{x_i^2-x^2}
+\end{align}
+note que la conservación de energía implica que $x\le x_i$. Entonces
+\begin{align}
+  \frac{dx}{dt}=\sqrt{\frac{k}{m}}\sqrt{x_i^2-x^2}\,.
+\end{align}
+Reorganizando términos
+\begin{align}
+  \label{eq:intosc}
+  \frac{dx}{\sqrt{x_i^2-x^2}}=\omega dt\,,
+\end{align}
+donde hemos definido la frecuencia angular $\omega$ como:
+\begin{align}
+  \omega\equiv \sqrt{\frac{k}{m}}\,.
+\end{align}
+Integrando \eqref{eq:intosc}
+\begin{align}
+  \label{eq:intosc}
+  \int_{x_i}^x\frac{dx}{\sqrt{x_i^2-x^2}}=\omega\int_0^t dt\,,
+\end{align}
+\begin{align}
+\left.\sin^{-1}\left(\frac{x}{x_i}  \right)\right|_{x_i}^x=&\omega t\nonumber\\
+\sin^{-1}\left(\frac{x}{x_i} \right)-\sin^{-1}\left(1\right)=&\omega t\nonumber\\
+\sin^{-1}\left(\frac{x}{x_i} \right)-\frac{\pi}{2}=&\omega t\,,
+\end{align}
+despejando $x$, tenemos
+\begin{align}
+  x=x_i\sin\left(\omega t +\frac{\pi}{2}\right)
+\end{align}
+o
+\begin{align}
+  x=x_i\cos(\omega t)
+\end{align}
+
+  
+%\left(  \right)
+
+
+\begin{inprogress}
+  \subsection{Estabilidad}
+
+\section{Diagramas de energía}
+
+\section{Oscilaciones pequeñas en un sistema ligado}
+
+\end{inprogress}
+
+
+  
+\section{Potencia}
+Potencia es la tasa de cambio del trabajo realizado. Si una fuerza $\mathbf{F}$ actúa en un cuerpo que sufre un desplazamiento $\Delta\mathbf{r}$, tenemos que el trabajo en dicho segmento es de la ec.\eqref{eq:dW}
+\begin{align}
+  \Delta W_j=\mathbf{F}(\mathbf{r}_j)\cdot \Delta \mathbf{r}_j\,.
+\end{align}
+en el límite $\Delta t\to 0$
+\begin{align}
+  dW=\mathbf{F}\cdot d\mathbf{r}\,.
+\end{align}
+Definimos la potencia desarrollada por la fuerza como
+\begin{align}
+  P=\frac{dW}{dt}=&\mathbf{F}\cdot \frac{d\mathbf{r}}{dt}\nonumber\\
+=&\mathbf{F}\cdot \mathbf{v}\,.
+\end{align}
+La unidad de potencia en el sistema SI es el watt (W):
+\begin{align}
+  \unit{1}{\watt}=\unit{1}{\joule\per\second}\,.
+\end{align}
+La relación entre un caballo de fuerza y el watt es
+\begin{align}
+  1\;\text{hp}\approx \unit{746}{\watt}\,.
+\end{align}
+\begin{inprogress}
+  Ejemplos cualitativos de potencia 
 \end{inprogress}
 
 
@@ -901,32 +1171,6 @@ vectores de velocidad simplemente rotan en el ángulo de dispersión.
 
 
 
-  
-\section{Potencia}
-Potencia es la tasa de cambio del trabajo realizado. Si una fuerza $\mathbf{F}$ actúa en un cuerpo que sufre un desplazamiento $\Delta\mathbf{r}$, tenemos que el trabajo en dicho segmento es de la ec.\eqref{eq:dW}
-\begin{align}
-  \Delta W_j=\mathbf{F}(\mathbf{r}_j)\cdot \Delta \mathbf{r}_j\,.
-\end{align}
-en el límite $\Delta t\to 0$
-\begin{align}
-  dW=\mathbf{F}\cdot d\mathbf{r}\,.
-\end{align}
-Definimos la potencia desarrollada por la fuerza como
-\begin{align}
-  P=\frac{dW}{dt}=&\mathbf{F}\cdot \frac{\mathbf{r}}{dt}\nonumber\\
-=&\mathbf{F}\cdot \mathbf{v}\,.
-\end{align}
-La unidad de potencia en el sistema SI es el watt (W):
-\begin{align}
-  \unit{1}{\watt}=\unit{1}{\joule\per\second}\,.
-\end{align}
-La relación entre un caballo de fuerza y el watt es
-\begin{align}
-  1\;\text{hp}\approx \unit{746}{\watt}\,.
-\end{align}
-\begin{inprogress}
-  Ejemplos cualitativos de potencia 
-\end{inprogress}
 
 
 \section{Problemas resueltos}
