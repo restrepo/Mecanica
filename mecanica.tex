@@ -24,6 +24,7 @@
 \usepackage{listings}
 %acroread /usr/share/doc/texlive-science-doc/latex/SIunits/SIunits.pdf
 \usepackage[squaren,mediumspace,mediumqspace]{SIunits} 
+%\usepackage{siunitx} 
 \usepackage[displaymath,textmath,sections,graphics,floats]{preview}
 %%%%%%%%% 
 \usepackage{comment}
@@ -76,6 +77,10 @@
 %\setlength{\topmargin}{-40pt}
 \def\lt{<} % compatibility with instiki
 \def\gt{>} % compatibility with instiki
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Example as section or envarimente
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1. First set the style
 \newtheoremstyle{example}{\topsep}{\topsep}%
      {}%         Body font
      {}%         Indent amount (empty = no indent, \parindent = para indent)
@@ -85,8 +90,14 @@
      {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}%         Thm head spec
 
    \theoremstyle{example}
+%2. Set enviroment name
+
    \newtheorem{example}{Example}[subsection]
-%%%%
+%%%%%%%%%%%%%%%
+\theoremstyle{definition}
+\newtheorem{ejemplo}{Ejemplo}[section]
+%\newtheorem[thm]{exmp}
+%%%%%%%%%
  \lstset{language=python
 %,inputencoding=utf8
 %,showspaces=false
@@ -114,9 +125,9 @@
 %\includeonly{intermov}
 %\includeonly{dinamica}
 %\includeonly{momentum}
-\includeonly{energia}
-%\includeonly{cinematica}
-%\includeonly{rigido}
+%\includeonly{energia}
+%%\includeonly{cinematica}
+\includeonly{rigido}
 %\includeonly{centrales}
 %\includeonly{oscilador}
 %\includeonly{relatividad}
