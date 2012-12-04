@@ -292,7 +292,7 @@ fig.~\ref{fig:centrodemasarigido}
 \end{figure}
 \end{frame}
 \begin{align}
-  \mathbf{L}=\sum_{i=1}^N\mathbf{L}_i=\sum_{i=1}^N \mathbf{r}_i\times m_i\dot{\mathbf{r}}_i
+  \mathbf{L}_{\text{total}}=\sum_{i=1}^N\mathbf{L}_i=\sum_{i=1}^N \mathbf{r}_i\times m_i\dot{\mathbf{r}}_i
 \end{align}
 Usando la relación entre las coordenas con respecto a una sistema
 externo y las coordenadas del centro de masa
@@ -301,7 +301,7 @@ externo y las coordenadas del centro de masa
 \end{align}
 
 \begin{align}
-   \mathbf{L}=&\sum_{i=1}^N
+   \mathbf{L}_{\text{total}}=&\sum_{i=1}^N
    \left(\mathbf{R}+\mathbf{r}_i'\right)\times m_i
    \left(\dot{\mathbf{R}}+\dot{\mathbf{r}}_i'\right)
 \end{align}
@@ -313,15 +313,22 @@ Analicemos término a término
   \left(\sum_{i=1}^N m_i\right)\dot{\mathbf{R}}\nonumber\\
   =&\mathbf{R}\times M\mathbf{V}\nonumber\\
   =&\mathbf{R}\times \mathbf{P}\nonumber\\
-  =&\mathbf{L}_{\text{ext}}\,,
+  =&\mathbf{L}_{\text{orb}}\,,
 \end{align*}
 donde $\mathbf{P}$ es el moméntum lineal total del cuerpo rígido con
-respecto al centro de masa y $\mathbf{L}_{\text{ext}}$ es moméntum angular
-ocasionado por las fuerzas externas al cuerpo rígido
+respecto al centro de masa y el moméntum angular orbital,
+$\mathbf{L}_{\text{orb}}$, es moméntum angular ocasionado por las
+fuerzas externas al cuerpo rígido
 \item
-  \begin{align*}
-    \sum_{i=1}^N\mathbf{r}_i'\times m_i \dot{\mathbf{R}}=0\,.
-  \end{align*}
+  \begin{align}
+    \label{eq:rmr}
+    \sum_{i=1}^N\mathbf{r}_i'\times m_i \dot{\mathbf{R}}
+    =&\sum_{i=1}^N m_i\left(\mathbf{r}_i-\mathbf{R}\right)\times  \dot{\mathbf{R}}\nonumber\\
+    =&\left(M\frac{\sum_{i=1}^N m_i\mathbf{r}_i}{M}- M \mathbf{R}\right)\times  \dot{\mathbf{R}}\nonumber\\
+    =&\left(M\mathbf{R}- M \mathbf{R}\right)\times  \dot{\mathbf{R}}\nonumber\\
+    =&\mathbf{0}\,.
+  \end{align}
+  %
 \item
   \begin{align*}
     \sum_{i=1}^N \mathbf{R}\times m_i \dot{\mathbf{r}}_i'=0\,.
@@ -340,13 +347,13 @@ donde hemos definido el momentum angular intrínseco del cuerpo rígido $\mathbf
 Que puede escribirse en el sistema de centro de masa, $\mathbf{r}_i'$, como % detalles en notas del cuaderno
 \begin{align}
   \label{eq:lcm}
-   \mathbf{L}=&\mathbf{L}_{\text{ext}}+\mathbf{L}_0\nonumber\\
+   \mathbf{L}_{\text{total}}=&\mathbf{L}_{\text{orb}}+\mathbf{L}_0\nonumber\\
    =&\mathbf{R}\times M\mathbf{V}+\sum_{i=1}^N \mathbf{r}_i'\times m_i\dot{\mathbf{r}}_i'\,,
 \end{align}
 Desarrollando está expresión se puede obtener
 \begin{align}
   \label{eq:tensorI}
-  \mathbf{L}=\mathbf{R}\times M\mathbf{V}+\mathbb{I}\boldsymbol{\omega}\,,
+  \mathbf{L}_{\text{total}}=\mathbf{R}\times M\mathbf{V}+\mathbb{I}\boldsymbol{\omega}\,,
 \end{align}
 
 \ejercicio{}Obtener la ec.~\eqref{eq:tensorI}.
@@ -359,12 +366,11 @@ y el moméntum angular alrededor del centro de masa es
 
 El moméntum angular puede entonces dividirse en dos partes
 \begin{itemize}
-\item $\mathbf{L}_{\text{trans}}$: Momento angular debido a la rotación del cuerpo sobre su centro de masa
-\item $\mathbf{L}_{\text{rot}}$: Momento angular debido al movimiento del centro de masa con respecto al origen del sistema inercial de coordenadas.
+\item $\mathbf{L}_0$: Momento angular debido a la rotación del cuerpo sobre su centro de masa
+\item $\mathbf{L}_{\text{orb}}$: Momento angular debido al movimiento del centro de masa con respecto al origen del sistema inercial de coordenadas.
 \end{itemize}
 
 
-%\left(\right)
 \section{Torque}
 
 Definimos el torque sobre un cuerpo rígido como la derivada temporal de su moméntum angular:
@@ -376,29 +382,24 @@ Esta ecuación define el \emph{Principio de Moméntum Angular}.
 
 Tomando la derivada temporal en la ec.~(\ref{eq:lcm}), y usando
 \begin{align}
-  \mathbf{F}=\sum_{i=1}^N\mathbf{f}_i\,,
+  \mathbf{F}=\sum_{i=1}^N\mathbf{F}_i\,,
 \end{align}
 tenemos
 \begin{align}
-  \boldsymbol{\tau}=&\sum_{i=1}^N\mathbf{r}_i'\times \mathbf{f}_i+\mathbf{R}\times\mathbf{F}\,,
+  \boldsymbol{\tau}=&\sum_{i=1}^N\mathbf{r}_i\times \mathbf{F}_i\nonumber\\
+=&\sum_{i=1}^N\left(\mathbf{r}_i'+\mathbf{R}\right)\times \mathbf{F}_i\nonumber\\
+=&\sum_{i=1}^N\mathbf{r}_i'\times \mathbf{F}_i+\mathbf{R}\times \sum_{i=1}^N\mathbf{F}_i\nonumber\\
+=&\sum_{i=1}^N\mathbf{r}_i'\times \mathbf{F}_i+\mathbf{R}\times\mathbf{F}\,,
 \end{align}
 El primer termino corresponde al torque sobre el centro de masa debido a las diversas fuerzas externas, y el segundo término es el torque debido a la fuerza externa total actuando sobre el centro de masa
 
+%\left(\right)
 Similarmente, tomando la derivada de la expresión para el moméntum en la ec.~(\ref{eq:tensorI})
 \begin{align}
-  \boldsymbol{\tau}=&\mathbb{I}\frac{d\boldsymbol{\omega}}{dt}+\mathbf{R}\times M\frac{\mathbf{V}}{dt}\nonumber\\
+  \boldsymbol{\tau}=&\mathbb{I}\frac{d\boldsymbol{\omega}}{dt}+\mathbf{R}\times M\frac{d\mathbf{V}}{dt}\nonumber\\
 =&\mathbb{I}\boldsymbol{\alpha}+\mathbf{R}\times M\mathbf{a}\,.
 \end{align}
 
-
-En el caso de una partícula, si una fuerza ejerce un torque relativo a una localización $A$
-\begin{align}
-  \boldsymbol{\tau}_A=\mathbf{r}_A\times\mathbf{F}
-\end{align}
-dicho torque causa cambios en el moméntum angular dados por el principio de moméntum angular
-\begin{align}
-  \frac{d\mathbf{L}}{dt}=&\boldsymbol{\tau}_A&\text{ó}\qquad \Delta\mathbf{L}\approx& \boldsymbol{\tau}_A \Delta t\,.
-\end{align}
 
 
 
@@ -425,11 +426,20 @@ caso de las orbitas planetarias.
 \section{Energía cinética rotacional}
 Expresando la energía cinética de un cuerpo rígido 
 \begin{align}
-  K\frac{1}{2}\sum_{i=1}^N m_i v_i^2\,,
+  K=\frac{1}{2}\sum_{i=1}^N m_i v_i^2\,,
 \end{align}
 en la coordenadas del centro de masa, tenemos
 \begin{align}
-  K=&\frac{1}{2}M V^2+\frac{1}{2}\boldsymbol{\omega}\cdot
+  K=&\frac{1}{2}\sum_{i=1}^N m_i |\mathbf{v}_i|^2\nonumber\\
+  =&\frac{1}{2}\sum_{i=1}^N m_i |\mathbf{v}_i'+\mathbf{V}'|^2\,.
+\end{align}
+El producto escalar cruzado de
+\begin{align*}
+  \sum_{i=1}^N m_i \mathbf{v}_i'\cdot\mathbf{V}'=0\,,
+\end{align*}
+si se sigue el mismo análisis que en la ec.~\eqref{eq:rmr}.
+\begin{align}
+ K =&\frac{1}{2}M V^2+\frac{1}{2}\boldsymbol{\omega}\cdot
   \mathbf{L}_0\nonumber\\
 0&\frac{1}{2}M V^2+\frac{1}{2}\boldsymbol{\omega}\cdot
   \left(\mathbb{I}\boldsymbol{\omega}\right)\,.
