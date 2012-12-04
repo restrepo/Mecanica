@@ -238,7 +238,6 @@ en general
   \mathbf{v}=\boldsymbol{\omega}\times\mathbf{r}\,.
 \end{align}
 
-%\left(\right)
 
 \section{Momentum angular y torque para una partícula}
 Definimos el momento angular para una partícula de moméntum $\mathbf{p}$ como
@@ -307,20 +306,52 @@ externo y las coordenadas del centro de masa
    \left(\dot{\mathbf{R}}+\dot{\mathbf{r}}_i'\right)
 \end{align}
 Analicemos término a término
+\begin{enumerate}
+\item 
 \begin{align*}
-  \sum_{i=1}^N\mathbf{R}\times m_i\dot{\mathbf{R}}
+  \sum_{i=1}^N\mathbf{R}\times m_i\dot{\mathbf{R}}=&\mathbf{R}\times
+  \left(\sum_{i=1}^N m_i\right)\dot{\mathbf{R}}\nonumber\\
+  =&\mathbf{R}\times M\mathbf{V}\nonumber\\
+  =&\mathbf{R}\times \mathbf{P}\nonumber\\
+  =&\mathbf{L}_{\text{ext}}\,,
 \end{align*}
+donde $\mathbf{P}$ es el moméntum lineal total del cuerpo rígido con
+respecto al centro de masa y $\mathbf{L}_{\text{ext}}$ es moméntum angular
+ocasionado por las fuerzas externas al cuerpo rígido
+\item
+  \begin{align*}
+    \sum_{i=1}^N\mathbf{r}_i'\times m_i \dot{\mathbf{R}}=0\,.
+  \end{align*}
+\item
+  \begin{align*}
+    \sum_{i=1}^N \mathbf{R}\times m_i \dot{\mathbf{r}}_i'=0\,.
+  \end{align*}
+\item
+  \begin{align*}
+    \sum_{i=1}^N \mathbf{r}_i'\times m_i \dot{\mathbf{r}}_i'=&
+    \sum_{i=1}^N \mathbf{r}_i'\times m_i \mathbf{v}_i'\nonumber\\
+    =&\mathbf{L}_0\,,
+  \end{align*}
+donde hemos definido el momentum angular intrínseco del cuerpo rígido $\mathbf{L}_0$
+
+
+\end{enumerate}
 
 Que puede escribirse en el sistema de centro de masa, $\mathbf{r}_i'$, como % detalles en notas del cuaderno
 \begin{align}
   \label{eq:lcm}
-   \mathbf{L}=\mathbf{R}\times M\mathbf{V}+\sum_{i=1}^N \mathbf{r}_i'\times m_i\dot{\mathbf{r}}_i'\,,
+   \mathbf{L}=&\mathbf{L}_{\text{ext}}+\mathbf{L}_0\nonumber\\
+   =&\mathbf{R}\times M\mathbf{V}+\sum_{i=1}^N \mathbf{r}_i'\times m_i\dot{\mathbf{r}}_i'\,,
 \end{align}
-
+Desarrollando está expresión se puede obtener
 \begin{align}
   \label{eq:tensorI}
   \mathbf{L}=\mathbf{R}\times M\mathbf{V}+\mathbb{I}\boldsymbol{\omega}\,,
 \end{align}
+
+\ejercicio{}Obtener la ec.~\eqref{eq:tensorI}.
+
+
 y el moméntum angular alrededor del centro de masa es
 \begin{align}
   \mathbf{L}_0=\mathbb{I}\boldsymbol{\omega}\,.
@@ -332,6 +363,8 @@ El moméntum angular puede entonces dividirse en dos partes
 \item $\mathbf{L}_{\text{rot}}$: Momento angular debido al movimiento del centro de masa con respecto al origen del sistema inercial de coordenadas.
 \end{itemize}
 
+
+%\left(\right)
 \section{Torque}
 
 Definimos el torque sobre un cuerpo rígido como la derivada temporal de su moméntum angular:
