@@ -1,3 +1,4 @@
 master file: mecanica.tex
 $ pdflatex mecanica
+svg sources of figures in ./figures dir
 
