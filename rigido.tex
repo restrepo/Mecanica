@@ -438,13 +438,29 @@ El producto escalar cruzado de
   \sum_{i=1}^N m_i \mathbf{v}_i'\cdot\mathbf{V}'=0\,,
 \end{align*}
 si se sigue el mismo análisis que en la ec.~\eqref{eq:rmr}.
+\begin{align*}
+ K =&\frac{1}{2}M V^2+\frac{1}{2}\sum_{i=1}^N m_i \mathbf{v}_i'\cdot\mathbf{v}_i'\nonumber\\
+ =&\frac{1}{2}M V^2+\frac{1}{2}\sum_{i=1}^N m_i (\boldsymbol{\omega}\times \mathbf{r}_i')\cdot\mathbf{v}_i'\,,
+\end{align*}
+Usando la identidad
 \begin{align}
- K =&\frac{1}{2}M V^2+\frac{1}{2}\boldsymbol{\omega}\cdot
+  (\mathbf{A}\times\mathbf{B})\cdot \mathbf{C}=\mathbf{A}\cdot(\mathbf{B}\times\mathbf{C})\,,
+\end{align}
+tenemos
+\begin{align}
+K =&\frac{1}{2}M V^2+\frac{1}{2}\sum_{i=1}^N m_i \boldsymbol{\omega}\cdot( \mathbf{r}_i'\times\mathbf{v}_i')\nonumber\\
+=&\frac{1}{2}M V^2+\frac{1}{2}\boldsymbol{\omega}\cdot
+\left(\sum_{i=1}^N m_i  \mathbf{r}_i'\times\mathbf{v}_i'\right)\nonumber\\
+    =&\frac{1}{2}M V^2+\frac{1}{2}\boldsymbol{\omega}\cdot
   \mathbf{L}_0\nonumber\\
 0&\frac{1}{2}M V^2+\frac{1}{2}\boldsymbol{\omega}\cdot
   \left(\mathbb{I}\boldsymbol{\omega}\right)\,.
 \end{align}
 Cuando $\mathbf{L}_0$ y $\boldsymbol{\omega}$ están referidos a los ejes principales de inercia
+\begin{align}
+  \mathbf{L}_0=\mathbb{I}\boldsymbol{\omega}=  \left(I_1\omega_1,I_2\omega_2,I_3\omega_3  \right)\,,
+\end{align}
+y
 \begin{align}
   K=\frac{1}{2}MV^2+\frac{1}{2}I_1\omega_1^2+\frac{1}{2}I_2\omega_2^2+\frac{1}{2}I_3\omega_3^2\,.
 \end{align}
@@ -513,7 +529,122 @@ y $l=\left|\mathbf{R}_T\right|$ es la distancia entre los ejes de modo que
 \subsection{Varilla uniforme}
 
 \subsection{Disco uniforme}
+Masa $M$ y radio $R$
+\begin{align}
+  I_{\text{CM}}=\frac{1}{2}MR^2
+\end{align}
+\subsection{Cilindro uniforme}
+Masa $M$ y radio $R$
+\begin{align}
+  I_{\text{CM}}=\frac{1}{2}MR^2
+\end{align}
+
 \subsection{Esfera}
+
+\section{Movimiento de rodadura sin deslizamiento}
+
+Si un sistema formado por un cuerpo rígido simétrico rueda sin
+deslizar el movimiento de rodadura se puede considerar como la suma de
+una traslación del centro de masa y una rotación pura alrededor del
+centro de masa. 
+Entonces, podemos hacer una reducción en el punto de contacto de forma
+que el movimiento de rodadura es equivalente a una rotación pura
+aplicada en el punto de contacto $P$
+
+
+
+Para ilustrar estos conceptos, consideremos un cuerpo uniforme que
+rueda sin deslizar sobre su eje de simetría por un plano inclinado por
+un ángulo $\theta$. Vamos a calcular la aceleración del cuerpo.
+
+Ecuaciones de movimiento para los torques con respecto al centro de
+masa. Tomemos el eje $x$ paralelo al plano inclinado
+
+Primero consideraremos el movimiento del cuerpo como una traslación y
+una rotación. En tal caso se deben cumplir las ecuaciones de la
+dinámica de traslación
+\begin{enumerate}
+\item Sumatoria de fuerzas en $x$ 
+  \begin{align}
+    \label{eq:fxcil}
+    Mg\sin\theta-f=&M a_c\,.
+  \end{align}
+\item Sumatoria de fuerzas en $y$
+  \begin{align*}
+    Mg\cos\theta-N=&0\,.
+  \end{align*}
+\end{enumerate}
+y la dinámica de rotación. Es decir, el torque con respecto al centro de masa. 
+\begin{align}
+  \label{eq:tcmcil}
+  Rf=&I_{\text{CM}}\alpha\,.
+\end{align}
+Sin embargo vemos que la ecuación para la sumatoria de fuerzas en $y$ no es necesaria pues sólo se requieren dos ecuaciones para las dos incógnitas $f$ y $a_c$, una vez tenemos en cuenta la ecuación de ligadura
+\begin{align}
+  \label{eq:acal}
+  a_c=R\alpha\,.
+\end{align}
+
+Ahora consideremos el movimiento del cuerpo como una rotación pura si nos centramos en  el \emph{eje instantáneo de rotación}: un eje perpendicular que pasa por el punto de contacto $P$. 
+\begin{align*}
+  R\sin\theta M g=&I_p\alpha\nonumber\\
+  =&(I_{\text{CM}}+MR^2)\alpha\,,
+\end{align*}
+
+Junto con la ecuación de ligadura
+
+Para ver que las dos formas de abordar el problema son equivalentes, podemos reemplazar \eqref{eq:fxcil} en \eqref{eq:tcmcil} y usar \eqref{eq:acal} 
+\begin{align*}
+  R(Mg\sin\theta-M a_c)=&I_{\text{CM}}\alpha\nonumber\\
+  RMg\sin\theta=&I_{\text{CM}}\alpha+M R a_c\nonumber\\
+  R\sin\theta Mg=&I_{\text{CM}}\alpha+M R^2\alpha\nonumber\\
+  R\sin\theta Mg=&(I_{\text{CM}}+M R^2)\alpha\,.
+\end{align*}
+Podemos entonces ver que la opción de usar el eje de rotación instantáneo, combinado con el teorema de ejes paralelos, permiten simplificar significativamente el problema.
+
+Podemos entonces encontrar la aceleración angular del cuerpo
+\begin{align}
+  \alpha=\frac{R\sin\theta M g}{I_{\text{CM}}+MR^2}\,,
+\end{align}
+y la correspondiente aceleración
+\begin{align}
+  \label{eq:acelcil}
+  a_c=&\frac{R^2\sin\theta M g}{I_{\text{CM}}+MR^2}\nonumber\\
+  =&\frac{\sin\theta }{M+I_{\text{CM}}/R^2}M g\,.
+\end{align}
+
+
+Mientras existe rodadura (rueda sin deslizar) el suelo ejerce una
+fuerza de rozamiento sobre la esfera, es una fuerza de rozamiento
+estática $f \le\mu N$ , y no hay disipación de energía mecánica. 
+Por lo tanto en el movimiento de rodadura la energía mecánica se
+conserva.
+
+De hecho, aplicando la conservación de la energía, y asumiendo que el cuerpo parte del reposo (sistema de referencia en el piso)
+\begin{align*}
+  Mgy=&\frac{1}{2}Mv_c^2+\frac{1}{2}I_{\text{CM}}\omega^2\nonumber\\
+  =&\frac{1}{2}Mv_c^2+\frac{1}{2R^2}I_{\text{CM}}v_c^2\nonumber\\
+  =&\frac{1}{2}\left(M+I_{\text{CM}}/R^2\right)v_c^2\,.
+\end{align*}
+asumiendo que el cuerpo recorre una distancia $h$ asociada con la altura vertical $y$, y considerando que
+\begin{align*}
+  v_c^2=2a_c h\,,
+\end{align*}
+entonces
+\begin{align*}
+  Mgh\sin\theta=&\frac{1}{2}v_c^2\left(M+I_{\text{CM}}/R^2\right)\nonumber\\
+  \cancel{2h}\sin\theta Mg=&\cancel{2h}a_c\left(M+I_{\text{CM}}/R^2\right)\nonumber\\
+  \sin\theta Mg=&\left(M+I_{\text{CM}}/R^2\right)a_c\,,
+\end{align*}
+y obtenemos de nuevo la ecuación para la aceleración \eqref{eq:acelcil}:
+\begin{align*}
+  a_c=\frac{\sin\theta}{M+I_{\text{CM}}/R^2}Mg\,.
+\end{align*}
+
+\ejercicio{}
+Calcular el ángulo crítico para el cual un cuerpo inicialmente en reposo sobre una superficie horizontal comienza a deslizar. Ayuda: ver 
+
+
 
 
 \begin{itemize}
@@ -526,10 +657,19 @@ y $l=\left|\mathbf{R}_T\right|$ es la distancia entre los ejes de modo que
     \end{align*}
 Justifique porqué dicha respuesta es incorrecta. 
 
+
+
 \item[\textbf{Solución:}] El cilindro podría moverse hacia la izquierda.
 
 
 \end{itemize}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.7]{cilindropol}
+  \caption{Cilindro}
+  \label{fig:cilindropol}
+\end{figure}
 
 \section{Problemas resueltos}
 
