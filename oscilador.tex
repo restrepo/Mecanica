@@ -17,8 +17,7 @@ Usando la ec.~\eqref{eq:restaur} tenemos
   \label{eq:osci}
   m\ddot{x}+kx=&0\nonumber\\
   \ddot{x}+\omega_0^2 x=&0\nonumber\\
-\end{align}
-donde hemos definido la \emph{frecuencia característica} del oscilador armónico como
+\end{align}donde hemos definido la \emph{frecuencia característica} del oscilador armónico como
 \begin{align*}
   \omega_0=\sqrt{\frac{k}{m}}\,.
 \end{align*}
@@ -104,23 +103,24 @@ y
 \end{align*}
 de modo que la energía mecánica del oscilador armónico coincide con su energía promedio.
 
-El oscilador armónico es un sistema ideal. En la práctica ningún sistema oscila por siempre pues está sometido a fuerzas de amortiguamiento no conservativas debidas a la fricción con el medio que afectan la amplitud (pero no la frecuencia) del oscilador con el tiempo. Una vez el oscilador esta en reposo deber ser forzado, con una fuerza periódica, para regresarlo a su estado de oscilación. Desde el punto de vista práctico es conveniente estudiar las caracterísitcas que debe tener la fuerza periódica para maximizar la amplitud inicial de oscilación y así aumentar el tiempo que dura el sistema oscilando antes de amortiguarse completamente. 
+El oscilador armónico es un sistema ideal. En la práctica ningún sistema oscila por siempre pues está sometido a fuerzas de amortiguamiento no conservativas debidas a la fricción con el medio que afectan la amplitud (pero no la frecuencia) del oscilador con el tiempo. Una vez el oscilador esta en reposo deber ser forzado, con una fuerza periódica, para regresarlo a su estado de oscilación. Desde el punto de vista práctico es conveniente estudiar las características que debe tener la fuerza periódica para maximizar la amplitud inicial de oscilación y así aumentar el tiempo que dura el sistema oscilando antes de amortiguarse completamente. 
 
 En adelante asumiremos que el oscilador se encuentra inicialmente en reposo en un sistema viscoso y veremos el efecto que tiene una fuerza periódica sobre su movimiento.
 
 \section{Oscilador forzado y amortiguado}
-Un oscilador forzado y amortiguado de masa $m$ sufre el efecto combinado de la fuerza restauradora $F_x$, la fuerza de fricción $f$ y una fuerza periódica $\mathcal{F}$, de modo que está sometido a la fuerza total
+Un oscilador forzado y amortiguado de masa $m$ sufre el efecto combinado de la fuerza restauradora $F_x$ (que depende de la elongación), la fuerza de fricción $f$ (que depende de la rapidez a la que se mueve el oscilador) y una fuerza periódica $\mathcal{F}$ (que depende del tiempo), de modo que está sometido a la fuerza total
 \begin{align*}
-  F_{\text{total}}=F_x+f+\mathcal{F}\,.
+  F_{\text{total}}=F_x(x)+\mathcal{F}(t)+f(v)\,.
 \end{align*}
 
 La fuerza de fricción sobre un objeto moviéndose a través de un fluido líquido o gaseoso  (a bajas velocidades) es usualmente proporcional a la rapidez de su movimiento\footnote{A velocidades altas la fuerza de fricción es proporcional al cuadrado de la rapidez}
 \begin{align*}
-  f=-b v\,,
+  f(v)=-b v\,,
 \end{align*}
-la constante de proporcionalidad de la forma y la masa del cuerpo, además de las propiedades del medio a través del cual se mueve el cuerpo. El fluido también se denomina medio viscoso. 
+la constante de proporcionalidad depende de la forma y la masa del cuerpo, además de las propiedades del medio a través del cual se mueve el cuerpo. 
+El fluido también se denomina medio viscoso. 
 
-Por ejemplo, si el cuerpo es una placa horizontal sobre la superficie de un líquido que se comporte como un \emph{fluido newtoniano}, por ejemplo el agua
+A modo de ilustración, si el cuerpo es una placa horizontal sobre la superficie de un líquido que se comporta como un \emph{fluido newtoniano}, como por ejemplo el agua
 \begin{align*}
   b=\mu\frac{A}{h}\,,
 \end{align*}
@@ -130,7 +130,7 @@ Sin perdida de generalidad se puede escribir la fuerza periódica aplicada sobre
 \begin{align*}
   \mathcal{F}(t)=\mathcal{F}_0\cos(\omega t)\,,
 \end{align*}
-donde $\omega$ es la frecuencia de la fuerza aplicada y es independiente de la frecuencia propia $\omega_0$. 
+donde $\omega$ es la frecuencia de la fuerza aplicada y en general es independiente de la frecuencia propia del oscilador $\omega_0$. 
 
 Con estas consideraciones la fuerza total queda
 \begin{align*}
@@ -152,7 +152,7 @@ donde $\gamma$ y $\omega^2$ tienen unidades de $1/\text{seg}$. En lugar de soluc
 y construimos una ecuación diferencial inhomogénea en términos de la variable compleja $z$
 \begin{align}
   \label{eq:oscforamoz}
-   \ddot x+i\ddot y+\gamma \dot x+i\gamma \dot y+\omega_0^2 x+i\omega_0^2 x=&
+   \ddot x+i\ddot y+\gamma \dot x+i\gamma \dot y+\omega_0^2 x+i\omega_0^2 y=&
    \frac{\mathcal{F}_0}{m}\left[\cos(\omega t)+i\sin(\omega t)\right]\nonumber\\
     \ddot z+\gamma \dot z+\omega_0^2 z=&\frac{\mathcal{F}_0}{m}e^{i\omega t}\,.
 \end{align}
@@ -207,7 +207,7 @@ Expandiendo la solución en \eqref{eq:propsol}
 Usando las ecs.~\eqref{eq:rphiz0}, llegamos finalmente a %detalles
 \begin{align}
   \label{eq:soluforzamo}
-  x=A(\omega)\cos(\omega t+\phi)\,,
+  x(t)=A(\omega)\cos(\omega t+\phi)\,,
 \end{align}
 donde
 \begin{align}
@@ -219,14 +219,14 @@ La solución queda completamente especificada sin tener que usar las condiciones
 
 
 \subsection{Oscilador forzado}
-En ausencia de fricción con el medio viscoso, $\gamma=0$ y
+En ausencia de fricción con el medio viscoso, $\gamma=0$ y la ec.~\eqref{eq:aomega} se reduce a
 \begin{align*}
   A(\omega)=&\frac{\mathcal{F}_0}{m}\frac{1}{\omega_0^2-\omega^2}\nonumber\\
   \phi=&\tan^{-1}0=0\,,
 \end{align*}
-y
+de modo que la solución \eqref{eq:soluforzamo} queda 
 \begin{align*}
-  x=\frac{\mathcal{F}_0}{m}\frac{1}{\omega_0^2-\omega^2}\cos(\omega t)
+  x(t)=\frac{\mathcal{F}_0}{m}\frac{1}{\omega_0^2-\omega^2}\cos(\omega t)
 \end{align*}
 La amplitud de oscilación $A(\omega)$ es máxima, de hecho infinita, cuando $\omega\to \omega_0$ %como se muestra en la figura
 
@@ -240,7 +240,7 @@ Para una cuerpo con condiciones iniciales que garanticen una oscilación con cie
 \begin{align*}
   z=z_0 e^{\alpha t}
 \end{align*}
-y siguiendo los pasos que dieron lugar a la ec.~\eqref{eq:soluz} (reemplazando $\omega\to -i\alpha$, obtenemos
+y siguiendo los pasos que dieron lugar a la ec.~\eqref{eq:soluz} (reemplazando $\omega\to -i\alpha$), obtenemos
 \begin{align*}
   \omega_0^2+\alpha \gamma+\alpha^2=0
 \end{align*}

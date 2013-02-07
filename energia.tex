@@ -215,10 +215,10 @@ y usando la ecuación (\ref{eq:linev2})
   \label{eq:consrven}
   -\mu mg(x-x_0)=\tfrac{1}{2}m v^2-\tfrac{1}{2}m v_0^2\,.
 \end{align*}
-% y
-% \begin{align}
-%   \tfrac{1}{2}m v_0^2+\mu mg x_0=\tfrac{1}{2}m v^2+\mu mg x\,.
-% \end{align}
+y
+\begin{align}
+x=x_0+\frac{v_0^2-v^2}{2\mu g}
+\end{align}
 La principal diferencia entre los dos movimientos estudiados es que
 cuando la velocidad final es igual a cero, el movimiento bajo una
 fuerza gravitacional constante continua (con la velocidad en sentido
@@ -885,6 +885,7 @@ llamada una \emph{colisión inelástica}. Si los cuerpos quedan juntos
 después de la colisión, decimos que la colisión es completamente
 inelástica.
 
+
 Aunque la energía total del sistema es siempre conservada en colisiones, parte de la energía cinética puede ser convertida a alguna otra forma. Para tener en cuenta éste hecho, escribamos la conservación de la energía para colisiones como
 \begin{align}
 \label{eq:calor}
@@ -1029,7 +1030,7 @@ forma de calor en el tramo $BC$ cuando $\mu=0.1$ es
 
 \begin{itemize}
 \item[\textbf{Ejemplo}]: \textbf{Colisiones entre dos bloques:}\footnote{Elaborado por Alexander Gallego}\\
-Considere la colisión entre dos bloques en una superficie sin fricción que interactúan a través de un resorte, como se muestra en la figura~\ref{fig:colisionelastica}. Antes de la colisión el bloque de masa $m_1$ se mueve hacia la derecha con rapidez $u_1$ y el bloque de masa $m_2$ se encuentra en reposo. Encuentre las velocidades finales $v_1$ y $v_2$ en función de $u_1$ y las masas
+Considere la colisión entre dos bloques que interactúan a través de un resorte, como se muestra en la figura~\ref{fig:colisionelastica}. Antes de la colisión el bloque de masa $m_1$ se mueve hacia la derecha con rapidez $u_1$ y el bloque de masa $m_2$ se encuentra en reposo. Encuentre las velocidades finales $v_1$ y $v_2$ en función de $u_1$ y las masas. 
 
 \begin{figure}
   \centering
@@ -1038,7 +1039,7 @@ Considere la colisión entre dos bloques en una superficie sin fricción que int
   \label{fig:colisionelastica}
 \end{figure}
 
-En ausencia de fricción tanto el momentum, como la energía cinética se conservan antes y después de la colisión. Una colisión en la cual la energía cinética se conserva es llamada una colisión elástica. Una colisión es elástica si la fuerzas de interacción son conservativas, como el resorte en nuestro ejemplo.
+Como la colisión ocurre practicamente en un punto, podemos despreciar la energía disipada en calor durante el pequeño intervalo de tiempo que dure la colisión. Entonces la energía cinética se conservan antes y después de la colisión. Una colisión en la cual la energía cinética se conserva es llamada una colisión elástica. Una colisión es elástica si la fuerzas de interacción son conservativas, como el resorte en nuestro ejemplo.
 
 Conservaci\'on de moméntum
 \begin{align}
@@ -1077,7 +1078,7 @@ Cancelando $m_1 u_1^2$ a ambos lados y dividiendo por $m_2v_2$ y factorizando $v
 \end{align}
 obtenemos
 \begin{equation}
-  v_2 = \frac{2m_1 u_1}{m_1+ m_2}\,.
+  v_2 = \frac{2m_1}{m_1+ m_2}u_1\,.
 \end{equation}
 Reemplazando este valor en \ref{eq:v1}
 
@@ -1311,6 +1312,50 @@ y entonces
       x=&{v_2'}\sqrt{\frac{2m}{k}}\nonumber\\
       =&\frac{2v_1}{3}\sqrt{\frac{2m}{k}}\,.
     \end{align*}
+  \end{itemize}
+
+
+\item Un anillo resbala a lo largo de un arco metalico ABC muy pulido que es arco de una circunferencia de radio $R=1.2\meter$. Sobre el anillo actúa una fuerza $\mathbf{F}$ de magnitud $150\newton$ y dirección constante formando un ángulo de $\alpha=\pi/6$ con la horizontal. 
+
+  \begin{minipage}{0.5\linewidth}
+   \includegraphics[scale=0.5]{anillos}
+  \end{minipage}
+  \begin{minipage}{0.5\linewidth}
+    Calcular el trabajo efectuado por la fuerza $\mathbf{F}$ sobre el anillo al moverse desde $A$ a $B$ y de $B$ a $C$
+  \end{minipage}
+  \begin{itemize}
+  \item[\textbf{Solución}]
+    En la figura se muestra el anillo en una posición general, de la figure tenemos que en el sistema de coordenadas $\hat{\mathbf{r}}$-$\hat{\boldsymbol{\theta}}$:
+    \begin{align*}
+      \mathbf{F}=F_r \hat{\mathbf{r}}+F_\theta\hat{\boldsymbol{\theta}}\,,
+    \end{align*}
+    donde
+    \begin{align*}
+      F_\theta=&F\cos(\pi/2-\theta+\alpha)\nonumber\\
+      =&F\sin(\alpha-\theta)\,. %comprobar
+    \end{align*}
+
+    Además del próximo capítulo:
+    \begin{align*}
+      \frac{d\mathbf{r}}{dt}=\frac{dr}{dt} \hat{\mathbf{r}}+ r\frac{d\theta}{dt}\hat{\boldsymbol{\theta}}\,,
+    \end{align*}
+    de modo que
+    \begin{align*}
+      d\mathbf{r}=dr \hat{\mathbf{r}}+ r \, d\theta\hat{\boldsymbol{\theta}}\,.
+    \end{align*}
+    Por la simetría del problema el trabajo para ir de $A$ a $C$ es el doble de ir de $A$ a $B$, además, como el movimiento sólo de da a lo largo de dirección tangencail al arco, entonces sólo la componente tangencial de la fuerza realiza trabajo. Con todas estas consideraciones tenemos:
+    \begin{align*}
+      W_{AC}=2W_{AB}=&\int_A^B \mathbf{F}\cdot d\mathbf{r}\nonumber\\
+      =&2\int_A^B (F_r\hat{\mathbf{r}}+F_\theta\hat{\boldsymbol{\theta}})\cdot (dr \hat{\mathbf{r}}+ r \, d\theta\hat{\boldsymbol{\theta}})\nonumber\\
+      =&2\int_A^B (F_\theta r \, d\theta)\hat{\boldsymbol{\theta}}\cdot\hat{\boldsymbol{\theta}}\nonumber\\
+      =&2\int_{0}^{\pi/2}F_\theta r \, d\theta\nonumber\\
+      =&2Fr\int_{0}^{\pi/2}\sin(\alpha-\theta) \, d\theta\nonumber\\
+      =&2Fr\cos(\alpha-\theta)|_0^{\pi/2}\nonumber\\
+      =&2Fr[\sin(\alpha-\pi/2)-\sin(\pi/6)]\nonumber\\
+      =&131.77\joule\,.
+    \end{align*}
+
+   
   \end{itemize}
 
 
