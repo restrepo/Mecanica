@@ -228,10 +228,28 @@ de modo que la solución \eqref{eq:soluforzamo} queda
 \begin{align*}
   x(t)=\frac{\mathcal{F}_0}{m}\frac{1}{\omega_0^2-\omega^2}\cos(\omega t)
 \end{align*}
-La amplitud de oscilación $A(\omega)$ es máxima, de hecho infinita, cuando $\omega\to \omega_0$ %como se muestra en la figura
+La amplitud de oscilación $A(\omega)$ es máxima, de hecho $\pm$infinita, cuando $\omega\to \omega_0$ a izquierda y derecha, como se ilustra en la figura~\ref{fig:resonance}
+\begin{frame}
+  \begin{figure}
+    \centering
+    \includegraphics[scale=0.9]{resonance}
+    \caption{Resonancia}
+    \label{fig:resonance}
+  \end{figure}
+\end{frame}
 
-Cuando la frecuencia de forzado $\omega$ es igual a $\omega_0$, se dice que se está operando a la \emph{frecuencia de resonancia}. Operar en resonancia permite obtener amplitudes grandes para fuerzas impulsoras pequeñas, como ocurre por ejemplo en los tubos de órganos, o en el sintonizador de una radio. En otras aplicaciones es necesario reducir la respuesta a una resonancia, como en la suspensión de un automóvil donde una fuerza viscosa es utilizada para disipar energía. 
 
+Cuando la frecuencia de forzado $\omega$ es igual a $\omega_0$, se dice que se está operando a la \emph{frecuencia de resonancia}. Operar en resonancia permite obtener amplitudes grandes para fuerzas impulsoras pequeñas, como ocurre por ejemplo en los tubos de órganos, o en el sintonizador de una radio. Un caso extremo es la bah{ia de Fundy en Canada, donde el período del oleaje para ir de un lado al otro de la bahía y el tiempo entre dos mareas altas (12.4 horas) es similar, lo que produce olas de mas de $\SI{10}{\meter}$.  En otras aplicaciones es necesario reducir la respuesta a una resonancia, como en la suspensión de un automóvil donde una fuerza viscosa es utilizada para disipar energía. 
+
+\example{}
+Explique para un punto $A(\omega)<0$ como se intepreta la solución
+\begin{align}
+  x(t)=&-|A(\omega)|\cos(\omega t)\nonumber\\
+  =&|A(\omega)|\cos(\omega t)\cos\pi\nonumber\\
+  =&|A(\omega)|\left(\cos(\omega t)\cos\pi-\sin(\omega t)\sin\pi  \right)\nonumber\\
+  =&|A(\omega)|\cos(\omega t+\pi)\,,
+\end{align}
+de modo que entre las soluciones a derecha e izquierda de la frecuencias de resonancia ocurre un desfase de $\pi$.
 \subsection{Oscilador amortiguado}
 Para una cuerpo con condiciones iniciales que garanticen una oscilación con ciertas condiciones iniciales en amplitud y frecuencia característica $\omega_0$, podemos ver cual es el efecto sólo del amortiguamiento. Haciendo $\mathcal{F}_0=0$ en la ecs.~\eqref{eq:oscforamo}\eqref{eq:oscforamoz}, proponemos como solución a la ecuación diferencial homogénea
 \begin{align*}
