@@ -204,6 +204,7 @@ Expandiendo la solución en \eqref{eq:propsol}
   =&x(t)+iy(t)\,,
 \end{align}
 
+\begin{frame}
 Usando las ecs.~\eqref{eq:rphiz0}, llegamos finalmente a %detalles
 \begin{align}
   \label{eq:soluforzamo}
@@ -216,7 +217,7 @@ donde
   \phi=&\tan^{-1}\left(\frac{\omega\gamma}{\omega^2-\omega_0^2}\right).
 \end{align}
 La solución queda completamente especificada sin tener que usar las condiciones iniciales. %discusión al respecto
-
+\end{frame}
 
 \subsection{Oscilador forzado}
 En ausencia de fricción con el medio viscoso, $\gamma=0$ y la ec.~\eqref{eq:aomega} se reduce a
@@ -232,14 +233,14 @@ La amplitud de oscilación $A(\omega)$ es máxima, de hecho $\pm$infinita, cuand
 \begin{frame}
   \begin{figure}
     \centering
-    \includegraphics[scale=0.9]{resonance}
+    %\includegraphics[scale=0.9]{resonance}
     \caption{Resonancia}
     \label{fig:resonance}
   \end{figure}
 \end{frame}
 
 
-Cuando la frecuencia de forzado $\omega$ es igual a $\omega_0$, se dice que se está operando a la \emph{frecuencia de resonancia}. Operar en resonancia permite obtener amplitudes grandes para fuerzas impulsoras pequeñas, como ocurre por ejemplo en los tubos de órganos, o en el sintonizador de una radio. Un caso extremo es la bah{ia de Fundy en Canada, donde el período del oleaje para ir de un lado al otro de la bahía y el tiempo entre dos mareas altas (12.4 horas) es similar, lo que produce olas de mas de $\SI{10}{\meter}$.  En otras aplicaciones es necesario reducir la respuesta a una resonancia, como en la suspensión de un automóvil donde una fuerza viscosa es utilizada para disipar energía. 
+Cuando la frecuencia de forzado $\omega$ es igual a $\omega_0$, se dice que se está operando a la \emph{frecuencia de resonancia}. Operar en resonancia permite obtener amplitudes grandes para fuerzas impulsoras pequeñas, como ocurre por ejemplo en los tubos de órganos, o en el sintonizador de una radio. Un caso extremo es la bahía de Fundy en Canada, donde el período del oleaje para ir de un lado al otro de la bahía y el tiempo entre dos mareas altas (12.4 horas) es similar, lo que produce olas de mas de $\SI{10}{\meter}$.  En otras aplicaciones es necesario reducir la respuesta a una resonancia, como en la suspensión de un automóvil donde una fuerza viscosa es utilizada para disipar energía. 
 
 \example{}
 Explique para un punto $A(\omega)<0$ como se intepreta la solución
@@ -255,6 +256,7 @@ Para una cuerpo con condiciones iniciales que garanticen una oscilación con cie
 \begin{align*}
      \ddot z+\gamma \dot z+\omega_0^2 z=0
 \end{align*}
+Escogemos una solución con una exponencial compleja, en lugar de la exponencial imaginaria de la ec.\eqref{eq:propsol}:
 \begin{align*}
   z=z_0 e^{\alpha t}
 \end{align*}
@@ -262,20 +264,33 @@ y siguiendo los pasos que dieron lugar a la ec.~\eqref{eq:soluz} (reemplazando $
 \begin{align*}
   \omega_0^2+\alpha \gamma+\alpha^2=0
 \end{align*}
-
+que debe interpretarse como una ecuación cuadrática para el parámetro complejo $\alpha$.
 Esta ecuación para $\alpha$ da lugar a dos raíces
 \begin{align*}
-  \alpha^{\pm}=-\frac{\gamma}{2}\pm i\omega\,, 
+  \alpha^{\pm}=\frac{-\gamma\pm\sqrt{\gamma^2-4\omega_0^2}}{2}\,.
 \end{align*}
-donde
+Las soluciones que vayamos a explorar a partir de este punto dependen del signo del radicando. Como estamos interesados en el amortiguamiento como un efecto pequeño, estableceremos a partir de ahora la condición de amortiguamiento suave
+\begin{align}
+  \label{eq:12}
+  \omega_0\gg \gamma\,.
+\end{align}
+Luego se entenderá la razón de esta condición, pero de momento se puede tomar como la exploración de una de las dos posibilidades. Utilizando esta ecuación tenemos
+\begin{align}
+  \alpha^{\pm}=&-\frac{\gamma}{2}\pm\frac{1}{2}\sqrt{-4 \left(\omega_0^2-\frac{\gamma^2}{4}\right)}\nonumber\\
+  =&-\frac{\gamma}{2}\pm\frac{1}{2}\sqrt{-4}\sqrt{\omega_0^2-\frac{\gamma^2}{4}}\nonumber\\
+  =&-\frac{\gamma}{2}\pm i\sqrt{\omega_0^2-\frac{\gamma^2}{4}}\,,
+\end{align}
+y definiendo
 \begin{align}
   \label{eq:newoc}
-  \omega=&\sqrt{\omega_0^2-\frac{\gamma^2}{4}}\,,
+  \omega\equiv&\sqrt{\omega_0^2-\frac{\gamma^2}{4}}\,,
 \end{align}
-Note que en un fluido viscoso la frecuencia característica del oscilador cambia con respecto a su valor en el vacío $\omega_0$.
+tenemos finalmente la solución válida para amortiguamiento suave
+\begin{align*}
+  \alpha^{\pm}=-\frac{\gamma}{2}\pm i\omega\,.
+\end{align*}
 
-
-La solución propuesta puede escribirse de una forma más general como
+Note que en un fluido viscoso la frecuencia característica del oscilador cambia con respecto a su valor en el vacío $\omega_0$. Al ser de nuevo una ecuación diferencial homogénea, es necesario establecer condiciones iniciales para determinar la magnitud y la fase de $z_0=|z_0|e^{i\phi}$. La solución propuesta puede escribirse de una forma más general como
 \begin{align*}
   z(t)=&z_1 e^{\alpha^+ t}+z_2 e^{\alpha^- t}\\
 =&e^{-(\gamma/2) t}\left(z_1 e^{i\omega t}+z_2 e^{-i \omega t}\right)\nonumber\\
@@ -300,13 +315,14 @@ donde $A_0$ y $\phi$ son constante arbitrarias que deben determinarse a partir d
   A(t)=A_0 e^{-(\gamma/2)t}\,,
 \end{align*}
 se llama la envolvente de la parte oscilatoria restante, y se representa con la línea a trazos en la Fig.~\ref{fig:damping}
+\begin{frame}
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{damping}
   \caption{Oscilador amortiguado con }
   \label{fig:damping}
 \end{figure}
-
+\end{frame}
 La frecuencia característica ya depende también de la propiedades del fluido y es, a partir de  la ec.\eqref{eq:newoc}
 \begin{align*}
   \omega_0\to \omega=&\sqrt{\omega_0^2-\frac{\gamma^2}{4}}\nonumber\\
@@ -319,7 +335,7 @@ Definimos el caso de amortiguamiento suave, la situación en la cual
 \end{align}
 tal que $\omega_0\approx\omega$. 
 
-%definir los casos de poco, crittico y sobreamortiguado
+%definir los casos de poco, critico y sobreamortiguado
 
 El sistema ya no es conservativo de manera que la energía mecánica debe ser dependiente del tiempo
 
