@@ -2,12 +2,15 @@
 \chapter{Relatividad Especial}
 
 \section{Principio de relatividad}
+\begin{frame}[fragile,allowframebreaks]
 El \emph{principio de relatividad} establece que:
 \begin{quote}
   Las leyes de la física tienen la misma forma en todos los sistemas inerciales. 
 \end{quote}
 Esto generaliza lo que se conoce de la mecánica en donde si en un sistema inercial $S$ el principio de moméntum  es $\mathbf{F}=d\mathbf{P}/dt$, en un sistema inercial $S'$, será $\mathbf{F}'=d\mathbf{P}'/dt$.
+\end{frame}
 \section{Transformaciones de Lorentz}
+\begin{frame}[fragile,allowframebreaks]
 Sea el sistema de referencia $S'$ moviendose a lo largo del eje $x$ con rapidez $V$ relativa al sistema de referencia estacionario de referencia $S$ como se muestra en la figura~\ref{fig:lorentz}
 \begin{figure}
   \centering
@@ -16,50 +19,85 @@ Sea el sistema de referencia $S'$ moviendose a lo largo del eje $x$ con rapidez 
   \label{fig:lorentz}
 \end{figure}
 
+\begin{details}
+Cuando se consolidaron las leyes electromagnéticas parecía como si
+estas leyes dependieran del sistema inercial donde se encuentra el
+observador. De hecho, una carga eléctrica por el mero hecho de estar
+en movimiento, así fuese con velocidad constante, generaba campos
+magnéticos. Pero, otro observador que vea la misma carga en reposo, no
+vería el correspondiente campo magnético. Para que el campo magnético
+y sus correspondientes leyes sean invariantes bajo diferentes
+observadores inerciales se requiere bien sea proponer un éter
+electromagnético ó alterar las transformaciones de Galileo. A partir
+de este punto tomaremos la segunda opción que ha resultado ser la más
+simple para explicar los resultados experimentales, como el
+experimento de Michelson y Morley.
+\end{details}
+
 Cuando escribimos las transformaciones de Galileo
 \begin{align*}
-  x=Vt+x'\,,
+  x=Vt+x'\nonumber\\
+  t=t'\,.
 \end{align*}
-se ésta asumiendo que la regla de metro no cambia so longitud por estar en movimiento, pero esto no es del todo obvio. De los fenómenos electromagnéticos que las cargas eléctricas en reposo generan campos eléctricos, mientras que las cargas eléctricas en movimiento generan además campos magnéticos. Además con el movimiento los campos eléctricos se deforman. Como la fuerzas eléctricas son importante para moldear la estructura atómica de la materia, podría en principio esperarse que la forma de la regla de metro cambia su configuración y de aquí so forma (longitud) por estar en movimiento. 
+
+
+
+Se ésta asumiendo que la regla de metro no cambia su longitud por estar en movimiento, pero esto no es del todo obvio. 
+\begin{details}
+De los fenómenos electromagnéticos que las cargas eléctricas en reposo generan campos eléctricos, mientras que las cargas eléctricas en movimiento generan además campos magnéticos. Además con el movimiento los campos eléctricos se deforman. Como la fuerzas eléctricas son importante para moldear la estructura atómica de la materia, podría en principio esperarse que la forma de la regla de metro cambia su configuración y de aquí so forma (longitud) por estar en movimiento. 
+\end{details}
+
+
 
 
 Entonces, admitiendo esta posibilidad, cambiaremos la Transformación de Galileo por la transformación más general:
 \begin{align}
   \label{eq:gammafactor}
-  x=Vt+\frac{1}{\gamma(V^2)} x'\,,
+  x=Vt+\frac{1}{\alert{\alert{\gamma(V^2)}}} x'\,,
 \end{align}
-donde el factor de escala $\gamma(V^2)$ de cuenta del posible cambio de longitud en la regla de metro en el sistema $S'$, como se ilustra en la Figura~\ref{fig:lorentz}. La dependencia de $\gamma$ en sólo la magnitud de la velocidad relativa dan cuenta del \emph{principio de relatividad} y de la isotropía del espacio. Además $\gamma$ debe ser adimensional.
+donde el factor de escala $\alert{\gamma(V^2)}$ da cuenta del posible cambio de longitud en la regla de metro en el sistema $S'$, como se ilustra en la Figura~\ref{fig:lorentz}. 
+La dependencia de $\gamma$ en sólo la magnitud de la velocidad relativa dan cuenta del \emph{principio de relatividad} y de la isotropía del espacio. Además $\gamma$ debe ser adimensional.
 
 De la ec.\eqref{eq:gammafactor}
 \begin{align}
 \label{eq:genltxp}
-  x'=\gamma(V^2)(x-V t)\,.
+  x'=\alert{\gamma(V^2)}(x-V t)\,.
 \end{align}
+\begin{details}
 El principio de relatividad nos dice que la misma relación se mantiene si las coordenadas primadas son cambiadas por las coordenadas sin primar, con $V$ reemplazado por $-V$, debido a que la velocidad de $S$ con respecto a $S'$ es $-V$. Además como en general las medidas de distancia en $S'$ son diferentes, no podemos asumir que el tiempo sea el mismo. Por consiguiente
+\end{details}
+\begin{onlybeamer}
+  \begin{align*}
+    x\longleftrightarrow& x'\\
+    t\longleftrightarrow& t'\\
+    V\longleftrightarrow& V'=-V\\
+  \end{align*}
+\end{onlybeamer}
 \begin{align*}
-    x=&\gamma(V^2)(x'+V t')\nonumber\\
-    =&\gamma\left[\gamma(x-V t)+V t'\right]
+    x=&\alert{\gamma(V^2)}(x'+V t')\nonumber\\
+    =&\alert{\gamma}\left[\alert{\gamma}(x-V t)+V t'\right]
 \end{align*}
 Despejando en términos de $t'$ %detalles
 \begin{align}
   \label{eq:genlttp}
-  t'=\gamma\left[t-\frac{1-\gamma^{-2}}{V}x\right]
+  t'=\alert{\gamma}\left[t-\frac{1-\alert{\gamma^{-2}}}{V}x\right]
 \end{align}
 Derivando \eqref{eq:genltxp}, \eqref{eq:genlttp} obtenemos la \emph{Ley de adición de velocidades} %detalles
 \begin{align*}
-  v_{x'}=\frac{v_x-V}{1-\frac{1-\gamma^{-2}}{V}v_x}
+  v_{x'}=\frac{v_x-V}{1-\frac{1-\alert{\gamma^{-2}}}{V}v_x}
 \end{align*}
 la cual debe satisfacer el principio de relatividad, por lo tanto, al cambiar al sistema no primado debe mantener su forma ($V\to -V$)
 \begin{align}
   \label{eq:adicionvel}
-  v_{x}=\frac{v_{x'}+V}{1+\frac{1-\gamma^{-2}}{V}v_{x'}}\,.
+  v_{x}=\frac{v_{x'}+V}{1+\frac{1-\alert{\gamma^{-2}}}{V}v_{x'}}\,.
 \end{align}
 Definimos
 \begin{align*}
-  F(v_{x'},V)\equiv\frac{v_{x'}+V}{1+\frac{1-\gamma^{-2}}{V}v_{x'}}
+  F(v_{x'},V)\equiv\frac{v_{x'}+V}{1+\frac{1-\alert{\gamma^{-2}}}{V}v_{x'}}
 \end{align*}
-
+\end{frame}
 \subsection{Propiedades de $F(v_{x'},V)$}
+\begin{frame}[fragile,allowframebreaks]
 \begin{itemize}
 \item \textbf{Paridad:}
   \begin{align}
@@ -81,16 +119,17 @@ Definimos
 \textbf{Demostración:} Usando ecs.~\eqref{eq:paridad}\eqref{eq:asociatividad}
 
 \end{itemize}
-
+\end{frame}
 \section{Soluciones}
 
+\begin{frame}[fragile,allowframebreaks]
 Entonces
 \begin{align*}
   F(v_{x'},V)=F(V,v_{x'})\,.
 \end{align*}
 Obtenemos %detalles
 \begin{align*}
-  \Gamma=\frac{1-\gamma^{-2}}{V^2}
+  \Gamma=\frac{1-\alert{\gamma^{-2}(V^2)}}{\alert{V^2}}=\text{constante} \alert{\text{\qquad Independiete de $V^2$}!!!}
 \end{align*}
 Por las dimensiones de $\Gamma$ podemos definir
 \begin{align*}
@@ -101,19 +140,19 @@ Por las dimensiones de $\Gamma$ podemos definir
 %detalles
 \begin{align*}
   \gamma=&\frac{1}{\sqrt{1-\Gamma V^2}}\nonumber\\
-  =&\frac{1}{\sqrt{1-V^2/c^2}}\,,
+  \alert{\gamma=}&\alert{\frac{1}{\sqrt{1-V^2/c^2}}}\,,
 \end{align*}
 de modo que si $\Gamma>0$ entonces $\gamma>1$. las \emph{Transformaciones de Lorentz} quedan
 \begin{align}
   \label{eq:lorentz}
-  x'=&\gamma(x-V t)\nonumber\\
-  t'=&\gamma\left(t-\frac{V}{c^2}x\right)
+  x'=&\alert{\gamma}(x-V t)\nonumber\\
+  t'=&\alert{\gamma}\left(t-\frac{V}{c^2}x\right)
 \end{align}
 Mientras que las transformaciones inversas son
 \begin{align}
   \label{eq:lorentzinv}
-  x=&\gamma(x'+V t')\nonumber\\
-  t=&\gamma\left(t'+\frac{V}{c^2}x'\right)\,.
+  x=&\alert{\gamma}(x'+V t')\nonumber\\
+  t=&\alert{\gamma}\left(t'+\frac{V}{c^2}x'\right)\,.
 \end{align}
 
 
@@ -153,28 +192,30 @@ Las Transformaciones de Lorentz  a lo largo del eje $x$ se pueden escribir en fo
 \end{equation}
 donde
 \begin{equation}
-  \cosh\xi=\gamma\qquad\sinh\xi=-\gamma V/c\,,
+  \cosh\xi=\alert{\gamma}\qquad\sinh\xi=-\alert{\gamma} V/c\,,
 \end{equation}
 \begin{align*}
 \cosh^2\xi-\sin^2\xi=&1\nonumber\\
-\gamma^2(1-V^2/c^2)=&1\nonumber\\
- \gamma=&\frac{1}{\sqrt{1-V^2/c^2}}.
+\alert{\gamma}^2(1-V^2/c^2)=&1\nonumber\\
+ \alert{\gamma}=&\frac{1}{\sqrt{1-V^2/c^2}}.
 \end{align*}
 y, por ejemplo:
 \begin{align}
-ct'=  ct\cosh{\xi}+x\sinh\xi=\gamma(ct-V x/c)=&c\frac{t-V x/c^2}{\sqrt{1-V^2/c^2}}\nonumber\\
-t'=  t\cosh{\xi}+x\sinh\xi=\gamma(ct-V x/c)/c=&\frac{t-V x/c^2}{\sqrt{1-V^2/c^2}}\nonumber\\
-x'=  ct\sinh{\xi}+x\cosh\xi=\gamma(-Vt+ x)=&\frac{x-Vt}{\sqrt{1-V^2/c^2}}\,.
+ct'=  ct\cosh{\xi}+x\sinh\xi=\alert{\gamma}(ct-V x/c)=&c\frac{t-V x/c^2}{\sqrt{1-V^2/c^2}}\nonumber\\
+t'=  t\cosh{\xi}+x\sinh\xi=\alert{\gamma}(ct-V x/c)/c=&\frac{t-V x/c^2}{\sqrt{1-V^2/c^2}}\nonumber\\
+x'=  ct\sinh{\xi}+x\cosh\xi=\alert{\gamma}(-Vt+ x)=&\frac{x-Vt}{\sqrt{1-V^2/c^2}}\,.
 \end{align}
 
+\end{frame}
 \subsection{Ley de adición de velocidades}
+\begin{frame}[fragile,allowframebreaks]
 Teniendo en cuenta que
 \begin{align*}
-  \gamma^{-2}=1-\frac{V^2}{c^2}\,,
+  \alert{\gamma}^{-2}=1-\frac{V^2}{c^2}\,,
 \end{align*}
 la ley de adición de velocidades \eqref{eq:adicionvel} queda
 \begin{align*}
-  F(v_{x'},V)=v_{x}=&\frac{v_{x'}+V}{1+\frac{1-\gamma^{-2}}{V}v_{x'}}\nonumber\\
+  F(v_{x'},V)=v_{x}=&\frac{v_{x'}+V}{1+\frac{1-\alert{\gamma}^{-2}}{V}v_{x'}}\nonumber\\
   =&\frac{v_{x'}+V}{1+\frac{1-1+V^2/c^2}{V}v_{x'}}\nonumber\\
   =&\frac{v_{x'}+V}{1+{Vv_{x'}}/{c^2}}\,,
 \end{align*}
@@ -220,32 +261,38 @@ Por consiguiente, una consecuencia de la Ley de adición de velocidades es que:
   La velocidad límite $c$, es la misma para todos los observadores inerciales.
 \end{quote}
 
+\end{frame}
 \subsection{Simultaneidad y orden de eventos}
 
+\begin{frame}[fragile,allowframebreaks]
 Un evento esta caracterizado por un conjunto de valores para las coordenadas $x,y,z,t$.  Con respecto a un sistema de coordenadas dado, dos eventos son \emph{simultáneos} si sus coordenadas temporales tienen el mismo valor
+\end{frame}
 
 \subsection{Contracción de Lorentz}
-Como hemos visto, la existencia de una velocidad límite en la naturaleza, la cual hemos identificaremos de ahora en adelante con la velocidad de la luz, afecta la forma de los cuerpos. Para ver las implicaciones de tener $\gamma>0$ en un cuerpo en movimiento primero definimos el sistema $S:(x,y,z,t)$ como sistema de laboratorio, y consideremos una varilla en reposo en el sistema $S':(x',y',z',t')$ que se mueve con velocidad rapidez $v$ respecto a $S$. 
+\begin{frame}[fragile,allowframebreaks]
+Como hemos visto, la existencia de una velocidad límite en la naturaleza, la cual hemos identificaremos de ahora en adelante con la velocidad de la luz, afecta la forma de los cuerpos. Para ver las implicaciones de tener $\alert{\gamma}>0$ en un cuerpo en movimiento primero definimos el sistema $S:(x,y,z,t)$ como sistema de laboratorio, y consideremos una varilla en reposo en el sistema $S':(x',y',z',t')$ que se mueve con velocidad rapidez $v$ respecto a $S$. 
 
 Definimos la longitud de la varilla como la distancia entre sus extremos en el mismo instante de tiempo. Los puntos finales deben ser determinados simultáneamente en el sistema de laboratorio; y debemos encontrar la relación entre $x'$ y $x$ para ese valor de $t$. Tenemos
 \begin{align*}
-  x'=\gamma(x-vt)\,.
+  x'=\alert{\gamma}(x-vt)\,.
 \end{align*}
 Para cada extremo de la varilla, al tiempo $t$ de los eventos simultáneos en los que se determina la posición de los extremos de la varilla desde el sistema de laboratorio, es
 \begin{align*}
-  x'_A=&\gamma(x_A-vt)\nonumber\\
-  x'_B=&\gamma(x_B-vt)\,,
+  x'_A=&\alert{\gamma}(x_A-vt)\nonumber\\
+  x'_B=&\alert{\gamma}(x_B-vt)\,,
 \end{align*}
 Restando ambas ecuaciones, obtenemos
 \begin{align*}
-  l'=l_0\equiv=x'_B-x'_A=\gamma(x_B-x_A)=\gamma l\,,
+  l'=l_0\equiv=x'_B-x'_A=\alert{\gamma}(x_B-x_A)=\alert{\gamma} l\,,
 \end{align*}
 donde $l_0$ es la longitud en reposo o \emph{propia} de la varilla, y $l$ es la longitud medida en el laboratorio para una varilla en movimiento a velocidad $v$. Entonces
 \begin{align*}
-  l=\frac{l_0}{\gamma}=l_0\sqrt{1-\frac{v^2}{c^2}}\,,
+  l=\frac{l_0}{\alert{\gamma}}=l_0\sqrt{1-\frac{v^2}{c^2}}\,,
 \end{align*}
 de modo que $l$ es más corta que $l_0$, la varilla se contrae. A medida que $v\to c$, $l\to 0$. Es importante notar que dicha longitud es relativa al observador en el sistema de laboratorio desde donde los extremos de la varilla se han medido simultáneamente. Un observador en reposo respecto a la varilla no nota ningún cambio en su longitud.
+\end{frame}
 \subsection{Dilatación temporal}
+\begin{frame}[fragile,allowframebreaks]
 Consideremos un reloj en reposo en el sistema $x',y',z'$ y considere dos eventos $A$ y $B$ ambos ocurriendo en el mismo punto $x_0'$:
 \begin{align*}
   A:(x_0',t_A')\nonumber\\
@@ -253,17 +300,17 @@ Consideremos un reloj en reposo en el sistema $x',y',z'$ y considere dos eventos
 \end{align*}
 El intervalo $\tau=t_B'-t_A'$ es el intervalo temporal entre los eventos en el sistema $S'$ donde el reloj está en reposo. Dicho sistema se mueve con rapidez $v$ respecto al sistema de laboratorio $S$, relacionado con $S'$ por (ec.~\eqref{eq:lorentzinv})
 \begin{align*}
-  t=\gamma\left(t'+\frac{V}{c^2}x'\right)
+  t=\alert{\gamma}\left(t'+\frac{V}{c^2}x'\right)
 \end{align*}
 de modo que
 \begin{align*}
-   t_A=&\gamma\left(t_A'+\frac{V}{c^2}x_0'\right)\nonumber\\
-   t_B=&\gamma\left(t_B'+\frac{V}{c^2}x_0'\right)\,,
+   t_A=&\alert{\gamma}\left(t_A'+\frac{V}{c^2}x_0'\right)\nonumber\\
+   t_B=&\alert{\gamma}\left(t_B'+\frac{V}{c^2}x_0'\right)\,,
 \end{align*}
 restando, encontramos
 \begin{align*}
-  T=t_B-t_A=&\gamma(t_B'-t_A')\nonumber\\
-  =&\gamma\tau\nonumber\\
+  T=t_B-t_A=&\alert{\gamma}(t_B'-t_A')\nonumber\\
+  =&\alert{\gamma}\tau\nonumber\\
   =&\frac{\tau}{\sqrt{1-v^2/c^2}}\,.
 \end{align*}
 
@@ -274,19 +321,21 @@ El intervalo temporal en el sistema de laboratorio es más grande que en el sist
   \begin{align*}
     d=c\tau\approx 3\times 10^8\times 2.15\times 10^{-6}=645\meter\,. 
   \end{align*}
-Si un muón se genera en la atmósfera con un $\gamma=10$, ¿que distancia promedio recorre antes de decaer?.
+Si un muón se genera en la atmósfera con un $\alert{\gamma}=10$, ¿que distancia promedio recorre antes de decaer?.
 \item[\textbf{Solución:}] Cuando el muón se mueve rápidamente, el tiempo de vida $\tau'$ que se observa desde un laboratorio en la superficie de la tierra, se incrementa por la dilatación temporal. El tiempo de vida observado es
   \begin{align*}
-    \tau'=&\gamma\tau\,,
+    \tau'=&\alert{\gamma}\tau\,,
   \end{align*}
 de modo que
 \begin{align*}
-  d'=c\tau'=\gamma c\tau=10 c\tau\approx 6450\meter\,,
+  d'=c\tau'=\alert{\gamma} c\tau=10 c\tau\approx 6450\meter\,,
 \end{align*}
 la dilatación temporal permite que los muones puedan llegar a la superficie de la tierra a un tasa de 10,000 muones por metro cuadrado cada minuto ( Mark Wolverton (September 2007). "Muons for Peace: New Way to Spot Hidden Nukes Gets Ready to Debut". Scientific American 297 (3): 26–28.), a pesar de producirse en la partes altas de la atmósfera.
 \end{itemize}
 %otras soluciones
+\end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
 \section{Momento energía}
 Supongamos que para una colisión
 \begin{align*}
@@ -294,32 +343,117 @@ Supongamos que para una colisión
 \end{align*}
 donde $m(v)$ debe determinarse. Del estudio de colisiones
 \begin{align*}
-  m(v)=\gamma m_0\,,
+  m(v)=\alert{\gamma} m_0\,,
 \end{align*}
-donde $m_0$ es la masa en reposo de la partícula.
+donde $m_0$ es la masa en reposo de la partícula. (Ver Jackson por ejemplo)
+
+De este modo, la expresión correcta para el moméntum es
+\begin{align}
+  \label{eq:gmv}
+  p=\alert{\gamma} m_0 \mathbf{v}\,,  
+\end{align}
+
 
 Para obtener la energía consideremos el trabajo
 \begin{align*}
-  K_b-K_a=&\int\frac{d\mathbf{p}}{dt}\cdot d\mathbf{r}\nonumber\\
-=&\mathbf{v}\cdot \mathbf{p}|_a^b-\int_a^b\mathbf{p}\cdot\mathbf{u}\nonumber\\
-=\left.\frac{m_0 v^2}{\sqrt{1-{v^2}/{c^2}}}\right|_a^b-\int_a^b\frac{m_0v dv}{\sqrt{1-v^2/c^2}}\nonumber\\
-=\left.\frac{m_0 v^2}{\sqrt{1-{v^2}/{c^2}}}\right|_a^b+\left.m_0 c^2\sqrt{1-\frac{v^2}{c^2}}\right|_a^b
+  W_{ba}=&\int\frac{d\mathbf{p}}{dt}\cdot d\mathbf{r}\nonumber\\
+  =&\int\left[d(\mathbf{p}\cdot\frac{d\mathbf{r}}{dt})-\mathbf{p}\cdot d\left(\frac{\mathbf{dr}}{dt}  \right)\right]\nonumber\\
+=&\mathbf{v}\cdot \mathbf{p}|_a^b-\int_a^b\mathbf{p}\cdot d\mathbf{v}\nonumber\\
+=&\mathbf{v}\cdot (\alert{\gamma} m_0\mathbf{v})|_a^b-\int_a^b\alert{\gamma} m_0\mathbf{v}\cdot d\mathbf{v}\nonumber\\
+=&\left.\frac{m_0 v^2}{\sqrt{1-{v^2}/{c^2}}}\right|_a^b-\int_a^b\frac{m_0v dv}{\sqrt{1-v^2/c^2}}\nonumber\\
+=&\left.\frac{m_0 v^2}{\sqrt{1-{v^2}/{c^2}}}\right|_a^b+\left.m_0 c^2\sqrt{1-\frac{v^2}{c^2}}\right|_a^b
 \end{align*}
-Sea $a$, tal que $v_a=0$, entonces
+donde hemos usado que
 \begin{align*}
-  K=&\frac{m_0c^2}{\sqrt{1-v^2/c^2}}-m_0 c^2
-  K=&mc^2-m_0 c^2
-\end{align*}
-O
-\begin{align*}
-  mc^2=&K+m_0c^2\nonumber\\
-=&\text{Trabajo hecho sobre la partículas}+m_0c^2
-\end{align*}
-donde $E=mc^2=\frac{m_0c^2}{\sqrt{1-v^2/c^2}}$, es la energía total de la partícula. Cuando $v\ll c$,
-\begin{align*}
-  K\approx \frac{1}{2}m_0 v^2\,.
+  \frac{d}{dv}
+  \left(
+    1-\frac{v^2}{c^2}
+  \right)=&\frac{1}{2}\frac{2v}{c^2}
+  \left(1-\frac{v^2}{c^2}\right)^{-1/2}\nonumber\\
+  =&\frac{v}{c^2}\frac{1}{\sqrt{1-{v^2}/{c^2}}}
 \end{align*}
 
+Sea $a$, tal que $v_a=0$ y $v_b=v$, entonces
+\begin{align*}
+  W_{ba}=&\frac{m_0 v^2}{\sqrt{1-v^2/c^2}}+m_0 c^2\sqrt{1-\frac{v^2}{c^2}}-m_0 c^2\nonumber\\
+=&\frac{\cancel{m_0 v^2}+m_0c^2(1-\cancel{v^2/c^2})}{\sqrt{1-v^2/c^2}}-m_0 c^2\nonumber\\
+=&\frac{m_0c^2}{\sqrt{1-v^2/c^2}}-m_0 c^2\nonumber\\
+  =&mc^2-m_0 c^2
+\end{align*}
+
+Cuando $v\ll c$
+\begin{align*}
+ W_{ba} =&\frac{m_0c^2}{\sqrt{1-v^2/c^2}}-m_0 c^2\nonumber\\
+\approx&{m_0c^2}\left(1-\frac{(-1)}{2}\frac{v^2}{c^2}\right)-m_0 c^2\nonumber\\
+\approx&{m_0c^2}+\frac{1}{2}m_0{v^2}-m_0 c^2\nonumber\\
+\approx&\frac{1}{2}m_0{v^2}\nonumber\\
+\approx&K\nonumber\\
+\approx&\text{energía cinética}\,.
+\end{align*}
+Ya que el término $m_0c^2$ lo podemos interpretar como la energía en reposo de la partícula, el trabajo completo $W_{ba}$, lo  podemos interptretar como
+\begin{align*}
+  W_{ba}=\text{Energía cinética relativista}=\text{Energía total}-\text{Energía en reposo}
+\end{align*}
+donde definimos la \emph{energía total} de una partícula, $E$, como
+\begin{align}
+  \label{eq:gme}  
+  E=&\frac{m_0c^2}{\sqrt{1-v^2/c^2}}\nonumber\\
+  =&\alert{\gamma} m_0c^2\,,
+\end{align}
+es decir, $\alert{\gamma}$ veces la energía en reposo.
+
+Note que la energía total depende de $v^2$
+\begin{align}
+  E(v^2)=\frac{m_0c^2}{\sqrt{1-v^2/c^2}}\nonumber\\
+  =E(0)+K
+\end{align}
+donde $E(0)$ es la energía en reposo.
+
+Combinando la ec.~\eqref{eq:gmv} con \eqref{eq:gme}, tenemos
+\begin{align}
+  \frac{E^2}{c^2}-\mathbf{p}^2=&\alert{\gamma}^2 m_0^2 c^2-\alert{\gamma}^2 m_0^2 v^2\nonumber\\
+  =&m_0^2 \alert{\gamma}^2(  c^2- v^2)\nonumber\\
+  =&m_0^2 c^2 \alert{\gamma}^2( 1- v^2/c^2)\nonumber\\
+  =&m_0^2 c^2\,,
+\end{align}
+De modo que
+\begin{align}
+  E^2-c^2\mathbf{p}^2=m_0^2 c^4
+\end{align}
+y si tomamos un sistema de unidades done $c=1$
+\begin{align}
+  E^2-\mathbf{p}^2=m_0^2\,,\qquad c=1\,.
+\end{align}
+En este sistema de unidades
+\begin{align}
+  [E]=[|\mathbf{p}|]=[m_0]\,.
+\end{align}
+Además una longitud $L$ y un tiempo $T$ tienen unidades
+\begin{align}
+  [L]=[T]=[E]^{-1}\,.
+\end{align}
+
+Por ejemplo la masa del protón, y otras partículas subatómicas como el quark top, el bosón gauge $Z$, o el bosón de Higgs, son respectivamente
+\begin{align*}
+  m_p\approx &1\ \text{GeV}\\
+  m_t\approx& 175\ \text{GeV}\\
+  m_Z\approx& 91\ \text{GeV}\\
+  m_H\approx& 125\ \text{GeV}\,,
+\end{align*}
+donde
+\begin{align*}
+  1\ \text{eV}=\SI{1.60217646\times 10^{-19}}{\joule}
+\end{align*}
+
+% \begin{align*}
+%   mc^2=&W_{ba}+m_0c^2\nonumber\\
+% =&\text{Trabajo hecho sobre la partícula}+m_0c^2
+% \end{align*}
+% donde $E=mc^2=\frac{m_0c^2}{\sqrt{1-v^2/c^2}}$, es la energía total de la partícula. Cuando $v\ll c$,
+% \begin{align*}
+%   K\approx \frac{1}{2}m_0 v^2\,.
+% \end{align*}
+\end{frame}
 \section{Notación relativista}
 \label{sec:srn}
 Las transformaciones de Lorentz se definen como la transformaciones que dejan invariante al producto escalar en el espacio de Minkowski definido como
@@ -451,11 +585,11 @@ Como un ejemplo de Transformación de Lorentz considere un desplazamiento a lo l
 \end{equation}
 donde
 \begin{equation}
-  \cosh\xi=\gamma\qquad\sinh\xi=v\gamma,\qquad\text{and}\qquad \gamma=\frac{1}{\sqrt{1-v^2}}.
+  \cosh\xi=\alert{\gamma}\qquad\sinh\xi=v\alert{\gamma},\qquad\text{and}\qquad \alert{\gamma}=\frac{1}{\sqrt{1-v^2}}.
 \end{equation}
 y, por ejemplo:
 \begin{align}
-  t\cosh{\xi}+x\sinh\xi=\gamma(t+v x)=\frac{t+v x}{\sqrt{1-v^2}}\,.
+  t\cosh{\xi}+x\sinh\xi=\alert{\gamma}(t+v x)=\frac{t+v x}{\sqrt{1-v^2}}\,.
 \end{align}
 El ${\Lambda^\mu}_{\nu}$ definido en la ec.~\eqref{eq:147qft} satisface la condición en ec.~\eqref{eq:148qft}, 
 \begin{align}

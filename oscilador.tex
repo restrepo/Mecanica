@@ -291,6 +291,7 @@ tenemos finalmente la solución válida para amortiguamiento suave
 \end{align*}
 
 Note que en un fluido viscoso la frecuencia característica del oscilador cambia con respecto a su valor en el vacío $\omega_0$. Al ser de nuevo una ecuación diferencial homogénea, es necesario establecer condiciones iniciales para determinar la magnitud y la fase de $z_0=|z_0|e^{i\phi}$. La solución propuesta puede escribirse de una forma más general como
+\begin{borrar}
 \begin{align*}
   z(t)=&z_1 e^{\alpha^+ t}+z_2 e^{\alpha^- t}\\
 =&e^{-(\gamma/2) t}\left(z_1 e^{i\omega t}+z_2 e^{-i \omega t}\right)\nonumber\\
@@ -305,7 +306,14 @@ La parte real da lugar a
   x(t)=&e^{-(\gamma/2) t}\left[(x_1+x_2)\cos(\omega t)+(y_2-y_1)\sin(\omega t)\right]\nonumber\\
   x(t)=&e^{-(\gamma/2) t}\left[B\sin(\omega t)+C\cos(\omega t)\right]\,,
 \end{align*}
-donde hemos definido $B=y_2-y_1$ y $C=x_1+x_2$. O usando las relaciones en eq.\eqref{eq:BCAphi}:
+donde hemos definido $B=y_2-y_1$ y $C=x_1+x_2$. O usando las relaciones en eq.\eqref{eq:BCAphi}:  
+\end{borrar}
+\begin{align*}
+  z(t)=&|z_0|e^{i\phi} e^{\alpha t}\nonumber\\
+  =&|z_0|e^{-(-\gamma/2)t}e^{i(\pm \omega t+\phi)}\nonumber\\
+  =&|z_0|e^{-(-\gamma/2)t}[\cos(\pm \omega t+\phi)+i\sin(\pm \omega t+\phi)]\,,
+\end{align*}
+Tomando la parte real de $z(t)$, definiendo $A_0\equiv |z_0|$, y tomando sin perdida de generalidad la solución positiva $+\omega t$\footnote{Bajo un cambio de fase $\phi\to-\phi'$: $\cos(-\omega t+\phi)\to \cos(-\omega t-\phi')=\cos(\omega t+\phi')$.}
 \begin{align}
   \label{eq:soluflui}
   x(t)=A_0 e^{-(\gamma/2)t}\cos(\omega t+\phi)\,,
@@ -323,7 +331,7 @@ se llama la envolvente de la parte oscilatoria restante, y se representa con la 
   \label{fig:damping}
 \end{figure}
 \end{frame}
-La frecuencia característica ya depende también de la propiedades del fluido y es, a partir de  la ec.\eqref{eq:newoc}
+La frecuencia característica  depende ahora de las propiedades del fluido y es, a partir de  la ec.\eqref{eq:newoc}
 \begin{align*}
   \omega_0\to \omega=&\sqrt{\omega_0^2-\frac{\gamma^2}{4}}\nonumber\\
 =&\omega_0\sqrt{1-\left(\frac{1}{2}\frac{\gamma}{\omega}\right)^2}\,.
@@ -388,7 +396,7 @@ de modo que
 \begin{align*}
   E(t)\approx E_0 e^{-\gamma t}\,.
 \end{align*}
-De modo que la energía mecánica decrece exponencialmente con el tiempo.  El decaimiento puede se caracterizado por el tiempo $\tau$ requerido para que la energía decaiga a $e^{-1}=0.368$ de su valor inicial %como se muestra en el plot
+Resulta entonces que la energía mecánica decrece exponencialmente con el tiempo.  El decaimiento puede se caracterizado por el tiempo $\tau$ requerido para que la energía decaiga a $e^{-1}=0.368$ de su valor inicial %como se muestra en el plot
 \begin{align*}
   E(\tau)=E_0 e^{-\gamma \tau}=E_0 e^{-1}\,.
 \end{align*}
@@ -428,14 +436,14 @@ como un radian de oscilación toma un tiempo
 \begin{align*}
   \Delta t=\frac{1}{\omega}\,,
 \end{align*}
-la energía disipada por radian es
-\begin{align*}
-  \gamma E \Delta t=\frac{\gamma}{\omega}\,,
-\end{align*}
+% la energía disipada por radian es
+% \begin{align*}
+%   \gamma E \Delta t=\frac{\gamma}{\omega}\,,
+% \end{align*}
 entonces
 \begin{align}
   \label{eq:calidad}
-  Q=\frac{E}{\gamma E \Delta t}=\frac{E}{\gamma E/\omega}=\frac{\omega}{\gamma}\,.
+  Q=\frac{E}{\Delta E}=\frac{E}{\gamma E \Delta t}=\frac{E}{\gamma E/\omega}=\frac{\omega}{\gamma}\,.
 \end{align}
 Un oscilador suavemente amortiguado satisface que $\omega\approx\omega_0$ y tiene
 \begin{align*}
@@ -448,6 +456,7 @@ Es decir, un oscilador suavemente amortiguado tiene $Q\gg 1$. Un oscilador altam
 \end{itemize}
 
 \subsection{Oscilador forzado y amortiguado}
+\begin{frame}[fragile,allowframebreaks]
 Retornando a la solución general~\eqref{eq:soluforzamo} podemos estudiar como se comporta la amplitud en función de $\omega$. Los puntos extremos de la amplitud se encuentra derivando con respecto a $\omega$
 \begin{align*}
 \frac{d A(\omega)}{d\omega}=
@@ -503,7 +512,7 @@ Además
 \end{align}
 %El gráfico generico se muestra en la figura
 
-En el caso de amortiguamiento ligero correspondiente a
+En el caso de amortiguamiento suave correspondiente a
 \begin{align*}
   \frac{\gamma}{\omega_0}\ll 1\,,
 \end{align*}
@@ -515,7 +524,7 @@ El máximo valor de la amplitud se alcanza para $\omega=\tilde\omega=\omega_0$, 
 A medida que $\gamma\to0$, $A(\omega_0)\to\infty$ como es de esperarse para un oscilador no amortiguado.
 
 
-Para analizar la energía del sistema conveniente calcular la energía mecánica promedio del sistema, la cual será una función de la frecuencia impulsora. Como
+Para analizar la energía del sistema es conveniente calcular la energía mecánica promedio del sistema, la cual será una función de la frecuencia impulsora. Como
 \begin{align*}
   x=& A(\omega)\cos(\omega t +\phi)\nonumber\\
   v=& -A(\omega)\omega\sin(\omega t +\phi)\,.
@@ -534,29 +543,36 @@ mientras que la energía promedio sobre un período de la oscilación es
 =&\frac{1}{4}\frac{\mathcal{F}_0^2}{m\omega_0^2}\frac{(1+{\omega^2}/{\omega_0^2})}{\left(1-\omega^2/\omega_0^2\right)^2+\gamma^2\omega^2/\omega_0^4}\,.
 \end{align*}
 
-Si $\omega\approx\omega_0$, en el límite de amortiguamiento suave $\gamma/\omega\ll1$
+Si $\omega\approx\omega_0$, $1+\omega^2/\omega_0^2\approx 2$, y en el límite de amortiguamiento suave $\gamma/\omega\ll1$
 \begin{align*}
-  \langle E(t)\rangle\approx&\frac{1}{4}\frac{\mathcal{F}_0^2}{m\omega_0^2}\frac{2}{(1-{\omega}/{\omega_0})^2(1+{\omega}/{\omega_0})^2+(\gamma^2/\omega_0^2)\omega^2/\omega_0^2}\nonumber\\
+ \langle E(t)\rangle\approx&\frac{1}{4}\frac{\mathcal{F}_0^2}{m\omega_0^2}\frac{2}{[(1-{\omega}/{\omega_0})(1+{\omega}/{\omega_0})]^2+(\gamma^2/\omega_0^2)\omega^2/\omega_0^2}\nonumber\\
+ \approx&\frac{1}{4}\frac{\mathcal{F}_0^2}{m\omega_0^2}\frac{2}{(1-{\omega}/{\omega_0})^2(1+{\omega}/{\omega_0})^2+(\gamma^2/\omega_0^2)\omega^2/\omega_0^2}\nonumber\\
 \approx&\frac{1}{4}\frac{\mathcal{F}_0^2}{m\omega_0^2}\frac{2}{(1-{\omega}/{\omega_0})^2(4)+(\gamma^2/\omega_0^2)}\nonumber\\
 \approx&\frac{1}{8}\frac{\mathcal{F}_0^2}{m\omega_0^2}\frac{1}{(1-{\omega}/{\omega_0})^2+(\gamma^2/4\omega_0^2)}\nonumber\\
 \approx&\frac{1}{8}\frac{\mathcal{F}_0^2}{m\omega_0^2}\frac{\omega_0^2}{(\omega_0-{\omega}/{\omega_0})^2+(\gamma/2)^2}\,,
 \end{align*}
-y
+donde también hemos hecho la aproximación $1+\omega/\omega_0\approx 2$. Por consiguiente 
 \begin{align*}
    \langle E(t)\rangle=&\frac{1}{8}\frac{\mathcal{F}_0^2}{m}
    \left[\frac{1}{(\omega-\omega_0)^2+(\gamma/2)^2}\right]\,,
 \end{align*}
-una función conocida como \emph{Lorentziana}.
-
+una función conocida como \emph{Lorentziana}
+\end{frame}
 
 Sí $\omega=\omega_0$, la parte
 \begin{align*}
   h(\omega)\equiv\frac{1}{(\omega-\omega_0)^2+(\gamma/2)^2}\,,
 \end{align*}
-define la \emph{altura de la Lorentziana}
+define la \emph{altura de la Lorentziana}, como se ilustra en la Figura~\ref{fig:lorentzian}
 \begin{align*}
  h_0\equiv h(\omega_0)=\frac{1}{(\gamma/2)^2}=\frac{4}{\gamma^2}
 \end{align*}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.8]{lorentzian}
+  \caption{Curvas lorentzianas para varios valores de $\gamma$. Se ha tomado $\omega_0=\SI{8}{\radian\per\second}$.}
+  \label{fig:lorentzian}
+\end{figure}
 Además 
 \begin{align*}
   \left.h(\omega)\right|_{(\omega-\omega_0)^2=(\gamma/2)^2}=\frac{h_0}{2}
@@ -574,7 +590,7 @@ La amplitud de la resonancia es entonces
   \Delta\omega=\omega_+-\omega_-=\gamma
 \end{align*}
 
-A medida que $\gamma\to$ la curva se vuelve más alta y estrecha. De modo que el rango sobre el cual el sistema responde llega a ser más pequeño y el oscilador llega a ser cada vez más selectivo en frecuencia, de la ecuación para el factor de calidad \eqref{eq:calidad}, teníamos
+A medida que $\gamma$ decrece, la curva se vuelve más alta y estrecha. De modo que el rango sobre el cual el sistema responde llega a ser más pequeño y el oscilador llega a ser cada vez más selectivo en frecuencia, de la ecuación para el factor de calidad \eqref{eq:calidad}, teníamos
 \begin{align*}
 Q=&\frac{\omega_0}{\gamma}\qquad\text{si}\ \frac{\gamma}{\omega}\ll 1  
 \end{align*}
@@ -583,24 +599,25 @@ Como $\Delta\omega=\gamma$, entonces, el factor de calidad de  un oscilador forz
   Q=\frac{\omega_0}{\Delta \omega}=\frac{\text{frecuencia de resonancia}}{\text{amplitud de resonancia}}\,.
 \end{align*}
 
-$Q$ caracteriza la frecuencia de respuesta de un sistema, a medida que $Q$ crece, el sistema se vuelve más selectivo en frecuencias. Por ejemplo, en sistemas atómicos $Q\sim 10^8$ lo que implica que el sistema no genera ninguna respuesta a menos que sea forzado muy cerca a su amplitud de resonancia. Como la frecuencia de oscilación de dichos sistemas atómicos es independiente de influencias externas, la característica de tener alto $Q$ puede usarse en algunas aplicaciones como lo relojes atómicos. 
+$Q$ caracteriza la frecuencia de respuesta de un sistema, a medida que $Q$ crece, el sistema se vuelve más selectivo en frecuencias. Por ejemplo, en sistemas atómicos $Q\sim 10^8$ lo que implica que el sistema no genera ninguna respuesta a menos que sea forzado muy cerca a su amplitud de resonancia. Como la frecuencia de oscilación de dichos sistemas atómicos es independiente de influencias externas, la característica de tener alto $Q$ puede usarse en algunas aplicaciones como los relojes atómicos. 
 
 Note que entre más pequeño sea el amortiguamiento, menos energía se disipa. El tiempo de disipación de amortiguamiento del sistema  fue definido en la ec.~\eqref{eq:vidamedia}. En el caso de un oscilador forzado y suavemente amortiguado, dicho tiempo satisface la condición
 \begin{align*}
   \tau \Delta \omega =1\,,
 \end{align*}
-que límite el diseño de osciladores. Si un elemento es muy selectivo en frecuencia entonces necesariamente oscila durante mucho tiempo. Además,  un elemento de estas característica le tomará mucho tiempo regresar al reposo después de aplicar una fuerza impulsora adecuada. 
+que límita el diseño de osciladores. Si un elemento es muy selectivo en frecuencia entonces necesariamente oscila durante mucho tiempo. Además,  un elemento de estas característica le tomará mucho tiempo regresar al reposo después de aplicar una fuerza impulsora adecuada. 
 
-En mecánica cuántica existe una relación similar que corresponde al \emph{principio de incertidumbre}
+\begin{frame}
+  En mecánica cuántica existe una relación similar que corresponde al \emph{principio de incertidumbre}
 \begin{align*}
   \Delta t \Delta E\ge \frac{\hbar}{2}
 \end{align*}
 que limita la respuesta de los sistemas cuánticos. 
-
+\end{frame}
 \begin{itemize}
-\item[\textbf{Ejemplo:}] La partícula $Z$ corresponde a una resonancia centrada en $91.1876\pm 0.0021$~GeV y con una amplitud de $2.4952\pm0.023$\~GeV (En unidades naturales). ¿cual es el tiempo de amortiguamiento (en este caso de decaimiento) de la resonanciaP?, ¿Cual es el factor de Calidad? 
+\item[\textbf{Ejemplo:}] La partícula $Z$ corresponde a una resonancia centrada en $91.1876\pm 0.0021$~GeV y con una amplitud de $2.4952\pm0.023$\~GeV (En unidades naturales). ¿Cual es el tiempo de amortiguamiento (en este caso de decaimiento) de la resonancia?, ¿Cual es el factor de Calidad? 
 
-\item[\textbf{Solución}]. El factor de conversión de GeV  a segundos es
+\item[\textbf{Solución:}] El factor de conversión de GeV  a segundos es
   \begin{align*}
     1\ \text{GeV}^{-1}=6.58211899\times 10^{-25}\second\,,
   \end{align*}
@@ -612,6 +629,10 @@ que limita la respuesta de los sistemas cuánticos.
     Q=\frac{\omega_0}{\gamma}=36.5
   \end{align*}
 \end{itemize}
+
+\ejemplo{} Si el factor de calidad de dos espejos esféricos, cuyos polos están separados una distancia de 6~cm y que forman una cavidad resonante que logra mantener un rayo de luz durante 130~ms es $Q=4\times 10^{10}$...  
+
+
 %ejemplos
 
 %\left(\right)

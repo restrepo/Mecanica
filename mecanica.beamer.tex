@@ -25,7 +25,7 @@
 }
 %\usepackage[svgnames]{xcolor}
 %%paginacion
-\usefoottemplate{\hfill \insertframenumber{}}% /\inserttotalframenumber}
+\usefoottemplate{\hfill \insertframenumber{}}% /\inserttotalframenumber
 %delete the navigation buttons
 \setbeamertemplate{navigation symbols}{}
 }
@@ -46,12 +46,31 @@
 \usepackage{simplewick}
 %acroread /usr/share/doc/texlive-science-doc/latex/SIunits/SIunits.pdf
 \usepackage[squaren,mediumspace,mediumqspace]{SIunits} 
+\newcommand{\SI}[2]{#1#2}
+\newcommand{\si}[1]{#1}
+%\usepackage{siunitx} 
 \usepackage[toc,page]{appendix}
 \usepackage{comment}
 \includecomment{inprogress}
 \specialcomment{inprogress}
 {\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
 %\excludecomment{inprogress}
+
+\includecomment{borrar}
+\specialcomment{borrar}
+{\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
+\excludecomment{borrar}
+
+\includecomment{details}
+\specialcomment{details}
+{\begingroup}{\endgroup}
+\excludecomment{details}
+
+\includecomment{onlybeamer}
+\specialcomment{onlybeamer}
+{\begingroup}{\endgroup}
+%\excludecomment{onlybeamer}
+
 
 \def\lt{<} % compatibility with instiki
 \def\gt{>} % compatibility with instiki
@@ -135,7 +154,8 @@
 %\mode<presentation>{\input{energia}}
 %\mode<presentation>{\input{rigido}}
 %\mode<presentation>{\input{centrales}}
-\mode<presentation>{\input{oscilador}}
+%\mode<presentation>{\input{oscilador}}
+\mode<presentation>{\input{relatividad}}
 %\mode<presentation>{\input{bibliography}}
 
 \end{document}

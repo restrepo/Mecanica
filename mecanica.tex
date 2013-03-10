@@ -25,6 +25,7 @@
 %acroread /usr/share/doc/texlive-science-doc/latex/SIunits/SIunits.pdf
 \usepackage[squaren,mediumspace,mediumqspace]{SIunits} 
 \newcommand{\SI}[2]{#1#2}
+\newcommand{\si}[1]{#1}
 %\usepackage{siunitx} 
 \usepackage[displaymath,textmath,sections,graphics,floats]{preview}
 %%%%%%%%% 
@@ -48,7 +49,13 @@
 \specialcomment{details}
 {\begingroup}{\endgroup}
 %\excludecomment{details}
-\PreviewEnvironment{details}
+%\PreviewEnvironment{details}
+
+\includecomment{onlybeamer}
+\specialcomment{onlybeamer}
+{\begingroup}{\endgroup}
+\excludecomment{onlybeamer}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%Beamer compability layer
 %to compile beamer use beyond.beamer.tex
@@ -78,6 +85,9 @@
 %\setlength{\topmargin}{-40pt}
 \def\lt{<} % compatibility with instiki
 \def\gt{>} % compatibility with instiki
+%%%%%%%%%%%%%%%%%%
+%%Commmands
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Example as section or envarimente
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -135,8 +145,8 @@
 %%\includeonly{cinematica}
 %\includeonly{rigido}
 %\includeonly{centrales}
-\includeonly{oscilador}
-%\includeonly{relatividad}
+%\includeonly{oscilador}
+\includeonly{relatividad}
 
 
 %%%%%%%%%%%%%%%%%%%
