@@ -1,15 +1,74 @@
 \chapter{Preliminares}
 
+\section{Cifras significativas}
+
+%cifras significativas
+Toda medida física tiene asociada un error experimental. Si la medida se repite múltiples veces tipicamente los resultados siguen una distribución gaussiana en la que el eje $x$ representa el valor medido y el eje el número de medidas,  como la que se muestra en la figura~\ref{fig:gaussian}. El valor central representa el valor númerico que se repite más veces. En el caso de una distribución gaussiana, la distancia entre dos puntos de la curva a la mitad de la altura de se conoce como el intervalo a $1\sigma$ y representa un intervalo en que es obtenida la medida el 68\% de las veces. El intervalo a $3\sigma$ es obtenido el 99.7\%, mientras que la medidad cae en el intervalo a $5\sigma$ el 99.9999\% de las veces. La convención es escribir la medida con el error a $1\sigma$ en la forma
+\begin{align*}
+  \text{cantidad física}=&\text{medida}\pm 1\sigma\\
+=&\text{medida}(1\sigma)\,.\\
+\end{align*}
+Así por ejemplo la medida de alguna distancia $d$ puede escribirse como
+\begin{align*}
+d=&(1.23\pm 0.01)\si{m}\nonumber\\
+  =&\SI{1.23\pm 0.01}{m}\,.
+\end{align*}
+Las cifras significativas de una cantidad física son todos aquellos dígitos que contribuyen a la precisión del número. Por consiguiente el número de cifras significativas esta determinado por todos los dígitos contados a partir del error a $1\sigma$. En el ejemplo anterior, el número directamente afectado por el error es el segundo decimal correspondiente al dígito 3 y por consiguiente la cantidad física tiene 3 cifras significativas. Al hacer operaciones con cantidades física existen métodos para propagar los errores hasta el resultado final. Una regla simple, cuando se tienen las cantidades físicas con sus cifras significativas pero sin especificar su error, es escribir el resultado final con un número de cifras significativas igual al de la cantidad con mayor número de cifras significativas de las involucradas en la operación. Por ejemplo, al calcular el volumen de un cubo con los lados especificados a tres cifras significativas como  $A =\SI{3.66}{m}$ $B = \SI{8.45}{m}$ y  $C=\SI{2.11}{m}$,
+\begin{align*}
+  V=ABC=\SI{65.3}{m}^3\,,
+\end{align*}
+también con tres cifras significativas.
+
+
+
 \section{Medidas y unidades}
-Las cantidades básicas en mecánica son longitud [L], masa [M] y tiempo [T], en donde se ha usado una letra entre corchete para denotar el símbolo dimensional de la cantidad física. En el Sistema Internacional (SI) de unidades están cantidades se miden en metros ($\meter$), kilogramos ($\kilo\gram$) y segundos ($\second$).
+Las cantidades básicas en mecánica son longitud [L], masa [M] y tiempo [T], en donde se ha usado una letra entre corchete para denotar el símbolo dimensional de la cantidad física. En el Sistema Internacional (SI) de unidades están cantidades se miden en metros ($\si{\meter}$), kilogramos ($\si{\kilo\gram}$) y segundos ($\si{\second}$).
+\begin{frame}
 \begin{itemize}
 \item Un segundo es la duración de $9\ 192\ 631\ 770$ oscilaciones de la radiación emitida en la transición entre los dos niveles hiperfinos del estado fundamental del isótopo 133 del átomo de cesio (${}^{133}$Cs), a una temperatura de 0 K~\cite{wikipedia}
 \item Un metro es la distancia que recorre la luz en el vacío durante un intervalo de $1/299\ 792\ 458$ de segundo~\cite{wikipedia}
 \item Un kilogramo es la masa que tiene el prototipo internacional, compuesto de una aleación de platino e iridio, que se guarda en la Oficina Internacional de Pesas y Medidas (BIPM) en Sèvres, cerca de París (Francia)~\cite{wikipedia}.
 Es la única unidad del SI que todavía se define por un objeto patrón y no por una característica física fundamental.
 \end{itemize}
+  
+\end{frame}
 
+%hablar sobre cancelación y transformación de unidades
+Es esencial usar unidades SI en ecuaciones físicas; por lo que usualmente se requiere que se transformen cantidades en otras unidades al sistema de unidades SI. Una forma conveniente es multiplicar por factores iguales a 1, como:
+\begin{align}
+  1=&\frac{\si{\kilo\meter}}{\SI{1000}{m}}\nonumber\\
+  1=&\frac{\SI{3600}{\second}}{\si{hour}}
+\end{align}
+Por ejemplo
+\begin{align}
+ 60\frac{\cancel{\si{\kilo\meter}}}{\cancel{\si{hour}}}
+ \frac{\SI{1000}{m}}{\cancel{\si{\kilo\meter}}}
+ \frac{\cancel{\si{hour}}}{\SI{3600}{\second}}
+=\SI{16.7}{\meter\per\second}\,.
+\end{align}
 
+\section{Notación científica}
+En los fenómenos de la naturaleza hay involucradas escalas que varían por muchos ordenes de magnitud\footnote{Ver por ejemplo \url{http://htwins.net/scale2/}}, por lo cual es conveniente usar la notación científica y las abreviaturas correspondientes a las diferentes escalas de 10 tanto en potencias positivas como negativas como las mostradas en la tabla~\ref{tab:potenciasdediez}
+
+Los 20 prefijos usados para formar los multiplos y submútiples de SI están dados en la Tabla~\ref{tab:sipref}
+\begin{table}
+  \centering
+  \begin{tabular}{lll|lll}
+    Factor & Nombre & Símbolo &Factor & Nombre & Símbolo \\\hline
+    $10^{24}$ & yotta& Y & $10^{-24}$ & yocto & y\\
+    $10^{21}$ & zetta& Z & $10^{-21}$ & zepto & z\\
+    $10^{18}$ & exa  & E & $10^{-18}$ & atto  & a\\
+    $10^{15}$ & peta & P & $10^{-15}$ & femto & f\\
+    $10^{12}$ & tera & T & $10^{-12}$ & pico  & p\\
+    $10^{9}$  & giga & G & $10^{-9}$  & nano  & n\\
+    $10^{6}$  & mega & M & $10^{-6}$  & micro & $\mu$\\
+    $10^{3}$  & kilo & k & $10^{-3}$  & mili  & m\\
+    $10^{2}$  & hecto& h & $10^{-2}$  & centi & c\\
+    $10^{1}$  & deka & da& $10^{-1}$  & deci  & d\\\hline
+  \end{tabular}
+  \caption{Prefijos SI}
+  \label{tab:sipref}
+\end{table}
 
 
 

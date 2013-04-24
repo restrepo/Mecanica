@@ -23,10 +23,11 @@
 \graphicspath{{figures/}}
 \usepackage{listings}
 %acroread /usr/share/doc/texlive-science-doc/latex/SIunits/SIunits.pdf
-\usepackage[squaren,mediumspace,mediumqspace]{SIunits} 
-\newcommand{\SI}[2]{#1#2}
-\newcommand{\si}[1]{#1}
-%\usepackage{siunitx} 
+%\usepackage[squaren,mediumspace,mediumqspace]{SIunits} 
+%\newcommand{\SI}[2]{#1#2}
+%\newcommand{\si}[1]{#1}
+%/usr/share/doc/texlive-doc/latex/siunitx/siunitx.pdf
+\usepackage{siunitx} 
 \usepackage[displaymath,textmath,sections,graphics,floats]{preview}
 %%%%%%%%% 
 \usepackage{comment}
@@ -55,6 +56,12 @@
 \specialcomment{onlybeamer}
 {\begingroup}{\endgroup}
 \excludecomment{onlybeamer}
+
+\includecomment{onlybook}
+\specialcomment{onlybook}
+{\begingroup}{\endgroup}
+\excludecomment{onlybook}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%Beamer compability layer
@@ -137,7 +144,7 @@
 \newcommand{\tofc}[1]{#1} % if full
 %%comment the following two lines for full document
 \renewcommand{\tofc}[1]{} %if  \includeonly{chapter1}
-%\includeonly{preliminares}
+\includeonly{preliminares}
 %\includeonly{intermov}
 %\includeonly{dinamica}
 %\includeonly{momentum}
@@ -146,7 +153,7 @@
 %\includeonly{rigido}
 %\includeonly{centrales}
 %\includeonly{oscilador}
-\includeonly{relatividad}
+%\includeonly{relatividad}
 
 
 %%%%%%%%%%%%%%%%%%%
