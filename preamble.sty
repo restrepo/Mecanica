@@ -1,0 +1,131 @@
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage[svgnames]{xcolor}
+\usepackage[spanish]{babel}
+\spanishdecimal{.}
+\addto\captionsspanish{%
+\def\tablename{Tabla}%
+}
+\usepackage{bm}
+\usepackage{simplewick}
+\usepackage[toc,page]{appendix}
+\graphicspath{{figures/}}
+\usepackage{listings}
+\usepackage[displaymath,textmath,sections,graphics,floats]{preview}
+%%%%%%%%% 
+\usepackage{comment}
+\includecomment{extrapage}
+\specialcomment{extrapage}
+{\begingroup}{\endgroup}
+%\excludecomment{extrapage}
+
+\includecomment{inprogress}
+\specialcomment{inprogress}
+{\begingroup\itshape \medskip}{\medskip \endgroup}
+\excludecomment{inprogress}
+
+\includecomment{borrar}
+\specialcomment{borrar}
+{\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
+\excludecomment{borrar}
+
+\includecomment{details}
+\specialcomment{details}
+{\begingroup}{\endgroup}
+%\excludecomment{details}
+%\PreviewEnvironment{details}
+
+\includecomment{onlybeamer}
+\specialcomment{onlybeamer}
+{\begingroup}{\endgroup}
+\excludecomment{onlybeamer}
+
+\includecomment{onlybook}
+\specialcomment{onlybook}
+{\begingroup}{\endgroup}
+\excludecomment{onlybook}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Beamer compability layer
+%to compile beamer use beyond.beamer.tex
+\includecomment{frame}
+\specialcomment{frame}
+{\begingroup}{\endgroup}
+%\excludecomment{frame}
+%undef beamer envioroments
+%\renewenvironment{frame}{}{}
+\newenvironment{block}
+{\noindent\rule{1ex}{1ex}\hrulefill\\}
+{\hrulefill\rule{1ex}{1ex}\\}
+
+\newcommand{\only}[1]{#1} 
+%\newenvironment{block}{\hrulefill}{\hrulefill}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%beamer commands
+\newcommand{\alert}[1]{#1}
+%%%%%%%%%%%%%&
+%%%x-symbolo compatibility
+\newcommand{\timesm}{\times}
+
+%\usepackage{bbold}
+\setlength{\textwidth}{180mm}
+\setlength{\oddsidemargin}{-1cm}
+\setlength{\evensidemargin}{-1cm}
+%\setlength{\topmargin}{-40pt}
+\def\lt{<} % compatibility with instiki
+\def\gt{>} % compatibility with instiki
+%%%%%%%%%%%%%%%%%%
+%%Commmands
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Example as section or envarimente
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%1. First set the style
+\newtheoremstyle{example}{\topsep}{\topsep}%
+     {}%         Body font
+     {}%         Indent amount (empty = no indent, \parindent = para indent)
+     {\bfseries}% Thm head font
+     {}%        Punctuation after thm head
+     {\newline}%     Space after thm head (\newline = linebreak)
+     {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}%         Thm head spec
+
+   \theoremstyle{example}
+%2. Set enviroment name
+
+   \newtheorem{example}{Example}[subsection]
+%%%%%%%%%%%%%%%
+\theoremstyle{definition}
+\newtheorem{ejemplo}{Ejemplo}[section]
+\newcommand{\finejemplo}{\hfill\rule{1ex}{1ex}}
+%\newtheorem[thm]{exmp}
+%%%%%%%%%
+%%%%%%%%%%%%%%%
+\theoremstyle{definition}
+\newtheorem{ejercicio}{Ejercicio}[section]
+%\newtheorem[thm]{exmp}
+%%%%%%%%%
+ \lstset{language=python
+%,inputencoding=utf8
+%,showspaces=false
+%{\small Hola} {\footnotesize Hola} {\scriptsize Hola} {\tiny Hola}
+,basicstyle=\small\ttfamily
+%,basicstyle=\small\sffamily,
+,keywordstyle=\color{blue}
+,commentstyle=\normalfont\ttfamily\color{red}
+,stringstyle=\color{Green}
+%,numbers=left
+%,numberstyle=\tiny
+,frame=b
+,inputencoding=utf8
+,extendedchars=true
+,columns=fullflexible
+,showstringspaces=false
+%,backgroundcolor=\color{lightgray}
+,texcl=true
+}
