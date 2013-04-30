@@ -1,11 +1,20 @@
 \chapter{Din\'amica}
 \label{cha:dinamica}
 
-\section{Primera Ley de Newton}
+\section{Sistemas inerciales}
 
 \subsection{Transformaciones de Galileo}
 
-La velocidad y la aceleraci\'on dependen del sistema de referencia usado para el c\'alculo de los mismos. Considere dos sistemas de referencia en movimiento relativo: $x,y,z,t$ y $x',y',z',t'$. Como el tiempo es absoluto
+Los vectores como la velocidad, la aceleración o el moméntum dependen
+son independiente entre sistemas de referencia usado en
+reposo. Considere ahora dos sistemas de referencia en movimiento
+relativo con $S:(x,y,z,t)$ en reposo y $S':(x',y',z',t')$ moviéndose a
+velocidad constante $\mathbf{V}$. Como hipótesis, asumamos que el
+patrón de medida no se afecta al encontrarse en el sistema de
+referencia en movimiento, y que el tiempo transcurre de la misma forma
+en los dos sistemas. Estas hipótesis son válidas si $v\ll c$ y serán
+reevaluadas cuando se formule la Relatividad Especial en el
+Capítulo~\ref{cha:relatividad-especial}. Entonces,
 \begin{align}
   t=t'\qquad v\ll c\,.
 \end{align}
@@ -19,6 +28,7 @@ donde el sistema de coordenadas primado se mueve con velocidad $\mathbf{V}$ a la
 \end{align}
 donde $d\mathbf{V}/dt=0$. Entonces
 \begin{align}
+\label{eq:rp}
   \mathbf{r}=&\mathbf{r}'+\mathbf{V}t\nonumber\\
   \mathbf{r}'=&\mathbf{r}-\mathbf{V}t\,.
 \end{align}
@@ -54,30 +64,34 @@ o
     z\\
   \end{pmatrix}
 \end{align}
-Como la velocidad $\mathbf{V}$ no cambia con el tiempo:
+A estas relaciones se les conoces como reglas de transformación, y en este corresponden a las \emph{Transformaciones de Galileo}. Por ejemplo, las traslaciones espaciales son un caso particular de la ecuación para $x'$ cuando $x'=x+a$ con $a$ una distancia constante. 
+
+Si el cuerpo se mueve con velocidad $\mathbf{v}(t)$ relativo al sistema $S$, podemos hallar su velocidad relativa al sistema $S'$ derivando la ec.~\eqref{eq:rp} con respecto al tiempo y teniendo en cuenta que  que la velocidad $\mathbf{V}$ no cambia con el tiempo:
 \begin{align}
-  \mathbf{v}'(t)=\mathbf{v}(t)-\mathbf{V}\,.
+\frac{d\mathbf{r}'}{dt}=&\frac{d\mathbf{r}}{dt}-\frac{d}{dt}\left(\mathbf{V}t\right)\nonumber\\
+  \mathbf{v}'(t)=&\mathbf{v}(t)-\mathbf{V}\,.
 \end{align}
-Pero para la aceleraci\'on:
+Pero para la aceleración:
 \begin{align}
-  \mathbf{a}'=\mathbf{a}\,.
+  \mathbf{a}'=\mathbf{a}\,,
 \end{align}
+de modo que si la velocidad relativa entre los sistemas es constante
+la aceleración de un objeto vista desde los dos sistemas de referencia
+es la misma. 
 
+Los sistemas de referencia moviéndose a velocidad constante se relacionan entre sí a través de las transformaciones de Galileo y reciben el nombre de sistemas inerciales: Un sistema de coordenadas inercial, es un sistema de coordenadas que se mueve a velocidad constante. Note los diferentes sistemas inerciales observan los mismos cambios en la velocidad de un cuerpo en movimiento y por lo tanto las Leyes de la física responsables de las fuerzas que están cambiando la velocidad el objeto deben ser independientes de los sistemas inerciales con respecto al cual se mida. El movimiento tiene sentido solamente con respecto a un sistema particular de coordenadas, y al momento de describir el movimiento es esencial especificar el sistema de coordenadas que se este usando. De este forma podemos formular el:
 
-\subsection{Primera Ley}
+\textbf{Principio de relatividad:} Las leyes de la física mantienen su forma en distintos sistemas inerciales.
 
-Un objeto se mueve uniformemente en el espacio siempre y cuando no hayan influencias externas actuando sobre \'el.
+Además podemos reformular la Primera Ley de Newton:
 
-El movimiento tiene sentido solamente con respecto a un sistema particular de coordenadas, y al momento de describir el movimiento es esencial especificar el sistema de coordenadas que se este usando. Un sistema de coordenadas inercial, es un sistema de coordenadas que se mueve a velocidad constante.
+\textbf{Primera Ley de Newton}: Los cuerpos aislados se mueven uniformemente con respecto a sistemas inerciales.
 
-\textbf{Primera Ley de Newton}: Los cuerpos aislados se mueven uniformemente en sistemas inerciales.
-
-Un cuerpo sobre el que no act\'uan fuerzas se llama \emph{cuerpo libre}.
+Un cuerpo sobre el que no actúan fuerzas se llama \emph{cuerpo libre}.
 
 \section{Principios de la Mecánica}
 La homogeneidad e isotropía del espacio, y la homogeneidad del tiempo permiten son ejemplos de transformaciones continuas que forman lo que matemáticamente se conocen como Grupos de Lie. 
 
-\textbf{Principio de relatividad:} Las leyes de la física mantienen su forma en distintos sistemas inerciales.
 
 Las cantidades físicas pueden sufrir transformaciones de traslaciones o rotaciones bajo grupos continuos, pero las leyes físicas deben mantener su forma después de estas transformaciones. Más aún, \textbf{El Teorema de Noether} establece que por cada transformación continua existe alguna carga conservada. En mecánica este teorema da lugar a tres leyes de conservación importantes, resumidas en la Tabla~\ref{tab:tn}
 
@@ -151,11 +165,11 @@ haber fuerzas internas al sistema, ejercidas por un objeto del sistema
 en otro objeto del sistema, pero tales fuerzas internas no pueden
 cambiar el moméntum del sistema. Veremos en detalle el por qué en
 el siguiente capítulo, pero la idea básica es que las fuerzas internas
-se cancelan entre si. Una fuerza que el objeto 1 hace sobre el objeto
+se cancelan entre si: una fuerza que el objeto 1 hace sobre el objeto
 2 en el sistema, cambia el moméntum del objeto 2. Pero el objeto 2
 ejerce una fuerza en dirección opuesta en el objeto 1 que cambia el
 moméntum del objeto de la forma opuesta, de modo que el cambio en el
-moméntum de los dos objetos suma cero.
+moméntum de los dos objetos suma cero. 
 
 \end{itemize}
 
@@ -182,7 +196,7 @@ moméntum de los dos objetos suma cero.
 \begin{itemize}
   \item     \alert{La tierra y el aire} son parte del entorno, de modo que las fuerzas
     ejercidas por la tierra el aire son ambas \alert{externas}.
-  \item Las fuerzas\alert{inter-atómicas} de los átomos de la bola son
+  \item Las fuerzas \alert{inter-atómicas} de los átomos de la bola son
     fuerzas \alert{internas} que no contribuyen a la fuerza neta $\mathbf{F}_{\text{neta}}$
   \end{itemize}
   
@@ -260,9 +274,9 @@ El proceso iterativo que se puede implementar computacionalmente equivale a hace
 Para ilustrar la integración numérica considere el siguiente programa en \texttt{vpython} de la solución al problema de una partícula de masa $m=0.5\ $Kg, con velocidad inicial $\mathbf{v}_i=(5,0,0)\ $m/s, moviendose bajo la influencia de una fuerza neta gravitacional dada por
 \begin{align}
 \textbf{F}_{\text{neta}}=&(0,-mg,0)\nonumber\\
-=&(0,-4.9,0)\newton\,,
+=&(0,-4.9,0)\si{\newton}\,,
 \end{align}
-La implementación con un paso de integración dado por un $\Delta t=0.01\second$ se ilustra en el siguiente programa:
+La implementación con un paso de integración dado por un $\Delta t=\SI{0.01}{\second}$ se ilustra en el siguiente programa:
 
 \begin{frame}[fragile,allowframebreaks]
 \begin{lstlisting}
@@ -299,7 +313,7 @@ Tomando el origen de coordenadas en el punto inicial de la bola, podemos obtener
 \begin{table}
   \centering
   \begin{tabular}{|c|c|c|}\hline
-    $t$ (\second) & $\mathbf{p}$ (\kilo\gram\ \meter\per\second) & $\mathbf{r}$ (\meter)\\\hline
+    $t$ (\si{\second}) & $\mathbf{p}$ (\si{\kilo\gram \meter\per\second}) & $\mathbf{r}$ (\si{\meter})\\\hline
     0.01 & (2.5, -0.049, 0) & (0.05,-0.00098, 0)\\
     0.02 & (2.5, -0.098, 0) & (0.1, -0.00294, 0)\\
     0.03 & (2.5, -0.147, 0) & (0.15,-0.00588, 0)\\
@@ -615,7 +629,7 @@ Para el movimiento en $y$ tenemos
   y_f=&y_i+v_{yi}\Delta t-\frac{1}{2}g \Delta t^2\nonumber\\
 =& 0+(7\ \text{m/s})(0.5\ \text{s})-\frac{1}{2}(9.8\ \text{N/kg})(0.5\ \text{s})^2=2.275\ \text{m}
 \end{align}
-El vector final de desplazamiento después de $0.5\second$ es
+El vector final de desplazamiento después de $\SI{0.5}{\second}$ es
 \begin{align}
   \mathbf{r}_f=(1.5,2.75,0)\ \text{m}
 \end{align}
@@ -634,7 +648,7 @@ con soluciones
 El segundo valor es el tiempo cuando la bola retorna al suelo
 \begin{align}
   \Delta t=&\frac{2 v_{yi}}{g}\nonumber\\
-=&\frac{2(7\ \text{m/s})}{9.8\newton\per\kilo\gram} =1.43\ \text{s}
+=&\frac{2(\SI{7}{m/s})}{\SI{9.8}{\newton\per\kilo\gram}} =\SI{1.43}\ \text{s}
 \end{align}
 El movimiento en $y$ es ilustrado en la figura~\ref{fig:parabgraph3}, mientras que la trayectoria real es ilustrada en la figura~\ref{fig:parabgraph5}.
 \end{itemize}
@@ -923,7 +937,7 @@ La aceleraci\'on, que esta en la misma direcci\'on que la fuerza esta dada por
   \mathbf{a}=\frac{\mathbf{F}_R}{m}=\frac{7\hat{\mathbf{i}}+5\hat{\mathbf{j}}}{7/3}=3\hat{\mathbf{i}}+\frac{15}{7}\hat{\mathbf{j}}\,.
 \end{align}
 
-\item[\textbf{Ejemplo:}] Un disco plano de masa $m=2\kilo\gram$, se desliza sobre un lago congelado con una rapidez inicial de $v=5\meter\per\second$. La fuerza de fricci\'on tiene un valor constante de $f=4\newton$ opuesta al movimiento. \textquestiondown cuan lejos avanza el disco antes de detenerse?
+\item[\textbf{Ejemplo:}] Un disco plano de masa $m=\SI{2}{\kilo\gram}$, se desliza sobre un lago congelado con una rapidez inicial de $v=\SI{5}{\meter\per\second}$. La fuerza de fricci\'on tiene un valor constante de $f=\SI{4}{\newton}$ opuesta al movimiento. \textquestiondown cuan lejos avanza el disco antes de detenerse?
 
 Escogiendo apropiadamente el sistema de coordenadas, tenemos:
 \begin{align}
@@ -931,7 +945,7 @@ Escogiendo apropiadamente el sistema de coordenadas, tenemos:
 \end{align}
 de donde
 \begin{align}
-  \mathbf{a}=-\frac{f}{m}\hat{\mathbf{i}}=\frac{-4\newton}{2\kilo\gram}\hat{\mathbf{i}}=\unit{-2\hat{\mathbf{i}}}{\meter\per\second\squared}\,.
+  \mathbf{a}=-\frac{f}{m}\hat{\mathbf{i}}=\frac{-\SI{4}{\newton}}{\SI{2}{\kilo\gram}}\hat{\mathbf{i}}={-2\hat{\mathbf{i}}}{\si{\meter\per\second\squared}}\,.
 \end{align}
 De la cinemática del problema tenemos (eq.~\eqref{eq:trayectoriay})
 \begin{align}
@@ -940,7 +954,7 @@ De la cinemática del problema tenemos (eq.~\eqref{eq:trayectoriay})
 Cuando el disco se detiene $\mathbf{v}_f=0$, de modo que
 \begin{align}
   -v_0^2=&2ax\nonumber\\
-  x=&-\frac{v_0^2}{2a}=\unit{6.25}{\meter}\,.
+  x=&-\frac{v_0^2}{2a}=\SI{6.25}{\meter}\,.
 \end{align}
 
 
@@ -965,19 +979,19 @@ En general, las leyes de Newton sólo son válidas en sistemas inerciales. Enton
 \item Si este permanece en un estado de movimiento uniforme, entonces se esta en un sistema inercial.
 \end{itemize}
 
-La tierra es b\'asicamente un sistema inercial en el cual la aceleración centrípeta debida a la rotación en el Ecuador es de $0.34\meter\per\second\squared$
+La tierra es b\'asicamente un sistema inercial en el cual la aceleración centrípeta debida a la rotación en el Ecuador es de $\SI{0.34}{\meter\per\second\squared}$
 
 La estructura y el comportamiento del Universo entero puede ser descrito por la acción de cuatro fuerzas fundamentales descritas en la tabla~\ref{tab:forces}
 \begin{table}
   \centering
   \begin{tabular}{l|cc|r}
     &Rango& Intensidad&Mediador\\\hline
-Fuerza fuerte (n\'ucleos hadr\'onicos) & $10^{-15}\meter$ &1 &gluones\\
+Fuerza fuerte (n\'ucleos hadr\'onicos) & $10^{-15}\si{\meter}$ &1 &gluones\\
 Fuerza electromagn\'etica (cargas) & $\infty$ & $10^{-2}$ & fot\'on\\
-Fuerza d\'ebil &$10^{-17}\meter$&$10^{-13}$ (isosp\'\i n)& $W^\pm,\ Z^0$\\
+Fuerza d\'ebil &$10^{-17}\si{\meter}$&$10^{-13}$ (isosp\'\i n)& $W^\pm,\ Z^0$\\
 Fuerza gravitacional (masas)&$\infty$& $10^{-38}$& gravit\'on\\
   \end{tabular}
-  \caption{Fuerzas fundamentales. La intensidad se mide con respecto a la fuerza entre dos protones separados $10^{-15}\meter$}
+  \caption{Fuerzas fundamentales. La intensidad se mide con respecto a la fuerza entre dos protones separados $10^{-15}\si{\meter}$}
   \label{tab:forces}
 \end{table}
 
@@ -1384,11 +1398,11 @@ Para $m_2$
       \begin{align*}
         a=\frac{f}{m_1}=\mu_e g\,.
       \end{align*}
-    \item[\ref{item:d1e})] Para $t=2\second$
+    \item[\ref{item:d1e})] Para $t=\SI{2}{\second}$
       \begin{align*}
         x=&\frac{1}{2}a t^2
       \end{align*}
-    \item[\ref{item:d1e})] $F=15.7\newton$, $a=1.96\meter\per\second^2$, $x=3.92\meter$
+    \item[\ref{item:d1e})] $F=\SI{15.7}{\newton}$, $a=\SI{1.96}{\meter\per\second^2}$, $x=\SI{3.92}{\meter}$
 
     \end{itemize}
 
@@ -1403,7 +1417,7 @@ Para $m_2$
       \label{item:dp1a}
     \item Determine la magnitud de la fuerza mínima para que $m_2$ no se deslice. Justifique porque es mínima.
       \label{item:dp1b}
-    \item Calcule dicha fuerza para $m_1=6\kilo\gram$, $m_2=3\times 10^3\gram$, y $\mu=0.6$
+    \item Calcule dicha fuerza para $m_1=\SI{6}{\kilo\gram}$, $m_2=3\times 10^3\si{\gram}$, y $\mu=0.6$
       \label{item:dp1c}
     \end{enumerate}
   \end{minipage}
@@ -1467,7 +1481,7 @@ La sumatoria de fuerzas para $m_1$
 
     \item[\ref{item:d1b})] Evaluando numéricamente tenemos que
       \begin{align*}
-        F_{\text{min}}=147\newton\,.
+        F_{\text{min}}=\SI{147}{\newton}\,.
       \end{align*}
 
       Como un chequeo de consistencia, podemos ver de \eqref{eq:dp4}

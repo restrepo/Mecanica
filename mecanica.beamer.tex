@@ -44,11 +44,6 @@
 %%%%%%%%%%from beyond.tex
 \usepackage{cancel}
 \usepackage{simplewick}
-%acroread /usr/share/doc/texlive-science-doc/latex/SIunits/SIunits.pdf
-\usepackage[squaren,mediumspace,mediumqspace]{SIunits} 
-\newcommand{\SI}[2]{#1#2}
-\newcommand{\si}[1]{#1}
-%\usepackage{siunitx} 
 \usepackage[toc,page]{appendix}
 \usepackage{comment}
 \includecomment{inprogress}
@@ -137,18 +132,27 @@
 
 \newcommand{\timesm}{\times}
 \newtheorem{ejemplo}[theorem]{Ejemplo}
+\newcommand{\finejemplo}{\hfill\rule{1ex}{1ex}}
 
 \newcommand{\chapter}{}
 \newcommand{\ignore}[1]{}
+
+%acroread /usr/share/doc/texlive-science-doc/latex/SIunits/SIunits.pdf
+\usepackage[squaren,mediumspace,mediumqspace]{SIunits} 
+\newcommand{\SI}[2]{#1#2}
+\newcommand{\si}[1]{#1}
+%\usepackage{siunitx} 
+
+
 \begin{document}
 %%Comment the following two lines for full processing
 %\mode<presentation>{\input{cf_tmp}}
 %\end{document}
 
 %\mode<presentation>{\input{introduccion}}
-\mode<presentation>{\input{preliminares}}
+%\mode<presentation>{\input{preliminares}}
 %\mode<presentation>{\input{intermov}}
-%\mode<presentation>{\input{dinamica}}
+\mode<presentation>{\input{dinamica}}
 %\mode<presentation>{\input{momentum}}
 %%\mode<presentation>{\input{cinematica}}
 %\mode<presentation>{\input{energia}}
