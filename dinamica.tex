@@ -126,11 +126,13 @@ matemáticamente se conocen como Grupos de Lie.
 
 Las cantidades físicas pueden sufrir transformaciones de traslaciones
 o rotaciones bajo grupos continuos, pero las leyes físicas deben
-mantener su forma después de estas transformaciones. Más aún,
-\textbf{El Teorema de Noether} establece que por cada transformación
-continua existe alguna carga conservada. En mecánica este teorema da
-lugar a tres leyes de conservación importantes, resumidas en la
-Tabla~\ref{tab:tn}
+mantener su forma después de estas transformaciones. 
+Más aún, \textbf{El Teorema de Noether} establece que por cada
+transformación continua existe alguna carga conservada. 
+Aunque no demostraremos este teorema si lo ilustraremos con ejemplos
+específicos. 
+En mecánica este teorema da lugar a tres leyes de conservación
+importantes, resumidas en la Tabla~\ref{tab:tn}
 
 \begin{frame}
   
@@ -682,7 +684,36 @@ En componentes:
   F_{\text{neta},y}=&\frac{d p_y}{dt}\nonumber\\
   F_{\text{neta},z}=&\frac{d p_z}{dt}\,,
 \end{align}
-y podemos ver que si alguna direción del momentum es constante, entonces la fuerza neta en esa dirección es cero, y viceverza.
+y podemos ver que si alguna dirección del moméntum es constante, entonces la fuerza neta en esa dirección es cero, y viceverza. 
+
+De acuerdo al teorema de Noether debe existir una simetría asociada a
+la conservación de cada una de la direcciones del moméntum. 
+La simetría correspondiente es la homogeneidad del espacio en cada una
+de sus tres direcciones independientes.
+Esta simetría se refleja en el hecho de que si realizamos un
+experimento en un sitio determinado y luego lo repetimos en el
+laboratorio de al lado, del frente, o del piso superior, debemos
+obtener exactamente el mismo resultado. 
+La regla de transformación correspondiente es que las leyes de la física deben ser invariante bajo el cambio, por ejemplo
+\begin{align*}
+  x\to x'=x+a\,,
+\end{align*}
+con $a$ constante.
+En efecto
+\begin{align*}
+  F'_{\text{neta},x}=&\frac{dp'_{x}}{dt}\nonumber\\
+=&m\frac{dv'_{x}}{dt}\nonumber\\
+=&m\frac{d}{dt}\frac{dx'}{dt}\nonumber\\
+=&m\frac{d}{dt}\frac{d(x+a)}{dt}\nonumber\\
+=&m\frac{d}{dt}\frac{d(x)}{dt}\nonumber\\
+=&m\frac{dv_{x}}{dt}\nonumber\\
+=&\frac{dp_{x}}{dt}=F_{\text{neta},x}\,,
+\end{align*}
+de modo que dos observadores en dos laboratorios separados por una
+distancia $x'=x+a$, deben medir la misma cantidad de movimiento para
+el movimiento de un cuerpo sometido a una fuerza $F_{\text{neta},x}$.
+
+
 
 En el caso de la fuerza gravitacional, si despreciamos la resistencia del aire, de la ec.~\eqref{eq:29} podemos ver que que la fuerza neta en $x$ y en $z$ es cero. Por lo tanto el momentum inicial en la dirección $x$ y $z$ se debe conservar. 
 
