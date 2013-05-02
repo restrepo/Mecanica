@@ -5,37 +5,46 @@
 
 \subsection{Transformaciones de Galileo}
 
-Los vectores como la velocidad, la aceleración o el moméntum dependen
-son independiente entre sistemas de referencia usado en
-reposo. Considere ahora dos sistemas de referencia en movimiento
-relativo con $S:(x,y,z,t)$ en reposo y $S':(x',y',z',t')$ moviéndose a
-velocidad constante $\mathbf{V}$. Como hipótesis, asumamos que el
-patrón de medida no se afecta al encontrarse en el sistema de
-referencia en movimiento, y que el tiempo transcurre de la misma forma
-en los dos sistemas. Estas hipótesis son válidas si $v\ll c$ y serán
-reevaluadas cuando se formule la Relatividad Especial en el
-Capítulo~\ref{cha:relatividad-especial}. Entonces,
+Los vectores como la velocidad, la aceleración o el moméntum
+son independientes de sistemas de referencia en
+reposo. 
+Considere ahora dos sistemas de referencia con $S:(x,y,z,t)$ en reposo
+y $S':(x',y',z',t')$ moviéndose a velocidad constante
+$\mathbf{V}$. 
+Como hipótesis, asumamos que el patrón de medida no se afecta al
+encontrarse en el sistema de referencia en movimiento, y que el tiempo
+transcurre de la misma forma en los dos sistemas. 
+Estas hipótesis son válidas si $v\ll c$ y serán reevaluadas cuando se
+formule la Relatividad Especial en el
+Capítulo~\ref{cha:relatividad-especial}. 
+Entonces,
 \begin{align}
   t=t'\qquad v\ll c\,.
 \end{align}
-Sea $\mathbf{r}$ el vector de posici\'on de un cuerpo relativo al primer sistema de referencia, y $\mathbf{r}'$ su vector de posici\'on relativo al segundo. Asumiendo que los sistema de referencia coinciden en el tiempo $t=t'=0$, entonces
+Sea $\mathbf{r}$ el vector de posición de un cuerpo relativo al
+primer sistema de referencia, y $\mathbf{r}'$ su vector de posición
+relativo al segundo.
+Asumiendo que los sistemas de referencia coinciden en el tiempo
+$t=t'=0$, entonces
 \begin{align}
   \mathbf{r}(t)=\mathbf{r}'(t)+\mathbf{R}(t)\,.
 \end{align}
-donde el sistema de coordenadas primado se mueve con velocidad $\mathbf{V}$ a largo de $\mathbf{R}$:
+donde el sistema de coordenadas primado se mueve con velocidad
+$\mathbf{V}$ a largo de $\mathbf{R}$:
 \begin{align}
   \mathbf{R}(t)=\mathbf{V}\, t\,,
 \end{align}
-donde $d\mathbf{V}/dt=0$. Entonces
+y como $d\mathbf{V}/dt=0$. Entonces
 \begin{align}
 \label{eq:rp}
   \mathbf{r}=&\mathbf{r}'+\mathbf{V}t\nonumber\\
   \mathbf{r}'=&\mathbf{r}-\mathbf{V}t\,.
 \end{align}
 
-En el caso especial de un sistema de referencia movi\'endose a lo largo del eje $x$, tenemos
+En el caso especial de un sistema de referencia moviéndose a lo largo
+del eje $x$, tenemos
 \begin{align}
-  \mathbf{r}'=\mathbf{r}-V t\hat{\mathbf{i}}\,,
+  \mathbf{r}'=\mathbf{r}-V t\,\hat{\mathbf{i}}\,,
 \end{align}
 o
 \begin{align}
@@ -64,9 +73,14 @@ o
     z\\
   \end{pmatrix}
 \end{align}
-A estas relaciones se les conoces como reglas de transformación, y en este corresponden a las \emph{Transformaciones de Galileo}. Por ejemplo, las traslaciones espaciales son un caso particular de la ecuación para $x'$ cuando $x'=x+a$ con $a$ una distancia constante. 
-
-Si el cuerpo se mueve con velocidad $\mathbf{v}(t)$ relativo al sistema $S$, podemos hallar su velocidad relativa al sistema $S'$ derivando la ec.~\eqref{eq:rp} con respecto al tiempo y teniendo en cuenta que  que la velocidad $\mathbf{V}$ no cambia con el tiempo:
+A estas relaciones se les conoce como reglas de transformación, y en
+este caso corresponden a las \emph{Transformaciones de Galileo}.
+Por ejemplo, las traslaciones espaciales son un caso particular de la
+ecuación para $x'$ cuando $x'=x+a$ con $a$ una distancia constante.
+Si el cuerpo se mueve con velocidad $\mathbf{v}(t)$ relativo al
+sistema $S$, podemos hallar su velocidad relativa al sistema $S'$
+derivando la ec.~\eqref{eq:rp} con respecto al tiempo y teniendo en
+cuenta que la velocidad $\mathbf{V}$ no cambia con el tiempo
 \begin{align}
 \frac{d\mathbf{r}'}{dt}=&\frac{d\mathbf{r}}{dt}-\frac{d}{dt}\left(\mathbf{V}t\right)\nonumber\\
   \mathbf{v}'(t)=&\mathbf{v}(t)-\mathbf{V}\,.
@@ -75,35 +89,60 @@ Pero para la aceleración:
 \begin{align}
   \mathbf{a}'=\mathbf{a}\,,
 \end{align}
-de modo que si la velocidad relativa entre los sistemas es constante
+de modo que si la velocidad relativa entre los sistemas es constante,
 la aceleración de un objeto vista desde los dos sistemas de referencia
-es la misma. 
+es la misma.
 
-Los sistemas de referencia moviéndose a velocidad constante se relacionan entre sí a través de las transformaciones de Galileo y reciben el nombre de sistemas inerciales: Un sistema de coordenadas inercial, es un sistema de coordenadas que se mueve a velocidad constante. Note los diferentes sistemas inerciales observan los mismos cambios en la velocidad de un cuerpo en movimiento y por lo tanto las Leyes de la física responsables de las fuerzas que están cambiando la velocidad el objeto deben ser independientes de los sistemas inerciales con respecto al cual se mida. El movimiento tiene sentido solamente con respecto a un sistema particular de coordenadas, y al momento de describir el movimiento es esencial especificar el sistema de coordenadas que se este usando. De este forma podemos formular el:
+Los sistemas de referencia moviéndose a velocidad constante se
+relacionan entre sí a través de las transformaciones de Galileo y
+reciben el nombre de sistemas inerciales: un sistema de coordenadas
+inercial, es un sistema de coordenadas que se mueve a velocidad
+constante.
+Como la aceleración es la misma desde todos los sistemas inerciales,
+los diferentes sistemas inerciales observan los mismos cambios en la
+velocidad de un cuerpo en movimiento y por lo tanto las Leyes de la
+física responsables de las fuerzas que están cambiando la velocidad el
+objeto deben ser independientes de los sistemas inerciales con
+respecto al cual se mida. 
+El movimiento tiene sentido solamente con respecto a un sistema
+particular de coordenadas, y al momento de describir el movimiento es
+esencial especificar el sistema de coordenadas que se este usando. De
+este forma podemos formular el:
 
 \textbf{Principio de relatividad:} Las leyes de la física mantienen su forma en distintos sistemas inerciales.
 
 Además podemos reformular la Primera Ley de Newton:
 
-\textbf{Primera Ley de Newton}: Los cuerpos aislados se mueven uniformemente con respecto a sistemas inerciales.
+\textbf{Primera Ley de Newton}: Los cuerpos aislados se mueven
+uniformemente con respecto a sistemas inerciales.
 
 Un cuerpo sobre el que no actúan fuerzas se llama \emph{cuerpo libre}.
 
 \section{Principios de la Mecánica}
-La homogeneidad e isotropía del espacio, y la homogeneidad del tiempo permiten son ejemplos de transformaciones continuas que forman lo que matemáticamente se conocen como Grupos de Lie. 
+La homogeneidad e isotropía del espacio, y la homogeneidad del tiempo
+son ejemplos de transformaciones continuas que forman lo que
+matemáticamente se conocen como Grupos de Lie.
 
 
-Las cantidades físicas pueden sufrir transformaciones de traslaciones o rotaciones bajo grupos continuos, pero las leyes físicas deben mantener su forma después de estas transformaciones. Más aún, \textbf{El Teorema de Noether} establece que por cada transformación continua existe alguna carga conservada. En mecánica este teorema da lugar a tres leyes de conservación importantes, resumidas en la Tabla~\ref{tab:tn}
+Las cantidades físicas pueden sufrir transformaciones de traslaciones
+o rotaciones bajo grupos continuos, pero las leyes físicas deben
+mantener su forma después de estas transformaciones. Más aún,
+\textbf{El Teorema de Noether} establece que por cada transformación
+continua existe alguna carga conservada. En mecánica este teorema da
+lugar a tres leyes de conservación importantes, resumidas en la
+Tabla~\ref{tab:tn}
 
 \begin{frame}
   
 \begin{table}
   \centering
-  \begin{tabular}{|l|l|l|}\hline{}
+  \begin{tabular}{|p{5cm}|l|p{5cm}|}\hline{}
     \textbf{Transformación} &\textbf{Ley Física}  &  \textbf{Cantidad conservada}\\\hline
 Traslaciones espaciales & Principio de moméntum & Moméntum\\
 Traslación temporal & Principio de Energía & Energía\\
-Rotaciones & Principio de momentum angular & Moméntum angular\\\hline
+Rotaciones & Principio de momentum angular & Moméntum angular\\
+Transformaciones de Galileo&Principio de Relatividad & 
+Movimiento uniforme del centro de masa\\\hline
   \end{tabular}
   \caption{Implicaciones del teorema de Noether en mecánica}
   \label{tab:tn}
@@ -128,6 +167,7 @@ Un \emph{sistema} puede estar conformada por uno o más objetos. Todo lo que no 
   %\begin{block}%
 {El Principio de Moméntum}, que también se conoce como la Segunda Ley de Newton es:
 \begin{align}
+\label{eq:ppiomomentum}
   \Delta\mathbf{p}=\mathbf{F}_{\text{neta}}\Delta t
 \end{align}
   %\end{block}
@@ -150,12 +190,12 @@ Para entender cada término de está ecuación, consideremos cada cantidad invol
 
 Ejemplos:
 \begin{itemize}
-\item Fuerza repulsiva entre un protón y otro protón
-\item La fuerza gravitacional atractiva que la tierra ejerce sobre usted
-\item La fuerza que un resorte comprimido ejerce sobre su mano
-\item La fuerza en una nave espacial de los gases expandiéndose en la maquinaria del cohete
+\item Fuerza repulsiva entre un protón y otro protón.
+\item La fuerza gravitacional atractiva que la tierra ejerce sobre usted.
+\item La fuerza que un resorte comprimido ejerce sobre su mano.
+\item La fuerza en una nave espacial de los gases expandiéndose en la
+  maquinaria del cohete.
 \end{itemize}
-Medir la velocidad de un objeto es una tarea familiar, pero ¿cómo medimos la magnitud de una fuerza?
 
 %hacer diagramas de resortes
 \item Las fuerza neta actuando en un sistema en un instante es el vector de
@@ -205,6 +245,15 @@ moméntum de los dos objetos suma cero.
 \begin{frame}
   La cantidad de interacción afectando un objeto incluye tanto la \alert{intensidad de la interacción} ($\mathbf{F}_{\text{neta}}$) y la \alert{duración} $\Delta t$ de la interacción. Un mayor cambio de moméntum es causado bien sea por una fuerza más grande o por aplicar la fuerza durante más tiempo.
 \end{frame}
+
+Del Principio de moméntum en la ec.~(\ref{eq:ppiomomentum}) podemos ver que las dimensiones de una fuerza $F$ son 
+\begin{align*}
+[F]=\frac{[M\ L/T]}{[T]}=[M L/T^2]\,
+\end{align*}
+que en unidades SI define el Newton 
+\begin{align*}
+\SI{1}{N}=\si{Kg m/s^2}
+\end{align*}
 
 \begin{frame}
   %\begin{block}%
@@ -269,7 +318,7 @@ y así sucesivamente
   \end{figure}
 \end{frame}
 
-El proceso iterativo que se puede implementar computacionalmente equivale a hacer la integral sobre la ecuación de movimiento dada por el Principio de Momentum. Sin embargo, sólo en casos muy específicos se puede realizar analíticamente la integración de la ecuación de movimiento.
+El proceso iterativo que se puede implementar computacionalmente equivale a hacer la integral sobre la ecuación de movimiento dada por el Principio de moméntum. Sin embargo, sólo en casos muy específicos se puede realizar analíticamente la integración de la ecuación de movimiento.
 
 Para ilustrar la integración numérica considere el siguiente programa en \texttt{vpython} de la solución al problema de una partícula de masa $m=0.5\ $Kg, con velocidad inicial $\mathbf{v}_i=(5,0,0)\ $m/s, moviendose bajo la influencia de una fuerza neta gravitacional dada por
 \begin{align}
@@ -365,6 +414,95 @@ while True:
 \end{frame}
 
 
+Medir la velocidad de un objeto es una tarea familiar, pero ¿cómo
+medimos la magnitud de una fuerza?
+
+Una forma simple de medir una fuerza es usar el estiramiento o
+compresión de un resorte. 
+%Hacer diagrama.
+Cuando colgamos un bloque de un resorte, notamos que el resorte se
+estira una distancia $s$.  
+Si doblamos el peso notamos que el resorte se estira el doble. 
+De la misma manera un resorte en posición vertical es comprimido una
+distancia $s$ por el mismo bloque, y el doble de la distancia con dos
+bloques.
+
+Por consiguiente, podemos usar un resorte para hacer una escala para
+medir fuerzas, calibrándolo en términos de cuanta fuerza se necesita
+para producir un determinando estiramiento.
+ 
+\subsection{Fuerza de un resorte}
+
+Una ley de fuerza describe matemáticamente como una fuerza depende en una situación. Para un resorte, se ha determinado experimentalmente que la fuerza ejercida por un resorte sobre un objeto pegado al resorte está dada por la siguiente ecuación:
+\begin{align}
+  \left| \mathbf{F}_{\text{resorte}} \right|=k|\Delta \mathbf{r}|
+\end{align}
+donde $|\Delta \mathbf{r}|$ es la magnitud del vector desplazamiento entre la posición inicial y final del objeto pegado al resorte, y $k$ es la \emph{constante elástica} del resorte. 
+
+La constante elástica $k$ es un número positivo, y es una propiedad del resorte en particular. Entre más grande $k$ más fuerza se necesita para estirar el resorte. 
+
+Para un resorte moviéndose en una dimensión y con el origen de coordenadas coincidiendo con la posición del objeto cuando el resorte esta relajado, tenemos que la fuerza que el resorte ejerce sobre el objeto cuando se estira una distancia $x$ es
+\begin{align}
+  \mathbf{F}=-k(x,0,0)
+\end{align}
+
+
+Si consideremos un resorte con un cuerpo pegado a su extremo moviéndose sobre una superficie, debemos considerar la fuerza de fricción entre el cuerpo y la superficie. La Ley que describe esta fuerza fricción $f$, encontrada también por experimentación, es
+\begin{align}
+  |\mathbf{f}|=\mu m g\,,
+\end{align}
+donde $\mu$ es el \emph{coeficiente de fricción entre el cuerpo y la superficie}, $m$ es la masa del cuerpo y $g$ es la aceleración gravitacional cerca a la superficie de la Tierra. La dirección de la fuerza de fricción es siempre opuesta a la dirección de movimiento. 
+
+Con está información y con el principio de moméntum podemos simular el movimiento de un cuerpo unido a un resorte sobre una superficie horizontal. La explicación paso a paso del funcionamiento del programa puede encontrarse en este \href{http://nbviewer.ipython.org/urls/raw.github.com/rescolo/spring/master/spring.ipynb}{link}. Mientras el programa definitivo es
+
+\begin{frame}[fragile,allowframebreaks]
+\begin{lstlisting}
+from __future__ import division
+from visual import *
+
+
+# INITIALIZE WINDOW AND DECLARATIONS
+
+scene.range = vector(1,1,1)
+scene.center = vector(0,0,0)
+scene.width = 800
+scene.height = 600
+
+# CREATE SPRING, WEIGHT AND LABEL OBJECTS
+
+relaxedlength = vector(.60,0,0) # length of spring when it isn't stretched or compressed
+spring = helix(pos=(-.75,0,0),axis=relaxedlength, radius=.1,coils=8,thickness=.01,color=color.green)
+
+weight = box(pos=(0,0,0),size=(.3,.3,.3),color=color.yellow)
+
+frictionlessSurface = box(size=(2,.02,.5),pos=(0,-.16,0))
+wall = box(size=(.04,.5,.3),pos=(-.77,.1,0),color=color.red)
+
+
+# SET INITIAL CONDITIONS
+
+spring.constant = 2 # k
+weight.mass = 10 # kg
+weight.velocity = vector(0,0,0)
+weight.acceleration = vector(0,0,0)
+weight.force = vector(0,0,0)
+
+#Set the label position
+mylabel = label(pos=(0,.4,0))
+#spring.displacement
+xpos=0.35 
+weight.pos=vector(xpos,0,0)
+spring.displacement=weight.pos
+spring.axis=relaxedlength+spring.displacement
+# message to the user
+message = "Inititial position:"
+message += "\ndisplacement: %.2f" % spring.displacement.x 
+mylabel.text = message
+
+\end{lstlisting}
+\end{frame}
+
+
 
 Como para un $\Delta t$ infinitesimal, la fuerza siempre se puede considerar constante, el principio de momentum se puede reescribir como
 \begin{align}
@@ -382,6 +520,8 @@ Si $\mathbf{F}_{\text{neta}}$ es conocida, a la ec.~\eqref{eq:28}, se conoce com
    \end{align*}
   \end{block}
 \end{frame}
+
+
 
 \subsection{Caso especial: masa constante}
 En el caso especial en que la masa del sistema, $m$, es constante, la ecuación de movimiento puede reescribirse como
