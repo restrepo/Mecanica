@@ -379,7 +379,6 @@ Tomando el origen de coordenadas en el punto inicial de la bola, podemos obtener
 
 
 Podemos complicar el programa poniendo rebotes sobre el piso. El programa modificado es
-
 \begin{frame}[fragile,allowframebreaks]
 \begin{lstlisting}
 from visual import *
@@ -504,6 +503,55 @@ mylabel.text = message
 \end{lstlisting}
 \end{frame}
 
+\subsection{Integración analítica}
+Al proceso de evolucionar un sistema a través del tiempo se le llama
+integración del movimiento. En algunos caso especiales dicha
+integración se puede realizar de forma analítica. El proceso
+matemático de integrar una función $f(x)$ en el intervalo $a$, $b$, corresponde a evaluar el área bajo la curva en ese intervalo
+\begin{align}
+  \int_a^b f(x)\,dx\approx&f(x_0)(x_1-x_0)+f(x_1)(x_2-x_1)+\cdots+f(x_{n-1})(x_n-x_{n-1}) \nonumber\\
+\lim_{\Delta x\to 0}\sum_{i=0}^n\,f(x_i)\Delta x_i\,,
+\end{align}
+donde $f(x_0)=1$, $f(x_{n})=b$ y $\Delta x_i=x_{i+1}-x_i$.
+
+Se puede demostrar que
+\begin{align}
+  \int_a^b f(x)\,dx=\left. F(x)  \right|_a^b
+\end{align}
+
+
+\begin{table}
+  \centering
+  \begin{tabular}{lll}
+    $f(x)$ & derivada & integral\\
+  \end{tabular}
+  \caption{Tabla de integrales}
+\end{table}
+
+De este modo, por ejemplo, la integral de la función $f(x)=x$ entre $0$ y $a$ es
+\begin{align}
+  \int_0^a x\,dx=\left.\frac{1}{2}x^2\right|_0^a=\frac{1}{2}a^2\,,
+\end{align}
+y el área del triángulo correspondiente es
+\begin{align}
+  \frac{1}{2}\text{base}\times\text{altura}=\frac{1}{2}a^2\,,
+\end{align}
+
+Así mismo la integral de una rapidez constante $v$, entre $t_1$ y $t_2$ para un movimiento en línea recta
+\begin{align}
+  \int_{t_1}^{t_2}v \,dt=v(t_2-t_1)=d=\text{distancia recorrida entre $t_1$ y $t_2$.}
+\end{align}
+En general, el área de la curva en línea recta de la velocidad en
+función del tiempo corresponde a la distancia recorrida. Para el
+gráfico de distancia en función del tiempo de la
+Fig.~\ref{fig:vinstaprom3}, tendríamos en el plano velocidad en
+función del tiempo, una línea recta horizontal entre cero y
+$\SI{1}{h}$, una línea recta de $\SI{70}{km/h}$, con área bajo la
+curva $\SI{70}{km}$, y otra línea recta entre $\SI{1}{h}$ y
+$\SI{2}{h}$ con área $\SI{30}{km}$ para una distancia total recorrida
+de $\SI{100}{km}$.
+
+\subsection{Ecuación de movimiento}
 
 
 Como para un $\Delta t$ infinitesimal, la fuerza siempre se puede considerar constante, el principio de momentum se puede reescribir como
