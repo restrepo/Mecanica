@@ -379,7 +379,6 @@ Tomando el origen de coordenadas en el punto inicial de la bola, podemos obtener
 
 
 Podemos complicar el programa poniendo rebotes sobre el piso. El programa modificado es
-
 \begin{frame}[fragile,allowframebreaks]
 \begin{lstlisting}
 from visual import *
@@ -504,6 +503,55 @@ mylabel.text = message
 \end{lstlisting}
 \end{frame}
 
+\subsection{Integración analítica}
+Al proceso de evolucionar un sistema a través del tiempo se le llama
+integración del movimiento. En algunos caso especiales dicha
+integración se puede realizar de forma analítica. El proceso
+matemático de integrar una función $f(x)$ en el intervalo $a$, $b$, corresponde a evaluar el área bajo la curva en ese intervalo
+\begin{align}
+  \int_a^b f(x)\,dx\approx&f(x_0)(x_1-x_0)+f(x_1)(x_2-x_1)+\cdots+f(x_{n-1})(x_n-x_{n-1}) \nonumber\\
+\lim_{\Delta x\to 0}\sum_{i=0}^n\,f(x_i)\Delta x_i\,,
+\end{align}
+donde $f(x_0)=1$, $f(x_{n})=b$ y $\Delta x_i=x_{i+1}-x_i$.
+
+Se puede demostrar que
+\begin{align}
+  \int_a^b f(x)\,dx=\left. F(x)  \right|_a^b
+\end{align}
+
+
+\begin{table}
+  \centering
+  \begin{tabular}{lll}
+    $f(x)$ & derivada & integral\\
+  \end{tabular}
+  \caption{Tabla de integrales}
+\end{table}
+
+De este modo, por ejemplo, la integral de la función $f(x)=x$ entre $0$ y $a$ es
+\begin{align}
+  \int_0^a x\,dx=\left.\frac{1}{2}x^2\right|_0^a=\frac{1}{2}a^2\,,
+\end{align}
+y el área del triángulo correspondiente es
+\begin{align}
+  \frac{1}{2}\text{base}\times\text{altura}=\frac{1}{2}a^2\,,
+\end{align}
+
+Así mismo la integral de una rapidez constante $v$, entre $t_1$ y $t_2$ para un movimiento en línea recta
+\begin{align}
+  \int_{t_1}^{t_2}v \,dt=v(t_2-t_1)=d=\text{distancia recorrida entre $t_1$ y $t_2$.}
+\end{align}
+En general, el área de la curva en línea recta de la velocidad en
+función del tiempo corresponde a la distancia recorrida. Para el
+gráfico de distancia en función del tiempo de la
+Fig.~\ref{fig:vinstaprom3}, tendríamos en el plano velocidad en
+función del tiempo, una línea recta horizontal entre cero y
+$\SI{1}{h}$, una línea recta de $\SI{70}{km/h}$, con área bajo la
+curva $\SI{70}{km}$, y otra línea recta entre $\SI{1}{h}$ y
+$\SI{2}{h}$ con área $\SI{30}{km}$ para una distancia total recorrida
+de $\SI{100}{km}$.
+
+\subsection{Ecuación de movimiento}
 
 
 Como para un $\Delta t$ infinitesimal, la fuerza siempre se puede considerar constante, el principio de momentum se puede reescribir como
@@ -980,7 +1028,7 @@ y usando
 \end{align}
 tenemos que $\sin(2\theta)=2\sin\theta\cos\theta$, y
 \begin{align}
-  R=\frac{v^2}{g}\sin(2\theta)\,,
+  R=\frac{v_0^2}{g}\sin(2\theta)\,,
 \end{align}
 de modo que el alcance máximo se obtiene para $\theta=\pi/4=45^\circ$,
 es decir, cuando las componentes de la velocidad inicial se reparten
@@ -1169,6 +1217,7 @@ Fuerza gravitacional (masas)&$\infty$& $10^{-38}$& gravit\'on\\
 
 
 \section{Aplicaciones de las leyes de Newton}
+\begin{frame}
 El método para resolver un problema de din\'amica, consiste en
 \begin{itemize}
 \item Escoja un sistema, consistiendo de una porción del Universo. El resto del Universo es llamado el entorno.
@@ -1178,9 +1227,9 @@ El método para resolver un problema de din\'amica, consiste en
 \item Establezca las ecuaciones de movimiento de cada cuerpo
 \item Identifique las fuerzas de acci\'on--reacci\'on
 \item Establezca las condiciones de ligadura.
-\item Comprueba unidad, compruebe la lógica de su respuesta (dirección del moméntum, cambio en la magnitud del moméntum) basado en la situación física.
+\item Comprueba unidades, compruebe la lógica de su respuesta (dirección del moméntum, cambio en la magnitud del moméntum) basado en la situación física.
 \end{itemize}
-
+\end{frame}
  
 
 Para ilustrar estos pasos, considere el diagrama de bloques mostrado en la figura~\ref{fig:blocks}, los cuales se encuentran en reposo. Encuentre la Fuerza ejercida por el bloque $B$ sobre el $A$, y la fuerza normal de la superficie sobre el bloque $B$.
@@ -1443,8 +1492,88 @@ La condición $m_1>\mu_d m_2$  garantiza que $m_1$ cae arrastrando a $m_2$ pero 
 
 \section{Problemas resueltos}
 
+\ejercicio{}
+\begin{frame}
+  Un jugador de baloncesto lanza un balón hacia un segundo
+jugador, con una rapidez $v_0$ formando un ángulo $\theta$ por
+encima de la horizontal. 
+En ese instante el receptor, que está a una distancia $x_0$ adelante
+del lanzador, va al encuentro del balón con cierta rapidez $v_1$
+constante para atraparlo a la misma altura a la cual fue lanzado.
 \begin{enumerate}
-\item Una cuerda ideal pasa a través de una polea ideal con uno de sus
+\item Haga un diagrama ilustrativo de la situación planteada, donde se muestre el sistema de referencia a emplear, la trayectoria seguida por el balón y la posición inicial del receptor.
+  \label{item:1jug}
+\item Plantee las ecuaciones cinemáticas de posición y velocidad que rigen el movimiento del balón y del receptor.
+  \label{item:2jug}
+\item Encuentre el valor de la rapidez del receptor que le permite atrapar el balón. 
+  \label{item:3jug}
+\item Calcule la rapidez $v_1$ hallada en el literal anterior para los valores particulares de $\theta=30^\circ$ , $v_0=\SI{20}{\meter\per\second}$  y $x_0=\SI{20}{\meter}$. De acuerdo con su resultado, ¿en qué sentido se mueve el receptor?.
+  \label{item:4jug}
+\end{enumerate}
+\end{frame}
+
+
+\subsection*{Solución}
+  \begin{itemize}
+  \item[~\ref{item:1jug})] Escogemos el sistema de referencia en el origen del primer jugador
+  \item[~\ref{item:2jug})] Para el balón
+    \begin{align*}
+      y=&v_{0y}t-\frac{1}{2}gt^2\nonumber\\
+      x=&v_{0x}t\,.
+    \end{align*}
+    Para el receptor
+    \begin{align*}
+      x_r=&x_0+v_1 t
+    \end{align*}
+  \item[~\ref{item:3jug})]
+    El tiempo de vuelo $t_v$ del balón se encuentra para $y=0$
+    \begin{align*}
+      v_{0y}t_v=&\frac{1}{2}gt_v^2\nonumber\\
+      v_{0y}=&\frac{1}{2}gt_v\,,
+    \end{align*}
+    de modo que
+    \begin{align}
+      \label{eq:tv}
+      t_v=&\frac{2v_{0y}}{g}\,,
+    \end{align}
+
+    Para el tiempo de vuelo $t_v$, obtenemos el alcance
+    \begin{align}
+      \label{eq:13}
+      R=&v_{0x}t_v \nonumber\\
+       =&2 v_{0x}\frac{v_{0y}}{g} \nonumber\\
+       =&\frac{2 v_{0}^2\cos\theta\sin\theta}{g} \nonumber\\
+       =&\frac{v_0^2}{g}\sin(2\theta)
+    \end{align}
+    Para que el receptor pueda atrapar el balón, su posición con respecto al sistema de referencia después de un tiempo $t_v$ debe ser justo el alcance $R$
+    \begin{align*}
+      x_0+v_1 t_v=&R\nonumber\\
+      v_1 t_v=&\frac{v_0^2}{g}\sin(2\theta)-x_0\nonumber\\
+      2 v_1 \frac{v_{0y}}{g}=&\frac{v_0^2}{g}\sin(2\theta)-x_0\nonumber\\
+      v_1 =&\left( \frac{v_0^2}{g}\sin(2\theta)-x_0 \right) \frac{g}{2v_0\sin\theta}\nonumber\\
+      =&\frac{v_0^2\sin(2\theta)-gx_0}{2v_0\sin\theta}\nonumber\\
+    \end{align*}
+
+    
+  \item[~\ref{item:4jug})]Evaluando la ec.~(\ref{eq:v1})
+    \begin{align*}
+      v_1=\SI{7.52}{\meter\per\second}
+    \end{align*}
+
+además 
+\begin{align*}
+t_v=&\SI{2.04}{\second}\nonumber\\
+ R=&\SI{35.35}{\meter}\,
+\end{align*}
+
+y el receptor se mueve en la misma dirección del balón.\finejemplo
+  \end{itemize}
+
+
+
+\ejercicio{}
+\begin{frame}
+ Una cuerda ideal pasa a través de una polea ideal con uno de sus
   extremos unido al bloque 1 que cuelga sobre un lado de la mesa que
   sostiene la polea. El otro extremo de la cuerda esta unido a un
   bloque 2 que se desliza a lo largo de la mesa. Ver Figura
@@ -1455,30 +1584,38 @@ La condición $m_1>\mu_d m_2$  garantiza que $m_1$ cae arrastrando a $m_2$ pero 
   desliza alrededor de la polea, En el tiempo $t=t_1$, el bloque 1
   golpea el piso. Encuentre la magnitud de la aceleración de cada
   bloque. Exprese su respuesta en términos de $m_1$, $m_2$, $\mu_d$. 
+\end{frame}
 
-  \textbf{Escogencia del sistema}. Para el sistema compuesto por el bloque 2, el entorno es la mesa y la cuerda, mientras que para el sistema compuesto por el bloque 1, el entorno es la cuerda y la tierra. Además escogemos un sistema de referencia $x-y$ usual. 
-
-\textbf{Diagramas de fuerzas} De acuerdo a los diagramas de cuerpo libre para ambos cuerpos ilustrado en la figura~\ref{fig:poleaidealfzas}. Tenemos
+\subsubsection*{Solución}
+\begin{frame}[fragile,allowframebreaks]
 \begin{itemize}
-\item Fuerzas en $x$ bloque 2:
+\item  \textbf{Escogencia del sistema}. Para el sistema compuesto por el bloque 2, el entorno es la mesa y la cuerda, mientras que para el sistema compuesto por el bloque 1, el entorno es la cuerda y la tierra. Además escogemos un sistema de referencia $x-y$ usual. 
+
+\item \textbf{Diagramas de fuerzas} De acuerdo a los diagramas de cuerpo libre para ambos cuerpos ilustrado en la figura~\ref{fig:poleaidealfzas}. Tenemos
+  \begin{itemize}
+  \item Fuerzas en $x$ bloque 2:
   \begin{align}
     \label{eq:pi1}
     (T-{\color{red}f})\hat{\mathbf{i}}=&m_2 (a\,\hat{\mathbf{i}})\nonumber\\
     T-{\color{red}f}=&m_2 a\,.
   \end{align}
-\item Fuerzas en $y$ bloque 2:
+  \item Fuerzas en $y$ bloque 2:
   \begin{align}
     (N-W_2)\hat{\mathbf{j}}=&0\nonumber\\
     N-W_2=&0\nonumber\\
     N=&m_2 g\,
   \end{align}
-en adelante suprimiremos los vectores unitarios en las ecuaciones resultantes de los diagramas de cuerpo libre.
-\item Fuerzas en $y$ bloque 1:
+  en adelante suprimiremos los vectores unitarios en las ecuaciones
+  resultantes de los diagramas de cuerpo libre.
+
+  \item Fuerzas en $y$ bloque 1:
   \begin{align}
     \label{eq:pi2}
     T-W_1=&{\color{blue}-}m_1 a\nonumber\\
     T-m_1 g=&{\color{blue}-}m_1 a
   \end{align}
+   donde el signo menos se debe a que la aceleración está en la dirección opuesta a $y$
+  \end{itemize}
 \item \textbf{Establezca las condiciones de ligadura:} La relación entre la fuerza normal y la fuerza de fricción es
   \begin{align}
     \label{eq:pi3}
@@ -1497,9 +1634,9 @@ Despejando $a$ y usando \eqref{eq:pi3}
   =&\frac{m_1-{\color{red}\mu_d} m_2 }{m_2{\color{blue}+}m_1}g\\
   \le&g\nonumber\,.
 \end{align}
-
+\finejemplo
 \end{itemize}
-
+%incluir aceleración
 
 
 \begin{figure}
@@ -1508,10 +1645,14 @@ Despejando $a$ y usando \eqref{eq:pi3}
     \caption{Diagramas de cuerpo libre ideal}
     \label{fig:poleaidealfzas}
   \end{figure}
+\end{frame}
   \begin{itemize}
-  \item[\textbf{Ejercicio}] Repita el problema usando un sistema de referencia rotado 90 grados en la dirección de las manecillas del reloj, para el bloque de masa $m_1$
+  \item[\textbf{Ejercicio}] Repita el problema usando un sistema de referencia rotado 90 grados en la dirección de las manecillas del reloj, para el bloque de masa $m_1$.
   \end{itemize}
-\item  (Tomado de \cite{gabriel}) Se coloca un bloque de masa $m_1$ sobre un bloque de masa $m_2$ (como se muestra en la figura). Los coeficientes de fricción cinético y estático entre los bloques son $\mu_k$ y $\mu_e$ respectivamente. Suponer que no hay fricción entre el bloque de masa $m_2$ y la superficie sobre la cual reposa. Se aplica una fuerza $\mathbf{F}$ horizontal al bloque de masa $m_2$
+
+\ejercicio{}
+
+(Tomado de \cite{gabriel}) Se coloca un bloque de masa $m_1$ sobre un bloque de masa $m_2$ (como se muestra en la figura). Los coeficientes de fricción cinético y estático entre los bloques son $\mu_k$ y $\mu_e$ respectivamente. Suponer que no hay fricción entre el bloque de masa $m_2$ y la superficie sobre la cual reposa. Se aplica una fuerza $\mathbf{F}$ horizontal al bloque de masa $m_2$
 
   \begin{minipage}{0.4\linewidth}
     \includegraphics[scale=0.95]{bloques}
@@ -1533,6 +1674,7 @@ Despejando $a$ y usando \eqref{eq:pi3}
     \end{enumerate}
   \end{minipage}
 
+\subsubsection*{Solución}
   \begin{itemize}
   \item[\ref{item:d1b})] Para $m_1$
     \begin{align}
@@ -1573,11 +1715,13 @@ Para $m_2$
       \begin{align*}
         x=&\frac{1}{2}a t^2
       \end{align*}
-    \item[\ref{item:d1e})] $F=\SI{15.7}{\newton}$, $a=\SI{1.96}{\meter\per\second^2}$, $x=\SI{3.92}{\meter}$
+    \item[\ref{item:d1e})] $F=\SI{15.7}{\newton}$, $a=\SI{1.96}{\meter\per\second^2}$, $x=\SI{3.92}{\meter}$ \finejemplo
 
     \end{itemize}
 
-\item  Dos bloques de masa $m_1$ y masa $m_2$ se mueven como lo índica la figura. Suponga que el piso es una superficie lisa (no hay fricción) y que la superficie de contacto entre los dos bloques es rugosa con coeficiente de fricción  $\mu$.
+\ejercicio{}
+\begin{frame}[fragile,allowframebreaks]
+ Dos bloques de masa $m_1$ y masa $m_2$ se mueven como lo índica la figura. Suponga que el piso es una superficie lisa (no hay fricción) y que la superficie de contacto entre los dos bloques es rugosa con coeficiente de fricción  $\mu$.
 
   \begin{minipage}{0.4\linewidth}
     \includegraphics[scale=0.95]{bloquespegados0}
@@ -1592,7 +1736,10 @@ Para $m_2$
       \label{item:dp1c}
     \end{enumerate}
   \end{minipage}
-
+\end{frame}
+\subsubsection*{Solución}
+\begin{frame}[fragile,allowframebreaks]
+\begin{itemize}
   \item[\ref{item:dp1a})] Recapitulemos de nuevo los pasos para solucionar los problemas de dinámica, pues en este caso son muy importantes la ecuaciones de ligadura. Primero establecemos los diagramas de cuerpo libre:
  
 \includegraphics{bloquespegados1} \includegraphics{bloquespegados2}
@@ -1612,13 +1759,13 @@ La sumatoria de fuerzas para $m_1$
 
     Para el bloque 2 tenemos
     \begin{align*}
-    \sum \mathbf{F}=&(N_{12},0,0)+(0,f,0)-(0,W_2,0)=(m_2a_x,m_2 a_y,0)\,. 
+    \sum \mathbf{F}=&(N_{12},0,0)+(0,f,0)-(0,W_2,0)=(m_2a_x,-m_2 a_y,0)\,. 
     \end{align*}
     que da lugar a
     \begin{align}
       \label{eq:dp2}
       \sum F_x:\quad&N_{12}=m_2 a_x\nonumber\\
-      \sum F_y:\quad&f-W_2=m_2 a_y\,.
+      \sum F_y:\quad&f-W_2=-m_2 a_y\,.
     \end{align}
 
     \textbf{Condiciones de ligadura}
@@ -1663,9 +1810,12 @@ La sumatoria de fuerzas para $m_1$
       de modo que el sistema completo de los dos bloques, dentro del
       cual se cancelan todas las fuerzas internas, se mueve como un
       sistema de masa $m_1+m_2$ bajo el efecto de la fuerza externa
-      $F_{\text{min}}$.
-\end{enumerate}
+      $F_{\text{min}}$.\finejemplo
 
+\end{itemize}
+\end{frame}
+\subsubsection*{Ejercicio}
+Calcule la aceleración con la que cae el bloque 2 para un determinado valor de la fuerza aplicada $F$.
 \begin{extrapage}
   \newpage
   \qquad
