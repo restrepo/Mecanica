@@ -253,7 +253,7 @@ superficies. Aceptando este postulado podríamos medir el calor en
 unidades de energía mecánica. La energía mecánica como la potencial o
 la cinética se miden en Joules en unidades SI, que se define como
 \begin{align*}
-  1\joule=\kilo\gram\; \meter^2\per\second^2\,.
+  \SI{1}{\joule}=\si{\kilo\gram\meter^2\per\second^2}\,.
 \end{align*}
 
 Precisamente fue el físico Británico James Prescott Joule el primer en
@@ -441,14 +441,14 @@ incrementa y la energía promedio de cada átomo se vuelve mayor. La
 energía calórica de un sólido es la energía mecánica de las
 vibraciones aleatorias de los átomos.
    
-La unidad de trabajo y energía en el SI es el joule ($\joule$):
+La unidad de trabajo y energía en el SI es el joule ($\si{\joule}$):
 \begin{align}
-  1\joule=1\kilo\gram\cdot \metre^2\per\second^2\,.
+  \SI{1}{\joule}=\SI{1}{\kilo\gram\metre^2\per\second^2}\,.
 \end{align}
 La unidad de trabajo y energía en el sistema cgs es el $\text{erg}$:
 \begin{align}
-  1\ \text{erg}=&1\gram\cdot\centi\meter^2\per\second^2\nonumber\\
-=&10^{-7}\joule\,.
+  1\ \text{erg}=&\SI{1}{\gram\centi\meter^2\per\second^2}\nonumber\\
+=&10^{-7}\si{\joule}\,.
 \end{align}
 
 \section{Ejemplos de energía potencial}
@@ -810,11 +810,11 @@ Definimos la potencia desarrollada por la fuerza como
 \end{align}
 La unidad de potencia en el sistema SI es el watt (W):
 \begin{align}
-  \unit{1}{\watt}=\unit{1}{\joule\per\second}\,.
+  \SI{1}{\watt}=\SI{1}{\joule\per\second}\,.
 \end{align}
 La relación entre un caballo de fuerza y el watt es
 \begin{align}
-  1\;\text{hp}\approx \unit{746}{\watt}\,.
+  1\;\text{hp}\approx \SI{746}{\watt}\,.
 \end{align}
 \example{} 
 En la factura eléctrica se cobra la energía consumida al
@@ -822,23 +822,23 @@ mes.  El joule es una unidad demasiado pequeña, lo que obligaría a
 emplear cifras demasiado grandes, por eso es conveniente reescribirlo
 en potencia mayores. Note que
 \begin{align}
-  1\joule=1\watt\cdot\second\,.
+  \SI{1}{\joule}=\si{\watt\second}\,.
 \end{align}
 De acuerdo a esto, pase a Joules las siguientes cantidades de energía
 \begin{enumerate}
-\item El $\kilo\watt\hour$ usado para medir el consumo electríco.
-\item Los $75\;\giga\watt\hour$ que consume el metro de Medellín en un año. 
+\item El $\si{\kilo\watt\hour}$ usado para medir el consumo electríco.
+\item Los $\SI{75}{\giga\watt\hour}$ que consume el metro de Medellín en un año. 
 %Si toda esa energía se pudiese convertir en energía cinética 
 \end{enumerate}
 \begin{align*}
-  1\;\kilo\watt\hour=&1000\watt\cdot 3600\second\nonumber\\
-  =&1000\frac{\joule}{\second}\cdot 3600\second\nonumber\\
-  =&3\;600\;000\; \joule\,.
+  \SI{1}{\kilo\watt\hour}=&\SI{1000}{\watt}\cdot \SI{3600}{\second}\nonumber\\
+  =&1000\frac{\si{\joule}}{\si{\second}}\cdot \SI{3600}{\second}\nonumber\\
+  =&\SI{3600000}{\joule} \,.
 \end{align*}
 
 \begin{align*}
-  75\;giga\watt\hour=&75\times 10^9\watt\cdot 3600\second\nonumber\\
-  =&2.7\times 10^{14}\joule\,.
+  \SI{75}{\giga\watt\hour}=&75\times 10^9\si{\watt}\cdot \SI{3600}{\second}\nonumber\\
+  =&2.7\times 10^{14}\si{\joule}\,.
 \end{align*}
 
 
@@ -1019,14 +1019,14 @@ Así mismo, el $\theta_{\text{max}}$ se obtiene cuando $\mu=0$:
   \theta_{\text{max}}&\approx 0.723\ \text{rad}\nonumber\\
 &\approx 41.4^\circ\,.
 \end{align}
-Note que si $m=1\kilo\gram$ y $R=1\meter$, la energía disipada en
+Note que si $m=\SI{1}{\kilo\gram}$ y $R=\SI{1}{\meter}$, la energía disipada en
 forma de calor en el tramo $BC$ cuando $\mu=0.1$ es
 \begin{align}
   Q=&2 \mu m g R\nonumber\\
-  =&2\cdot 0.1\cdot 1\kilo\gram\cdot 9.8\meter\per\second^2\cdot
-  1\meter\nonumber\\
-  =&1.96\kilo\gram \meter^2\per\second^2\nonumber\\
-  =&1.96\joule\,.
+  =&2\cdot 0.1\cdot \SI{1}{\kilo\gram}\cdot \SI{9.8}{\meter\per\second^2}\cdot
+  \SI{1}{\meter}\nonumber\\
+  =&\SI{1.96}{\kilo\gram \meter^2\per\second^2}\nonumber\\
+  =&\SI{1.96}{\joule}\,.
 \end{align}
 
 \end{itemize}
@@ -1318,7 +1318,12 @@ y entonces
   \end{itemize}
 
 
-\item Un anillo resbala a lo largo de un arco metalico ABC muy pulido que es arco de una circunferencia de radio $R=1.2\meter$. Sobre el anillo actúa una fuerza $\mathbf{F}$ de magnitud $150\newton$ y dirección constante formando un ángulo de $\alpha=\pi/6$ con la horizontal. 
+\item Un anillo resbala a lo largo de un arco metalico ABC muy pulido
+  que es arco de una circunferencia de radio
+  $R=\SI{1.2}{\meter}$. 
+  Sobre el anillo actúa una fuerza $\mathbf{F}$ de magnitud
+  $\SI{150}{\newton}$ y dirección constante formando un ángulo de
+  $\alpha=\pi/6$ con la horizontal.
 
   \begin{minipage}{0.5\linewidth}
    \includegraphics[scale=0.5]{anillos}
@@ -1355,7 +1360,7 @@ y entonces
       =&2Fr\int_{0}^{\pi/2}\sin(\alpha-\theta) \, d\theta\nonumber\\
       =&2Fr\cos(\alpha-\theta)|_0^{\pi/2}\nonumber\\
       =&2Fr[\sin(\alpha-\pi/2)-\sin(\pi/6)]\nonumber\\
-      =&131.77\joule\,.
+      =&\SI{131.77}{\joule}\,.
     \end{align*}
 
    
