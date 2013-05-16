@@ -269,6 +269,7 @@ Reemplazando en \eqref{eq:m38}
   =&\frac{2}{3}L\,.
 \end{align}
 \finejemplo
+%centro de masa de un cuadrado uniforme
 % \textbf{Centro de masa de una hoja triangular} 
 
 \section{Conservación del momentum}
@@ -327,9 +328,20 @@ Para analizar este tipo de sistemas es esencial tratar con el mismo conjunto de 
 
 Considere un cohete a un tiempo $t$ que se mueve a velocidad $\mathbf{v}$. Entre un tiempo $t$ y $t+\Delta t$, una masa de combustible $\Delta m$ es quemada y expulsada como gas a una velocidad $\mathbf{u}$ relativa al cohete.
 
-El sistema consiste de $\Delta m$ más la masa remanente del cohete $M$. De aquí que la masa total es $M+\Delta m$.
+El sistema consiste de $\Delta m$ más la masa remanente del cohete $M$. De aquí que la masa total es $M+\Delta m$. Como se muestra en la figura~\ref{fig:rocket}
+\begin{frame}
+  \begin{figure}
+  \centering
+%\only<1>{\includegraphics{rocket1}}%
+%\only<2>{\includegraphics{rocket1a}}%
+%\only<3>%
+{\includegraphics{rocket2}}
+  \caption{Cohete}
+  \label{fig:rocket}
+\end{figure}
+\end{frame}
 
-La velocidad del cohete al tiempo $t$ es $\mathbf{v}(t)$, y en $t+\Delta t$, es $\mathbf{v}+\Delta\mathbf{v}$. Similarmente, la velocidad de la masa de combustible al tiempo $t$ es $\mathbf{v}(t)$, y al tiempo $t+\Delta t$, es la velocidad del cohete a ese tiempo, más la suma vectorial de su propia velocidad: $\mathbf{v}+\Delta\mathbf{v}+\mathbf{u}$. 
+La velocidad del cohete al tiempo $t$ es $\mathbf{v}(t)$, y en $t+\Delta t$, es $\mathbf{v}+\Delta\mathbf{v}$. Similarmente, la velocidad de la masa de combustible al tiempo $t$ es $\mathbf{v}(t)$, y al tiempo $t+\Delta t$, es la velocidad del cohete a ese tiempo, más la suma vectorial de su propia velocidad: $\mathbf{v}+\Delta\mathbf{v}+\mathbf{u}$, donde hemos tenido en cuenta que la dirección del vector $\mathbf{u}$ es arbitraria. 
 
 El momentum inicial es:
 \begin{align}
@@ -363,12 +375,15 @@ como
   \mathbf{F}_{\text{ext}}=\frac{d\mathbf{P}}{dt},,
 \end{align}
 entonces
+\begin{frame}
 \begin{align}
   \label{eq:mrocket}
    \mathbf{F}_{\text{ext}}=M\frac{d\mathbf{v}}{dt}-\mathbf{u}\frac{dM}{dt}\,.
 \end{align}
 Esta es la ecuación de movimiento para un cohete en presencia de
-fuerzas externas
+fuerzas externas  
+\end{frame}
+
 
 \subsection{Cohete en el espacio libre}
 
@@ -414,13 +429,29 @@ Si $\mathbf{v}_0=0$, entonces
 \end{align}
 La velocidad final es independiente de como la masa es liberada. Las únicas cantidades importante son las velocidades de expulsión y el cociente entre las masas finales e iniciales.
 
-\begin{itemize}
-\item[\textbf{Ejemplo}]Si un cohete de masa $M=\SI{1000}{\kilo\gram}$ está expulsando gas a una tasa de $\SI{10}{\kilo\gram\per\second}$, y a una velocidad de expulsión de $\SI{500}{\meter\per\second}$. Calcule la velocidad después de $\SI{20}{\second}$.\\
+\ejemplo{}
+\begin{frame}
+  Un cohete de masa $M=\SI{1000}{\kilo\gram}$ está expulsando gas a
+  una tasa de $\SI{10}{\kilo\gram\per\second}$, y a una rapidez de
+  expulsión de $\SI{500}{\meter\per\second}$. Calcule la velocidad
+  después de $\SI{20}{\second}$.
+
+\noindent
+\textbf{Solución}
+
+Tomando la dirección de movimiento a lo largo del eje $x$, tenemos que $\mathbf{u}=(-500,0,0)\si{\meter\per\second}$. 
 Después de $\SI{20}{\second}$ el cohete a expulsado una masa de $\SI{10}{\kilo\gram\per\second}\timesm\SI{20}{\second}=\SI{200}{\kilo\gram}$, de modo que $M_f=\SI{1000}{\kilo\gram}-\SI{200}{\kilo\gram}=\SI{800}{\kilo\gram}$, entonces
 \begin{align}
-  v_f=(-\SI{500}{\meter\per\second})\ln\frac{800}{1000}=\SI{112}{\meter\per\second}\,.
+  v_f=-(-\SI{500}{\meter\per\second})\ln\frac{1000}{800}=\SI{112}{\meter\per\second}\,.
 \end{align}
-Del enunciado del problema se puede 
+o en forma vectorial
+\begin{align*}
+  \mathbf{v}_f=(+112,0,0)\si{\meter\per\second}\,,
+\end{align*}
+de modo que el cohete se mueve en la dirección opuesta al combustible
+\end{frame}
+
+Del enunciado del problema se puede inferir que
 \begin{align}
   \frac{dM}{dt}=-10\ \frac{\text{Kg}}{\text{s}}\,,
 \end{align}
@@ -441,7 +472,7 @@ Usando la ec.~\eqref{eq:m39} podemos calcular el empuje del cohete:
   =&\SI{5000}{\newton}\,\hat{\mathbf{i}}\,,
 \end{align}
 y  el empuje producido por el cohete es de $\SI{5000}{\newton}$,  
-\end{itemize}
+
 
 %\begin{inprogress}
 %http://mypages.iit.edu/~smart/acadyear/rockets.htm
@@ -459,9 +490,10 @@ de modo que
  \mathbf{x}={\{-500 [-t+t \ln (t-100)-100 \ln (100-t)]\}}\si{\meter}\,\hat{\mathbf{i}}
 \end{align}
 %\end{inprogress}
+\finejemplo
 
-
-Si el cohete está en presencia de un campo gravitacional constante (cerca a la superficie de la tierra), la fuerza externa es
+Si el cohete está en presencia de un campo gravitacional constante
+(cerca a la superficie de la tierra), la fuerza externa es
 \begin{align}
   \mathbf{F}=M\mathbf{g}
 \end{align}
@@ -502,7 +534,8 @@ Con esta definición del impulso podemos establecer el Principio de Moméntum en
   \end{center}
 \end{frame}
 
-Ejemplo: Una fuerza constante de $(3,-5,4)\ $N actúa en un objeto durante $10\ $s. ¿Cuál es el impulso neto aplicado al objeto? ¿Cual fue el cambio en el momentum del objeto?
+\begin{frame}
+  Ejemplo: Una fuerza constante de $(3,-5,4)\ $N actúa en un objeto durante $10\ $s. ¿Cuál es el impulso neto aplicado al objeto? ¿Cual fue el cambio en el momentum del objeto?
 \begin{align}
 \text{Impulso}=\mathbf{F}_{\text{neta}}\Delta t=(3,-5,4)\ \text{N}\cdot (10\ \text{s})=
 (30,-50,40)\ \text{N}\cdot\text{s}\,.
@@ -511,7 +544,7 @@ El cambio en el moméntum del objeto es igual al impulso neto, de modo que
 \begin{align}
   \Delta \mathbf{p}=(30,-50,40)\ \text{Kg\,m/s}
 \end{align}
-
+\end{frame}
 durante un intervalo suficientemente pequeño $\Delta t=t_b-t_a$, tenemos
 \begin{align}
    \mathbf{I}=\mathbf{F}\Delta t=&\mathbf{P}(t_b)-\mathbf{P}(t_a)\,.

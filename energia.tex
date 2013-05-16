@@ -58,7 +58,7 @@ Si $\Delta t$ es el tiempo que se tarda en atravesar un segmento, entonces
 
 \section{Ecuación de la trayectoria}
 
-Aplicando el concepto de integral de línea a la ecuación de movimiento
+Aplicando el concepto de integral de línea a la ecuación de movimiento con masa constante
 \begin{align}
 \label{eq:trayectoria}
   \mathbf{F}(\mathbf{r})=&m\frac{d\mathbf{v}}{dt}\nonumber\\
@@ -165,6 +165,7 @@ la integral de línea se reduce a una integral normal
 
 
 \subsection{Fuerza gravitacional constante}
+\begin{frame}
 Considere el trabajo que tiene que realizar la fuerza gravitacional
 para reducir la rapidez de una partícula que ha sido lanzada hacia
 arriba con rapidez $v_0$ hasta una rapidez $v$. Tomando el origen de coordenadas en la superficie de la tierra, tenemos
@@ -181,6 +182,7 @@ y usando la ecuación (\ref{eq:linev2})
   \label{eq:consrven}
   mgy_0-mgy=\tfrac{1}{2}m v^2-\tfrac{1}{2}m v_0^2\,,
 \end{align}
+\end{frame}
 de donde
 \begin{align*}
   v^2-v_0^2=-2g(y-y_0)\,,
@@ -197,9 +199,10 @@ forma
 \end{align}
 
 \subsection{Trabajo realizado por la fuerza de fricción}
-Considere el trabajo realizado por la fuerza de fricción para reducir
+\begin{frame}
+  Considere el trabajo realizado por la fuerza de fricción para reducir
 la rapidez inicial de un cuerpo lanzado con rapidez inicial $v_0$
-sobre una superficie horizontal con coeficiente dinámico de fricción
+sobre una superficie horizontal con coeficiente de fricción dinámico
 $\mu$, hasta una rapidez $v$. Tomando el origen de coordenadas en la
 superficie, tenemos
 \begin{align*}
@@ -212,9 +215,9 @@ entonces
 \end{align*}
 y usando la ecuación (\ref{eq:linev2})
 \begin{align*}
-  \label{eq:consrven}
-  -\mu mg(x-x_0)=\tfrac{1}{2}m v^2-\tfrac{1}{2}m v_0^2\,.
+  \mu mgx_0-\mu mgx=\tfrac{1}{2}m v^2-\tfrac{1}{2}m v_0^2\,.
 \end{align*}
+\end{frame}
 y
 \begin{align}
 x=x_0+\frac{v_0^2-v^2}{2\mu g}
