@@ -2,6 +2,10 @@
 \chapter{Trabajo y Energía}
 \label{chap:energia}
 
+Hasta ahora hemos explotado la homogeneidad del espacio que da lugar a la conservación de las tres componentes de la cantidad de movimiento. En este capítulo ilustraremos de nuevo el Teorema de Noether mostrando que la cantidad conservada asociada a la homogeneidad del tiempo es la \emph{Energía}. 
+
+La homogeneidad de las ecuaciones de movimiento con respecto al tiempo queda manifiesta cuando estás se reescriben de una forma independiente del tiempo. 
+ 
 En el caso de caída libre integramos la ecuación de movimiento para una fuerza constante $\mathbf{F}=-m g\hat{\mathbf{j}}$:
 \begin{align}
   \frac{d^2y}{dt^2}=-g\,,
@@ -19,14 +23,39 @@ Para analizar la trayectoria de un movimiento bajo una fuerza arbitraria debemos
   \mathbf{F}\Delta t\approx \Delta\mathbf{p}\,.
 \end{align}
 
+\section{Movimiento en una dimensión}
+En el caso de masa constante, podemos escribir la ecuación de movimiento en una dimensión como
+\begin{align*}
+  F=&m a \nonumber\\
+  F=& m \frac{dv}{dt} \nonumber\\
+  Fdx=& m \frac{dv}{dt} dx = m \frac{dv}{dt}\frac{dx}{dt} dt = m v\frac{dv}{dt} dt \nonumber\\
+  Fdx=& m v\, dv\,,
+\end{align*}
+e integrando directamente con respecto en la dirección de movimiento, asumiendo que ésta es a lo largo de $x$, tenemos que
+\begin{align}
+\label{eq:tray1d}
+\int_{x_0}^x F dx =&m\int_{v_0}^v v dv  \nonumber\\
+=&\frac{1}{2}m \left( v^2-v_0^2 \right)
+\end{align}
+Para el caso de $F=-mg$ y la dirección en $y$, la ecuación general de la trayectoria para un sistema de masa constante (\ref{eq:tray1d}) da lugar inmediatamente a la ec.~(\ref{eq:trayl}).
+
 
 \section{Integral de línea}
-Para calcular directamente la ecuación de trayectoria a partir de una determinada ecuación de movimiento debemos definir primero la integral de línea a lo largo de una curva continua $C$. Está se puede evaluar si conocemos como cambia el argumento, $\mathbf{r}$, del la función vectorial $\mathbf{F}$, en términos de algún parámetro $t$:
+A modo de teorema establecemos que la ecuación de la trayectoria para una partícula de masa constante, se puede determinar de la ecuación de movimiento  en tres dimensiones
+\begin{align*}
+  \mathbf{F}=m\mathbf{a}=m \frac{d\mathbf{v}}{dt}
+\end{align*}
+cuando se realiza la \emph{integral de línea} a lo largo de la curva continua $C$ que sigue la partícula:
+\begin{align}
+\label{eq:flinea}
+   \int_C\mathbf{F}(\mathbf{r})\cdot d\mathbf{r}=&m\int_C\frac{d\mathbf{v}}{dt}\cdot d\mathbf{r}
+\end{align}
+donde la integral de línea se puede evaluar si conocemos como cambia el argumento, $\mathbf{r}$, del una función vectorial $\mathbf{G}$, en términos de algún parámetro $t$:
 \begin{align}
   \label{eq:e12}
-  \int_C \mathbf{F}(\mathbf{r})\cdot\,d\mathbf{r} = \int_{t_a}^{t_b} \mathbf{F}(\mathbf{r}(t))\cdot\frac{d\mathbf{r(t)}}{dt}\,dt.
+  \int_C \mathbf{G}(\mathbf{r})\cdot\,d\mathbf{r} = \int_{t_a}^{t_b} \mathbf{G}(\mathbf{r}(t))\cdot\frac{d\mathbf{r(t)}}{dt}\,dt.
 \end{align}
-donde $\mathbf{r}$ es el vector de posición desde un origen de coordenadas a cada uno de los segmento $d\mathbf{r}$ tangenciales a la trayectoria $C$, tal que $\mathbf{r}_a=\mathbf{r}(t_a)$ y $\mathbf{r}_b$ corresponden a las posiciones de los extremos de $C$. Aquí $\mathbf{F}(\mathbf{r})$ es una función vectorial general. Para visualizar la integral de línea, se divide la trayectoria desde la posición inicial $\mathbf{r}_a$ hasta la posición final $\mathbf{r}_b$ en $N$ segmentos cortos de longitud $\Delta \mathbf{r}_j$, donde $j$ es un índice que numera los segmentos.  Ver fig~\ref{fig:lineint}.
+donde $\mathbf{r}$ es el vector de posición desde un origen de coordenadas a cada uno de los segmento $d\mathbf{r}$ tangenciales a la trayectoria $C$, tal que $\mathbf{r}_a=\mathbf{r}(t_a)$ y $\mathbf{r}_b$ corresponden a las posiciones de los extremos de $C$. Aquí $\mathbf{G}(\mathbf{r})$ es una función vectorial general. Para visualizar la integral de línea, se divide la trayectoria desde la posición inicial $\mathbf{r}_a$ hasta la posición final $\mathbf{r}_b$ en $N$ segmentos cortos de longitud $\Delta \mathbf{r}_j$, donde $j$ es un índice que numera los segmentos.  Ver fig~\ref{fig:lineint}.
 
 \begin{frame}
 \begin{figure}
@@ -37,7 +66,7 @@ donde $\mathbf{r}$ es el vector de posición desde un origen de coordenadas a ca
 \end{figure}
 \end{frame}
 
-Si $\Delta \mathbf{r}_j$ es suficientemente pequeño, el integrando de la ec.~\eqref{eq:e12} puede escribirse como
+Si $\Delta \mathbf{r}_j$ es suficientemente pequeño, el integrando del lado derecho de la ec.~\eqref{eq:flinea} puede escribirse como
 \begin{align}
   \label{eq:dW}
   \mathbf{F}(\mathbf{r}_j)\cdot\Delta\mathbf{r}_j
@@ -250,11 +279,17 @@ forma de energía que no puede usarse para continuar el movimiento del
 bloque. Esta forma de energía se llama calor y se refleja en el
 calentamiento (aumento de temperatura) entre las
 superficies. Aceptando este postulado podríamos medir el calor en
-unidades de energía mecánica. La energía mecánica como la potencial o
-la cinética se miden en Joules en unidades SI, que se define como
-\begin{align*}
-  \SI{1}{\joule}=\si{\kilo\gram\meter^2\per\second^2}\,.
-\end{align*}
+unidades de energía mecánica. 
+
+La unidad de trabajo y energía en el SI es el joule ($\si{\joule}$):
+\begin{align}
+  \SI{1}{\joule}=\SI{1}{\kilo\gram\metre^2\per\second^2}\,.
+\end{align}
+La unidad de trabajo y energía en el sistema cgs es el ergio ($\text{erg}$):
+\begin{align}
+  1\ \text{erg}=&\SI{1}{\gram\centi\meter^2\per\second^2}\nonumber\\
+=&10^{-7}\si{\joule}\,.
+\end{align}
 
 Precisamente fue el físico Británico James Prescott Joule el primer en
 apreciar que el calor en si mismo representa una forma de energía. A
@@ -388,7 +423,7 @@ El operador
 +\hat{\mathbf{j}}\frac{\partial }{\partial y}
 +\hat{\mathbf{k}}\frac{\partial }{\partial z}
 \end{align}
-se llama \emph{gradiente} y convierte una función escalar en varias variables en una función vectorial. De éste modo para un campo conservativo, la integral de línea entre $a$ y $b$ se puede evaluar dando como resultado:
+se llama \emph{gradiente} y convierte una función escalar de varias variables en una función vectorial. De éste modo para un campo conservativo, la integral de línea entre $a$ y $b$ se puede evaluar dando como resultado:
 \begin{align}
   \int_C\mathbf{F}\cdot d\mathbf{r}=U(\mathbf{r}_a)-U(\mathbf{r}_b)
 \end{align}
@@ -403,7 +438,7 @@ variaciones de una función escalar llamada el potencial.
 \section{Conservación de la energía}
 Las fuerzas fundamentales, o más estrictamente, las interacciones
 fundamentes conocidas en la naturaleza, son todas conservativas. Como
-consecuencia la energía total de un sistema de partículas se debe
+consecuencia, la energía total de un sistema de partículas se debe
 conservar. Estas interacciones fundamentales pueden generan algunas
 fuerzas remanentes como la fricción que aparentemente es no
 conservativa: el trabajo para arrastrar un objeto entre un par de
@@ -421,15 +456,8 @@ energía total del sistema se debe conservar, aunque en la practica
 resulte extremadamente complicado calcular el calor generado por las
 interacciones conservativas entre los átomos y moléculas del sistema.
 
-El físico Británico James Prescott Joule fue el primer en apreciar que
-el calor en si mismo representa una forma de energía. A través de una
-serie de experimentos meticulosos sobre le calentamiento del agua por
-una rueda de paletas movidas por un cuerpo cayendo, mostró que la
-perdida de la energía mecánica por fricción estaba acompañada por la
-aparición de una cantidad de energía equivalente por fricción. Joule
-concluyó que el calor es una forma de energía y que la suma de la
-energía mecánica y la energía calórica de un sistema es conservada.
-
+Como dijimos antes, Joule fue el primer en apreciar que
+el calor en si mismo representa una forma de energía. 
 En nuestros días tenemos un conocimiento más detallado de la energía
 calórica que la que tenía Joule. Sabemos que los sólidos están
 compuestos por átomos mantenidos juntos por fuertes interacciones
@@ -441,15 +469,6 @@ incrementa y la energía promedio de cada átomo se vuelve mayor. La
 energía calórica de un sólido es la energía mecánica de las
 vibraciones aleatorias de los átomos.
    
-La unidad de trabajo y energía en el SI es el joule ($\si{\joule}$):
-\begin{align}
-  \SI{1}{\joule}=\SI{1}{\kilo\gram\metre^2\per\second^2}\,.
-\end{align}
-La unidad de trabajo y energía en el sistema cgs es el $\text{erg}$:
-\begin{align}
-  1\ \text{erg}=&\SI{1}{\gram\centi\meter^2\per\second^2}\nonumber\\
-=&10^{-7}\si{\joule}\,.
-\end{align}
 
 \section{Ejemplos de energía potencial}
 
