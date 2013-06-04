@@ -439,7 +439,7 @@ variaciones de una función escalar llamada el potencial.
 Las fuerzas fundamentales, o más estrictamente, las interacciones
 fundamentes conocidas en la naturaleza, son todas conservativas. Como
 consecuencia, la energía total de un sistema de partículas se debe
-conservar. Estas interacciones fundamentales pueden generan algunas
+conservar. Estas interacciones fundamentales pueden generar algunas
 fuerzas remanentes como la fricción que aparentemente es no
 conservativa: el trabajo para arrastrar un objeto entre un par de
 puntos por diferentes caminos con fricción, depende de la trayectoria
@@ -511,7 +511,7 @@ de donde
 \end{itemize}
 
 
-\example{}
+\ejemplo{}
 \label{ex:polea}
 
 
@@ -562,17 +562,18 @@ tenemos, de la última ecuación
 de donde
 \begin{align}
 \label{eq:acelfin}
-  a=g\,\frac{m_1\phantom{\color{red}-\mu m_2}}{m_1+m_2}
+  a=g\,\frac{m_1\phantom{\color{red}-\mu m_2}}{m_1+m_2}\,,
 \end{align}
-
 \end{frame}
+que coincide con el resultado expresado en la ecuación \eqref{eq:polea} cuando $\mu=0$.
+
+
 Usando directamente las leyes de Newton, como hicimos en los problemas resueltos del capítulo de dinámica
 \begin{align}
   T=&m_2 a\nonumber\\
 m_1g-T=&m_1 a\,,
 \end{align}
-donde $T$ es la tensión de la cuerda. Despejando $a$ obtuvimos el mismo resultado expresado en la ecuación \eqref{eq:polea} con $\mu=0$.
-
+donde $T$ es la tensión de la cuerda. 
 
 
 \begin{inprogress}
@@ -626,7 +627,7 @@ En el caso por ejemplo de la un movimiento en presencia de una fuerza
 no conservativa como la fricción, $Q$ corresponde a la energía
 disipada en forma de calor.
 
-En el caso del ejemplo asociado a la figura~\ref{fig:poleaideale}, si consideremos que entre las dos superficies fricción, esta realiza un trabajo que se disipa en calor $Q$, a medida que el cuerpo de masa $m_1$ cae una distancia $y_0$ dado por
+En el caso del ejemplo asociado a la figura~\ref{fig:poleaideale}, si consideramos que entre las dos superficies hay fuerza fricción, esta realiza un trabajo sobre el bloque $m_2$ que se disipa en calor $Q$, a medida que el cuerpo de masa $m_1$ cae una distancia $y_0$. El calor disipado esta dado por
 \begin{align*}
     {\color{red}Q}=-W_{ba}=&\int_C \mathbf{F}\cdot d\mathbf{r}\nonumber\\
 =&\int_C
@@ -639,10 +640,10 @@ dx,&dy,&dz
 =&-(-\mu m_2 g)\int_0^{y_0}dx\nonumber\\
 &={\color{red}\mu m_2g y_0\,,}
 \end{align*}
-donde $\mu$, es el coeficiente de fricción y hemos usado la ligadura
-que la distancia recorrida vertical es la misma que la distancia
-horizontal, pues la cuerda es ideal. Repitiendo los pasos que dieron
-lugar a la ec.\eqref{eq:acelfin}
+donde $\mu$, es el coeficiente de fricción y donde hemos usado la
+ligadura consistente en que la distancia vertical recorrida es la
+misma que la distancia horizontal, pues la cuerda es ideal.
+Repitiendo los pasos que dieron lugar a la ec.~\eqref{eq:acelfin}
 
 
 \begin{frame}
@@ -698,7 +699,7 @@ que coincide exactamente con el resultado obtenido en la ecuación \eqref{eq:pol
 \end{inprogress}
 
 
-\subsection{Energía potencial de un resorte}
+\section{Energía potencial de un resorte}
 Por sencillez consideremos el caso de un resorte que se mueve a lo largo del eje $x$, como se muestra en la figura~\ref{fig:resorte}. Para una elongación $x-x_0$ a partir de su posición de equilibrio $x_0$ la fuerza está dada por la Ley de Hooke
 \begin{align}
   \mathbf{F}=-k(x-x_0)\hat{\mathbf{i}}\,.
@@ -710,7 +711,7 @@ Por sencillez consideremos el caso de un resorte que se mueve a lo largo del eje
 {\includegraphics[scale=0.5]{resorte1}}
 %\only<2>{\includegraphics[scale=0.5]{resorte2}}%
 %\only<3>{\includegraphics[scale=0.5]{resorte3}}%
-    \caption{Resorte (Adapatado de Wikipedia)}
+    \caption{Resorte (Adaptado de Wikipedia)}
     \label{fig:resorte}
   \end{figure}
 \end{frame}
@@ -732,8 +733,11 @@ Y viceversa: de la siguiente energía potencial para el resorte,
 \end{align}
 se puede obtener la fuerza conservativa
 \begin{align}
-  F=-\frac{\partial}{\partial x}U(x)=&-\frac{2}{2}k(x-x_0)\frac{\partial}{\partial x}(x-x_0)+0\nonumber\\
-=&-k(x-x_0)\,.
+  \mathbf{F}=-\frac{\partial}{\partial x}U(x)\hat{\mathbf{i}}
+=&\left(
+-\frac{2}{2}k(x-x_0)\frac{\partial}{\partial x}(x-x_0)+0
+\right)\hat{\mathbf{i}}\nonumber\\
+=&-k(x-x_0)\hat{\mathbf{i}}\,.
 \end{align}
 
 Por convención escogemos que la energía potencial sea cero en la posición de equilibrio:
@@ -746,7 +750,7 @@ de modo que la energía potencial para el resorte es
   U(x)=&\tfrac{1}{2}k{(x-x_0)^2}\,.
 \end{align}
 
-\example{}
+\ejemplo{}
 \label{ex:resorte}
 
 En $t=0$ una masa atada a un resorte sobre
@@ -865,12 +869,13 @@ De acuerdo a esto, pase a Joules las siguientes cantidades de energía
 \section{Colisiones}
 Un sistema de dos partículas interaccionando en ausencia de fuerzas externas conserva el momentum total, de modo que
 \begin{align}
+\label{eq:consmom}
   \mathbf{P}_i=&\mathbf{P}_f\nonumber\\
 m_1\mathbf{v}_1+m_2\mathbf{v}_2=&m_1\mathbf{v}'_1+m_2\mathbf{v}'_2\,.
 \end{align}
 
 
-\section{Colisiones elásticas e inelásticas}
+\subsection{Colisiones elásticas}
 Una colisión en la cual la energía la energía cinética no cambia 
 es llamada una \emph{colisión elástica}. Una colisión es elástica si
 las fuerzas de interacción son conservativas, como por ejemplo la
@@ -878,6 +883,117 @@ interacción entre dos bloques que se deslizan sin fricción
 interaccionando a través de resortes, como se ilustra en la
 figura~\ref{fig:colisionelastica}.
 
+
+\begin{frame}
+En tal caso, la conservación de la energía cinética da lugar a la ecuación
+\begin{equation}
+\label{eq:E2}
+  m_1 v^2_1 + m_2 v^2_2 = m_1 {v'}^2_1 + m_2 {v'}^2_2\,.
+\end{equation}
+
+Si la colisión se desarrolla en una sola dimensión, la ec.~\eqref{eq:consmom} se reduce a 
+\begin{equation}\label{eq:E1}
+  m_1 v_1 + m_2 v_2 = m_1 v_1' + m_2 v_2'\,,
+\end{equation}
+
+Tenemos entonces un sistema de dos ecuaciones que podemos resolver
+para las dos incógnitas $v_1'$ y $v_2'$. La solución es
+\begin{align}
+  v_1' =& \frac{(m_1 - m_2)v_1 + 2m_2 v_2}{m_1 + m_2} \nonumber\\
+  v_2' =& \frac{(m_2 - m_1)v_2 + 2m_1 v_1}{m_1+ m_2}
+\end{align}
+\end{frame}
+
+
+\ejemplo{}
+\textbf{Colisiones entre dos bloques:}\footnote{Elaborado por Alexander Gallego}\\
+Considere la colisión entre dos bloques que interactúan a través de un
+resorte, como se muestra en la
+figura~\ref{fig:colisionelastica}. 
+Antes de la colisión el bloque de masa $m_1$ se mueve hacia la derecha
+con rapidez $u_1$ y el bloque de masa $m_2$ se encuentra en
+reposo. 
+Encuentre las velocidades finales $v_1$ y $v_2$ en función de $u_1$ y
+las masas.
+
+\begin{figure}
+  \centering
+  \includegraphics{colisionelastica}
+  \caption{Colisión elástica}
+  \label{fig:colisionelastica}
+\end{figure}
+
+Como la colisión ocurre prácticamente en un punto, podemos despreciar
+la energía disipada en calor durante el pequeño intervalo de tiempo
+que dura la colisión. Entonces la energía cinética se conserva antes y
+después de la colisión. 
+
+Conservación de moméntum
+\begin{align}
+  \label{eq:e1}
+  p_{i}=&p_f\nonumber\\
+  m_1 u_1 =& m_1 v_1 + m_2 v_2\,.
+\end{align}
+
+Conservación de energía cinética
+\begin{align}
+  \label{eq:e2}
+  K_i=&K_f\nonumber\\
+  m_1 u^2_1 =& m_1 v^2_1 + m_2 v^2_2\,.
+\end{align}
+
+De (\ref{eq:e1})
+\begin{equation}
+  \label{eq:v1}
+  v_1 = \frac{1}{m_1}( m_1u_1 - m_2 v_2),
+\end{equation}
+Reemplazando $v_1$ en \ref{eq:e2}
+\begin{equation}
+   m_1 u_1^2 = m_1 \left( \frac{m_1u_1 - m_2 v_2}{m_1} \right)^2 +  m_2 v^2_2\,,
+\end{equation}
+y desarrollando el binomio
+\begin{align}
+ m_1 u_1^2 =& \frac{1}{m_1}( m_1^2 u_1^2 - 2 m_1 m_2 u_1 v_2 + m_2^2 v_2^2) + m_2 v_2^2\nonumber\\
+m_1 u_1^2 =&  m_1 u_1^2 - 2 m_2 u_1 v_2 + \frac{m_2^2}{m_1} v_2^2 + m_2 v_2^2\,.
+\end{align}
+Cancelando $m_1 u_1^2$ a ambos lados y dividiendo por $m_2v_2$ y factorizando $v_2$
+\begin{align}
+  0=& - 2 m_2 u_1 v_2 + \frac{m_2^2}{m_1} v_2^2 + m_2 v_2^2\nonumber\\
+  0=& - 2  u_1  + \frac{m_2}{m_1} v_2 + v_2\nonumber\\
+  0=& - 2  u_1  + \left(\frac{m_2}{m_1} +1 \right)v_2\nonumber\\
+  0=& - 2  u_1  + \left(\frac{m_2+m_1}{m_1}\right)v_2\,,
+\end{align}
+obtenemos
+\begin{equation}
+  v_2 = \frac{2m_1}{m_1+ m_2}u_1\,.
+\end{equation}
+Reemplazando este valor en \eqref{eq:v1}
+
+\begin{align}
+  v_1 =& \frac{1}{m_1}\left(m_1u_1 - \frac{2m_2 m_1u_1}{m_1+m_2} \right)\nonumber\\
+  =& \frac{u_1}{m_1}\left(m_1 - \frac{2m_2 m_1}{m_1+m_2} \right)\nonumber\\
+  =& u_1\left(1 - \frac{2m_2}{m_1+m_2} \right)\nonumber\\
+  =& u_1\left(\frac{m_1+m_2 - 2m_2}{m_1+m_2} \right)\nonumber\\
+  v_1 = &\frac{m_1 - m_2}{m_1 + m_2} u_1
+\end{align}
+Asumiendo que el bloque 1 se mueve inicialmente hacia la derecha: $u_1>0$,  tenemos los siguientes casos:
+\begin{align}
+  v_1\to
+  \begin{cases}
+    =0 & \text{si\ }m_1=m_2\\
+    >0 & \text{si\ }m_1>m_2\\
+    <0 & \text{si\ }m_1<m_2
+  \end{cases}\,.
+\end{align}
+\finejemplo
+
+
+
+
+
+
+
+\subsection{Colisiones inelásticas}
 En un segundo experimento, tome el mismo par de bloques y reemplace el
 resorte por una masilla adhesiva. Considere el segundo bloque
 inicialmente en reposo. Después de la colisión ambos bloques se quedan
@@ -915,19 +1031,21 @@ Aunque la energía total del sistema es siempre conservada en colisiones, parte 
 \end{align}
 donde $Q=K_i-K_f$ es la cantidad de energía cinética convertida a otra forma
 
-Para colisiones en una dimensión:
-Conservaci\'on de momentum
+Para colisiones en una dimensión, la ec.~\eqref{eq:consmom}
+Conservación de moméntum  se reduce a
 \begin{equation}\label{eq:E1}
   m_1 v_1 + m_2 v_2 = m_1 v_1' + m_2 v_2'\,,
 \end{equation}
-y conservaci\'on de energía cinética
+y conservación de energía cinética es
 \begin{equation}\label{eq:E2}
   m_1 v^2_1 + m_2 v^2_2 = m_1 {v'}^2_1 + m_2 {v'}^2_2+Q\,.
 \end{equation}
+Una vez se calcule $Q$, el sistema de dos ecuaciones con dos
+incógnitas se puede resolver
 
+\ejemplo{}
 \begin{frame}[fragile,allowframebreaks]
-  \begin{itemize}
-\item[\textbf{Ejemplo:}] \textbf{Colisiones
+ \textbf{Colisiones
     inelásticas:}\footnote{Elaborado por Nicolás Moure} Un bloque de masa $m$ inicialmente en reposo
   en el punto $A$, se deja caer por una superficie circular de radio
   $R$ como se muestra en la figura ~\ref{fig:colision}. Al llegar al
@@ -945,12 +1063,11 @@ y conservaci\'on de energía cinética
     \label{fig:colision}
   \end{figure}
 
-\end{itemize}
 
 \end{frame}
 
-\begin{itemize}
-\item[\textbf{Solución}] 
+\noindent
+\textbf{Solución}] 
 En los tramos $AB$ y $CD$ sólo realiza trabajo el peso porque
 $\mathbf{N}$ es perpendicular a la trayectoria. En el sector $BC$ sólo
 realiza trabajo la fricción, porque el peso y la normal sor
@@ -1048,111 +1165,24 @@ forma de calor en el tramo $BC$ cuando $\mu=0.1$ es
   =&\SI{1.96}{\joule}\,.
 \end{align}
 
-\end{itemize}
-
-\begin{itemize}
-\item[\textbf{Ejemplo}]: \textbf{Colisiones entre dos bloques:}\footnote{Elaborado por Alexander Gallego}\\
-Considere la colisión entre dos bloques que interactúan a través de un resorte, como se muestra en la figura~\ref{fig:colisionelastica}. Antes de la colisión el bloque de masa $m_1$ se mueve hacia la derecha con rapidez $u_1$ y el bloque de masa $m_2$ se encuentra en reposo. Encuentre las velocidades finales $v_1$ y $v_2$ en función de $u_1$ y las masas. 
-
-\begin{figure}
-  \centering
-  \includegraphics{colisionelastica}
-  \caption{Colisión elástica}
-  \label{fig:colisionelastica}
-\end{figure}
-
-Como la colisión ocurre practicamente en un punto, podemos despreciar la energía disipada en calor durante el pequeño intervalo de tiempo que dure la colisión. Entonces la energía cinética se conservan antes y después de la colisión. Una colisión en la cual la energía cinética se conserva es llamada una colisión elástica. Una colisión es elástica si la fuerzas de interacción son conservativas, como el resorte en nuestro ejemplo.
-
-Conservaci\'on de moméntum
-\begin{align}
-  \label{eq:e1}
-  p_{i}=&p_f\nonumber\\
-  m_1 u_1 =& m_1 v_1 + m_2 v_2\,.
-\end{align}
-
-Conservaci\'on de energía cinética
-\begin{align}
-  \label{eq:e2}
-  K_i=&K_f\nonumber\\
-  m_1 u^2_1 =& m_1 v^2_1 + m_2 v^2_2\,.
-\end{align}
-
-De (\ref{eq:e1})
-\begin{equation}
-  \label{eq:v1}
-  v_1 = \frac{1}{m_1}( m_1u_1 - m_2 v_2),
-\end{equation}
-Reemplazando $v_1$ en \ref{eq:e2}
-\begin{equation}
-   m_1 u_1^2 = m_1 \left( \frac{m_1u_1 - m_2 v_2}{m_1} \right)^2 +  m_2 v^2_2\,,
-\end{equation}
-y desarrollando el binomio
-\begin{align}
- m_1 u_1^2 =& \frac{1}{m_1}( m_1^2 u_1^2 - 2 m_1 m_2 u_1 v_2 + m_2^2 v_2^2) + m_2 v_2^2\nonumber\\
-m_1 u_1^2 =&  m_1 u_1^2 - 2 m_2 u_1 v_2 + \frac{m_2^2}{m_1} v_2^2 + m_2 v_2^2\,.
-\end{align}
-Cancelando $m_1 u_1^2$ a ambos lados y dividiendo por $m_2v_2$ y factorizando $v_2$
-\begin{align}
-  0=& - 2 m_2 u_1 v_2 + \frac{m_2^2}{m_1} v_2^2 + m_2 v_2^2\nonumber\\
-  0=& - 2  u_1  + \frac{m_2}{m_1} v_2 + v_2\nonumber\\
-  0=& - 2  u_1  + \left(\frac{m_2}{m_1} +1 \right)v_2\nonumber\\
-  0=& - 2  u_1  + \left(\frac{m_2+m_1}{m_1}\right)v_2\,,
-\end{align}
-obtenemos
-\begin{equation}
-  v_2 = \frac{2m_1}{m_1+ m_2}u_1\,.
-\end{equation}
-Reemplazando este valor en \ref{eq:v1}
-
-\begin{align}
-  v_1 =& \frac{1}{m_1}\left(m_1u_1 - \frac{2m_2 m_1u_1}{m_1+m_2} \right)\nonumber\\
-  =& \frac{u_1}{m_1}\left(m_1 - \frac{2m_2 m_1}{m_1+m_2} \right)\nonumber\\
-  =& u_1\left(1 - \frac{2m_2}{m_1+m_2} \right)\nonumber\\
-  =& u_1\left(\frac{m_1+m_2 - 2m_2}{m_1+m_2} \right)\nonumber\\
-  v_1 = &\frac{m_1 - m_2}{m_1 + m_2} u_1
-\end{align}
-Asumiendo que el bloque 1 se mueve inicialmente hacia la derecha: $u_1>0$,  tenemos los siguientes casos:
-\begin{align}
-  v_1\to
-  \begin{cases}
-    =0 & \text{si\ }m_1=m_2\\
-    >0 & \text{si\ }m_1>m_2\\
-    <0 & \text{si\ }m_1<m_2
-  \end{cases}\,.
-\end{align}
+\finejemplo
 
 
-
-\item[\textbf{Ejercicion}]. En el caso en que el bloque 2 también se este moviendo con rapidez $u_2$ hacia la derecha, encuentra soluci\'on general para el sistema inicial de ecuaciones:
-
-Conservaci\'on de momentum
-\begin{equation}\label{eq:E1}
-  m_1 v_1 + m_2 v_2 = m_1 v_1' + m_2 v_2'\,,
-\end{equation}
-y conservaci\'on de energía cinética
-\begin{equation}\label{eq:E2}
-  m_1 v^2_1 + m_2 v^2_2 = m_1 {v'}^2_1 + m_2 {v'}^2_2\,.
-\end{equation}
-  
-La solución es
-\begin{align}
-  v_1' =& \frac{(m_1 - m_2)v_1 + 2m_2 v_2}{m_1 + m_2} \nonumber\\
-  v_2' =& \frac{(m_2 - m_1)v_2 + 2m_1 v_1}{m_1+ m_2}
-\end{align}
-\end{itemize}
 
 
 
 \section{Colisiones y coordenadas de centro de masa}
 Para estudiar las colisiones de dos partículas que se mueven con
-velocidades $v_1$ y $v_2$ en los que se denomina sistema de
-laboratorio, es conveniente reescribir las posiciones y velocidades en
-el sistema de centro de masa. Del Capítulo de momentum tenemos:
+velocidades $\mathbf{v}_1$ y $\mathbf{v}_2$ en lo que se denomina \emph{sistema de
+  laboratorio} $L$, es conveniente reescribir las posiciones y velocidades
+en el sistema de centro de masa $C$.
+
+Del Capítulo \ref{cha:momentum} sobre moméntum, tenemos:
   \begin{align}
     \label{eq:mbaton}
     \mathbf{R}=\frac{m_1\mathbf{r}_1+m_2\mathbf{r}_2}{m_1+m_2}
   \end{align}
-De modo que las coordenadas en el sistema de centro de masa satisfacen:
+De modo que las coordenadas en el sistema $C$ satisfacen:
 \begin{align}
   \mathbf{r}_{1c} =&\mathbf{r}_1-\mathbf{R}\nonumber\\
   \mathbf{r}_{2c}=&\mathbf{r}_2-\mathbf{R}\,.
@@ -1163,12 +1193,30 @@ De la ec.~(\ref{eq:mbaton})
     =&\frac{m_2}{m_1+m_2}(\mathbf{r}_1-\mathbf{r}_2)\nonumber\\
  \mathbf{r}_{2c}=&-\left(\frac{m_1}{m_1+m_2} \right)\left(\mathbf{r}_1-\mathbf{r}_2 \right)\,.
 \end{align}
-Derivando estas expresiones obtenemos
+Derivando con respecto al tiempo estas expresiones, obtenemos
+ 
+\begin{minipage}{0.5\linewidth}
+  \includegraphics[scale=0.35]{vcm}
+
+\noindent
+$V$ está en la línea que une $\mathbf{v}_1$ con $\mathbf{v}_1$.
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
   \begin{align}
     \label{eq:mbaton}
     \mathbf{V}=\frac{m_1\mathbf{v}_1+m_2\mathbf{v}_2}{m_1+m_2}
   \end{align}
-De modo que las coordenadas en el sistema de centro de masa satisfacen:
+\end{minipage}
+
+
+\begin{minipage}{0.5\linewidth}
+  \includegraphics[scale=0.35]{v12cm}
+
+\noindent
+$\mathbf{v}_{1c}$ y $\mathbf{v}_{2c}$ están en direcciones opuestas a lo largo del vector de velocidad relativa $\mathbf{v}=\mathbf{v}_1-\mathbf{v}_2$
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+De modo que las coordenadas en el sistema $C$ satisfacen:
 \begin{align}
   \mathbf{v}_{1c} =&\mathbf{v}_1-\mathbf{V}\nonumber\\
   \mathbf{v}_{2c}=&\mathbf{v}_2-\mathbf{V}\,.
@@ -1179,27 +1227,92 @@ De la ec.~(\ref{eq:mbaton})
     =&\frac{m_2}{m_1+m_2}(\mathbf{v}_1-\mathbf{v}_2)\nonumber\\
  \mathbf{v}_{2c}=&-\left(\frac{m_1}{m_1+m_2} \right)\left(\mathbf{v}_1-\mathbf{v}_2 \right)\,.
 \end{align}
-De modo que los moméntum desde el sistema de centro de masa:
+\end{minipage}
+  
+De esta forma, las cantidades de movimiento desde el sistema $C$ son
 \begin{align}
-  \mathbf{p}_{1c}=\mu(\mathbf{v}_1-\mathbf{v}_2)\nonumber\\
-  \mathbf{p}_{2c}=-\mu(\mathbf{v}_1-\mathbf{v}_2)\,,
+  \mathbf{p}_{1c}=&m_1\mathbf{v}_{1c}\nonumber\\
+                =&\frac{m_1m_2}{m_1+m_2}(\mathbf{v}_1-\mathbf{v}_2)\nonumber\\
+                =&\mu(\mathbf{v}_1-\mathbf{v}_2)\nonumber\\
+\end{align}
+\begin{align}
+    \mathbf{p}_{2c}=&m_2\mathbf{v}_{2c}\nonumber\\
+    =&-\left(\frac{m_1m_2}{m_1+m_2} \right)\left(\mathbf{v}_1-\mathbf{v}_2 \right)\nonumber\\
+                =&-\mu(\mathbf{v}_1-\mathbf{v}_2)\,,
 \end{align}
 donde
 \begin{align}
   \mu=\frac{m_1m_2}{m_1+m_2}\,.
 \end{align}
 
-Para una interacción de dos partículas tenemos el resultado
+Podemos ahora calcular el moméntum total en el sistema de centro de masa $C$
+\begin{align*}
+\mathbf{p}_{1c}+\mathbf{p}_{2c}=&\mu(\mathbf{v}_1-\mathbf{v}_2)
+-\mu(\mathbf{v}_1-\mathbf{v}_2)\nonumber\\
+=&0\,,
+\end{align*}
+y las cantidades de movimiento en el centro de masa son iguales y opuestas
 \begin{align}
   \mathbf{p}_{1c}=&-\mathbf{p}_{2c}\,.
 \end{align}
+
+El moméntum en el sistema $L$ es
+\begin{align*}
+  m_1\mathbf{v}_1+m_2\mathbf{v}_2=&(m_1+m_2)\frac{m_1\mathbf{v}_1+m_2\mathbf{v}_2}{m_1+m_2}\nonumber\\
+  =&(m_1+m_2)\mathbf{V}
+\end{align*}
+y ya que el moméntum es conservado en cualquier colisión, entonces
+$\mathbf{V}$ es constante. 
+Podemos usar este resultado como una ayuda para visualizar los
+vectores de velocidad antes y después de la colisión.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{coli1}
+  \includegraphics[scale=0.3]{coli2}
+  \includegraphics[scale=0.3]{coli3}
+
+\hspace{7cm}{(c)}
+  \caption{Colisiones}
+  \label{fig:coli}
+\end{figure}
+
+La figura~\ref{fig:coli}~(a) muestra las trayectoria y velocidades de
+dos partículas en colisión.  
+En la figura~\ref{fig:coli}~(b) mostramos las velocidades iniciales en
+los sistema $L$ y $C$.
+Todos los vectores están sobre el mismo plano.
+$\mathbf{v}_{1c}$ y $\mathbf{v}_{2c}$ deben estar espalada con espalda
+ya que el moméntum total en el sistema $C$ es cero. 
+Después de la colisión, como se muestra en la
+figura~\ref{fig:coli}~(c), las velocidades en el sistema $C$ son de
+nuevo espalda a espalda. 
+La figura también muestra las velocidades
+finales en el sistema de laboratorio.
+Note que el plano de la figura~\ref{fig:coli}~(c) no es necesariamente
+el plano de la figura~\ref{fig:coli}~(a). 
+Evidentemente las relaciones geométricas entre las velocidades
+iniciales y finales en el sistema $L$ es bastante complicado. 
+Afortunadamente, la situación en el sistema $C$ es mucho más simple. 
+Las velocidades iniciales y finales en el sistema $C$ determinan un
+plano conocido como el plano de dispersión. 
+Cada partícula es desviada a través del mismo ángulo de dispersión
+$\Theta$ en este plano.
+
+La fuerza de interacción debe ser conocida para poder calcular
+$\Theta$, o al contrario, midiendo la desviación podemos aprender
+sobre la fuerza de interacción. Sin, embargo evitaremos estas
+consideraciones y asumiremos que la interacción ha causado alguna
+desviación en el sistema $C$.
+
+
 Si además la colisión es elástica y denotando con primas las
 velocidades después de la colisión tenemos
 \begin{align}
   \tfrac{1}{2}m_1 v_{1c}^2+  \tfrac{1}{2}m_2 v_{2c}^2
 = \tfrac{1}{2}m_1 {v_{1c}'}^2+ \tfrac{1}{2}{m_2 v_{2c}'}^2
 \end{align}
-Combinando con las ecuaciones de conservación de momentum
+Combinando con las ecuaciones de conservación de moméntum
 \begin{align}
   v_{1c}=&v_{1c}'\nonumber\\
   v_{2c}=&v_{2c}'\nonumber\\
