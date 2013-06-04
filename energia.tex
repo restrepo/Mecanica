@@ -1309,17 +1309,55 @@ desviación en el sistema $C$.
 Si además la colisión es elástica y denotando con primas las
 velocidades después de la colisión tenemos
 \begin{align}
+\label{eq:cecm}
   \tfrac{1}{2}m_1 v_{1c}^2+  \tfrac{1}{2}m_2 v_{2c}^2
-= \tfrac{1}{2}m_1 {v_{1c}'}^2+ \tfrac{1}{2}{m_2 v_{2c}'}^2
+= \tfrac{1}{2}m_1 {v_{1c}'}^2+ \tfrac{1}{2}m_2 {v_{2c}'}^2\,.
 \end{align}
-Combinando con las ecuaciones de conservación de moméntum
+Ya que el moméntum inicial y final es cero, y escogiendo
+convenientemente el eje $x$ de los sistemas $C$ y $C$, de manera que
+coincida con los vectores moméntum, tenemos
+\begin{align}
+  m_1 v_{1c}+m_2 v_{2c}=&0 \nonumber\\
+  m_2 v_{1c}'+m_2 v_{2c}'=&0\,
+\end{align}
+y
+\begin{align}
+\label{eq:ccp}
+  v_{2c}=&-\frac{m_1}{m_2}v_{1c}\nonumber\\
+  v_{2c}'=&-\frac{m_1}{m_2}v_{1c}'\,.
+\end{align}
+Reemplazando en ec.~(\ref{eq:cecm})
+\begin{align}
+  m_1 v_{1c}^2+  \frac{m_1^2}{m_2} v_{1c}^2
+=& m_1 {v_{1c}'}^2+ \frac{m_1^2}{m_2} {v_{1c}'}^2 \nonumber\\
+ \left(m_1+\frac{m_1^2}{m_2}  \right) v_{1c}^2
+=&\left(m_1+\frac{m_1^2}{m_2}  \right) {v_{1c}'}^2 \nonumber\\
+v_{1c}^2=&{v_{1c}'}^2\,,
+\end{align}
+de modo que
+\begin{align*}
+  v_{1c}=&v_{1c}'\,.
+\end{align*}
+Sustituyendo en la ec.~(\ref{eq:ccp}), obtenemos que
+\begin{align*}
+  v_{2c}=&v_{2c}'\,.
+\end{align*}
+En resumen, el problema general de lo colisión de dos cuerpos, visto
+desde el sistema del centro de masa, implica que
 \begin{align}
   v_{1c}=&v_{1c}'\nonumber\\
-  v_{2c}=&v_{2c}'\nonumber\\
+  v_{2c}=&v_{2c}'\,.
 \end{align}
 En una colisión elástica, la rapidez de cada partícula en el sistema
 de centro de masa es la misma antes y después de la colisión. Así, los
-vectores de velocidad simplemente rotan en el ángulo de dispersión.
+vectores de velocidad simplemente rotan en el ángulo de dispersión,
+como se muestra en la figura~\ref{fig:particolgen}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.6]{particolgen}
+  \caption{Colisión general de dos cuerpos}
+  \label{fig:particolgen}
+\end{figure}
 \begin{inprogress}
 
 
