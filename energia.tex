@@ -1203,7 +1203,7 @@ $V$ está en la línea que une $\mathbf{v}_1$ con $\mathbf{v}_1$.
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
   \begin{align}
-    \label{eq:mbaton}
+    \label{eq:Vcm}
     \mathbf{V}=\frac{m_1\mathbf{v}_1+m_2\mathbf{v}_2}{m_1+m_2}
   \end{align}
 \end{minipage}
@@ -1218,11 +1218,13 @@ $\mathbf{v}_{1c}$ y $\mathbf{v}_{2c}$ están en direcciones opuestas a lo largo 
 \begin{minipage}{0.5\linewidth}
 De modo que las coordenadas en el sistema $C$ satisfacen:
 \begin{align}
+  \label{eq:v12cm}
   \mathbf{v}_{1c} =&\mathbf{v}_1-\mathbf{V}\nonumber\\
   \mathbf{v}_{2c}=&\mathbf{v}_2-\mathbf{V}\,.
 \end{align}
 De la ec.~(\ref{eq:mbaton})
 \begin{align}
+  \label{eq:v12cm12}
   \mathbf{v}_{1c}
     =&\frac{m_2}{m_1+m_2}(\mathbf{v}_1-\mathbf{v}_2)\nonumber\\
  \mathbf{v}_{2c}=&-\left(\frac{m_1}{m_1+m_2} \right)\left(\mathbf{v}_1-\mathbf{v}_2 \right)\,.
@@ -1358,12 +1360,126 @@ como se muestra en la figura~\ref{fig:particolgen}
   \caption{Colisión general de dos cuerpos}
   \label{fig:particolgen}
 \end{figure}
-\begin{inprogress}
 
 
 \subsection{Ángulo de dispersión}
-\end{inprogress}
+Considere la dispersión elástica de una partícula de masa $m_1$ y
+velocidad $\mathbf{v}_1$ con una partícula de masa $m_2$ en reposo,
+como se muestra en la figura~\ref{fig:collitarget} (a). 
+Después de la colisión las partículas se mueven con velocidades
+$\mathbf{v}_1'$ y $\mathbf{v}_2'$.
+Es más fácil analizar el movimiento desde el Sistema de centro de
+masa. 
+Como no hay fuerzas externas actuando sobre el par de partículas, el
+centro de masa se mueve a velocidad constante [ver
+fig.~\ref{fig:collitarget}~(c)] dada por la ec.~(\ref{eq:Vcm}) con
+$\mathbf{v}_2=0$
+\begin{align}
+  \label{eq:Vv20}
+  \mathbf{V}=\frac{m_1}{m_1+m_2}\mathbf{v}_1\,.
+\end{align}
+Un observador en el centro de masa ve las dos partículas moverse con
+la velocidades dadas en la ec.~\eqref{eq:v12cm}
+\begin{align*}
+  \mathbf{v}_{1c} =&\mathbf{v}_1-\mathbf{V}\nonumber\\
+  \mathbf{v}_{2c}=&-\mathbf{V}\,,
+\end{align*}
+e ilustradas en la fig.~\ref{fig:collitarget}~(d). De las ecuaciones~\eqref{eq:v12cm12}
+\begin{align}
+  \label{eq:v12cm12v20}
+  \mathbf{v}_{1c}
+    =&\frac{m_2}{m_1+m_2}\mathbf{v}_1\nonumber\\
+ \mathbf{v}_{2c}=&-\frac{m_1}{m_1+m_2}\mathbf{v}_1\,.
+\end{align}
 
+
+Como después de la colisión la velocidad $\mathbf{v}_2'$ es diferente
+de cero, entonces
+\begin{align}
+  \label{eq:v12c}
+  \mathbf{v}_{1c}' =&\mathbf{v}_1'-\mathbf{V}\nonumber\\
+  \mathbf{v}_{2c}'=&\mathbf{v}_2'-\mathbf{V}\,.
+\end{align}
+
+\begin{frame}
+\begin{figure}
+  \centering
+%\only<1>%
+{\includegraphics[scale=0.6]{collitargeta}}
+%\only<2>%
+{\includegraphics[scale=0.6]{collitargetb}}\nobreakinbeamer
+%\only<3>%
+{\includegraphics[scale=0.6]{collitargetc}}
+%\only<4>%
+{\includegraphics[scale=0.6]{collitargetd}}\nobreakinbeamer
+%\only<5>%
+{\includegraphics[scale=0.6]{collitargete}}
+%\only<6>%
+{\includegraphics[scale=0.6]{collitargetf}}
+  \caption{Colisión con blanco en reposo}
+  \label{fig:collitarget}
+\end{figure}
+\end{frame}
+
+Estas sumas vectoriales están representadas en la
+fig.~\ref{fig:collitarget}~(e) que dan lugar a los vectores espalda a
+espalda mostrados en la fig.~\ref{fig:collitarget}~(e), con
+$\mathbf{v}_{1c}'$, por ejemplo, formando un ángulo $\Theta$ con la
+dirección de $\mathbf{v}_{1c}$ como se representa en la figura~\ref{fig:collitargetg}. 
+
+Allí tenemos de nuevo la representación geométrica de la ecuación para
+$\mathbf{v}_{1c}'$ dada por la ec.~\eqref{eq:v12c}.
+
+\begin{frame}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.8]{collitargetg}
+  \caption{Ángulo de dispersión}
+  \label{fig:collitargetg}
+\end{figure}
+\end{frame}
+
+El ángulo $\Theta$ puede variar en todo su rango desde $0$ hasta
+$2\pi$. Para hallar la relación con uno de los ángulo en el sistema de
+laboratorio, $\theta_1$, tenemos de la trigonometría de la
+fig.~\ref{fig:collitargetg} que
+\begin{align}
+  \tan\theta_1=&\frac{v_{1c}'\sin\Theta}{V+v_{1c}'\cos\Theta}\nonumber\\
+  =&\frac{\sin\Theta}{\left(V/v_{1c}'\right)V+\cos\Theta}\,.
+\end{align}
+
+Ya que $v_{1c}'=v_{1c}$
+\begin{align}
+  \label{eq:tanth1}
+  \tan\theta_1=&\frac{\sin\Theta}{\left(V/v_{1c}\right)V+\cos\Theta}\,.
+\end{align}
+
+Desarrollando la magnitud del vector $\mathbf{v}_{1c}$ en las
+ecs.~\eqref{eq:v12cm12v20}, 
+\begin{align*}
+ v_{1c}=&\frac{m_2}{m_1+m_2}v_1\,, 
+ \end{align*}
+y usando la ec.~\eqref{eq:Vv20}, tenemos
+\begin{align*}
+  v_{1c}=&\frac{m_2}{m_1}\frac{m_1}{m_1+m_2}v_1\nonumber\\
+  =&\frac{m_2}{m_1}V\,.
+\end{align*}
+De modo que
+\begin{align*}
+  \frac{V}{v_{1c}}=\frac{m_1}{m_2}.
+\end{align*}
+Reemplazando finalmente en~\eqref{eq:tanth1}, tenemos finalmente que
+\begin{align*}
+    \tan\theta_1=&\frac{\sin\Theta}{\left(m_1/m_2\right)V+\cos\Theta}\,.
+\end{align*}
+Cuando $m_1/m_2<1$ (o $m_1<m_2$), $\theta_1$ también puede variar entre $0$ y
+$2\pi$. Pero si $m_1>m_2$, $\tan\theta_1$ queda limitado por un valor
+máximo. En particular en el límite en $m_1>>m_2$:
+\begin{align*}
+  \tan\theta_1\approx \frac{m_2}{m_1}\tan\Theta\to 0\qquad\text{si $m_1>>m_2$}\,.
+\end{align*}
+Una bola muy pesada simplemente arrastra la pequeña pero sin cambiar
+sustancialmente la dirección.
 
 
 
