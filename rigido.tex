@@ -1,28 +1,40 @@
 
 \chapter{Movimiento del cuerpo rígido}
 
-\section{Movimiento Circular Uniforme}
+\section{Movimiento Circular Uniforme I}
 
-Considere el movimiento descrito por la siguiente ecuaci\'on
+Considere el movimiento descrito por la siguiente ecuación
 \begin{align}
   \label{eq:mua}
-  \mathbf{r}(t)=r\left(\hat{\mathbf{i}}\cos(\omega t)+\hat{\mathbf{j}}\sin(\omega t)\right),
+  \mathbf{r}(t)=r\left[\hat{\mathbf{i}}\cos(\omega t)+\hat{\mathbf{j}}\sin(\omega t)\right],
 \end{align}
 con $r=\text{constante}$ y $\omega=\text{constante}$, representado en la figura~\ref{fig:mua1}.
 
 La velocidad es
 \begin{align}
   \mathbf{v}=&%detalles\\
-  r\omega\left(-\hat{\mathbf{i}}\sin(\omega t)+\hat{\mathbf{j}}\cos(\omega t)\right),
+  r\omega\left[-\hat{\mathbf{i}}\sin(\omega t)+\hat{\mathbf{j}}\cos(\omega t)\right],
 \end{align}
-representado en la figura~\ref{fig:mua2}. Note que $\mathbf{r}\cdot\mathbf{v}=0$, de modo que los vectores son perpendiculares.
+representado en la figura~\ref{fig:mua2}. Note que, 
+\begin{align*}
+\mathbf{r}\cdot\mathbf{v}=r^2\omega 
+   \left[-\sin(\omega t)\cos(\omega t)+\sin(\omega t)\cos(\omega t) \right]
+  =0\,,
+\end{align*}
+de modo que los vectores son perpendiculares entre sí.
 
-La aceleraci\'on es
+La aceleración es
 \begin{align}
   \mathbf{a}=&%detalles\\
-  -r\omega^2\left(\hat{\mathbf{i}}\cos(\omega t)+\hat{\mathbf{j}}\sin(\omega t)\right),
+  -r\omega^2\left[\hat{\mathbf{i}}\cos(\omega t)+\hat{\mathbf{j}}\sin(\omega t)\right],
 \end{align}
-representado en la figura~\ref{fig:mua3}. Note que $\mathbf{a}\cdot\mathbf{v}=0$, de modo que los vectores son perpendiculares. Adem\'as
+representado en la figura~\ref{fig:mua3}. Note que
+\begin{align*}
+  \mathbf{a}\cdot\mathbf{v}=r^2\omega^3 
+   \left[-\sin(\omega t)\cos(\omega t)+\sin(\omega t)\cos(\omega t) \right]
+  =0\,,
+\end{align*}
+de modo que los vectores son perpendiculares. Además 
 $\mathbf{r}\cdot\mathbf{a}=-1$, de modo que los vectores son antiparalelos.
 
 
@@ -59,13 +71,30 @@ $\mathbf{r}\cdot\mathbf{a}=-1$, de modo que los vectores son antiparalelos.
 
 %Hacer una figura con los ejes rotados con hat theta a pi/2+theta 
 
+Para algunos problemas en dos dimensiones, es conveniente reescribir el vector de posición $\mathbf{r}(t)=x(t)\hat{\mathbf{i}}+y(t)\hat{\mathbf{j}}$ en términos de coordenadas polares:
+
+\begin{frame}
+\noindent
+\begin{minipage}{0.2\textwidth}
+\includegraphics[scale=1]{polares}  
+\end{minipage}
+\begin{minipage}{0.8\textwidth}
+  \begin{align}
+    \label{eq:polares}
+    x(t)=&r(t)\cos \left[ \theta(t) \right]\nonumber\\
+    y(t)=&r(t)\sin \left[ \theta(t) \right]
+  \end{align}
+\end{minipage}
+\end{frame}
+
+
 La ecuaci\'on para el vector de posici\'on puede escribirse en general como
 \begin{align}
 \label{eq:rpol}
-  \mathbf{r}(t)=&r(t)\left(\hat{\mathbf{i}}\cos[\theta(t)]+\hat{\mathbf{j}}\sin[\theta(t)]\right)\nonumber\\
-=&r(t)\hat{\mathbf{r}}(t)
+  \mathbf{r}(t)=&r(t)\left\{\hat{\mathbf{i}}\cos[\theta(t)]+\hat{\mathbf{j}}\sin[\theta(t)]\right\}\nonumber\\
+=&r(t)\hat{\mathbf{r}}(t)\,,
 \end{align}
-Para algunos problemas es conveniente reescribir \'esta ecuaci\'on en coordenadas polares, donde
+donde
 \begin{align}
 \label{eq:runit}
   \hat{\mathbf{r}}(t)=\hat{\mathbf{i}}\cos[\theta(t)]+\hat{\mathbf{j}}\sin[\theta(t)]\,.
@@ -75,7 +104,7 @@ Para algunos problemas es conveniente reescribir \'esta ecuaci\'on en coordenada
 El vector perpendicular a $\hat{\mathbf{r}}(t)$ describe la dirección angular. De la figura %ver notas
 \begin{align}
 \label{eq:thetaunit}
-  \hat{\boldsymbol{\theta}}(t)=&\hat{\mathbf{i}}\cos[\pi/2-\theta(t)]+\hat{\mathbf{j}}\sin[\pi/2-\theta(t)]\nonumber\\
+  \hat{\boldsymbol{\theta}}(t)=&\hat{\mathbf{i}}\cos[\theta(t)+\pi/2]+\hat{\mathbf{j}}\sin[\theta(t)+\pi/2]\nonumber\\
 =&-\hat{\mathbf{i}}\sin[\theta(t)]+\hat{\mathbf{j}}\cos[\theta(t)]\,.
 \end{align}
 
@@ -129,40 +158,111 @@ Ahora, de la ec.~\eqref{eq:runit}
 \end{align}
 y usando la ec.~\eqref{eq:thetaunit}
 \begin{align}
+\label{eq:dhr}
 \dot{\hat{\mathbf{r}}}(t)=\dot{\theta}\hat{\boldsymbol{\theta}}\,.
 \end{align}
 Sustituyendo en la ec.~\eqref{eq:vcurvprev}:
 \begin{align}
   \label{eq:vpol}
   \mathbf{v}(t)=&\dot{r}(t)\hat{\mathbf{r}}(t)+r(t)\dot{\theta}(t)\hat{\boldsymbol{\theta}}(t)\nonumber\\
-  =&\dot{r}(t)\hat{\mathbf{r}}(t)+r(t)\omega(t)\boldsymbol{\theta}(t)\,.
+  =&\dot{r}(t)\hat{\mathbf{r}}(t)+r(t)\omega(t)\hat{\boldsymbol{\theta}}(t)\,.
 \end{align}
 donde hemos definido la velocidad angular instantánea como
 \begin{align}
-  \omega(t)=\dot\theta(t)
+  \omega(t)=\dot\theta(t)\,.
+\end{align}
+Además
+\begin{align}
+\label{eq:dht}
+  \dot{\hat{\boldsymbol{\theta}}}(t)=&
+  -\hat{\mathbf{i}}\dot{\theta}(t)\cos[\theta(t)]-\hat{\mathbf{j}}\dot{\theta}(t)\sin[\theta(t)]\nonumber\\
+  =&-\hat{\mathbf{r}}(t)\,.
 \end{align}
 
-y la aceleraci\'on es %ver notas
+Usando (\ref{eq:vpol}) con (\ref{eq:dhr})  y (\ref{eq:dht}), la aceleraci\'on es %ver notas
 \begin{align}
 \label{eq:apol}
-  \mathbf{a}(t)=&%detalles\\
-[\underbrace{\ddot{r}(t)}_{{\text{Acel. lineal.}}}
+  \mathbf{a}(t)=&\frac{d\mathbf{v}(t)}{dt}\nonumber\\
+=& \ddot{r}(t)\hat{\mathbf{r}}(t)+\dot{r}(t)\dot{\hat{\mathbf{r}}}(t)+\dot{r}(t)\dot{\theta}(t)\hat{\boldsymbol{\theta}}(t)
++r(t)\ddot{\theta}(t)\hat{\boldsymbol{\theta}}(t)
++r(t)\dot{\theta}(t)\dot{\hat{\boldsymbol{\theta}}}(t) \nonumber\\
+=&
+ \ddot{r}(t)\hat{\mathbf{r}}(t)+\dot{r}(t)\dot{\theta}(t)\hat{\boldsymbol{\theta}}(t)+\dot{r}(t)\dot{\theta}(t)\hat{\boldsymbol{\theta}}(t)
++r(t)\ddot{\theta}(t)\hat{\boldsymbol{\theta}}(t)
+-r(t)\dot{\theta}(t)\dot{\theta}(t)\hat{\mathbf{r}} \nonumber\\
+=&[\underbrace{\ddot{r}(t)}_{{\text{Acel. lineal.}}}
 -\underbrace{r(t)\dot{\theta}^2(t)}_{{\text{Acel. centr\'\i peta.}}}]\hat{\mathbf{r}}(t)
 +[\underbrace{r(t)\ddot{\theta}(t)}_{{\text{Acel. lineal tangencial.}}}
 +\underbrace{2\dot{r}(t)\dot{\theta}(t)}_{{\text{Acel. de coriolis.}}}]\hat{\boldsymbol{\theta}}(t).
 \end{align}
 
-\ejemplo{\textbf{MCU}:}
-Calcule la fuerza para mantener un cuerpo de masa $m$ en un movimiento circular uniforme
+\begin{frame}
+  En resumen, en coordenadas polares $\hat{\mathbf{r}}$, $\hat{\boldsymbol{\theta}}$ la velocidad y la aceleración están dadas por
+\begin{align*}
+   \mathbf{v}(t)=&\dot{\mathbf{r}}(t)=\dot{r}(t)\hat{\mathbf{r}}(t)+
+r(t)\dot{\hat{\mathbf{r}}}(t)\nonumber\\
+ \mathbf{a}(t)=&
+\left[\ddot{r}(t)-r(t)\dot{\theta}^2(t)\dot{\theta}(t)\right]\hat{\mathbf{r}} 
++\left[r(t)\ddot{\theta}(t)+2\dot{r}(t)\dot{\theta}(t)  \right]\hat{\boldsymbol{\theta}}(t)
+\end{align*}
+\end{frame}
+
+\subsection{Vector de velocidad angular}
+
+Es conveniente definir un espacio tridimensional asignando un vector unitario,
+$\hat{\boldsymbol{\omega}}$, perpendicular al plano en coordenadas polares
+$\hat{\mathbf{r}}$, $\hat{\boldsymbol{\theta}}$, tal que
+\begin{align*}
+  \hat{\boldsymbol{\omega}}=\hat{\mathbf{r}}\times \hat{\boldsymbol{\theta}}\,.
+\end{align*}
+Entonces
+\begin{align*}
+ \hat{\boldsymbol{\theta}}=&\hat{\boldsymbol{\omega}}\times\hat{\mathbf{r}}& \hat{\mathbf{r}}=&\hat{\boldsymbol{\theta}}\times\hat{\boldsymbol{\omega}}\,.
+\end{align*}
+De esta formula, la ecuación para la velocidad en coordenadas polares \eqref{eq:vpol}, puede escribirse como
+\begin{align}
+    \mathbf{v}(t)
+  =&\dot{r}(t)\hat{\mathbf{r}}(t)+r(t)\omega(t)\hat{\boldsymbol{\theta}}(t)\nonumber\\
+  =&\frac{\dot{r}(t)}{r(t)}r(t)\hat{\mathbf{r}}(t)+r(t)\omega(t)\hat{\boldsymbol{\omega}}\times\hat{\mathbf{r}}\nonumber\\
+  =&\frac{\dot{r}(t)}{r(t)}\mathbf{r}(t)+\boldsymbol{\omega}(t)\times\mathbf{r}(t)\,,
+\end{align}
+donde hemos identificado la dirección perpendicular al plano $\hat{\mathbf{r}}$-$\hat{\boldsymbol{\theta}}$, con la dirección de la velocidad angular
+\begin{align}
+  \boldsymbol{\omega}(t)=\omega(t)\hat{\boldsymbol{\omega}}(t)\,.
+\end{align}
 
 
-Comparando (\ref{eq:mua}) con (\ref{eq:rpol}), tenemos para el Movimiento Circular Uniforme que
+
+
+Las componentes angulares como tal:
+\begin{align*}
+  \theta_x\hat{\mathbf{i}}+\theta_y\hat{\mathbf{j}}+\theta_k\hat{\mathbf{k}}\,,
+\end{align*}
+no pueden formar un vector, pues no resultaria ser conmutativo, como
+puede mostrarse facilmente haciendo rotaciones sobre los tres ejes de
+un libro en el espacio. La diferencia entre las diferentes
+posibilidades de rotaciones son del orden de $\Delta
+\theta_{x,y,x}^2$, de modo que las componentes diferenciales si forman
+un vector. 
+
+Definimos entonces la velocidad angular en tres dimensiones como:
+\begin{align}
+  \boldsymbol{\omega}=&\frac{d\theta_x}{dt}\hat{\mathbf{i}}+\frac{d\theta_y}{dt}\hat{\mathbf{j}}
++\frac{d\theta_z}{dt}\hat{\mathbf{k}}\nonumber\\
+=&\omega_x\hat{\mathbf{i}}+\omega_y\hat{\mathbf{j}}+\omega_z\hat{\mathbf{k}}\,,
+\end{align}
+la cual si constituye un vector.
+
+\subsection{Movimiento circular uniforme II}
+
+
+Una partícula en movimiento circular uniforme (MCU), dado por la ec.~\eqref{eq:muapol}, mantiene el radio del movimiento constante con respecto a un sistema de referencia en el centro de giro. Por lo tanto, en coordenadas polares dicho movimiento satisface que
 \begin{align}
   \label{eq:muapol}
    \dot{r}=&0&&&&\\
   \theta(t)=&\omega t\,,&\dot{\theta}(t)=&\omega\,,&\ddot{\theta}(t)=&0\,.
 \end{align}
-De modo que reemplazando las ecuaciones \eqref{eq:muapol} en las ecuaciones \eqref{eq:vpol}, \eqref{eq:apol}, y usando la transformaci\'on inversa \eqref{eq:polinv}, tenemos que
+De modo que reemplazando las ecuaciones  en las ecuaciones \eqref{eq:vpol}, \eqref{eq:apol}, y usando la transformaci\'on inversa \eqref{eq:polinv}, tenemos que
 \begin{align}
   \mathbf{r}(t)=&r\hat{\mathbf{r}}(t)\nonumber\\
   =&r\left(\hat{\mathbf{i}}\cos(\omega t)+\hat{\mathbf{j}}\sin(\omega t)\right),
@@ -184,11 +284,17 @@ La siguiente derivada da lugar a
 \end{align*}
 y usando la ec.\eqref{eq:vome}
 \begin{align}
+\label{eq:muaa}
   \mathbf{a}(t)=-\frac{v^2}{r}\hat{\mathbf{r}}
 \end{align}
 
 de modo que en el MCU la velocidad no tiene componente radial, y s\'olo
-contribuye la aceleraci\'on centr\'\i peta, como era de esperarse. Finalmente
+contribuye la aceleraci\'on centr\'\i peta, como era de esperarse.
+\ejemplo{\textbf{MCU}:}
+Calcule la fuerza para mantener un cuerpo de masa $m$ en un movimiento circular uniforme
+
+
+Tenemos que la ec.~\eqref{eq:muaa} da lugar a
 \begin{align}
   \mathbf{F}=m\mathbf{a}=-\frac{m v^2}{r}\hat{\mathbf{r}}\,.
 \end{align}
@@ -201,58 +307,77 @@ contribuye la aceleraci\'on centr\'\i peta, como era de esperarse. Finalmente
 
 \ejemplo{} 
 \label{eje:movim-gener-en}
-Calcular la velocidad de rotación de una partícula de masa
+Calcular la velocidad de rotación de una partícula 
 girando en movimiento circular en una plano paralelo al plano $x$-$y$
 y con el eje $z$ pasando por el centro de la orbita circular.
 
 %hacer dibujo obtener la formula para la velocidad en términos de la
 %velocidad angular.  ver notas en estrellitas
-
-\begin{align*}
-  \mathbf{v}=\boldsymbol{\omega}\times\mathbf{r}\,.
-\end{align*}
-
 \qed
 
 
-Las componentes angulares como tal:
-\begin{align*}
-  \theta_x\hat{\mathbf{i}}+\theta_y\hat{\mathbf{j}}+\theta_k\hat{\mathbf{k}}\,,
-\end{align*}
-no pueden formar un vector, pues no resultaria ser conmutativo, como
-puede mostrarse facilmente haciendo rotaciones sobre los tres ejes de
-un libro en el espacio. La diferencia entre las diferentes
-posibilidades de rotaciones son del orden de $\Delta
-\theta_{x,y,x}^2$, de modo que las componentes diferenciales si forman
-un vector. 
-
-Definimos entonces la velocidad angular en tres dimensiones como:
-\begin{align}
-  \boldsymbol{\omega}=&\frac{d\theta_x}{dt}\hat{\mathbf{i}}+\frac{d\theta_y}{dt}\hat{\mathbf{j}}
-+\frac{d\theta_z}{dt}\hat{\mathbf{k}}\nonumber\\
-=&\omega_x\hat{\mathbf{i}}+\omega_y\hat{\mathbf{j}}+\omega_z\hat{\mathbf{k}}\,.
-\end{align}
-La ecuacion obtenida en el ejemplo~\ref{eje:movim-gener-en} es válida
-en general
-\begin{align}
-  \mathbf{v}=\boldsymbol{\omega}\times\mathbf{r}\,.
-\end{align}
-
-
 \section{Momentum angular y torque para una partícula}
-Definimos el momento angular para una partícula de moméntum $\mathbf{p}$ como
+Como último caso de aplicación del teorema de Noether, debemos
+preguntarnos cual es la cantidad conservada asociada a la isotropía
+del espacio, es decir con la invarianza de la leyes de la naturaleza
+con respecto a rotaciones en el espacio: si realizamos un experimento
+sobre una mesa, y luego lo repetimos con la mesa rotada en algún
+ángulo sobre un eje perpendicular a la superficie, entonces el resultado
+del experimento debe ser el mismo.
+
+La cantidad conservada es más fácil de visualizar en el caso de la
+rotación de un cuerpo rígido, es decir, un cuerpo dentro del cual
+todas la partículas que lo componen mantienen su posición de manera
+que el cuerpo siempre esta cohesionado. 
+De este modo, dentro un cuerpo rígido en rotación con respecto a algún
+eje todas la partículas se mueven con la misma velocidad angular
+$\boldsymbol{\omega}$.
+Cuando observamos un cuerpo rígido girando con respecto a un
+\emph{sólo} eje de giro como la rueda de una bicicleta, un yoyó, un
+trompo, etc; podemos ver que la dirección del eje de giro se opone al
+cambio de dirección. 
+En particular la conservación del eje de giro de las ruedas es lo que
+garantiza el equilibrio de una bicicleta en movimiento.
+
+
+La cantidad conservada entonces debe ser una cantidad proporcional al
+vector $\boldsymbol{\omega}$ asociada con el giro de una de la
+partículas que compone el cuerpo rígido. 
+Como por definición el radio de giro de tal partícula es constante,
+entonces la combinación de cantidades vectoriales relevante debe ser
+alguna de las combinaciones entre $\mathbf{r}$, $\mathbf{v}$ y
+$\boldsymbol{\mathbf{\omega}}$ (tal que usando la regla de la mano
+derecha, la mano se debe enrollar de $\mathbf{r}$ a $\mathbf{v}$ para
+definir $\boldsymbol{\Omega}$)
+\begin{align*}
+  \mathbf{v}=\boldsymbol{\omega}\times\mathbf{r}\,,\qquad
+  \mathbf{r}=\mathbf{v}\times\boldsymbol{\omega}\,,\qquad
+  \boldsymbol{\omega}=\mathbf{r}\times\mathbf{v}\,.
+\end{align*}
+Asumimos entonces que la cantidad conserva es proporcional al vector
+de velocidad angular, y la definimos de manera que el factor de
+proporcionalidad sea la masa de la partícula:
+$m(\mathbf{r}\times\mathbf{v})=\mathbf{r}\times\mathbf{p}$. 
+
+Comencemos entonces definiendo el momento angular para una partícula de moméntum $\mathbf{p}$ como
 \begin{align}
   \label{eq:L}
   \mathbf{L}=&\mathbf{r}\times\mathbf{p}\,.
 \end{align}
 y el correspondiente vector de torque como el causante de los cambios
-en el momento angular cuando son aplicados durante algún intervalo
-$\Delta t$ sobre la partícula.
+en el momento angular cuando es aplicado durante algún intervalo
+$\Delta t$ sobre la partícula. 
+
+Podemos establecer entonces el \emph{principio de moméntum angular}
+para una partícula como
 \begin{align}
   \Delta \mathbf{L}\approx \boldsymbol{\tau}\Delta t\,.
 \end{align}
-Entonces
+donde $\boldsymbol{\tau}$ es el torque aplicado sobre la partícula. 
+
+En forma diferencial el principio de moméntum angular puede escribirse como
 \begin{align}
+\label{eq:tautor}
   \boldsymbol{\tau}=\frac{d\,\mathbf{L}}{dt}\,.
 \end{align}
 Desarrollando esta expresión, tenemos que
@@ -263,15 +388,16 @@ Desarrollando esta expresión, tenemos que
 =&\mathbf{v}\times\mathbf{p}+
 \mathbf{r}\times\frac{d\mathbf{p}}{dt}\nonumber\\
 \end{align}
-como $\mathbf{v}$ es paralelo a $\mathbf{p}$, la variación del
-momentum es la fuerza aplicada, entonces
+como $\mathbf{v}$ es paralelo a $\mathbf{p}$,
+$\mathbf{v}\times\mathbf{p}=0$, y teniendo en cuenta que la variación
+del momentum es la fuerza aplicada, $\mathbf{F}$, entonces
 \begin{align}
-  \label{eq:torque}
+  \label{eq:torqueini}
   \boldsymbol{\tau}=\mathbf{r}\times\mathbf{F}\,.
 \end{align}
 
 Para entender las definiciones de moméntum angular y torque es mejor
-ir hacia atras del resultado en \eqref{eq:torque} la resultado en
+ir hacia atrás del resultado en \eqref{eq:torqueini} al resultado en
 \eqref{eq:L}: La capacidad de una fuerza para ejercer un giro sobre
 una partícula depende de la distancia a la que es aplicada la fuerza.
 %\left(\right)
@@ -280,8 +406,8 @@ una partícula depende de la distancia a la que es aplicada la fuerza.
 
 
 El moméntum angular para un cuerpo rígido es la suma del momentum
-angular para cada partícula en el cuerpo rígido como se ilustra en la
-fig.~\ref{fig:centrodemasarigido}
+angular para cada partícula dentro del cuerpo rígido como se ilustra
+en la fig.~\ref{fig:centrodemasarigido}
 
 \begin{frame}
 \begin{figure}
@@ -344,22 +470,104 @@ donde hemos definido el momentum angular intrínseco del cuerpo rígido $\mathbf
 
 \end{enumerate}
 
-Que puede escribirse en el sistema de centro de masa, $\mathbf{r}_i'$, como % detalles en notas del cuaderno
+Entonces el moméntum angular total puede  escribirse en el sistema de centro de masa, $\mathbf{r}_i'$, como 
 \begin{align}
   \label{eq:lcm}
    \mathbf{L}_{\text{total}}=&\mathbf{L}_{\text{orb}}+\mathbf{L}_0\nonumber\\
    =&\mathbf{R}\times M\mathbf{V}+\sum_{i=1}^N \mathbf{r}_i'\times m_i\dot{\mathbf{r}}_i'\,,
 \end{align}
-Desarrollando está expresión se puede obtener
+\noindent
+\textbf{Teorema}: Desarrollando está expresión se puede obtener
 \begin{align}
   \label{eq:tensorI}
   \mathbf{L}_{\text{total}}=\mathbf{R}\times M\mathbf{V}+\mathbb{I}\boldsymbol{\omega}\,,
 \end{align}
+donde $\mathbb{I}$ es el tensor de inercia. 
+\medskip
 
-\ejercicio{}Obtener la ec.~\eqref{eq:tensorI}.
+\noindent
+\textbf{Demostración}
+\begin{align*}
+\mathbf{L}_0 =& \sum_{i=1}^N \mathbf{r}_i'\times
+m_i\dot{\mathbf{r}}_i' \nonumber\\
+=&  \sum_{i=1}^N \mathbf{r}_i'\times m_i\dot{\mathbf{v}}_i' \nonumber\\
+=&  \sum_{i=1}^N \mathbf{r}_i'\times m_i (\boldsymbol{\omega}\times \mathbf{r}'_i)
+\end{align*}
+Usando la identidad
+\begin{align*}
+  \mathbf{A}\times\left(\mathbf{B}\times\mathbf{C}\right)=\left(\mathbf{A}\cdot\mathbf{C}\right)\mathbf{B}-\left(\mathbf{A}\cdot\mathbf{B}\right)\mathbf{C}
+\end{align*}
+tenemos para $\mathbf{A}=\mathbf{C}=\mathbf{r}_i$ y
+$\mathbf{B}=\boldsymbol{\omega}$, que
+\begin{align*}
+  \mathbf{L}_0=&\sum_{i=1}^N m_i \left[ \left(\mathbf{r}_i'\cdot\mathbf{r}_i'
+  \right)\boldsymbol{\omega}
+  -\left( \mathbf{r}_i'\cdot\boldsymbol{\omega}\right)\mathbf{r}_i' \right] \nonumber\\
+=&\sum_{i=1}^N m_i \left[\left( {x_i'}^2+{y_i'}^2+{z_i'}^2 \right)\boldsymbol{\omega}
+-\left(x_{i}'\omega_x+y_{i}'\omega_y+z_{i}'\omega_z  \right)\mathbf{r}_i'\right]\,.
+\end{align*}
+En términos de componentes tenemos
+\begin{align}
+\label{eq:Lox}
+ L_{0x}=&\sum_{i=1}^N m_i \left[  \left( {x_i'}^2+{y_i'}^2+{z_i'}^2 \right)\omega_x
+-\left(x_{i}'\omega_x+y_{i}'\omega_y+z_{i}'\omega_z  \right) x_i'\right] \nonumber\\
+=&\sum_{i=1}^N m_i \left[\left( {x_i'}^2+{y_i'}^2+{z_i'}^2 \right)\omega_x
+-\left({x_i'}^2\omega_x+x_i'y_i'\omega_yx_i+x_i'z_i'\omega_z  \right)\right] \nonumber\\
+=&\sum_{i=1}^N m_i \left[\left( {y_i'}^2+{z_i'}^2 \right)\omega_x
+-x_i'y_i'\omega_y-x_i'z_i'\omega_z  \right] \nonumber\\
+=&\sum_{i=1}^N m_i\left( {y_i'}^2+{z_i'}^2 \right)\omega_x
+-\sum_{i=1}^N m_i x_i' y_i'\omega_y-\sum_{i=1}^N m_ix_i'z_i'\omega_z \,.
+\end{align}
+Similarmente
+\begin{align}
+\label{eq:Loyz}
+  L_{0y}=&\sum_{i=1}^N m_i\left( {x_i'}^2+{z_i'}^2 \right)\omega_y
+-\sum_{i=1}^N m_i y_i'x_i' \omega_x-\sum_{i=1}^N m_iy_i'z_i'\omega_z \nonumber\\
+  L_{0z}=&\sum_{i=1}^N m_i\left( {x_i'}^2+{y_i'}^2 \right)\omega_y
+-\sum_{i=1}^N m_i z_i'x_i' \omega_x-\sum_{i=1}^N m_iz_i'y_i'\omega_z \,.
+\end{align}
+Las ecs.~\eqref{eq:Lox} y \eqref{eq:Loyz} pueden escribirse en forma
+matricial como
+\begin{frame}
+\begin{align}
+  \begin{pmatrix}
+    L_{0x}\\
+    L_{0y}\\
+    L_{0z}\\
+  \end{pmatrix}=\mathbb{I}
+  \begin{pmatrix}
+    \omega_x\\
+    \omega_y\\
+    \omega_z\\
+  \end{pmatrix}=&
+  \begin{pmatrix}
+    I_{xx}&I_{xy}&I_{xz}\\
+    I_{yx}&I_{yy}&I_{yz}\\
+    I_{zx}&I_{zy}&I_{zz}\\
+  \end{pmatrix}
+  \begin{pmatrix}
+     \omega_x\\    
+     \omega_y\\    
+     \omega_z\\    
+  \end{pmatrix}\nonumber\\
+   =&
+  \sum_{i=1}^Nm_i\begin{pmatrix}
+    {y_i'}^2+{_i'}^2&-x_i'y_i'        &-x_i'z_i'\\
+    -x_i'y_i'       &{x_i'}^2+{z_i'}^2&-y_i'z_i'\\
+    -x_i'z_i'       &-y_i'z_i'       &{x_i'}^2+{z_i'}^2\\
+  \end{pmatrix}
+  \begin{pmatrix}
+     \omega_x\\    
+     \omega_y\\    
+     \omega_z\\    
+  \end{pmatrix},
+\end{align}
+\end{frame}
+de modo que $\mathbb{I}$, que definimos como el \emph{tensor de
+  inercia}, es una matriz $3\times 3$ simétrica 
 
 
-y el moméntum angular alrededor del centro de masa es
+El moméntum angular alrededor del centro de masa es entonces
 \begin{align}
   \mathbf{L}_0=\mathbb{I}\boldsymbol{\omega}\,.
 \end{align}
@@ -376,7 +584,7 @@ El moméntum angular puede entonces dividirse en dos partes
 Definimos el torque sobre un cuerpo rígido como la derivada temporal de su moméntum angular:
 \begin{align}
   \label{eq:torque}
-  \boldsymbol{\tau}=\frac{d\mathbf{L}}{dt}\,.
+  \boldsymbol{\tau}=\frac{d\mathbf{L}_{\mathrm{total}}}{dt}\,.
 \end{align}
 Esta ecuación define el \emph{Principio de Moméntum Angular}. 
 
