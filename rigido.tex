@@ -202,9 +202,9 @@ Usando (\ref{eq:vpol}) con (\ref{eq:dhr})  y (\ref{eq:dht}), la aceleraci\'on es
   En resumen, en coordenadas polares $\hat{\mathbf{r}}$, $\hat{\boldsymbol{\theta}}$ la velocidad y la aceleración están dadas por
 \begin{align*}
    \mathbf{v}(t)=&\dot{\mathbf{r}}(t)=\dot{r}(t)\hat{\mathbf{r}}(t)+
-r(t)\dot{\hat{\mathbf{r}}}(t)\nonumber\\
+\dot{\theta}\hat{\boldsymbol{\theta}}\nonumber\\
  \mathbf{a}(t)=&
-\left[\ddot{r}(t)-r(t)\dot{\theta}^2(t)\dot{\theta}(t)\right]\hat{\mathbf{r}} 
+\left[\ddot{r}(t)-r(t)\dot{\theta}^2(t)\right]\hat{\mathbf{r}} 
 +\left[r(t)\ddot{\theta}(t)+2\dot{r}(t)\dot{\theta}(t)  \right]\hat{\boldsymbol{\theta}}(t)
 \end{align*}
 \end{frame}
@@ -585,7 +585,7 @@ El momento angular puede entonces dividirse en dos partes
 \end{itemize}
 
 
-\section{Torque}
+\section{Principio de Momento Angular}
 
 Definimos el torque sobre un cuerpo rígido como la derivada temporal de su momento angular:
 \begin{align}
@@ -611,9 +611,9 @@ El primer termino corresponde al torque sobre el centro de masa debido a las div
 Similarmente, tomando la derivada de la expresión para el moméntum en la ec.~(\ref{eq:tensorI})
 \begin{align}
   \boldsymbol{\tau}=&\mathbb{I}\frac{d\boldsymbol{\omega}}{dt}+\mathbf{R}\times M\frac{d\mathbf{V}}{dt}\nonumber\\
-=&\mathbb{I}\boldsymbol{\alpha}+\mathbf{R}\times M\mathbf{a}\,.
+=&\mathbb{I}\boldsymbol{\alpha}+\mathbf{R}\times M\mathbf{A}\,.
 \end{align}
-
+donde $\boldsymbol{\alpha}$ es la aceleración angular y $\mathbf{A}$ es la aceleración del centro de masa.
 
 
 
@@ -667,7 +667,7 @@ K =&\frac{1}{2}M V^2+\frac{1}{2}\sum_{i=1}^N m_i \boldsymbol{\omega}\cdot( \math
 \left(\sum_{i=1}^N m_i  \mathbf{r}_i'\times\mathbf{v}_i'\right)\nonumber\\
     =&\frac{1}{2}M V^2+\frac{1}{2}\boldsymbol{\omega}\cdot
   \mathbf{L}_0\nonumber\\
-0&\frac{1}{2}M V^2+\frac{1}{2}\boldsymbol{\omega}\cdot
+=&\frac{1}{2}M V^2+\frac{1}{2}\boldsymbol{\omega}\cdot
   \left(\mathbb{I}\boldsymbol{\omega}\right)\,.
 \end{align}
 Cuando $\mathbf{L}_0$ y $\boldsymbol{\omega}$ están referidos a los ejes principales de inercia
@@ -837,10 +837,10 @@ nos centramos en el \emph{eje instantáneo de rotación}: un eje
 perpendicular que pasa por el punto de contacto $P$.
 \begin{align*}
   R\sin\theta M g=&I_p\alpha\nonumber\\
-  =&(I_{\text{CM}}+MR^2)\alpha\,,
+  =&(I_{\text{CM}}+MR^2)\alpha\,.
 \end{align*}
+La ecuación de lugadura~\eqref{eq:acal} es la misma en ambos casos. 
 
-Junto con la ecuación de ligadura
 
 Para ver que las dos formas de abordar el problema son equivalentes, podemos reemplazar \eqref{eq:fxcil} en \eqref{eq:tcmcil} y usar \eqref{eq:acal} 
 \begin{align*}
