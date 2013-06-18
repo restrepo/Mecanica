@@ -3,7 +3,9 @@
 
 \section{Movimiento Circular Uniforme I}
 
-Considere el movimiento descrito por la siguiente ecuación
+
+Considere el movimiento de un objeto atado a una cuerda que es forzado a girar en un plano horizontal. Queremos encontrar determinar la tensión de la cuerda en función de la rapidez y el radio de giro. Si la rapidez es constante el movimiento está descrito por la siguiente ecuación
+%%Modificar en adelante de acuerdo a este discurso
 \begin{align}
   \label{eq:mua}
   \mathbf{r}(t)=r\left[\hat{\mathbf{i}}\cos(\omega t)+\hat{\mathbf{j}}\sin(\omega t)\right],
@@ -316,7 +318,7 @@ y con el eje $z$ pasando por el centro de la orbita circular.
 \qed
 
 
-\section{Momentum angular y torque para una partícula}
+\section{Momento angular y torque para una partícula}
 Como último caso de aplicación del teorema de Noether, debemos
 preguntarnos cual es la cantidad conservada asociada a la isotropía
 del espacio, es decir con la invarianza de la leyes de la naturaleza
@@ -368,14 +370,14 @@ y el correspondiente vector de torque como el causante de los cambios
 en el momento angular cuando es aplicado durante algún intervalo
 $\Delta t$ sobre la partícula. 
 
-Podemos establecer entonces el \emph{principio de moméntum angular}
+Podemos establecer entonces el \emph{principio de momento angular}
 para una partícula como
 \begin{align}
   \Delta \mathbf{L}\approx \boldsymbol{\tau}\Delta t\,.
 \end{align}
 donde $\boldsymbol{\tau}$ es el torque aplicado sobre la partícula. 
 
-En forma diferencial el principio de moméntum angular puede escribirse como
+En forma diferencial el principio de momento angular puede escribirse como
 \begin{align}
 \label{eq:tautor}
   \boldsymbol{\tau}=\frac{d\,\mathbf{L}}{dt}\,.
@@ -396,16 +398,16 @@ del momentum es la fuerza aplicada, $\mathbf{F}$, entonces
   \boldsymbol{\tau}=\mathbf{r}\times\mathbf{F}\,.
 \end{align}
 
-Para entender las definiciones de moméntum angular y torque es mejor
+Para entender las definiciones de momento angular y torque es mejor
 ir hacia atrás del resultado en \eqref{eq:torqueini} al resultado en
 \eqref{eq:L}: La capacidad de una fuerza para ejercer un giro sobre
 una partícula depende de la distancia a la que es aplicada la fuerza.
 %\left(\right)
 
-\section{Momentum angular para un cuerpo rígido}
+\section{momento angular para un cuerpo rígido}
 
 
-El moméntum angular para un cuerpo rígido es la suma del momentum
+El momento angular para un cuerpo rígido es la suma del momentum
 angular para cada partícula dentro del cuerpo rígido como se ilustra
 en la fig.~\ref{fig:centrodemasarigido}
 
@@ -442,8 +444,8 @@ Analicemos término a término
   =&\mathbf{L}_{\text{orb}}\,,
 \end{align*}
 donde $\mathbf{P}$ es el moméntum lineal total del cuerpo rígido con
-respecto al centro de masa y el moméntum angular orbital,
-$\mathbf{L}_{\text{orb}}$, es moméntum angular ocasionado por las
+respecto al centro de masa y el momento angular orbital,
+$\mathbf{L}_{\text{orb}}$, es momento angular ocasionado por las
 fuerzas externas al cuerpo rígido
 \item
   \begin{align}
@@ -465,12 +467,12 @@ fuerzas externas al cuerpo rígido
     \sum_{i=1}^N \mathbf{r}_i'\times m_i \mathbf{v}_i'\nonumber\\
     =&\mathbf{L}_0\,,
   \end{align*}
-donde hemos definido el momentum angular intrínseco del cuerpo rígido $\mathbf{L}_0$
+donde hemos definido el momento angular intrínseco del cuerpo rígido $\mathbf{L}_0$
 
 
 \end{enumerate}
 
-Entonces el moméntum angular total puede  escribirse en el sistema de centro de masa, $\mathbf{r}_i'$, como 
+Entonces el momento angular total puede  escribirse en el sistema de centro de masa, $\mathbf{r}_i'$, como 
 \begin{align}
   \label{eq:lcm}
    \mathbf{L}_{\text{total}}=&\mathbf{L}_{\text{orb}}+\mathbf{L}_0\nonumber\\
@@ -552,9 +554,9 @@ matricial como
   \end{pmatrix}\nonumber\\
    =&
   \sum_{i=1}^Nm_i\begin{pmatrix}
-    {y_i'}^2+{_i'}^2&-x_i'y_i'        &-x_i'z_i'\\
+    {y_i'}^2+{x_i'}^2&-x_i'y_i'        &-x_i'z_i'\\
     -x_i'y_i'       &{x_i'}^2+{z_i'}^2&-y_i'z_i'\\
-    -x_i'z_i'       &-y_i'z_i'       &{x_i'}^2+{z_i'}^2\\
+    -x_i'z_i'       &-y_i'z_i'       &{x_i'}^2+{y_i'}^2\\
   \end{pmatrix}
   \begin{pmatrix}
      \omega_x\\    
@@ -564,15 +566,19 @@ matricial como
 \end{align}
 \end{frame}
 de modo que $\mathbb{I}$, que definimos como el \emph{tensor de
-  inercia}, es una matriz $3\times 3$ simétrica 
+  inercia}, es una matriz $3\times 3$ simétrica. 
+Cada entrada de la matriz es una sumatoria de operaciones sobre
+coordenadas, de modo que el resultado es un número.
+En el caso continuo, cada entrada sería el resultado numérico de una
+integral definida
 
 
-El moméntum angular alrededor del centro de masa es entonces
+El momento angular alrededor del centro de masa es entonces
 \begin{align}
   \mathbf{L}_0=\mathbb{I}\boldsymbol{\omega}\,.
 \end{align}
 
-El moméntum angular puede entonces dividirse en dos partes
+El momento angular puede entonces dividirse en dos partes
 \begin{itemize}
 \item $\mathbf{L}_0$: Momento angular debido a la rotación del cuerpo sobre su centro de masa
 \item $\mathbf{L}_{\text{orb}}$: Momento angular debido al movimiento del centro de masa con respecto al origen del sistema inercial de coordenadas.
@@ -581,12 +587,12 @@ El moméntum angular puede entonces dividirse en dos partes
 
 \section{Torque}
 
-Definimos el torque sobre un cuerpo rígido como la derivada temporal de su moméntum angular:
+Definimos el torque sobre un cuerpo rígido como la derivada temporal de su momento angular:
 \begin{align}
   \label{eq:torque}
   \boldsymbol{\tau}=\frac{d\mathbf{L}_{\mathrm{total}}}{dt}\,.
 \end{align}
-Esta ecuación define el \emph{Principio de Moméntum Angular}. 
+Esta ecuación define el \emph{Principio de Momento Angular}. 
 
 Tomando la derivada temporal en la ec.~(\ref{eq:lcm}), y usando
 \begin{align}
@@ -611,7 +617,7 @@ Similarmente, tomando la derivada de la expresión para el moméntum en la ec.~(
 
 
 
-\subsection{Conservación del moméntum angular}
+\subsection{Conservación del momento angular}
 Como los torques de los pares de fuerzas de acción reacción son iguales y opuestos, entonces al torque neto sobre un sistema de partículas sólo contribuyen las fuerzas externas
 
 La ec.~(\ref{eq:torque}) la podemos escribir más explícitamente como
@@ -620,14 +626,14 @@ La ec.~(\ref{eq:torque}) la podemos escribir más explícitamente como
   \boldsymbol{\tau}_{\text{neto}}=\frac{d\mathbf{L}}{dt}\,.
 \end{align}
 Podemos observar que si el torque neto alrededor de una localización
-$A$ es cero, el moméntum angular sobre esa localización no cambia.
+$A$ es cero, el momento angular sobre esa localización no cambia.
 
 Pueden existir fuerzas actuando, causando cambios en el moméntum
 lineal, pero si las fuerzas no ejercen ningún torque, la tasa de
-cambio del moméntum angular es cero y se conserva. Por ejemplo en el
+cambio del momento angular es cero y se conserva. Por ejemplo en el
 caso de la interacción de dos cuerpos que se mueven bajo el efecto de
 una fuerza con sólo componente radial, la cual no ejerce torques,
-entonces el moméntum angular del sistema se debe conservar. Este es el
+entonces el momento angular del sistema se debe conservar. Este es el
 caso de las orbitas planetarias.
 
 
@@ -682,17 +688,36 @@ Sea $I_0$ el momento de inercia sobre un eje pasando por el centro de masa de un
 donde $l$ es la distancia entre los ejes.
 
 \begin{itemize}
-\item[\textbf{Demostación}] La ecuación que relaciona las coordenadas en el sistema de centro de masa para una partícula del cuerpo rígido es
+\item[\textbf{Demostración}] La ecuación que relaciona las coordenadas en el sistema de centro de masa para una partícula del cuerpo rígido es
   \begin{align}
     \mathbf{r}_i=&\mathbf{R}+\mathbf{r}'_i\nonumber\\
     (x_i,y_i,z_i)=&(x'_i,y'_i,z'_i)+(R_x,R_y,R_z)\nonumber\\
-    \boldsymbol{\rho}_i+z_i\hat{\mathbf{k}}=& \mathbf{R}_T+R_z\hat{\mathbf{k}}+\boldsymbol{\rho}'_i+z'_i\hat{\mathbf{k}}\,.
+    \boldsymbol{\rho}_i+z_i\hat{\mathbf{k}}=& \boldsymbol{\rho}'_i+z'_i\hat{\mathbf{k}}+\mathbf{R}_T+R_z\hat{\mathbf{k}}\,.
   \end{align}
 Igualando las componentes transversales tenemos
 \begin{align}
   \boldsymbol{\rho}_i=& \mathbf{R}_T+\boldsymbol{\rho}'_i
 \end{align}
-Elevando al cuadrado y sumando sobre todas las masas tenemos el momento de inercia alrededor de un eje paralelo al del centro de masa que fijamos para que coincida con el eje $z$
+La interpretación de los vectores transversos se basa en la figura~\ref{fig:centrodemasarigidoparalelo}
+
+\begin{frame}
+\begin{figure}
+  \centering
+%\only<1>{\includegraphics[scale=1]{centrodemasarigidoparalelo1}}%
+%\only<2>%
+{\includegraphics[scale=1]{centrodemasarigidoparalelo2}}
+  \caption{Teorema ejes paralelos}
+  \label{fig:centrodemasarigidoparalelo}
+\end{figure}
+\end{frame}
+
+Es claro que
+\begin{align}
+\label{eq:I0}
+  I_0=&\sum_i m_i\boldsymbol{\rho}'_i)^2\,.
+\end{align}
+
+Para obtener el momento de inercia alrededor de un eje paralelo al del centro de masa, primero hacemos coincidir el eje $z$ el nuevo eje de giro. Elevando al cuadrado y sumando sobre todas masas  
 \begin{align}
   I=\sum_i m_i\boldsymbol{\rho}_i^2=&\sum_i m_i(\mathbf{R}_T+\boldsymbol{\rho}'_i)^2\,,
 \end{align}
@@ -701,7 +726,7 @@ el producto cruzado de nuevo es cero por la definición de centro de masa
   I=\sum_i m_i\boldsymbol{\rho}_i^2=&\sum_i m_i\mathbf{R}_T^2+\sum_i m_i{\boldsymbol{\rho}'}_i^2\nonumber\\
   =&M\mathbf{R}_T^2+\sum_i m_i{\boldsymbol{\rho}'}_i^2\,.
 \end{align}
-El momento de inercia alrededor del centro de masa es
+Usando el momento de  inercia alrededor del centro dado en la ec.~\eqref{eq:I0}
 \begin{align}
   I_0=\sum_i m_i{\boldsymbol{\rho}'}_i^2\,,
 \end{align}
@@ -1257,7 +1282,7 @@ Hay dos formas en las cuales $L_1$ puede cambiar: por cambios en $\omega_1$, o c
   \label{eq:DL1}
   \Delta L_1=I_1\Delta\omega_1+\Delta(L_2)+\Delta(L_3)\,,
 \end{align}
-consideremos primero la rotación sobre el eje principal 2. Esta induce un cambio en el moméntum angular $L_1$ que contribuye a la ec.~\eqref{eq:DL1} como
+consideremos primero la rotación sobre el eje principal 2. Esta induce un cambio en el momento angular $L_1$ que contribuye a la ec.~\eqref{eq:DL1} como
 \begin{align}
     \Delta L_1=&I_1\Delta\omega_1+L_3\sin(\Delta\theta_2)+\Delta(L_3)\nonumber\\
     =&I_1\Delta\omega_1+I_3\omega_3\Delta\theta_2+\Delta(L_3)\,.
