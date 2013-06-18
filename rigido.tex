@@ -687,8 +687,8 @@ Sea $I_0$ el momento de inercia sobre un eje pasando por el centro de masa de un
 \end{align}
 donde $l$ es la distancia entre los ejes.
 
-\begin{itemize}
-\item[\textbf{Demostración}] La ecuación que relaciona las coordenadas en el sistema de centro de masa para una partícula del cuerpo rígido es
+\noindent
+\textbf{Demostración} La ecuación que relaciona las coordenadas en el sistema de centro de masa para una partícula del cuerpo rígido es
   \begin{align}
     \mathbf{r}_i=&\mathbf{R}+\mathbf{r}'_i\nonumber\\
     (x_i,y_i,z_i)=&(x'_i,y'_i,z'_i)+(R_x,R_y,R_z)\nonumber\\
@@ -727,14 +727,11 @@ el producto cruzado de nuevo es cero por la definición de centro de masa
   =&M\mathbf{R}_T^2+\sum_i m_i{\boldsymbol{\rho}'}_i^2\,.
 \end{align}
 Usando el momento de  inercia alrededor del centro dado en la ec.~\eqref{eq:I0}
-\begin{align}
-  I_0=\sum_i m_i{\boldsymbol{\rho}'}_i^2\,,
-\end{align}
-y $l=\left|\mathbf{R}_T\right|$ es la distancia entre los ejes de modo que
+y definiendo  $l=\left|\mathbf{R}_T\right|$, es decir, la distancia entre los ejes, tenemos finalmente que
 \begin{align}
   I=I_0+M l^2\,,
 \end{align}
-\end{itemize}
+\qed
 
 
 \section{Resumen}
@@ -777,7 +774,7 @@ Masa $M$ y radio $R$
 \section{Movimiento de rodadura sin deslizamiento}
 
 Si un sistema formado por un cuerpo rígido simétrico rueda sin
-deslizar el movimiento de rodadura se puede considerar como la suma de
+deslizar, el movimiento de rodadura se puede considerar como la suma de
 una traslación del centro de masa y una rotación pura alrededor del
 centro de masa. 
 Entonces, podemos hacer una reducción en el punto de contacto de forma
@@ -788,10 +785,24 @@ aplicada en el punto de contacto $P$
 
 Para ilustrar estos conceptos, consideremos un cuerpo uniforme que
 rueda sin deslizar sobre su eje de simetría por un plano inclinado por
-un ángulo $\theta$. Vamos a calcular la aceleración del cuerpo.
+un ángulo $\theta$. Ver figura~\ref{fig:rodadura}. Vamos a calcular la aceleración del cuerpo.
 
-Ecuaciones de movimiento para los torques con respecto al centro de
-masa. Tomemos el eje $x$ paralelo al plano inclinado
+Las ecuación de movimiento será obtenida con respecto a un sistema de
+referencia en el centro de masa~\footnote{Aunque puede parecer que
+  dicho sistema no es inercial, podemos considerar el sistema completo
+  cuerpo y resto de la tierra y despreciar el movimiento de la tierra
+  ocasionado por el bloque}. 
+Entonces los torques se deben tomar con respecto al centro de
+masa. Tomemos el eje $x$ paralelo al plano inclinado. 
+
+\begin{frame}
+\begin{figure}
+  \centering
+  \includegraphics{rodadura}
+  \caption{Rodadura}
+  \label{fig:rodadura}
+\end{figure}
+\end{frame}
 
 Primero consideraremos el movimiento del cuerpo como una traslación y
 una rotación. En tal caso se deben cumplir las ecuaciones de la
@@ -812,13 +823,18 @@ y la dinámica de rotación. Es decir, el torque con respecto al centro de masa.
   \label{eq:tcmcil}
   Rf=&I_{\text{CM}}\alpha\,.
 \end{align}
-Sin embargo vemos que la ecuación para la sumatoria de fuerzas en $y$ no es necesaria pues sólo se requieren dos ecuaciones para las dos incógnitas $f$ y $a_c$, una vez tenemos en cuenta la ecuación de ligadura
+Sin embargo vemos que la ecuación para la sumatoria de fuerzas en $y$
+no es necesaria pues sólo se requieren dos ecuaciones para las dos
+incógnitas $f$ y $a_c$, una vez tenemos en cuenta la ecuación de
+ligadura
 \begin{align}
   \label{eq:acal}
   a_c=R\alpha\,.
 \end{align}
 
-Ahora consideremos el movimiento del cuerpo como una rotación pura si nos centramos en  el \emph{eje instantáneo de rotación}: un eje perpendicular que pasa por el punto de contacto $P$. 
+Ahora consideremos el movimiento del cuerpo como una rotación pura si
+nos centramos en el \emph{eje instantáneo de rotación}: un eje
+perpendicular que pasa por el punto de contacto $P$.
 \begin{align*}
   R\sin\theta M g=&I_p\alpha\nonumber\\
   =&(I_{\text{CM}}+MR^2)\alpha\,,
