@@ -202,9 +202,9 @@ Usando (\ref{eq:vpol}) con (\ref{eq:dhr})  y (\ref{eq:dht}), la aceleraci\'on es
   En resumen, en coordenadas polares $\hat{\mathbf{r}}$, $\hat{\boldsymbol{\theta}}$ la velocidad y la aceleración están dadas por
 \begin{align*}
    \mathbf{v}(t)=&\dot{\mathbf{r}}(t)=\dot{r}(t)\hat{\mathbf{r}}(t)+
-\dot{\theta}\hat{\boldsymbol{\theta}}\nonumber\\
+r(t)\dot{\theta}(t)\hat{\boldsymbol{\theta}}(t)\nonumber\\
  \mathbf{a}(t)=&
-\left[\ddot{r}(t)-r(t)\dot{\theta}^2(t)\right]\hat{\mathbf{r}} 
+\left[\ddot{r}(t)-r(t)\dot{\theta}^2(t)\right]\hat{\mathbf{r}}(t)
 +\left[r(t)\ddot{\theta}(t)+2\dot{r}(t)\dot{\theta}(t)  \right]\hat{\boldsymbol{\theta}}(t)
 \end{align*}
 \end{frame}
@@ -766,10 +766,12 @@ Masa $M$ y radio $R$
 \subsection{Cilindro uniforme}
 Masa $M$ y radio $R$
 \begin{align}
-  I_{\text{CM}}=\frac{1}{2}MR^2
+  I_{\text{CM}}=\frac{3}{2}MR^2
 \end{align}
 
 \subsection{Esfera}
+
+
 
 \section{Movimiento de rodadura sin deslizamiento}
 
@@ -1285,101 +1287,6 @@ y despejando para la velocidad angular, obtenemos el resultado final
   \end{itemize}
 \end{itemize}
 
-\section{Ecuaciones de Euler}
-
-
-Suponga un sistema rotando a través de sus tres ejes principales, de modo que las componentes de $\mathbf{L}$ son
-\begin{align}
-  \mathbf{L}=(I_1\omega_1,I_2\omega_2,I_3\omega_3)
-\end{align}
-
-Hay dos formas en las cuales $L_1$ puede cambiar: por cambios en $\omega_1$, o cambios en $L_2$ y $L_3$. Fijemos las posible rotaciones a lo largo de los ejes en el sentido de la mano derecha. Entonces
-\begin{align}
-  \label{eq:DL1}
-  \Delta L_1=I_1\Delta\omega_1+\Delta(L_2)+\Delta(L_3)\,,
-\end{align}
-consideremos primero la rotación sobre el eje principal 2. Esta induce un cambio en el momento angular $L_1$ que contribuye a la ec.~\eqref{eq:DL1} como
-\begin{align}
-    \Delta L_1=&I_1\Delta\omega_1+L_3\sin(\Delta\theta_2)+\Delta(L_3)\nonumber\\
-    =&I_1\Delta\omega_1+I_3\omega_3\Delta\theta_2+\Delta(L_3)\,.
-\end{align}
-Similarmente, una rotación sobre el eje principal 3
-\begin{align}
-    \Delta L_1=&I_1\Delta\omega_1+I_3\omega_3\Delta\theta_2-I_2\omega_2\Delta\theta_3\,.
-\end{align}
-\begin{align}
-  \lim_{\Delta t\to 0}\frac{\Delta L_1}{\Delta t}=&
-I_1\frac{d\omega_1}{dt}+(I_3-I_2)\omega_2\omega_3\,.
-\end{align}
-Repitiendo el mismo proceso para $L_2$ y $L_3$ obtenemos las ecuaciones de Euler para el movimiento del cuerpo rígido
-\begin{align}
-  \tau_1=\frac{dL_1}{dt}=&I_1\frac{d\omega_1}{dt}+(I_3-I_2)\omega_2\omega_3\nonumber\\
-  \tau_2=\frac{dL_2}{dt}=&I_2\frac{d\omega_2}{dt}+(I_1-I_3)\omega_1\omega_3\nonumber\\
-  \tau_3=\frac{dL_3}{dt}=&I_3\frac{d\omega_3}{dt}+(I_2-I_1)\omega_2\omega_1\,.
-\end{align}
-\subsection{Estabilidad del movimiento rotacional}
-\begin{align}
-\omega_1=&\text{cte}&   \omega_2=&0& \omega_3=&0\,,
-\end{align}
-después de una pequeña perturbación
-\begin{align}
-  \omega_2\ne&0\,,&\omega_3\ne&0\,,\qquad\text{pero}\nonumber\\
-  \omega_2\ll& \omega_1 \,,&\omega_3\ll &\omega_1\,.
-\end{align}
-
-se llega a las ecuaciones
-\begin{align}
-  \frac{d\omega_1}{dt}=&0\nonumber\\
-  \frac{d^2\omega_2}{dt^2}+A\omega_2=&0\,,
-\end{align}
-donde
-\begin{align}
-  A=\frac{(I_1-I_2)(I_1-I_3)}{I_2I_3}\omega_1^2\,.
-\end{align}
-Si $A>0$ tenemos una solución oscilatoria, que corresponde a un movimiento de precesión a lo largo del eje 1, el cual es un movimiento de rotacional estable. Si $A>0$, la solución es
-\begin{align}
-  \omega_2 C\exp(A^2 t)
-\end{align}
-(donde $C$ es una constante por especificar) de modo que $w_2$ se incrementa exponencialmente con el tiempo, dando lugar a un movimiento inestable.
-
-El movimiento estable, es decir con $A>0$, cuando $I_1=I_{\text{max}}$ ó si  $I_1=I_{\text{min}}$. El movimiento es inestable, es decir con $A<0$, cuando $I_1$ es el momento de inercia intermedio.
-
-\begin{itemize}
-\item[\textbf{Ejemplo:}] Tomado de \cite{mit2009}: Un disco con momento de inercia sobre el centro de masa $I_{\text{cm}}$ rota en un plano horizontal. Está suspendido por una varilla delgada de masa despreciable. Si el disco se rota fuera de su posición de equilibrio por un ángulo $\theta$, la varilla ejerce una torque restaurardor dado por $\boldsymbol{\tau}_{\text{cm}}=-\gamma \theta$. En $t=0$ el disco es liberado desde el reposo con un desplazamiento angular de $\theta_0$. Encuentre la subsecuente dependencia temporal del desplazamiento angular $\theta(t)$
-
-
-Escojamos un sistema de coordenadas tal que $\hat{\mathbf{k}}$ apunte hacia arriba.  La componente $\hat{\mathbf{k}}$ de la ecuación de torque
-\begin{align}
-  \boldsymbol{\tau}_{\text{cm}}=I_{\text{cm}}\boldsymbol{\alpha}\,,
-\end{align}
-es
-\begin{align}
-  -\gamma \theta= I_{\text{cm}}\frac{d^2\theta}{d t^2}\,.
-\end{align}
-o
-\begin{align}
-\frac{d^2\theta}{d t^2}+\frac{\gamma}{I_{\text{cm}}}\theta=0\,.
-\end{align}
-
-Esto es una ecuación de un oscilador armónico simple con solución
-\begin{align}
-  \theta(t)=A\cos(\omega_0 t)+B\sin(\omega_0 t)\,.
-\end{align}
-Donde la frecuencia de oscilación está dada por
-\begin{align}
-  \omega_0=\sqrt{\gamma/I_{\text{cm}}}\,.
-\end{align}
-La componente $z$ de la velocidad angular está dada por
-\begin{align}
-  \frac{d\theta(t)}{dt}=-A\omega_0\sin(\omega_0 t)+B\omega_0\sin(\omega_0 t)\,.
-\end{align}
-
-Las condiciones iniciales en $t=0$, son que $\theta(t=0)=A=\theta_0$, y $d\theta/dt=0=\omega_0B$, de donde $B=0$. Entonces
-\begin{align}
-   \theta(t)=\theta_0\cos\left(\sqrt{\gamma/I_{\text{cm}}} t \right)\,.
-\end{align}
-\end{itemize}
-
 \section{Problemas resueltos}
 
 \begin{enumerate}
@@ -1510,7 +1417,12 @@ finalmente, reemplazando en la primera expresión para $a_{\text{CM}}$
 \end{align*}
 
 
-Por conservación de la energía...
+Por conservación de la energía, si $m$ cae una distancia $h$ y tomando el origen del sistema de referencia en la altura final
+\begin{align}
+  mgh=&\frac{1}{2}I_{C}\omega^2+\frac{1}{2}mv^2 \nonumber\\
+  mgh=&\frac{1}{2}I_{C}\left( \frac{v}{2R} \right)^2+\frac{1}{2}mv^2 \,.
+\end{align}
+Obteniendo la misma expresión
 
 \end{itemize}
 \end{enumerate}
