@@ -861,8 +861,9 @@ de modo que $w_2$ (y similarmente $\omega_{3}$) se incrementa exponencialmente c
 
 El movimiento estable, es decir con $A>0$, cuando $I_1=I_{\text{max}}$ ó si  $I_1=I_{\text{min}}$. El movimiento es inestable, es decir con $A<0$, cuando $I_1$ es el momento de inercia intermedio.
 
-\begin{itemize}
-\item[\textbf{Ejemplo:}] Tomado de \cite{mit2009}: Un disco con momento de inercia sobre el centro de masa $I_{\text{cm}}$ rota en un plano horizontal. Está suspendido por una varilla delgada de masa despreciable. Si el disco se rota fuera de su posición de equilibrio por un ángulo $\theta$, la varilla ejerce una torque restaurardor dado por $\boldsymbol{\tau}_{\text{cm}}=-\gamma \theta$. En $t=0$ el disco es liberado desde el reposo con un desplazamiento angular de $\theta_0$. Encuentre la subsecuente dependencia temporal del desplazamiento angular $\theta(t)$
+
+\ejemplo{}
+Tomado de \cite{mit2009}: Un disco con momento de inercia sobre el centro de masa $I_{\text{cm}}$ rota en un plano horizontal. Está suspendido por una varilla delgada de masa despreciable. Si el disco se rota fuera de su posición de equilibrio por un ángulo $\theta$, la varilla ejerce una torque restaurardor dado por $\boldsymbol{\tau}_{\text{cm}}=-\gamma \theta$. En $t=0$ el disco es liberado desde el reposo con un desplazamiento angular de $\theta_0$. Encuentre la subsecuente dependencia temporal del desplazamiento angular $\theta(t)$
 
 
 Escojamos un sistema de coordenadas tal que $\hat{\mathbf{k}}$ apunte hacia arriba.  La componente $\hat{\mathbf{k}}$ de la ecuación de torque
@@ -895,7 +896,7 @@ Las condiciones iniciales en $t=0$, son que $\theta(t=0)=A=\theta_0$, y $d\theta
 \begin{align}
    \theta(t)=\theta_0\cos\left(\sqrt{\gamma/I_{\text{cm}}} t \right)\,.
 \end{align}
-\end{itemize}
+\qed
 
 \section{Cálculo de moméntos de inercia}
 
@@ -913,10 +914,15 @@ Masa $M$ y radio $R$
 \subsection{Cilindro uniforme}
 Masa $M$ y radio $R$
 \begin{align}
+\label{eq:Icmcil}
   I_{\text{CM}}=\frac{3}{2}MR^2
 \end{align}
 
 \subsection{Esfera}
+Masa $M$ y radio $R$
+\begin{align}
+  I_{\text{CM}}=\frac{2}{5}MR^2
+\end{align}
 
 
 
@@ -1045,8 +1051,8 @@ Calcular el ángulo crítico para el cual un cuerpo inicialmente en reposo sobre
 
 
 
-\begin{itemize}
-\item[\textbf{Ejemplo}]     Un cilíndro de radio $R$ y masa $M$ rueda sin deslizar a lo largo
+\ejemplo{}
+Un cilíndro de radio $R$ y masa $M$ rueda sin deslizar a lo largo
     de una superficie debido a una cinta delgada enrollada en torno de
     el, que pasa por una polea ideal y está conectada a un bloque de
     masa $m$ como se muestra en la figura~\ref{fig:cilindropol}. Un estudiante obtiene la siguiente respuesta para la aceleración del cuerpo:
@@ -1056,11 +1062,9 @@ Calcular el ángulo crítico para el cual un cuerpo inicialmente en reposo sobre
 Justifique porqué dicha respuesta es incorrecta. 
 
 
+\noindent
+\textbf{Solución:} El cilindro podría moverse hacia la izquierda o con una aceleración infinita.
 
-\item[\textbf{Solución:}] El cilindro podría moverse hacia la izquierda.
-
-
-\end{itemize}
 
 \begin{figure}
   \centering
@@ -1069,154 +1073,13 @@ Justifique porqué dicha respuesta es incorrecta.
   \label{fig:cilindropol}
 \end{figure}
 
+
+
+
 \section{Problemas resueltos}
 
-\begin{itemize}
-\item[\textbf{Ejemplo}] Dos masas $m_1$ y $m_2$ unidas por una cuerda ideal están enrrolladas en una polea de radio $R$ y masa $M$ que puede rotar alrededor de un eje fijo que pasa por el centro de la polea, tal como se muestra en la figura~\ref{fig:polea}. Suponga que no hay fricción en el eje de la polea, que las dos masas están inicialmente en reposo, que $m_1 > m_2$ y que las dos masas están originalmente separadas una distancia $h$. Calcule la rapidez de cada una de las masas justamente cuando una pasa al lado de la otra, es decir, la rapidez de encuentro.
-
-  \begin{figure}
-    \centering
-    \includegraphics[scale=0.8]{polea}
-    \caption{Ejemplo conservación de la energía}
-    \label{fig:polea}
-  \end{figure}
-La conservación de la energía mecánica se debe aplicar al sistema completo de masas $m_1$ y 
-\end{itemize}
-
-
-
-\begin{itemize}
-\item[\textbf{Ejemplo:}] Tomado de \cite{mit2009}. Un péndulo físico consiste de una varilla uniforme de masa $m_1$ con un pivote en un extremo. La varilla tiene longitud $l_1$ y momento de inercia $I_1$  sobre le punto del pivote. Un disco de masa $m_2$ y radio $r_2$ con momento de inercia $I_{\text{cm}}$ sobre su centro de masa está unido rígidamente a una distancia $l_2$ del punto de pivote. El péndulo está inicialmente desplazado a un ángulo $\theta_0$ y entonces es liberado desde el reposo.
-  \begin{enumerate}
-  \item ¿Cual es el momento de inercia del péndulo físico sobre el punto de pivote?
-    \label{item:1}
-  \item ¿Cuan lejos del punto de pivote está el centro de masa del sistema?
-    \label{item:2}
-  \item ¿Cual es la velocidad angular del péndulo cuando el péndulo cuando el péndulo está en la parte de abajo de su oscilación?
-\label{item:3}
-
-\ref{item:1}. El momento de inercia sobre el punto de pivote será la suma del momento de inercia de la varilla, dada por $I_1$, y el momento de inercia del disco sobre el punto de pivote. El momento de inercia del disco sobre el punto de pivote se encuentra a partir del teorema de los ejes paralelos:
-\begin{align}
-  I_{\text{disc}}=I_{\text{cm}}+m_2 l_2^2\,.
-\end{align}
-El momento de inercia total sobre el punto de pivote es entonces
-\begin{align}
-  \label{eq:rig3}
-  I_S=I_1+I_{\text{disc}}=I_1+I_{\text{cm}}+m_2 l_2^2\,.
-\end{align}
-
-\ref{item:2}. El centro de masa del sistema compuesto esta localizado a una distancia del punto de pivote dada por
-\begin{align}
-  \label{eq:rig5}
-  l_{\text{cm}}=\frac{m_1(l_1/2)+m_2 l_2}{m_1+m_2}
-\end{align}
-
-\ref{item:3}. Podemos usar la conservación de la energía mecánica, para encontrar la velocidad angular del péndulo en la para de abajo de su oscilación. 
-
-Tomando el punto de energía potencial gravitacional cero como el punto donde la parte de abajo de la varilla está en su posición más baja, esto es, $\theta=0$, tenemos que la energía mecánica inicial es (ver Figura~\ref{fig:pendulofisico})
-\begin{align}
-  E_0=U_0=m_1 g  \left(l_1-\frac{l_1}{2}\cos\theta_0  \right)
-+m_2 g  \left(l_1-l_2\cos\theta_0  \right)
-\end{align}
-
-\begin{figure}
-  \centering
-  \includegraphics{pendulofisico}
-  \caption{Energía potencial inicial del péndulo físico}
-  \label{fig:pendulofisico}
-\end{figure}
-
-La energía mecánica final es
-\begin{align}
-  E_f=U_f+K_f=m_1 g \frac{l_1}{2}+m_2 g(l_1-l_2)+\frac{1}{2}I_S \omega_f^2\,.
-\end{align}
-Igualando las energías inciales y finales
-\begin{align}
-\label{eq:rig4}
-  m_1 g  \left(l_1-\frac{l_1}{2}\cos\theta_0  \right)
-+m_2 g  \left(l_1-l_2\cos\theta_0  \right)&=m_1 g \frac{l_1}{2}+m_2 g(l_1-l_2)+\frac{1}{2}I_S \omega_f^2\nonumber\\
-  m_1 g  \left(l_1-\frac{l_1}{2}\cos\theta_0  \right)-m_1 g \frac{l_1}{2}-m_2 g(l_1-l_2)
-+m_2 g  \left(l_1-l_2\cos\theta_0  \right)&=\frac{1}{2}I_S \omega_f^2\nonumber\\
-  m_1 g  \left(l_1-\frac{l_1}{2}\cos\theta_0  \right)-m_1 g \frac{l_1}{2}-\cancel{m_2 g l_1}+\cancel{m_2 gl_1}+m_2 gl_2
--m_2 g  l_2\cos\theta_0 &=\frac{1}{2}I_S \omega_f^2\nonumber\\
-  m_1 g  \left(\frac{l_1}{2}-\frac{l_1}{2}\cos\theta_0  \right)+m_2 gl_2
--m_2 g  l_2\cos\theta_0 &=\frac{1}{2}I_S \omega_f^2\nonumber\\
-  \frac{m_1 l_1}{2}g \left(1-\cos\theta_0  \right)+
-m_2 l_2 g(1-\cos\theta_0) &=\frac{1}{2}I_S \omega_f^2\nonumber\\
-  \left(\frac{m_1 l_1}{2}+ m_2 l_2 \right)g \left(1-\cos\theta_0  \right) &=\frac{1}{2}I_S \omega_f^2\,.
-\end{align}
-
-Ahora solucionamos para $\omega_f$ (tomando la raíz cuadrada positiva para asegurar que estamos calculando la velocidad angular)
-\begin{align}
-  \omega_f=\sqrt{\frac{2\left(\frac{m_1 l_1}{2}+ m_2 l_2 \right)g \left(1-\cos\theta_0  \right)}{I_S}}\,.
-\end{align}
-Finalmente sustituyendo el resultado para $I_S$ de la ec.~\eqref{eq:rig3}
-\begin{align}
-    \omega_f=\sqrt{\frac{2\left(\frac{m_1 l_1}{2}+ m_2 l_2 \right)g \left(1-\cos\theta_0  \right)}{I_1+I_{\text{cm}}+m_2 l_2^2\,.}}\,.
-\end{align}
-  \end{enumerate}
-
-Note que podemos reescribir la ec.~\eqref{eq:rig4}, usando la ecuación \eqref{eq:rig5} para la distancia entre el centro de masa y el punto de pivote, y obtener
-\begin{align}
-\label{eq:rig6}
- (m_1+m_2)l_{\text{cm}} g \left(1-\cos\theta_0  \right) &=\frac{1}{2}I_S \omega_f^2\,. 
-\end{align}
-
-Podemos interpretar esta ecuación como sigue. Trate el sistema compuesto como una partícula puntual de masa $m_1+m_2$ localizada en el centro de masa $l_{\text{cm}}$. Tome el punto cero de energía potencial gravitacional para ser el punto donde le centro de masa está en su punto más bajo, esto es, en $\theta=0$. Ver Figura~\ref{fig:pendulofisicocm}. Entonces
-\begin{align}
-  E_0=(m_1+m_2)l_{\text{cm}} g \left(1-\cos\theta_0  \right)
-\end{align}
-y
-\begin{align}
-  E_f=\frac{1}{2}I_S \omega_f^2\,,
-\end{align}
-de modo que la ecuación \eqref{eq:rig6} se puede obtener directamente de la conservación de la energía del sistema simplificado.
-\begin{figure}
-  \centering
-  \includegraphics{pendulofisicocm}
-  \caption{Sistema visto como un péndulo simple}
-  \label{fig:pendulofisicocm}
-\end{figure}
-
-\end{itemize}
-
-\begin{itemize}
-\item[\textbf{Ejemplo:}] Encuentra la ecuación de movimiento para un péndulo simple de longitud $l$  usando la condición de conservación de la energía mecánica $dE/dt=0$. 
-
-De la Figura.~\ref{fig:pendulofisicocm}, reemplazando $l_{\text{cm}}$ por $l$ y considerando una posición genérica del péndulo formando un ángulo $\theta$ con la vertical podemos calcular la energía mecánica
-\begin{align}
- E=& m l g(1-\cos\theta)+\frac{1}{2}I \omega^2\nonumber\\
- =& m l g(1-\cos\theta)+\frac{1}{2}I \dot\theta^2\,.
-\end{align}
-El momento de inercia para el péndulo simple sobre un eje perpendicular al punto de pivote es
-\begin{align}
-  I=ml^2\,,
-\end{align}
-de modo que
-\begin{align}
-  E=m l g(1-\cos\theta)+\frac{1}{2}m l^2 \dot\theta^2\,.
-\end{align}
-Aplicando la condición de conservación de la energía mecánica tenemos
-\begin{align}
-  \frac{dE}{dt}=mlg\dot\theta\sin\theta+\frac{1}{2}m l^2 2\dot\theta\ddot\theta=&0\nonumber\\
-mlg\dot\theta\sin\theta+m l^2 \dot\theta\ddot\theta=&0\,.
-\end{align}
-Simplificando este expresión, tenemos
-\begin{align}
- l\ddot\theta+ g\sin\theta=&0\nonumber\\
- \ddot\theta+ \frac{g}{l}\sin\theta=&0\,.
-\end{align}
-\end{itemize}
-Cuando las oscilaciones son pequeñas $\sin\theta\approx\theta$ y
-\begin{align}
-   \ddot\theta+ \frac{g}{l}\theta=&0\,.
-\end{align}
-Entonces el péndulo simple realiza un movimiento armónico simple con frecuencia:
-\begin{align}
-  \omega_0=\sqrt{\frac{g}{l}}
-\end{align}
-\begin{itemize}
-\item[\textbf{Ejemplo:}] Tomado de \cite{mit2009}. Considere una polea de masa $m_p$, radio $R$, y momento de inercia $I_{\text{cm}}$ sobre su centro de masa en uno de los lados de una mesa. Una cuerda inextensible de masa despreciable pasa a través de la polea y esta unida en uno de sus extremos al bloque 1 que cuelga sobre un lado de la mesa. El otro extremo esta unido al bloque 2 que se desliza a lo largo de la mesa. Ver Figura \ref{fig:poleafisica}. El coeficiente de fricción cinético entre la masa y el bloque 2 es $\mu_k$. El bloque 1 tiene una masa $m_1$ y el bloque 2 tiene una masa $m_2$, con $m_1>\mu_k m_2$. En el tiempo $t=0$, los bloques son liberados desde el reposo y la cuerda no se desliza alrededor de la polea,  En el tiempo $t=t_1$, el bloque 1 golpea el piso.
+\ejemplo{}
+Tomado de \cite{mit2009}. Considere una polea de masa $m_p$, radio $R$, y momento de inercia $I_{\text{cm}}$ sobre su centro de masa en uno de los lados de una mesa. Una cuerda inextensible de masa despreciable pasa a través de la polea y esta unida en uno de sus extremos al bloque 1 que cuelga sobre un lado de la mesa. El otro extremo esta unido al bloque 2 que se desliza a lo largo de la mesa. Ver Figura \ref{fig:poleafisica}. El coeficiente de fricción cinético entre la masa y el bloque 2 es $\mu_k$. El bloque 1 tiene una masa $m_1$ y el bloque 2 tiene una masa $m_2$, con $m_1>\mu_k m_2$. En el tiempo $t=0$, los bloques son liberados desde el reposo y la cuerda no se desliza alrededor de la polea,  En el tiempo $t=t_1$, el bloque 1 golpea el piso.
   \begin{enumerate}
   \item Encuentre la magnitud de la aceleración de cada bloque. Exprese su respuesta en términos de $m_p$, $I_{\text{cm}}$, $R$, $m_1$, $m_2$, $\mu_k$, y $t_1$
     \label{item:4}
@@ -1301,10 +1164,312 @@ de la cual podemos despejar la aceleración
     \frac{m_1g-\mu_k m_2 g}{m_1+m_2+I_{\text{cm}}/R^2}
   \right)t_1^2\,.
 \end{align}
-\end{itemize}
+
+
+
+\ejemplo{}
+(Tomado de \cite{gabriel}) Un bloque de masa $m$ desliza por la superficie del plano inclinado de ángulo $\theta$, mostrado en la figura. El coeficiente de fricción entre el bloque y la superficie es $\mu$. Por la acción de la cuerda, el cilindro macizo de masa $M$ y radio $R$ gira alrededor de un eje fijo que para por $C$.  La cuerda esta enrollada alrededor de un pequeño saliente de radio $r=0.1\ $m. Desprecie la fricción entre el volante y el eje alrededor del cual gira. 
+
+  \begin{minipage}{0.3\linewidth}
+    \includegraphics[scale=0.45]{poleasuple}
+  \end{minipage}
+  \begin{minipage}{0.7\linewidth}
+    \begin{enumerate}
+    \item Haga el diagrama de fuerzas que actúan sobre cada uno de los cuerpos.
+      \label{item:p3a}
+    \item Escriba las ecuaciones de movimiento para estos cuerpos.
+      \label{item:p3b}
+    \item Encuentre la tensión en la cuerda, la aceleración angular del volante y la aceleración del bloque. 
+      \label{item:p3c}
+    \item Hallar la energía cinética rotacional del sistema cuando el bloque ha recorrido una distancia $h$. 
+    \item Finalmente, calcule las cantidades anteriores para el caso particular de $m=5\ $Kg, $\mu=0.25$, $M=20\ $Kg, $R=0.2\ $m $r=0.1\ $m, $\theta=37^\circ$
+    \end{enumerate}
+  \end{minipage}
+%sln pag 183
+
+  \begin{itemize}
+  \item[\textbf{Solución}]
+  \item[\ref{item:p3b}] 
+    Para la polea, si el eje $z$ apunta hacia afuera de la página:
+    \begin{align*}
+      \boldsymbol{\tau}=&I\boldsymbol{\alpha}\nonumber\\
+      -rT=&-I_c\alpha\,.
+    \end{align*}
+    Para el bloque
+    \begin{align*}
+      mg\sin\theta-T-\mu N=&m a\nonumber\\
+      N=&mg\cos\theta\,.
+    \end{align*}
+  \item[\ref{item:p3c}]
+    Usando la ligadura
+    \begin{align*}
+      a=&r\alpha\,,
+    \end{align*}
+    Tenemos
+    \begin{align*}
+      T=\frac{I_c}{r^2}a
+    \end{align*}
+    y sustityendo en la ecuación de movimiento para el bloque
+    \begin{align*}
+      mg\sin\theta-\frac{I_c}{r^2}a-\mu g \cos\theta=&ma\,,
+    \end{align*}
+    podemos despejar $a$
+    \begin{align*}
+      a(m+I_c/r^2)=&mg(\sin\theta-\mu\cos\theta)\nonumber\\
+      a=&\frac{mg(\sin\theta-\mu\cos\theta)}{m+I_c/r^2}\nonumber\\
+      =&\frac{mg(\sin\theta-\mu\cos\theta)}{m+MR^2/(2r^2)}\nonumber\\
+      =&\frac{2r^2mg(\sin\theta-\mu\cos\theta)}{2r^2m+MR^2}\,,
+    \end{align*}
+    y reemplzando de nuevo en $T$
+    \begin{align*}
+      T=\frac{MR^2}{2r^2}a\,.
+    \end{align*}
+
+  \end{itemize}
+
+\ejemplo{}
+ Un cilíndro de radio $R$ y masa $M$ rueda sin deslizar a lo largo
+    de una superficie debido a una cinta delgada enrollada en torno de
+    el, que pasa por una polea ideal y está conectada a un bloque de
+    masa $m$ como se muestra en la figura.
+
+
+\begin{minipage}{9 cm}
+
+\includegraphics[scale=0.8]{cilindropol}
+
+\end{minipage}
+\begin{minipage}{8 cm}
+\begin{enumerate}
+\item Haga un diagrama de cuerpo libre para cada cuerpo.
+      \label{item:r3a}
+\item Plantee las ecuaciones de movimiento para cada cuerpo.
+      \label{item:r3b}
+\item Halle la aceleración del cilindro y la aceleración del bloque
+      \label{item:r3c}
+\item Calcule la tensión en la cuerda para $M=1$ kg, $m=750$ g
+      \label{item:r3d}
+\end{enumerate}
+\end{minipage}
+%variaciones: plano inclinado pag 181,  y polea no ideal, pag. 185
 
 \begin{itemize}
-\item[\textbf{Ejemplo:}] Tomado de \cite{mit2009}: Dos objetos puntuales están localizados en los puntos $A$ y $B$, con masas $m_A=2M$ y $m_B=M$, como se muestra en la figura~\ref{fig:barrabolas} Una fuerza de magnitud $F$ es aplicado a lo largo del eje $x$ al objeto en $B$ de la figura~\ref{fig:barrabolas} en $t=0$ por un intervalo de tiempo $\Delta t$. Despreciando la gravedad, de todas sus respuesta en términos de $M$ y $D$.
+\item[\ref{item:r3b}.] Para el cilíndro y tomando los torques con respecto al punto de contacto con la superficie, $P$
+  \begin{align*}
+    2 R T=I_P \alpha\,,
+  \end{align*}
+Para el cuerpo
+\begin{align*}
+  T-m g=&-ma\,.
+\end{align*}
+\item[\ref{item:r3c}.] La aceleración del cilindro $a_{\text{CM}}$, la aceleración angular $\alpha$, y la aceleración $a$ del bloque están relacionadas por
+  \begin{align*}
+    a=2\alpha R=2 a_{\text{CM}}
+  \end{align*}
+Entonces, de la ecuación de movimiento para el cilindro
+\begin{align*}
+  a_{\text{CM}}=&\alpha R\\
+  =&\frac{2 R^2 T}{I_P}
+\end{align*}
+y para el cuerpo
+\begin{align*}
+  a=&\frac{mg-T}{m}\\
+  a_{\text{CM}}=\frac{a}{2}=&\frac{mg-T}{2m}\\
+  =&\frac{g}{2}-\frac{T}{2m}\,.
+\end{align*}
+Igualando las expresiones podemos obtener la tensión
+\begin{align*}
+\frac{2R^2T}{I_P}=&\frac{g}{2}-\frac{T}{2m}\\
+T \left(\frac{2R^2}{I_P}+\frac{1}{2m}  \right)=&\frac{g}{2}\\
+T \left( 4m R^2+I_P \right)=&I_P m g\\
+T=&\frac{I_P mg}{4m R^2+I_P}
+\end{align*}
+finalmente, reemplazando en la primera expresión para $a_{\text{CM}}$
+\begin{align}
+\label{eq:acmcil}
+  a_{\text{CM}}=&\frac{2R^2}{\cancel{I_P}}\frac{\cancel{I_P} mg}{4m R^2+I_P}\nonumber\\
+=&\frac{mg}{2m +I_P/(2R^2)}\nonumber\\
+=&\frac{mg}{2 \left[m +I_P/(2R)^2  \right]}.
+\end{align}
+En términos del momento de inercia para el centro de masa tenemos entonces que la aceleración del cilindro es
+\begin{align*}
+  a_{\text{CM}}=&  \frac{mg}{2 \left[ m+(I_{\text{CM}}+MR^2)/(2R)^2\right]}\nonumber\\
+  =&  \frac{mg}{2  (4 m R^2+I_{\text{CM}}+MR^2)/(4R^2)}\nonumber\\
+  =&  \frac{2R^2mg}{4 m R^2+MR^2+I_{\text{CM}}}\,,
+\end{align*}
+Reeplazando finalmente la expresión para el momento de Inercia de un cilindro con respecto al centro de masa dada en la ec.~\eqref{eq:Icmcil}, tenemos
+\begin{align*}
+  a_{\text{CM}}=&\frac{2R^2mg}{4 m R^2+MR^2+3MR^2/2}\nonumber\\
+=&\frac{2R^2mg}{4 m R^2+MR^2+3MR^2/2}\nonumber\\
+=&\frac{4mg}{8 m +2M+3M}\nonumber\\
+=&\frac{4mg}{8 m +5M}\,,
+\end{align*}
+
+
+
+
+Por conservación de la energía, si $m$ cae una distancia $h$ y tomando el origen del sistema de referencia en la altura final, tenemos que tomando la conservación de la energía mecánica con respecto al eje instantáneo de giro en el punto de contacto $P$
+\begin{align}
+  \label{eq:KPcil}
+  mgh=&\frac{1}{2}I_P\,\omega^2+\frac{1}{2}mv^2 \\
+  mgh=&\frac{1}{2}I_P\left( \frac{v}{2R} \right)^2+\frac{1}{2}mv^2 \nonumber\\
+  mgh=&\frac{1}{2}\left[\frac{I_P}{(2R)^2}+m\right]v^2\nonumber\\
+  mg\cancel{h}=&\frac{1}{2}\left[\frac{I_P}{(2R)^2}+m\right]\left(2 a \cancel{h}  \right)\nonumber
+\end{align}
+de donde obtenemos que
+\begin{align*}
+a=\frac{mg}{m+I_P/(2R)^2}=2a_{\text{CM}}\,,
+\end{align*}
+Obteniendo la misma expresión para la $a_{CM}$ en la ec.~\eqref{eq:acmcil}:
+\begin{align*}
+a_{\text{CM}}=  \frac{mg}{2 \left[ m+I_P/(2R)^2 \right]}\,,
+\end{align*}
+
+Si tomamos la conservación de la energía mecánica con respecto a un
+eje que pase por el centro de masa del cilíndro, entonces también
+debemos considerar la energía de traslación del centro de masa del
+cilíndro
+\begin{align*}
+   mgh=&\frac{1}{2}I_{\text{CM}}\,\omega^2+\frac{1}{2}Mv_{\text{CM}}^2+\frac{1}{2}mv^2 \nonumber\\
+   mgh=&\frac{1}{2}I_{\text{CM}}\omega^2+\frac{1}{2}MR^2\omega^2+\frac{1}{2}mv^2 \nonumber\\
+   mgh=&\frac{1}{2}\left( I_{\text{CM}}+\frac{1}{2}MR^2 \right)\omega^2+\frac{1}{2}mv^2 \nonumber\\
+   mgh=&\frac{1}{2}I_P\omega^2+\frac{1}{2}mv^2\,,
+\end{align*}
+que coincide con la ec.~\eqref{eq:KPcil} para la conservación de la Energía mecánica con respecto al eje instantáneo. El paso de la penúltima a al última ecuación, ilustra muy bien el Teorema del eje parálelo. 
+\end{itemize}
+
+
+\ejemplo{}
+ Tomado de \cite{mit2009}. Un péndulo físico consiste de una varilla uniforme de masa $m_1$ con un pivote en un extremo. La varilla tiene longitud $l_1$ y momento de inercia $I_1$  sobre le punto del pivote. Un disco de masa $m_2$ y radio $r_2$ con momento de inercia $I_{\text{cm}}$ sobre su centro de masa está unido rígidamente a una distancia $l_2$ del punto de pivote. El péndulo está inicialmente desplazado a un ángulo $\theta_0$ y entonces es liberado desde el reposo.
+  \begin{enumerate}
+  \item ¿Cual es el momento de inercia del péndulo físico sobre el punto de pivote?
+    \label{item:1}
+  \item ¿Cuan lejos del punto de pivote está el centro de masa del sistema?
+    \label{item:2}
+  \item ¿Cual es la velocidad angular del péndulo cuando el péndulo cuando el péndulo está en la parte de abajo de su oscilación?
+\label{item:3}
+  \end{enumerate}
+\ref{item:1}. El momento de inercia sobre el punto de pivote será la suma del momento de inercia de la varilla, dada por $I_1$, y el momento de inercia del disco sobre el punto de pivote. El momento de inercia del disco sobre el punto de pivote se encuentra a partir del teorema de los ejes paralelos:
+\begin{align}
+  I_{\text{disc}}=I_{\text{cm}}+m_2 l_2^2\,.
+\end{align}
+El momento de inercia total sobre el punto de pivote es entonces
+\begin{align}
+  \label{eq:rig3}
+  I_S=I_1+I_{\text{disc}}=I_1+I_{\text{cm}}+m_2 l_2^2\,.
+\end{align}
+
+\ref{item:2}. El centro de masa del sistema compuesto esta localizado a una distancia del punto de pivote dada por
+\begin{align}
+  \label{eq:rig5}
+  l_{\text{cm}}=\frac{m_1(l_1/2)+m_2 l_2}{m_1+m_2}
+\end{align}
+
+\ref{item:3}. Podemos usar la conservación de la energía mecánica, para encontrar la velocidad angular del péndulo en la para de abajo de su oscilación. 
+
+Tomando el punto de energía potencial gravitacional cero como el punto donde la parte de abajo de la varilla está en su posición más baja, esto es, $\theta=0$, tenemos que la energía mecánica inicial es (ver Figura~\ref{fig:pendulofisico})
+\begin{align}
+  E_0=U_0=m_1 g  \left(l_1-\frac{l_1}{2}\cos\theta_0  \right)
++m_2 g  \left(l_1-l_2\cos\theta_0  \right)
+\end{align}
+
+\begin{figure}
+  \centering
+  \includegraphics{pendulofisico}
+  \caption{Energía potencial inicial del péndulo físico}
+  \label{fig:pendulofisico}
+\end{figure}
+
+La energía mecánica final es
+\begin{align}
+  E_f=U_f+K_f=m_1 g \frac{l_1}{2}+m_2 g(l_1-l_2)+\frac{1}{2}I_S \omega_f^2\,.
+\end{align}
+Igualando las energías inciales y finales
+\begin{align}
+\label{eq:rig4}
+  m_1 g  \left(l_1-\frac{l_1}{2}\cos\theta_0  \right)
++m_2 g  \left(l_1-l_2\cos\theta_0  \right)&=m_1 g \frac{l_1}{2}+m_2 g(l_1-l_2)+\frac{1}{2}I_S \omega_f^2\nonumber\\
+  m_1 g  \left(l_1-\frac{l_1}{2}\cos\theta_0  \right)-m_1 g \frac{l_1}{2}-m_2 g(l_1-l_2)
++m_2 g  \left(l_1-l_2\cos\theta_0  \right)&=\frac{1}{2}I_S \omega_f^2\nonumber\\
+  m_1 g  \left(l_1-\frac{l_1}{2}\cos\theta_0  \right)-m_1 g \frac{l_1}{2}-\cancel{m_2 g l_1}+\cancel{m_2 gl_1}+m_2 gl_2
+-m_2 g  l_2\cos\theta_0 &=\frac{1}{2}I_S \omega_f^2\nonumber\\
+  m_1 g  \left(\frac{l_1}{2}-\frac{l_1}{2}\cos\theta_0  \right)+m_2 gl_2
+-m_2 g  l_2\cos\theta_0 &=\frac{1}{2}I_S \omega_f^2\nonumber\\
+  \frac{m_1 l_1}{2}g \left(1-\cos\theta_0  \right)+
+m_2 l_2 g(1-\cos\theta_0) &=\frac{1}{2}I_S \omega_f^2\nonumber\\
+  \left(\frac{m_1 l_1}{2}+ m_2 l_2 \right)g \left(1-\cos\theta_0  \right) &=\frac{1}{2}I_S \omega_f^2\,.
+\end{align}
+
+Ahora solucionamos para $\omega_f$ (tomando la raíz cuadrada positiva para asegurar que estamos calculando la velocidad angular)
+\begin{align}
+  \omega_f=\sqrt{\frac{2\left(\frac{m_1 l_1}{2}+ m_2 l_2 \right)g \left(1-\cos\theta_0  \right)}{I_S}}\,.
+\end{align}
+Finalmente sustituyendo el resultado para $I_S$ de la ec.~\eqref{eq:rig3}
+\begin{align}
+    \omega_f=\sqrt{\frac{2\left(\frac{m_1 l_1}{2}+ m_2 l_2 \right)g \left(1-\cos\theta_0  \right)}{I_1+I_{\text{cm}}+m_2 l_2^2\,.}}\,.
+\end{align}
+
+Note que podemos reescribir la ec.~\eqref{eq:rig4}, usando la ecuación \eqref{eq:rig5} para la distancia entre el centro de masa y el punto de pivote, y obtener
+\begin{align}
+\label{eq:rig6}
+ (m_1+m_2)l_{\text{cm}} g \left(1-\cos\theta_0  \right) &=\frac{1}{2}I_S \omega_f^2\,. 
+\end{align}
+
+Podemos interpretar esta ecuación como sigue. Trate el sistema compuesto como una partícula puntual de masa $m_1+m_2$ localizada en el centro de masa $l_{\text{cm}}$. Tome el punto cero de energía potencial gravitacional para ser el punto donde le centro de masa está en su punto más bajo, esto es, en $\theta=0$. Ver Figura~\ref{fig:pendulofisicocm}. Entonces
+\begin{align}
+  E_0=(m_1+m_2)l_{\text{cm}} g \left(1-\cos\theta_0  \right)
+\end{align}
+y
+\begin{align}
+  E_f=\frac{1}{2}I_S \omega_f^2\,,
+\end{align}
+de modo que la ecuación \eqref{eq:rig6} se puede obtener directamente de la conservación de la energía del sistema simplificado.
+\begin{figure}
+  \centering
+  \includegraphics{pendulofisicocm}
+  \caption{Sistema visto como un péndulo simple}
+  \label{fig:pendulofisicocm}
+\end{figure}
+
+
+\ejemplo{}
+ Encuentre la ecuación de movimiento para un péndulo simple de longitud $l$  usando la condición de conservación de la energía mecánica $dE/dt=0$. 
+
+De la Figura.~\ref{fig:pendulofisicocm}, reemplazando $l_{\text{cm}}$ por $l$ y considerando una posición genérica del péndulo formando un ángulo $\theta$ con la vertical podemos calcular la energía mecánica
+\begin{align}
+ E=& m l g(1-\cos\theta)+\frac{1}{2}I \omega^2\nonumber\\
+ =& m l g(1-\cos\theta)+\frac{1}{2}I \dot\theta^2\,.
+\end{align}
+El momento de inercia para el péndulo simple sobre un eje perpendicular al punto de pivote es
+\begin{align}
+  I=ml^2\,,
+\end{align}
+de modo que
+\begin{align}
+  E=m l g(1-\cos\theta)+\frac{1}{2}m l^2 \dot\theta^2\,.
+\end{align}
+Aplicando la condición de conservación de la energía mecánica tenemos
+\begin{align}
+  \frac{dE}{dt}=mlg\dot\theta\sin\theta+\frac{1}{2}m l^2 2\dot\theta\ddot\theta=&0\nonumber\\
+mlg\dot\theta\sin\theta+m l^2 \dot\theta\ddot\theta=&0\,.
+\end{align}
+Simplificando este expresión, tenemos
+\begin{align}
+ l\ddot\theta+ g\sin\theta=&0\nonumber\\
+ \ddot\theta+ \frac{g}{l}\sin\theta=&0\,.
+\end{align}
+
+Cuando las oscilaciones son pequeñas $\sin\theta\approx\theta$ y
+\begin{align}
+   \ddot\theta+ \frac{g}{l}\theta=&0\,.
+\end{align}
+Entonces el péndulo simple realiza un movimiento armónico simple con frecuencia:
+\begin{align}
+  \omega_0=\sqrt{\frac{g}{l}}
+\end{align}
+
+\ejemplo{}
+Tomado de \cite{mit2009}: Dos objetos puntuales están localizados en los puntos $A$ y $B$, con masas $m_A=2M$ y $m_B=M$, como se muestra en la figura~\ref{fig:barrabolas} Una fuerza de magnitud $F$ es aplicado a lo largo del eje $x$ al objeto en $B$ de la figura~\ref{fig:barrabolas} en $t=0$ por un intervalo de tiempo $\Delta t$. Despreciando la gravedad, de todas sus respuesta en términos de $M$ y $D$.
   \begin{figure}
     \centering
     \includegraphics{barrabolas}
@@ -1420,159 +1585,27 @@ y despejando para la velocidad angular, obtenemos el resultado final
 
 %\left(\right)
   \end{enumerate}
-
-  \begin{itemize}
-  \item Hallar la aceleración de un cilindro uniforme de radio $R$ y masa $M$ cuando rueda sin deslizar por un plano inclinado a un ángulo $\beta$
-  \end{itemize}
-  \begin{itemize}
-  \item Aplicando la ecuación de torque sobre el centro de masa:...
-
-  \end{itemize}
-
-  \begin{itemize}
-  \item[\textbf{Ejemplo:}] Ejemplo 27.7.4 (pag. 17) de \cite{mit2009}: \textbf{Cilindro rodando hacia abajo de un plano inclinado}.
-  \end{itemize}
-\end{itemize}
-
-\section{Problemas resueltos}
-
-\begin{enumerate}
-\item (Tomado de \cite{gabriel}) Un bloque de masa $m$ desliza por la superficie del plano inclinado de ángulo $\theta$, mostrado en la figura. El coeficiente de fricción entre el bloque y la superficie es $\mu$. Por la acción de la cuerda, el cilindro macizo de masa $M$ y radio $R$ gira alrededor de un eje fijo que para por $C$.  La cuerda esta enrollada alrededor de un pequeño saliente de radio $r=0.1\ $m. Desprecie la fricción entre el volante y el eje alrededor del cual gira. 
-
-  \begin{minipage}{0.3\linewidth}
-    \includegraphics[scale=0.45]{poleasuple}
-  \end{minipage}
-  \begin{minipage}{0.7\linewidth}
-    \begin{enumerate}
-    \item Haga el diagrama de fuerzas que actúan sobre cada uno de los cuerpos.
-      \label{item:p3a}
-    \item Escriba las ecuaciones de movimiento para estos cuerpos.
-      \label{item:p3b}
-    \item Encuentre la tensión en la cuerda, la aceleración angular del volante y la aceleración del bloque. 
-      \label{item:p3c}
-    \item Hallar la energía cinética rotacional del sistema cuando el bloque ha recorrido una distancia $h$. 
-    \item Finalmente, calcule las cantidades anteriores para el caso particular de $m=5\ $Kg, $\mu=0.25$, $M=20\ $Kg, $R=0.2\ $m $r=0.1\ $m, $\theta=37^\circ$
-    \end{enumerate}
-  \end{minipage}
-%sln pag 183
-
-  \begin{itemize}
-  \item[\textbf{Solución}]
-  \item[\ref{item:p3b}] 
-    Para la polea, si el eje $z$ apunta hacia afuera de la página:
-    \begin{align*}
-      \boldsymbol{\tau}=&I\boldsymbol{\alpha}\nonumber\\
-      -rT=&-I_c\alpha\,.
-    \end{align*}
-    Para el bloque
-    \begin{align*}
-      mg\sin\theta-T-\mu N=&m a\nonumber\\
-      N=&mg\cos\theta\,.
-    \end{align*}
-  \item[\ref{item:p3c}]
-    Usando la ligadura
-    \begin{align*}
-      a=&r\alpha\,,
-    \end{align*}
-    Tenemos
-    \begin{align*}
-      T=\frac{I_c}{r^2}a
-    \end{align*}
-    y sustityendo en la ecuación de movimiento para el bloque
-    \begin{align*}
-      mg\sin\theta-\frac{I_c}{r^2}a-\mu g \cos\theta=&ma\,,
-    \end{align*}
-    podemos despejar $a$
-    \begin{align*}
-      a(m+I_c/r^2)=&mg(\sin\theta-\mu\cos\theta)\nonumber\\
-      a=&\frac{mg(\sin\theta-\mu\cos\theta)}{m+I_c/r^2}\nonumber\\
-      =&\frac{mg(\sin\theta-\mu\cos\theta)}{m+MR^2/(2r^2)}\nonumber\\
-      =&\frac{2r^2mg(\sin\theta-\mu\cos\theta)}{2r^2m+MR^2}\,,
-    \end{align*}
-    y reemplzando de nuevo en $T$
-    \begin{align*}
-      T=\frac{MR^2}{2r^2}a\,.
-    \end{align*}
-
-  \end{itemize}
-
-\item Un cilíndro de radio $R$ y masa $M$ rueda sin deslizar a lo largo
-    de una superficie debido a una cinta delgada enrollada en torno de
-    el, que pasa por una polea ideal y está conectada a un bloque de
-    masa $m$ como se muestra en la figura.
+\qed
 
 
-\begin{minipage}{9 cm}
-
-\includegraphics[scale=0.8]{cilindropol}
-
-\end{minipage}
-\begin{minipage}{8 cm}
-\begin{enumerate}
-\item Haga un diagrama de cuerpo libre para cada cuerpo.
-      \label{item:r3a}
-\item Plantee las ecuaciones de movimiento para cada cuerpo.
-      \label{item:r3b}
-\item Halle la aceleración del cilindro y la aceleración del bloque
-      \label{item:r3c}
-\item Calcule la tensión en la cuerda para $M=1$ kg, $m=750$ g
-      \label{item:r3d}
-\end{enumerate}
-\end{minipage}
-%variaciones: plano inclinado pag 181,  y polea no ideal, pag. 185
-
-\begin{itemize}
-\item[\ref{item:r3b}] Para el cilíndro y tomando los torques con respecto al punto de contacto con la superficie
-  \begin{align*}
-    -T-f=&M a_{\text{CM}}\\
-    N=&Mg\\
-    2 R T=I_p \alpha\,,
-  \end{align*}
-Para el cuerpo
-\begin{align*}
-  T-m g=&-ma\,.
-\end{align*}
-\item[\ref{item:r3c}] La aceleración del cilindro $a_{\text{CM}}$, la aceleración angular $\alpha$, y la aceleración $a$ del bloque están relacionadas por
-  \begin{align*}
-    a=2\alpha R=2 a_{\text{CM}}
-  \end{align*}
-Entonces, de la ecuación de movimiento para el cilindro
-\begin{align*}
-  a_{\text{CM}}=&\alpha R\\
-  =&\frac{2 R^2 T}{I_p}\\
-  =&\frac{2 R^2 T}{\frac{3}{2}MR^2}\\
-  =&\frac{4 T}{3M}\,
-\end{align*}
-y para el cuerpo
-\begin{align*}
-  a=&\frac{mg-T}{m}\\
-  a_{\text{CM}}=\frac{a}{2}=&\frac{mg-T}{2m}\\
-  =&\frac{g}{2}-\frac{T}{2m}\,.
-\end{align*}
-Igualanado las expresiones podemos obtener la tensión
-\begin{align*}
-\frac{4 T}{3M}=&\frac{g}{2}-\frac{T}{2m}\\
-  \frac{4 T}{3M}+\frac{T}{2m}=&\frac{g}{2}\\
-  T  \left(\frac{4 }{3M}+\frac{1}{2m}\right)=&\frac{g}{2}\\
-  T  \left(\frac{8m+3M }{6Mm}\right)=&\frac{g}{2}\\
-  T=&\frac{3Mmg}{8m+3M}\,,
-\end{align*}
-finalmente, reemplazando en la primera expresión para $a_{\text{CM}}$
-\begin{align*}
-  a_{\text{CM}}=&\frac{4}{3M}\frac{3Mmg}{8m+3M}\\
-=&\frac{4mg}{8m+3M}\,.
-\end{align*}
+\ejemplo{}
+Ejemplo 27.7.4 (pag. 17) de \cite{mit2009}: \textbf{Cilindro rodando hacia abajo de un plano inclinado}.
 
 
-Por conservación de la energía, si $m$ cae una distancia $h$ y tomando el origen del sistema de referencia en la altura final
-\begin{align}
-  mgh=&\frac{1}{2}I_{C}\omega^2+\frac{1}{2}mv^2 \nonumber\\
-  mgh=&\frac{1}{2}I_{C}\left( \frac{v}{2R} \right)^2+\frac{1}{2}mv^2 \,.
-\end{align}
-Obteniendo la misma expresión
 
-\end{itemize}
-\end{enumerate}
+\section{Ejercicios}
+
+\ejercicio{}
+Dos masas $m_1$ y $m_2$ unidas por una cuerda ideal están enrrolladas en una polea de radio $R$ y masa $M$ que puede rotar alrededor de un eje fijo que pasa por el centro de la polea, tal como se muestra en la figura~\ref{fig:polea}. Suponga que no hay fricción en el eje de la polea, que las dos masas están inicialmente en reposo, que $m_1 > m_2$ y que las dos masas están originalmente separadas una distancia $h$. Calcule la rapidez de cada una de las masas justamente cuando una pasa al lado de la otra, es decir, la rapidez de encuentro.
+
+  \begin{figure}
+    \centering
+    \includegraphics[scale=0.8]{polea}
+    \caption{Ejemplo conservación de la energía}
+    \label{fig:polea}
+  \end{figure}
+%La conservación de la energía mecánica se debe aplicar al sistema completo de masas $m_1$ y 
+
 
 %%% Local Variables: 
 %%% mode: latex
