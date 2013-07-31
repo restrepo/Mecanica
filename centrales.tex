@@ -58,8 +58,8 @@ que al restarlas dan lugar a
 \begin{align}
   \label{eq:prevcentral}
   \ddot{\mathbf{r}}_1-\ddot{\mathbf{r}}_2=&\left(\frac{1}{m_1}+\frac{1}{m_2}\right)F(r)\hat{\mathbf{r}}\nonumber\\
-  =&\frac{m_1 m_2}{m_1+m_2}F(r)\hat{\mathbf{r}}\nonumber\\
-  =&\mu F(r)\hat{\mathbf{r}}\,,
+  =&\frac{m_1+m_2}{m_1 m_2}F(r)\hat{\mathbf{r}}\nonumber\\
+  =&\frac{1}{\mu} F(r)\hat{\mathbf{r}}\,,
 \end{align}
 donde hemos definido la masa reducida
 \begin{align}
@@ -72,7 +72,7 @@ Además, derivando dos veces la ec.~\eqref{eq:rcentral}
 podemos escribir la ec.~\eqref{eq:prevcentral} como una ecuación de movimiento para una partícula de masa $\mu$ bajo el efecto de una fuerza $F(r)\hat{\mathbf{r}}$ como
 \begin{align}
   \label{eq:singlebody}
-  \ddot{\mathbf{r}}=\mu F(r)\hat{\mathbf{r}}\,.
+  F(r)\hat{\mathbf{r}}= \mu\ddot{\mathbf{r}}\,.
 \end{align}
 y el problema de dos cuerpos se reduce al problema de una sola partícula como se ilustra en la figura~\ref{fig:singlecentral}
 \begin{figure}
@@ -292,16 +292,16 @@ Lo que nos dice el diagrama es lo siguiente. La energía cinética $K=E-U$ es m�
 
 El oscilador armónico es un buen ejemplo de un sistema de movimiento confinado. A medida que $E$ se incremente, los puntos de retorno se alejan cada vez más, pero la partícula nunca se mueve libremente. Si $E$ decrece, la amplitud del movimiento decrece, hasta que finalmente para $E=0$ la partícula permanece en reposo en $x=0$.
 
-En el caso del movimiento bajo una fuerza central, la expresión para la energía total en términos de $U_{\text{eff}}(r)$ depende sólo de $r$ y podemos visualizar el movimiento a través de los diagramas de energía. En el caso de una fuerza repulsiva de tipo $(A/r^2)\hat{\mathbf{r}}$, con $A=\text{constante}$, la energía potencial es $U(r)=A/r$, de modo que
+En el caso del movimiento bajo una fuerza central, la expresión para la energía total en términos de $U_{\text{eff}}(r)$ depende sólo de $r$ y podemos visualizar el movimiento a través de los diagramas de energía. En el caso de una fuerza repulsiva de tipo $(C/r^2)\hat{\mathbf{r}}$, con $C=\text{constante}$, la energía potencial es $U(r)=C/r$, de modo que
 \begin{align}
-  U_{\text{eff}}=\frac{1}{2}\frac{L^2}{\mu r^2}+\frac{A}{r} 
+  U_{\text{eff}}=\frac{1}{2}\frac{L^2}{\mu r^2}+\frac{C}{r} 
 \end{align}
 que en total es una función decreciente de la distancia. %como se ilustra en la figura.
 Hay una distancia de máximo acercamiento, $r_{\text{min}}$, pero el movimiento no está confinado para $r$ grande ya que $U_{\text{eff}}$ decrece con la distancia. Sí la partícula es disparada hacia el origen, esta gradualmente pierde energía cinética hasta que alcanza momentáneamente el reposo en $r_{\text{min}}$. El movimiento entonces se invierte y la partícula se mueve hacia el infinito. La rapidez inicial y final en un cualquier punto es idéntica; la colisión sólo invierte la velocidad.
 
-Para el caso de una fuerza central atractiva del tipo $-(A/r^2)\hat{\mathbf{r}}$, con $A=\text{constante}$, la energía potencial es $U(r)=-A/r$, de modo que
+Para el caso de una fuerza central atractiva del tipo $-(C/r^2)\hat{\mathbf{r}}$, con $C=\text{constante}$, la energía potencial es $U(r)=-C/r$, de modo que
 \begin{align}
-  \frac{1}{2}\frac{L^2}{\mu r^2}-\frac{A}{r}\,.
+  \frac{1}{2}\frac{L^2}{\mu r^2}-\frac{C}{r}\,.
 \end{align}
 Ahora hay dos contribuciones compitiendo. La primera domina para $r\to 0$ y la segunda para $r\to \infty$. El resultado se ilustra en la figura y puede obtener con un código similar al siguiente
 \begin{lstlisting}
@@ -341,6 +341,7 @@ show()
 Note que en el caso de otros potenciales de la forma $-1/r^n$ con $n>1$, no es posible obtener el conjunto de trayectorias posible de hipérbolas y elipses que se obtiene para el caso de $n=1$.
 
 \section{Ecuación de las trayectoria}
+\begin{frame}[fragile,allowframebreaks]
 La ec. para la trayectoria \eqref{eq:traycent} 
 \begin{align}
   \frac{d\theta}{dr}=\frac{L}{\mu r^2}\frac{1}{\sqrt{({2}/{\mu})\left(E-U_{\text{eff}}(r)\right)}}
@@ -382,8 +383,6 @@ El resultado de la integración es:
   \theta-\theta_0=&L\frac{1}{\sqrt{L^2}}
   \sin^{-1}\left[\frac{2\mu C r-2L^2}{2r\sqrt{\mu^2C^2+2\mu E L^2}}\right]_{r_0}^r\nonumber\\
 =&\sin^{-1}\left[\frac{\mu C r-L^2}{r\sqrt{\mu^2C^2+2\mu E L^2}}\right]_{r_0}^r\nonumber\\
-\end{align}
-\begin{align}
    =&\sin^{-1}\left(\frac{\mu C r-L^2}{r\sqrt{\mu^2C^2+2\mu E L^2}}\right)-
    \sin^{-1}\left(\frac{\mu C r_0-L^2}{r_0\sqrt{\mu^2C^2+2\mu E L^2}}\right)
 \end{align}
@@ -423,13 +422,14 @@ donde $\epsilon$ se define como la \emph{excentricidad}. Entonces
 \end{align}
 y
 \begin{align}
-  \frac{L^2}{\mu C}=a(1-\epsilon^2)\,.
+\label{eq:LCa}
+  \frac{L^2}{\mu C}=&a(1-\epsilon^2)\,.
 \end{align}
 
 
 Además definimos
 \begin{align}
-  r_0\equiv=a(1-\epsilon^2)\,,
+  r_0\equiv a(1-\epsilon^2)\,,
 \end{align}
 Como $r(-\theta)=r(\theta)$, el eje de simetría es el eje $x$.
 
@@ -444,6 +444,8 @@ Con estas definiciones obtenemos
      e>1:& \text{hipérbola}\\
    \end{cases}
 \end{align}
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 Para ver esto es conveniente reescribir la ecuación en coordenadas cartesianas. Sea
 \begin{align*}
   x=&r\cos\theta\\
@@ -461,9 +463,10 @@ x^2+y^2-[\epsilon x+a(1-\epsilon^2)]^2=&0\nonumber\\
 x^2+y^2-[\epsilon^2 x^2+2\epsilon a(1-\epsilon^2)x+a^2(1-\epsilon^2)^2]=&0\nonumber\\
 (1-\epsilon^2)x^2-2\epsilon a(1-\epsilon^2)x+y^2=&a^2(1-\epsilon^2)^2\,,
 \end{align}
-
+\end{frame}
 
 \subsection{$0\le \epsilon\le 1$: Órbitas elípticas}
+\begin{frame}[fragile,allowframebreaks]
 La ec.~\eqref{eq:conicacar} tiene la forma
 \begin{align}
     y^2+A x^2-Bx=\text{constante}\,,
@@ -486,6 +489,7 @@ que puede compararse con la ecuación de la elipse con centro en $(x_0,y_0)$
 \frac{(x-x_0)^2}{a^2}+\frac{(y-y_0)^2}{b^2}=1\,.
 \end{align}
 Dicha elipse está ilustrada en la figura~\ref{fig:elipsecar}
+\end{frame}
 \begin{frame}
   
 
@@ -545,6 +549,7 @@ de modo que
 \end{align}
 Note que como la energía gravitacional es negativa cuando la orbita es elíptica, la raíz cuadrada esta bien definida.
 
+\begin{frame}
 Usando está ecuación podemos escribir la ec.~\eqref{eq:eli1} finalmente como
 \begin{align}
   \frac{(x-c)^2}{a^2}+\frac{y^2}{b^2}=&1\,.
@@ -553,6 +558,7 @@ De modo que la solución a la ecuación de la órbita para $0\le\epsilon\le 1$ c
 \begin{align}
   x_0=c\,.
 \end{align}
+\end{frame}
 
 El valor de $r_{\text{min}}$ y $r_{\text{max}}$ se pueden obtener haciendo $y=0$ en la ec.~\eqref{eq:eli1}
 \begin{align}
@@ -574,16 +580,23 @@ de donde
 
 %\left(\right)
 
-
+\begin{frame}
 El valor máximo y mínimo para $r$ se pueden obtener también de la ecuación de las orbitas en coordenadas polares cuando $\cos\theta=1$ ($\theta=0$) y $\cos\theta=-1$ ($\cos\theta=-1$) respectivamente
 \begin{align}
   \label{eq:22cent}
   r_{\text{max}}=&a\frac{(1-\epsilon)(1+\epsilon)}{1-\epsilon}=a(1+\epsilon)\nonumber\\
   r_{\text{min}}=&a\frac{(1-\epsilon)(1+\epsilon)}{1+\epsilon}=a(1-\epsilon)\,.
 \end{align}
+de donde,
+\begin{align}
+\label{eq:rmaxmin}
+  \epsilon=\frac{r_{\text{max}}-r_{\text{min}}}{r_{\text{max}}+r_{\text{min}}}
+\end{align}
+ya que
 \begin{align*}
-  \epsilon=\frac{r_{\text{max}}+r_{\text{min}}}{r_{\text{max}}-r_{\text{min}}}
+   \frac{r_{\text{max}}-r_{\text{min}}}{r_{\text{max}}+r_{\text{min}}}=&\frac{2a\epsilon}{2a}\,,
 \end{align*}
+\end{frame}
 
 Como $r$ se mide con respecto al origen de coordenadas, la distancia del centro de la elipse, el cual se encuentra sobre el eje $x$, al origen de coordenadas es
 \begin{align}
@@ -659,6 +672,7 @@ Concluimos entonces que el centro de masa está en uno de los focos de la elipse
 \begin{frame}
 Considere un sistema de dos partículas bajo el efecto de una fuerza central tal que la partícula de masa reducida $\mu$ con un vector de posición $\mathbf{r}(t)$ con respecto al origen de coordenadas localizado en el centro de masa, con energía $E$ y magnitud de momentum angular $L$. Sea
 \begin{align}
+ \label{eq:aE}
   a=&-\frac{C}{2E}\nonumber\\
   b=&\frac{L}{\sqrt{-2\mu E}}\nonumber\\
   c=&-\frac{C}{2E}\sqrt{1+\frac{2EL^2}{\mu C^2}}\,.
@@ -733,7 +747,9 @@ Además de la ec.~(\ref{eq:17exc})
 de donde resulta que $E>0$ como se esperaba de la figura~\ref{fig:conicas}. En el límite de $\epsilon\to 1$ tendremos una parábola y $E=0$.
 
 \ejemplo{}
+\begin{frame}
 Un meteoro con semieje mayor\footnote{El semieje mayor coincide con el reportado para el meteoro que cayó sobre la región de Chelyabinsk en Rusia en febrero 15 de 2013: J.~Zuluaga and I.~Ferrín, \href{http://arxiv.org/abs/1302.5377}{arXiv:1302.5377}. La excentricidad ha sido alterada para simplificar el problema.} ${394.4\times10^{6}}\si{\kilo\meter}$ y  excentricidad $0.71$, tiene su órbita sobre el mismo plano y los ejes coincidiendo con la orbita de la Tierra alrededor del Sol. Determine si existe peligro de colisión con la Tierra y calcule  los posibles puntos de colisión. La órbita de la Tierra tiene un semieje mayor de ${149.6\times10^{6}}\si{\kilo\meter}$,  y una excentricidad de $0.0167$.
+\end{frame}
 
 \textbf{Solución:}
 La ecuación de la orbita elíptica  es
@@ -797,13 +813,13 @@ dando lugar a
 Para los parámetros de la tierra $a_T={149.6\times10^{6}}\si{\kilo\meter}$, $\epsilon_T=0.0167$ y un meteoro con $a_M={394.4\times10^{6}}\si{\kilo\meter}$ y $\epsilon_M=0.71$
 obtenemos como solución física el valor para $x_1$:
 \begin{align}
-  x_1=&-{66.7712\times10^{6}}\si{\kilo\meter}\nonumber\\
+  x_1=&-\SI{66.7712E{6}}{\kilo\meter}\nonumber\\
   y_1=&{132.578\times10^{6}}\si{\kilo\meter}\,
 \end{align}
 con el otro punto de intersección en $(x_1,-y_1)$ como se muestra en la figura~\ref{fig:orbitcollision}.
+\begin{frame}
 \begin{figure}
   \centering
-  
   \includegraphics[scale=0.35]{orbitcollision}
   \caption{Colisiones de orbitas}
   \label{fig:orbitcollision}
@@ -828,6 +844,7 @@ Reemplazando en la órbita de la Tierra por ejemplo, da lugar a
 Finalmente, la posición en $x$ la podemos estimar como:
 \begin{align*}
   x=r\cos\theta=-\frac{a_M(1-\epsilon_M^2)-a_T(1-\epsilon_T^2)}{\epsilon_M-\epsilon_T}
+   =-\SI{66.7712E{6}}{\kilo\meter}
 \end{align*}
 que coincide exactamente con la ec.~\eqref{eq:xyoc}. Los dos valores de $y$ se pueden obtener de
 \begin{align*}
@@ -844,6 +861,63 @@ que resulta en el mismo valor numérico:
 \end{align*}
 
 Por lo tanto la condición para que exista colisión es que $y^2>0$.
+  
+\end{frame}
+
+\ejemplo{}
+\begin{frame}
+Calcule la velocidad inicial mínima para que un cuerpo lanzado horizontalmente respecto a la superficie de la tierra regrese a su punto de partida
+
+\subsubsection{Solución}
+La energía de la órbita circular (la mínima para obtener una órbita cerrada) debe ser igual a la energía de lanzamiento
+\begin{align*}
+  E=\frac{1}{2}m v_0^{2}-\frac{GmM}{R}=&-\frac{\mu C^2}{2 L^2}\nonumber\\
+  =&-\frac{m G^2m^2M^2}{2 (Rmv_0)^2 }\nonumber\\
+  =&-\frac{m G^2M^2}{2R^2v_0^2}\nonumber\\
+\end{align*}
+de modo que
+\begin{align*}
+  \left( v_0^2 \right)^2-2 \frac{GM}{R^2}R\left( v_0^2 \right)+\left( \frac{GM}{R^2} \right)^2R^2=&0 \nonumber\\
+  \left( v_0^2 \right)^2-2 gR\left( v_0^2 \right)+g^2R^2=&0 \nonumber\\
+\left(v_0^2-gR  \right)^2=0\,,
+\end{align*}
+\begin{align*}
+  v_0=\pm \sqrt{gR}=\SI{7920}{m s^{-1}}\,.
+\end{align*}
+\end{frame}
+
+\subsection{Potencial gravitacional}
+\begin{frame}
+La Ley de Gravitación Universal define una fuerza central atractiva y conservativa la cual se puede obtener a partir del potencial gravitacional
+\begin{align*}
+  U(r)=-\frac{C}{r}\,,
+\end{align*}
+\end{frame}
+
+De hecho 
+\begin{align*}
+\mathbf{F}(\mathbf{r})=-\boldsymbol{\nabla}U(r)
+=&C\boldsymbol{\nabla}\left(\frac{1}{r}\right)\nonumber\\
+=&C\boldsymbol{\nabla}\left(\frac{1}{\sqrt{x^2+y^2+z^2}}\right)\nonumber\\
+=&C\left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\right)\left(\frac{1}{\sqrt{x^2+y^2+z^2}}\right)\nonumber\\
+=&C\left(\frac{\partial}{\partial x}\frac{1}{\sqrt{x^2+y^2+z^2}},\frac{\partial}{\partial y}\frac{1}{\sqrt{x^2+y^2+z^2}},\frac{\partial}{\partial z}\frac{1}{\sqrt{x^2+y^2+z^2}}\right)\nonumber\\
+=&C\left(\frac{-1}{2}\frac{2x}{(x^2+y^2+z^2)^{3/2}},\frac{-1}{2}\frac{2x}{(x^2+y^2+z^2)^{3/2}},\frac{-1}{2}\frac{2z}{(x^2+y^2+z^2)^{3/2}}\right)\nonumber\\
+=&-\frac{C}{r^2}\frac{(x,y,z)}{r}\nonumber\\
+=&-\frac{C}{r^2}\frac{\mathbf{r}}{r}\nonumber\\
+=&-\frac{C}{r^2}\hat{\mathbf{r}}\,.
+\end{align*}
+%\left(\right)
+
+%manzana lanzada del everest
+
+La fuerza gravitacional debe ser proporcional al peso del cuerpo sobre el cual actúa. Por la tercera ley de Newton debe ser proporcional al producto de las masas, de modo que
+\begin{align}
+  C\propto m_1 m_2\,.
+\end{align}
+
+
+%Ejemplo: potencial gravitacional cerca a la superficie de la tierra.
+
 
  
 \section{Gravitación}
@@ -859,37 +933,25 @@ Ley de gravitación universal
 \end{align}
 La constante de proporcionalidad, $G$, es llamada la constante gravitacional, y toma el valor
 \begin{equation}
-  G=6.673\;84(80)\times 10^{-11}\meter^3\kilo\gram^-1\second^-2
+  G=6.673\;84(80)\times 10^{-11}\si{\meter^3\kilo\gram^{-1}\second^{-2}}
 \end{equation}
 \end{frame}
+La determinación de $G$ permite determinar la masa de la tierra. La fuerza gravitacional del de la tierra con masa $M$ sobre un cuerpo de masa $m$ sobre la superficie es igual al peso del cuerpo. Es decir
+\begin{align*}
+  \frac{GMm}{R^2}=&mg \nonumber\\
+  \frac{GM}{R^2}=&g \nonumber\\
+   M=&\frac{gR^2}{G}\nonumber\\
+   M=&\SI{5.9723(9)E24}{Kg}
+\end{align*}
+donde hemos usado los valores para el radio de la tierra, $R$ y la aceleración gravitacional estándar $g$ dados por
+\begin{align}
+  R=\SI{6.378140E6}{m}& &g=\SI{9.80665}{m s^{-2}}\,.&
+\end{align}
+
 %The constant of proportionality, G, is called the gravitational constant, and takes the value 
 
 
 %Incidentally, there is something rather curious about Equation (210). According to this law, the gravitational force acting on an object is directly proportional to its inertial mass. But why should inertia be related to the force of gravity? After all, inertia measures the reluctance of a given body to deviate from its preferred state of uniform motion in a straight-line, in response to some external force. What has this got to do with gravitational attraction? This question perplexed physicists for many years, and was only answered when Albert Einstein published his general theory of relativity in 1916. According to Einstein, inertial mass acts as a sort of gravitational charge since it impossible to distinguish an acceleration produced by a gravitational field from an apparent acceleration generated by observing in a non-inertial reference frame. The assumption that these two types of acceleration are indistinguishable leads directly to all of the strange predictions of general relativity: e.g., clocks in different gravitational potentials run at different rates, mass bends space, etc.
-
-\subsection{Potencial gravitacional}
-\begin{frame}
-La Ley de Gravitación Universal define una fuerza central atractiva y conservativa la cual puede obtener a partir del potencial gravitacional
-\begin{align*}
-  U(r)=-\frac{Gm_1m_2}{r}\,,
-\end{align*}
-\end{frame}
-
-De hecho 
-\begin{align*}
-\mathbf{F}(\mathbf{r})=-\boldsymbol{\nabla}U(r)
-=&Gm_1m_2\boldsymbol{\nabla}\left(\frac{1}{r}\right)\nonumber\\
-=&Gm_1m_2\boldsymbol{\nabla}\left(\frac{1}{\sqrt{x^2+y^2+z^2}}\right)\nonumber\\
-=&Gm_1m_2\left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z}\right)\left(\frac{1}{\sqrt{x^2+y^2+z^2}}\right)\nonumber\\
-=&Gm_1m_2\left(\frac{\partial}{\partial x}\frac{1}{\sqrt{x^2+y^2+z^2}},\frac{\partial}{\partial y}\frac{1}{\sqrt{x^2+y^2+z^2}},\frac{\partial}{\partial z}\frac{1}{\sqrt{x^2+y^2+z^2}}\right)\nonumber\\
-=&Gm_1m_2\left(\frac{-1}{2}\frac{2x}{(x^2+y^2+z^2)^{3/2}},\frac{-1}{2}\frac{2x}{(x^2+y^2+z^2)^{3/2}},\frac{-1}{2}\frac{2z}{(x^2+y^2+z^2)^{3/2}}\right)\nonumber\\
-=&-\frac{Gm_1m_2}{r^2}\frac{(x,y,z)}{r}\nonumber\\
-=&-\frac{Gm_1m_2}{r^2}\frac{\mathbf{r}}{r}\nonumber\\
-=&-\frac{Gm_1m_2}{r^2}\hat{\mathbf{r}}\,.
-\end{align*}
-%\left(\right)
-
-%Ejemplo: potencial gravitacional cerca a la superficie de la tierra.
 
 \section{Leyes de Kepler}
 
@@ -911,6 +973,7 @@ Como ya hemos demostrado que el centro de masa está en uno de los focos para un
 
 Queda entonces por demostrar \ref{item:7}. Para la ley de gravitación tenemos
 \begin{align}
+\label{eq:CGmu}
     C=&GmM=G\mu(M+m)\,.
 \end{align}
 Partiendo de la definición del momento angular con respecto al centro del sistema reducido, tenemos también:
@@ -928,49 +991,44 @@ donde $d\mathcal{A}$ es el area diferencial barrida durante el diferencial de ti
   \frac{L}{2\mu} T=&\mathcal{A}=\pi a b\,,
 \end{align}
 el área de la elipse. Entonces
-\begin{align}
-  T^2=&\frac{4\mu^2}{L^2}\mathcal{A}^2\nonumber\\
-  =&\frac{4\mu^2}{L^2}\pi^2 a^2 b^2\,,
-\end{align}
-Podemos usar la  ecuación (\ref{eq:b}) para $b$:
 \begin{align*}
-  b=&\frac{L}{\sqrt{-2\mu E}}\,.
+  T^2=&\frac{4\mu^2}{L^2}\mathcal{A}^2\nonumber\\
+  =&\frac{4\mu^2}{L^2}\pi^2 a^2 b^2 \nonumber\\
+   =&\frac{4\mu^2}{L^2}\pi^2 a^2 a^2(1-\epsilon^2)\,,
 \end{align*}
-Como
+usando la ec.~\eqref{eq:LCa} y~\eqref{eq:CGmu}
 \begin{align}
-  b^2=&-\frac{L^2}{2\mu E}\nonumber\\
+   T^2=&\frac{4\mu^2}{L^2}\pi^2 a^3 \frac{L^2}{\mu C}\nonumber\\
+   =&\frac{\mu}{2C}\pi^2 8a^3 \nonumber\\
+   =&\frac{\mu}{2G\mu(M_{\bigoplus}+m)}\pi^2 8a^3 \nonumber\\
+   =&\frac{\pi^2}{2G(M_{\bigoplus}+m)} (2a)^3 \,,
 \end{align}
-entonces
+donde $M_{\bigoplus}$ es la masa sola. El resultado puede escribirse finalmente como:
 \begin{align}
-  \label{eq:19}
-T^2=&-\frac{4\mu^2}{L^2}\pi^2\frac{L^2}{2\mu E} a^2 \nonumber\\
-=&-\frac{4\mu\pi^2}{2E} a^2 \nonumber\\
-=&4\pi^2\frac{\mu}{-2E} a^2 \,.
+  T^2=&\frac{\pi^2}{2G(m+M_{\bigoplus})}A^3 \,.
 \end{align}
-Ya que
+Ya que para todos los planetas $M_{\bigoplus}\gg m$, la constante aproximada de Kepler puede definirse como
 \begin{align}
-  \mu=\frac{mM}{m+M}=\frac{C}{G(m+M)}\,,
+  k=\frac{\pi^2}{2GM_{\bigoplus}}
 \end{align}
-La ec.~(\ref{eq:19}) puede escribirse como:
+y la tercera ley queda establecida aclarando que es válida sólo de
+forma aproximada. Como la constante de Kepler se puede obtener a
+partir de medidas observacionales del sistema solar, la masa del sol
+se puede calcular. El valor actualizado es
 \begin{align}
-  T^2=&\frac{4\pi^2}{G(m+M)}\frac{C}{(-2E)} a^2 \nonumber\\
-=&\frac{4\pi^2}{G(m+M)}a^3 \nonumber\\
-=&\frac{4\pi^2}{8G(m+M)}(2a)^3 \nonumber\\
-=&\frac{\pi^2}{2G(m+M)}A^3 \,.
+  M_{\bigoplus}=\SI{1.98844(30)E30}{kg}\,.
 \end{align}
-Ya que para todos los planetas $M\gg m$, la constante aproximada de Kepler puede definirse como
-\begin{align}
-  k=\frac{\pi^2}{2GM}
-\end{align}
-y la tercera ley queda establecida aclarando que es válida sólo de forma aproximada.
 
 
 
-\begin{itemize}
-\item[\textbf{Ejemplo}] (Ejercicio 9.8 Klepner). Un proyectil de masa $m$ es disparado desde la superficie de la tierra formando un ángulo $\alpha$ con la vertical. La velocidad inicial es igual a $\sqrt{GM/R}$. ¿cuanto se eleva el proyectil si $\alpha=60^\circ$?. Desprecie la resistencia del aire y la rotación de la tierra. 
+
+\ejemplo{}
+ (Ejercicio 9.8 Klepner). Un proyectil de masa $m$ es disparado desde la superficie de la tierra formando un ángulo $\alpha$ con la vertical. La velocidad inicial es igual a $\sqrt{GM/R}$. ¿cuanto se eleva el proyectil si $\alpha=60^\circ$?. Desprecie la resistencia del aire y la rotación de la tierra. 
 
 Solucionaremos primero el problemas usando las leyes de conservación de la energía y del momento angular en el momento del lanzamiento y en la altura máxima. Luego solucionaremos el problemas usando la la ecuación de la orbita. Finalmente escribiremos y graficaremos la ecuación de la trayectoria.
-\item[\textbf{Solución}] Resolveremos el problema utilizando la ecuación de la orbita debemos conocer la energía en al menos un punto
+
+\subsubsection*{Solución}
+Resolveremos el problema utilizando la ecuación de la orbita debemos conocer la energía en al menos un punto
 \begin{align}
   E=&E_0=\frac{1}{2}m v_0^2-\frac{GMm}{R}\nonumber\\
   L=&L_0=\mu R v_0 \sin\alpha
@@ -1051,7 +1109,8 @@ El gráfico correspondiente se muestra en la figura~\ref{fig:elipse}.
 %TODO: Analizar que pasa para otros ángulos de lanzamiento.
 %EXAMEN: hallar el punto de colisión
 
-\item También podemos resolver el problema usando conservación de energía (asumiendo que la tierra permanece en reposo)
+\subsubsection*{Solución alternativa} 
+También podemos resolver el problema usando conservación de energía (asumiendo que la tierra permanece en reposo)
 \begin{frame}[fragile,allowframebreaks]
 \textbf{Conservación de la energía:}
 
@@ -1122,7 +1181,7 @@ Con estos datos podemos escribir la ecuación de la trayectoria en coordenadas p
 
 \end{frame}
 
-\end{itemize}
+\qed
 
 
 
@@ -1382,7 +1441,14 @@ que corresponde a la ec.~\eqref{eq:tensfic}
 
 \subsection{Mareas}
 %Con este ejemplo se puede aclarar lo que significa campo gravitacional local
-Las mareas son una evidencia de que la tierra se encuentra en un sistema noinercial. Sea $\boldsymbol{\mathcal{G}}(\mathbf{r}_{l}$ el campo gravitacional del sol (o la luna) sobre el centro  de la tierra, con $\mathbf{r}_{s}$ la distancia desde el centro del sol campo hasta el centro de la tierra. Un observador sobre la superficie de la tierra atribuye la marea a una fuerza ficticia $\mathbf{F}_{\text{fic}}$ asociada a la aceleración que ocasiona el sol sobre el centro de la tierra:
+Las mareas son una evidencia de que la tierra se encuentra en un
+sistema noinercial. Sea $\boldsymbol{\mathcal{G}}(\mathbf{r}_{s})$ el
+campo gravitacional del sol (o la luna) sobre el centro de la tierra,
+con $\mathbf{r}_{s}$ la distancia desde el centro del sol hasta el
+centro de la tierra. Un observador sobre la superficie de la tierra
+atribuye la marea a una fuerza ficticia $\mathbf{F}_{\text{fic}}$
+asociada a la aceleración que ocasiona el sol sobre el centro de la
+tierra:
 \begin{align}
   \mathbf{A}=\mathcal{G}(\mathbf{r}_s)\,.
 \end{align}
@@ -1390,17 +1456,43 @@ De la ec.~\eqref{eq:fzaaparente}, tenemos
 \begin{align}
   \mathbf{F}'=&\mathbf{F}+\mathbf{F}_{\text{fict}}\nonumber\\
   =&m \boldsymbol{\mathcal{G}}(\mathbf{r})-m\mathbf{A}\nonumber\\
-  =&m \boldsymbol{\mathcal{G}}(\mathbf{r})-m \boldsymbol{\mathcal{G}}(\mathbf{r}_l)
+  =&m \boldsymbol{\mathcal{G}}(\mathbf{r})-m \boldsymbol{\mathcal{G}}(\mathbf{r}_s)
 \end{align}
-En la figura~\ref{fig:fzaaparente} donde se exagera la diferencia entre el campo gravitacional en el centro de la tierra y la superficie, se muestra la fuerza aparente que causa la marea en la cara de la tierra que da al sol
+donde $\boldsymbol{\mathcal{G}}(\mathbf{r})$ es el campo gravitacional ejercido por el sol en un punto sobre la superficie de la tierra. En la figura~\ref{fig:fzaaparente} donde se exagera la diferencia entre el campo gravitacional en el centro de la tierra y la superficie, se muestra la fuerza aparente que causa la marea en la cara de la tierra que da al sol
 \begin{frame}
 \begin{figure}
   \centering
-  \includegraphics{fzaaparente}
+%\only<1>{\includegraphics{fzaaparentea}}%
+%\only<2>{\includegraphics{fzaaparentec}}%
+%\only<3>%
+{\includegraphics{fzaaparented}}
   \caption{Fuerza aparente}
   \label{fig:fzaaparente}
 \end{figure}
 \end{frame}
+La fuerza aparente en el punto $A$ es
+\begin{align*}
+  \mathbf{F}'=&m \left(-\frac{GM}{(r_s-R)^2}+\frac{GM}{r_s^2}  \right)\widehat{\mathbf{r}}\nonumber\\
+   =&-m\frac{GM}{r_s^2}  \left(\frac{1}{(1-R/r_s)^2}-1  \right)\widehat{\mathbf{r}}\nonumber\\
+   =&-m\boldsymbol{\mathcal{G}}(\mathbf{r}_s)\left[ \left( 1-\frac{R}{r_s} \right)^{-2}-1 \right]\nonumber\\
+   =&-m\boldsymbol{\mathcal{G}}(\mathbf{r}_s)\left[ 1-2\frac{R}{r_s}+\mathcal{O}\left( \frac{R^2}{r_s^2} \right)-1 \right]\nonumber\\
+   =&-m\boldsymbol{\mathcal{G}}(\mathbf{r}_s)\left[ 1-2\frac{R}{r_s}+\mathcal{O}\left( \frac{R^2}{r_s^2} \right)-1 \right]\nonumber\\
+   =&-2m\boldsymbol{\mathcal{G}}(\mathbf{r}_s)\frac{R}{r_s}+\mathcal{O}\left( \frac{R^2}{r_s^2} \right)\,,
+\end{align*}
+y esta dirigida hacia el sol. La fuerza aparente en punto $C$ que esta a una distancia del sol $r_s+R$, se obtiene de la expresión anterior reemplazando $R\to -R$, de modo que
+\begin{align*}
+  \mathbf{F}'=&+2m\boldsymbol{\mathcal{G}}(\mathbf{r}_s)\frac{R}{r_s}+\mathcal{O}\left( \frac{R^2}{r_s^2} \right)\,,
+\end{align*}
+¡y esta dirigida en la dirección opuesta al sol!, como se muestra en figura~\ref{fig:fzaaparente}. Es fácil mostrar que en los polos la fuerza aparente se dirige hacia el centro de la tierra por lo que el efecto total es la creación de las mareas. El efecto neto es crear una elevación máxima de $\SI{24}{cm}$. Sin embargo la luna crea un efecto similar. Podemos estimar cual es más importante mirando la variación de cada uno de los campos
+\begin{align*}
+  \frac{d\mathbf{F}'(\mathbf{r_s})}{dr_s}=&2 \frac{GM_s m}{r_s^3}&  \frac{d\mathbf{F}'(\mathbf{r_l})}{dr_l}=&2 \frac{GM_l m}{r_l^3}\,,
+\end{align*}
+cuyo cociente es
+\begin{align*}
+  \frac{d\mathbf{F}'(\mathbf{r_s})/dr_s}{d\mathbf{F}'(\mathbf{r_l})/dr_l}=\frac{M_l}{M_s}\frac{r_s^3}{r_l^3}\approx 2.1\,,
+\end{align*}
+y la máxima elevación creada por la luna es de $\SI{53.5}{cm}$.
+
 
 \subsection{Principio de equivalencia}
 
@@ -1438,10 +1530,12 @@ Para ilustrar el principio de equivalencia considere un observador confinado den
 
 
 \section{Problemas resueltos}
-\begin{enumerate}
-\item Un satélite de masa $m=2 \times 10^3$ kg está en órbira elíptica alrededor de la tierra. En el perigeo (punto $p$) (punto de mayor cercanía a la tierra) su altitud es $h_p=1.1 \times 10^3$ km y en el apogeo (punto $a$) (punto de más alejado de la tierra) su altitud es $h_a=4.1 \times 10^3$ km. Recuerde que le eje mayor de la órbita $A=2a$ y la energía del sistema $E$ se relacionan mediante la ecuación: $A=-{C}/{E}=-{GM_{\text{tierra}}m}/{E}$, además el radio de la tierra es $R=6.4 \times 10^3$ km. 
 
-  \begin{minipage}{0.45\linewidth}
+\ejemplo{}
+Un satélite de masa $m=2 \times 10^3$ kg está en órbira elíptica alrededor de la tierra. En el perigeo (punto $p$) (punto de mayor cercanía a la tierra) su altitud es $h_p=\SI{1.1E3}{Km}$ y en el apogeo (punto $a$) (punto de más alejado de la tierra) su altitud es $h_a=\SI{4.1E3}{Km}$. 
+
+\begin{frame}
+  \begin{minipage}{0.44\linewidth}
     \includegraphics[scale=0.75]{orbita}
   \end{minipage}
   \begin{minipage}{0.55\linewidth}
@@ -1454,63 +1548,72 @@ Para ilustrar el principio de equivalencia considere un observador confinado den
       \label{item:c1c}
     \end{enumerate}
   \end{minipage}
+\end{frame}
 %sln pag 183
 
-  \begin{itemize}
-  \item[\textbf{Solución}]
-  \item[\ref{item:c1a})] Ya que $m\ll M_{\text{earth}}$ podemos tomar $\mu\approx m$ y asumir que la tierra está fija:
-    \begin{align*}
-      A=h_p+h_a+2R\,,
-    \end{align*}
-    además   
-    \begin{align*}
-      E=-\frac{C}{A}\,,
-    \end{align*}
-    donde
-
-    \begin{align*}
-      C=GM_{\text{tierra}}m=&\frac{GM_{\text{tierra}}}{R^2}R^2 m\nonumber\\
-      =&g m R^2\,,
-    \end{align*}
-    ya que
-    \begin{align*}
-      g=\frac{GM_{\text{tierra}}}{R^2}\,.
-    \end{align*}
-
-    La energía inicial antes de lanzar el satélite fue
-    \begin{align*}
-      E_i=&-\frac{GmM_{\text{tierra}}}{R}\nonumber\\
-      =&-\frac{C}{R}\,,
-    \end{align*}
-    La energía necesaria para poner el cuerpo en órbita es
-    \begin{align*}
-      \Delta E=E-E_i=&-\frac{C}{A}+\frac{C}{R}\nonumber\\
-      =&C\left( -\frac{1}{A}+\frac{1}{R}     \right)\nonumber\\
-      =&C\left( \frac{A-R}{AR}     \right)\nonumber\\
-      =&g m R^2\left( \frac{A-R}{AR}     \right)\nonumber\\
-      =&g m R\left( \frac{h_p+h_a+R}{h_p+h_a+2R}     \right)\nonumber\\
-      =&g m R\left[ \frac{1}{1+R/(h_p+h_a+R)}     \right]\nonumber\\
-      \approx&8.1\times 10^{10}\joule\,.
-    \end{align*}
-   \item[\ref{item:c1b})]
-     \begin{align*}
-       \epsilon=&\frac{r_{\text{max}}+r_{\text{min}}}{r_{\text{max}}-r_{\text{min}}}\nonumber\\
-       =&\frac{1}{6}
-     \end{align*}
-   \item[\ref{item:c1b})]
-     \begin{align*}
-       E=\frac{1}{2}mv^2-\frac{C}{r}
-     \end{align*}
-     \begin{align*}
-       E=\frac{1}{2}mv_p^2-\frac{C}{h_p}
-     \end{align*}
-     \begin{align*}
-       v_p=7900\meter\per\second\,.
-     \end{align*}
-    \end{itemize}
+\subsubsection*{Solución}
+El  semieje mayor de la órbita $A=2a$ y la energía del sistema $E$ se relacionan mediante la ecuación~\eqref{eq:aE}, que puede escribirse como
+\begin{align*}
+  A=-\frac{C}{E}=-\frac{GMm}{E}\,.
+\end{align*}
+Además el radio de la tierra es $R=6.4 \times 10^3$ km. 
 
 
-\end{enumerate}
+\begin{itemize}
+\item[\ref{item:c1a})] Sea $M$ la masa de la tierra y $m$ la masa
+  del satélite. Ya que $m\ll M$ podemos tomar $\mu\approx m$ y
+  asumir que la tierra está fija. El eje mayor de la órbita elíptica
+  \begin{align*}
+    A=h_p+h_a+2R\,,
+  \end{align*}
+  además   
+  \begin{align*}
+    E=-\frac{C}{A}\,,
+  \end{align*}
+  donde
+
+  \begin{align*}
+    C=GMm=&\frac{GM}{R^2}R^2 m\nonumber\\
+    =&g m R^2\,,
+  \end{align*}
+  ya que
+  \begin{align*}
+    g=\frac{GM}{R^2}\,.
+  \end{align*}
+
+  La energía inicial antes de lanzar el satélite fue
+  \begin{align*}
+    E_i=&-\frac{GmM}{R}\nonumber\\
+    =&-\frac{C}{R}\,,
+  \end{align*}
+  La energía necesaria para poner el cuerpo en órbita es
+  \begin{align*}
+    \Delta E=E-E_i=&-\frac{C}{A}+\frac{C}{R}\nonumber\\
+    =&C\left( -\frac{1}{A}+\frac{1}{R}     \right)\nonumber\\
+    =&C\left( \frac{A-R}{AR}     \right)\nonumber\\
+    =&g m R^2\left( \frac{A-R}{AR}     \right)\nonumber\\
+    =&g m R\left( \frac{h_p+h_a+R}{h_p+h_a+2R}     \right)\nonumber\\
+    =&g m R\left[ \frac{1}{1+R/(h_p+h_a+R)}     \right]\nonumber\\
+    \approx&8.1\times 10^{10}\si{\joule}\,.
+  \end{align*}
+ \item[\ref{item:c1b})] De ec.~\eqref{eq:rmaxmin}
+   \begin{align*}
+     \epsilon=&\frac{r_{\text{max}}-r_{\text{min}}}{r_{\text{max}}+r_{\text{min}}}\nonumber\\
+     =&\frac{1}{6}
+   \end{align*}
+ \item[\ref{item:c1b})]
+   \begin{align*}
+     E=\frac{1}{2}mv^2-\frac{C}{r}
+   \end{align*}
+   \begin{align*}
+     E=\frac{1}{2}mv_p^2-\frac{C}{h_p}
+   \end{align*}
+   \begin{align*}
+     v_p=7900\si{\meter\per\second}\,.
+   \end{align*}
+  \end{itemize}
+
+
 %ejemplo pendulo oscilando en vagón
 
 \begin{extrapage}
