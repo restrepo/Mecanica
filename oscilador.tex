@@ -233,7 +233,7 @@ La amplitud de oscilación $A(\omega)$ es máxima, de hecho $\pm$infinita, cuand
 \begin{frame}
   \begin{figure}
     \centering
-    %\includegraphics[scale=0.9]{resonance}
+    \includegraphics[scale=0.4]{forzado}
     \caption{Resonancia}
     \label{fig:resonance}
   \end{figure}
@@ -251,6 +251,15 @@ Explique para un punto $A(\omega)<0$ como se intepreta la solución
   =&|A(\omega)|\cos(\omega t+\pi)\,,
 \end{align}
 de modo que entre las soluciones a derecha e izquierda de la frecuencias de resonancia ocurre un desfase de $\pi$.
+
+Por consiguiente, la solución al oscilador forzado se puede escribir como
+\begin{align*}
+  x(t)=\begin{cases}
+  \frac{\mathcal{F}_0}{m}\frac{1}{|\omega_0^2-\omega^2|}\cos(\omega t) & \omega<\omega_0\\
+  \frac{\mathcal{F}_0}{m}\frac{1}{|\omega_0^2-\omega^2|}\cos(\omega t+\pi) & \omega>\omega_0\\
+  \end{cases}
+\end{align*}
+
 
 
 \subsection{Oscilador forzado y amortiguado}
@@ -641,7 +650,26 @@ que limita la respuesta de los sistemas cuánticos.
   \end{align*}
 \end{itemize}
 
-\ejemplo{} Si el factor de calidad de dos espejos esféricos, cuyos polos están separados una distancia de 6~cm y que forman una cavidad resonante que logra mantener un rayo de luz durante 130~ms es $Q=4\times 10^{10}$...  
+\ejemplo{} Si el factor de calidad de dos espejos esféricos que forman una cavidad resonante es $Q=4\times 10^{10}$. Dentro de esta cavidad se logra mantener un rayo de luz durante un tiempo de vida media de $\SI{130}{ms}$. Calcular el período de rebotes del rayo de luz dentro de la cavidad, y el tamaño de la misma.
+
+\noindent
+\textbf{Solución:} Como el factor de calidad es muy grande, podemos usar la aproximación de amortiguamiento suave. Usando $\tau=\SI{0.13}{s}$,
+\begin{align*}
+\omega_0=Q\gamma=&\frac{Q}{\tau}\\
+=&\frac{\num{4E10}}{\SI{0.13}{s}}\\
+=&\num{3.08E11}
+\end{align*}
+De aquí obtenemos el período
+\begin{align*}
+T=\frac{2\pi}{\omega_0}=\SI{2.04E-11}{s}
+\end{align*}
+y la distancia que recorre la luz en ese tiempo es
+\begin{align*}
+l&cT=\SI{299792458}{m/s}\times\SI{2.04E-11}{s}\\
+=&\SI{0.006}{m}\\
+=&\SI{0.6}{cm}
+\end{align*}
+\qed
 
 
 %ejemplos
