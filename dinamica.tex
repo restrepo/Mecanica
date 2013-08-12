@@ -1814,8 +1814,127 @@ La sumatoria de fuerzas para $m_1$
 
 \end{itemize}
 \end{frame}
+
+\ejemplo{}
+Considere dos bloques de masas $m_1$ y $m_2$ unidos por 
+una cuerda inextensible de longitud $d$. El primer bloque está en un 
+superficie horizontal sin fricción y el segundo desciende desde el reposo
+por un plano inclinado también sin fricción que forma un ángulo $\theta$ 
+con la horizontal. Cuando el bloque 2 llega al piso, después de deslizar
+una distancia $d$, este para súbitamente debido a una cuña, y el bloque 1 
+queda con una velocidad horizontal y cae en un movimiento parabólico 
+(la cuerda no ejerce ningún efecto en la caída parabólica).
+
+  \begin{minipage}{0.4\linewidth}
+    \includegraphics[scale=0.4]{Punto2.png}
+  \end{minipage}
+  \begin{minipage}{0.6\linewidth}
+    \begin{enumerate}
+    \item Realice un diagrama de cuerpo libre de cada bloque en 
+la situación inicial.
+\item Demuestre que la rapidez final del bloque 2 cuando llega 
+al piso es
+
+\[ v_f = \sqrt{ \frac{2dm_2g\sin \theta}{m_1+m_2} } \]
+
+\label{item:bbc1}
+\item Calcule el alcance horizontal del bloque 1 cuando cae
+al piso.
+\label{item:bbc2}
+\item Determine la razón de masas $m_1/m_2$ en términos de 
+$\theta$ y $d$, necesaria para que el bloque 1 caiga justo sobre el bloque 2.
+\label{item:bbc3}
+\end{enumerate}
+\end{minipage}
+
+\textbf{Solución}
+  \begin{itemize}
+  \item[\ref{item:bbc1})] La aceleración del bloque $m_2$ se obtiene de
+    \begin{align}
+      T=&m_1 a \nonumber\\
+      -T+m_2g\sin\theta=&m_2 a
+    \end{align}
+de modo que
+\begin{align}
+  a=&g\frac{m_2\sin\theta}{m_1+m_2}\,,
+\end{align}
+La rapidez final después de recorrer una distancia $d$ es
+\begin{align}
+  v_f=&\sqrt{2da}\nonumber\\
+   =&\sqrt{\frac{2dm_2g\sin\theta}{m_1+m_2}}\,.
+\end{align}
+\item[\ref{item:bbc2})] Esta es la rapidez inicial del bloque en la
+  dirección horizontal (ángulo de lanzamiento $\alpha=0$) de $m_1$ al
+  salir de la superficie horizontal.
+  Por lo tanto, el alcance horizontal es la distancia recorrida en el
+  tiempo de vuelo, que tomando como origen de coordenadas la base del
+  plano inclinado y teniendo en cuenta la rapidez inicial en $y=0$, es
+\begin{align}
+ y_{f}=0=&d\sin\theta-\frac{1}{2}g t_{\text{vuelo}}^2
+\end{align}
+\begin{align}
+  t_{\text{vuelo}}=\sqrt{\frac{2d\sin\theta}{g}}
+\end{align}
+y por consiguiente, el alcance en $x$ es
+\begin{align}
+  x=&v_{0x}t_{\text{vuelo}}\nonumber\\
+   =&v_f t_{\text{vuelo}}\nonumber\\
+   =&\sqrt{\left(\frac{2dm_2g\sin\theta}{m_1+m_2}\right)\left(\frac{2d\sin\theta}{g}\right)}\nonumber\\
+   =&2d\sin\theta\sqrt{\frac{m_2}{m_1+m_2}}\,,
+\end{align}
+\item[\ref{item:bbc3})] La condición implica que
+  \begin{align}
+    d\cos\theta=&x \nonumber\\
+               =&2d\sin\theta\sqrt{\frac{m_2}{m_1+m_2}}\,,
+  \end{align}
+de modo que
+\begin{align}
+\sqrt{\frac{m_1+m_2}{m_2}}=&2\tan\theta \nonumber\\
+\frac{m_1+m_2}{m_2}=&4\tan^2\theta \nonumber\\
+\frac{m_1}{m_2}=&4\tan^2\theta-1\,.
+\end{align}
+
+
+  \end{itemize}
+    
+
+
+
+
 \subsubsection*{Ejercicio}
 Calcule la aceleración con la que cae el bloque 2 para un determinado valor de la fuerza aplicada $F$.
+
+\ejercicio{}
+Un bloque de masa $m_{1}$ está unido a una masa $m_{2}$ por medio de una cuerda inextensible, como lo indica la figura. Desprecie la fricción entre el bloque y el plano inclinado. El ángulo de inclinación del plano es $\theta$ con respecto a la horizontal. Suponga que la polea es ideal.
+
+\begin{minipage}{12 cm}{
+\begin{enumerate}
+\item Dibujar todas las fuerzas que actúan sobre $m_{1}$ y $m_{2}$.
+\item Escoja el sistema de referencia que considere adecuado para cada una de las masas y 
+escriba  las   ecuaciones   de movimiento, tanto para $m_{1}$, como  para $m_{2}$.
+\item Calcular la aceleración de las masas y la tensión en la cuerda en términos de $m_{1}$, $m_{2}$, $g$ y $\theta$.
+
+\item Finalmente use la calculadora y calcule los valores numéricos si $m_{2}=\SI{5}{\kilo\gram}$, $m_{1}=\SI{2}{\kilo\gram}$, y $\theta=30^\circ$. 
+\end{enumerate}
+}\end{minipage}
+\begin{minipage}{6 cm}{
+\begin{center}
+\includegraphics[scale=0.6]{planoinclinado}
+\end{center}
+}\end{minipage}
+
+
+  Respuestas:
+  \begin{align*}
+    a=\dfrac{g}{(m_{1}+m_{2})}[m_{2}(-\mu \cos\theta +\sin\theta) - m_{1}]
+  \end{align*}   
+ \begin{align*}
+   T=g\dfrac{m_{1}m_{2}}{(m_{1}+m_{2})}[1-\mu\cos\theta + \sin\theta]
+\end{align*}
+
+
+
+
 % \begin{extrapage}
 %   \newpage
 %   \qquad
