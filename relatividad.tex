@@ -19,7 +19,7 @@ Sea el sistema de referencia $S'$ moviendose a lo largo del eje $x$ con rapidez 
   \label{fig:lorentz}
 \end{figure}
 
-\begin{details}
+\begin{details} %no in presentation
 Cuando se consolidaron las leyes electromagnéticas parecía como si
 estas leyes dependieran del sistema inercial donde se encuentra el
 observador. De hecho, una carga eléctrica por el mero hecho de estar
@@ -30,7 +30,7 @@ y sus correspondientes leyes sean invariantes bajo diferentes
 observadores inerciales se requiere bien sea proponer un éter
 electromagnético ó alterar las transformaciones de Galileo. A partir
 de este punto tomaremos la segunda opción que ha resultado ser la más
-simple para explicar los resultados experimentales, como el
+simple para explicar los resultados experimentales, como el del
 experimento de Michelson y Morley.
 \end{details}
 
@@ -42,14 +42,22 @@ Cuando escribimos las transformaciones de Galileo
 
 
 
-Se ésta asumiendo que la regla de metro no cambia su longitud por estar en movimiento, pero esto no es del todo obvio. 
+Se ésta asumiendo que la regla de metro no cambia su longitud por
+estar en movimiento, pero esto no es del todo obvio.  
 \begin{details}
-De los fenómenos electromagnéticos que las cargas eléctricas en reposo generan campos eléctricos, mientras que las cargas eléctricas en movimiento generan además campos magnéticos. Además con el movimiento los campos eléctricos se deforman. Como la fuerzas eléctricas son importante para moldear la estructura atómica de la materia, podría en principio esperarse que la forma de la regla de metro cambia su configuración y de aquí so forma (longitud) por estar en movimiento. 
+De los fenómenos
+electromagnéticos se sabe que las cargas eléctricas en movimiento
+generan campos magnéticos. Además con el movimiento el propio campo
+eléctrico se deforma. Como la fuerzas eléctricas son importantes para
+moldear la estructura atómica de la materia, podría en principio
+esperarse que la forma de la regla de metro cambia su configuración y
+de aquí so forma (longitud) por estar en movimiento.
 \end{details}
+\end{frame}
 
 
 
-
+\begin{frame}[fragile,allowframebreaks]
 Entonces, admitiendo esta posibilidad, cambiaremos la Transformación de Galileo por la transformación más general:
 \begin{align}
   \label{eq:gammafactor}
@@ -82,7 +90,28 @@ Despejando en términos de $t'$ %detalles
   \label{eq:genlttp}
   t'=\alert{\gamma}\left[t-\frac{1-\alert{\gamma^{-2}}}{V}x\right]
 \end{align}
-Derivando \eqref{eq:genltxp}, \eqref{eq:genlttp} obtenemos la \emph{Ley de adición de velocidades} %detalles
+
+\begin{details}
+  Las ecuaciones \eqref{eq:genltxp}, y \eqref{eq:genlttp} se denominan
+\emph{transformaciones de Lorentz}, las cuales se reducen a las
+transformaciones de Galileo en el caso $\gamma(V^2)=1$. Las
+tranformaciones de Lorentz (y de Galileo) forman un grupo. Podemos
+encotrar $\gamma$ en función de $V^2$ si combinamos el principio de
+relatividad con las propiedades del Grupo de Lorentz, que a su vez,
+reflejan la homegeneidad e isotropía del espacio y la homogeneidad del
+tiempo. 
+
+Para demostrar las propiedeas del grupo: conjunto cerrado, existencia
+de elemento identidad, existencia de inverso y ley asociativa, es
+conveniente combinar las dos leyes de transformación en una única ley
+de transformación del grupo. 
+\end{details}
+Derivando \eqref{eq:genltxp}, y \eqref{eq:genlttp}
+\begin{align*}
+  \frac{dx'}{dt}&=\gamma \left(\frac{dx}{dt}-V  \right)\nonumber\\
+ \frac{dt'}{dt}&=\gamma \left(1-\frac{1-\gamma^2}{V}\frac{dx}{dt}  \right)
+\end{align*}
+obtenemos la \emph{Ley de adición de velocidades} %detalles
 \begin{align*}
   v_{x'}=\frac{v_x-V}{1-\frac{1-\alert{\gamma^{-2}}}{V}v_x}
 \end{align*}
@@ -96,16 +125,67 @@ Definimos
   F(v_{x'},V)\equiv\frac{v_{x'}+V}{1+\frac{1-\alert{\gamma^{-2}}}{V}v_{x'}}
 \end{align*}
 \end{frame}
+
+Procedemos a establecer a continuación las propiedades de Grupo
+
 \subsection{Propiedades de $F(v_{x'},V)$}
 \begin{frame}[fragile,allowframebreaks]
 \begin{itemize}
-\item \textbf{Paridad:}
+\item \textbf{Conjunto cerrado:} Tranformaciones entre sistemas
+  inercial consitutyen sistemas inerciales
+\item \textbf{Identidad}. El elemento identidad corresponde a la
+  transformación $F(V,-V)=0$.
+\item \textbf{Inverso (Paridad):}
   \begin{align}
     \label{eq:paridad}
     F(-v_{x'},-V)=-F(v_{x'},V)
   \end{align}
-%demostración
+\textbf{Demostración}: Usando la ecuación 
+\begin{align*}
+  F(-v_{x'},-V)=&\frac{-v_{x'}-V}{1+\frac{1-\alert{\gamma^{-2}}}{-V}(-v_{x'})}\nonumber\\
+   =&\frac{-v_{x'}-V}{1+\frac{1-\alert{\gamma^{-2}}}{-V}(-v_{x'})}\nonumber\\
+   =&-\frac{v_{x'}+V}{1+\frac{1-\alert{\gamma^{-2}}}{V}v_{x'}}\nonumber\\
+   =&-F(v_{x'},V)\,.
+\end{align*}
+
 \item \textbf{Asociatividad}
+Sean tres cuerpos en movimiento relativo sobre la misma línea recta y
+moviendose hacia la derecha. Asignamos sistemas de referencia $A$, $B$
+y $C$ a cada una de las partículas respectivamente. Sea $v_{AB}$ la
+velocidad de la partícula $A$ (o sistema $A$ según corresponda) con
+respecto a $B$, etc. Sin perdida de generalidad podemos asumir que $B$
+se aleja de $A$ y $C$ se aleja de $B$. Tomemos primero a $A$ como el
+sistema en reposo, $B$ el sistema inercial con velocidad $V=v_{AB}$, y
+$C$ como la partícula en movimiento. Entonces, $v_x=v_{CA}$ es la
+velocidad de la partícula $C$ con respecto al sistema $A$ mientras que
+$v_x'=v_{CB}$ es la velocidad de la paratícula $C$ con respecto a $A$. La
+ley de adición de velocidades queda entonces
+
+\begin{minipage}{0.4\linewidth}
+\begin{align*}
+      v_{CA}=F(v_{CB},v_{BA})
+\end{align*}  
+\end{minipage}
+\begin{minipage}{0.6\linewidth}
+  \includegraphics[scale=0.7]{asociaca}
+\end{minipage}
+
+De otro lado, un observador en reposo en $C$ ve alejarse a una 
+partícula en $A$ con una velocidad $v_x=v_{AC}$, y al sistema de
+referencia $B$ con velocidad $V=v_{BC}$. Finalmente la partícula $A$
+se aleja del sistema $B$ con una velocidad $v_{x'}=v_{AB}$. Entonces,
+la ley de adicion de velocidades que como
+
+\begin{minipage}{0.4\linewidth}
+\begin{align*}
+      v_{AC}=F(v_{BC},v_{AB})
+\end{align*}  
+\end{minipage}
+\begin{minipage}{0.6\linewidth}
+  \includegraphics[scale=0.7]{asociaac}
+\end{minipage}
+
+Teniendo en cuenta que $v_{CA}=v_{AC}$, tenemos que
   \begin{align}
     \label{eq:asociatividad}
     v_{CA}=F(v_{CB},v_{BA})=-v_{AC}=-F(v_{AB},v_{BC})
@@ -116,33 +196,69 @@ Definimos
     \label{eq:intercambio}
     F(v_{CB},v_{BA})=F(v_{BA},v_{CB})
   \end{align}
-\textbf{Demostración:} Usando ecs.~\eqref{eq:paridad}\eqref{eq:asociatividad}
-
+\textbf{Demostración:} Usando ecs.~\eqref{eq:paridad} y \eqref{eq:asociatividad}
+\begin{align*}
+  F(v_{CB},v_{BA})=&-F(v_{AB},v_{BC})\nonumber\\
+=& F(-v_{AB},-v_{BC})\nonumber\\
+=& F(-v_{BA},-v_{CB})\,.
+\end{align*}
 \end{itemize}
 \end{frame}
 \section{Soluciones}
 
 \begin{frame}[fragile,allowframebreaks]
-Entonces
+Usando la propiedad de intercambio, tenemos entonces que
 \begin{align*}
   F(v_{x'},V)=F(V,v_{x'})\,.
 \end{align*}
 Obtenemos %detalles
 \begin{align*}
-  \Gamma=\frac{1-\alert{\gamma^{-2}(V^2)}}{\alert{V^2}}=\text{constante} \alert{\text{\qquad Independiete de $V^2$}!!!}
+\frac{v_{x'}+V}{1+\frac{1-\alert{\gamma^{-2}}}{V}v_{x'}}=&
+\frac{V+v_{x'}}{1+\frac{1-\alert{\gamma^{-2}}}{v_{x'}}V}\nonumber\\
+{1+\frac{1-\alert{\gamma^{-2}}}{v_{x'}}V}=&
+{1+\frac{1-\alert{\gamma^{-2}}}{V}v_{x'}} \nonumber\\
+{\frac{1-\alert{\gamma^{-2}}}{v_{x'}}V}=&
+{\frac{1-\alert{\gamma^{-2}}}{V}v_{x'}} \nonumber\\
+{\frac{1-\alert{\gamma^{-2}}}{v_{x'}^{2}}}=&
+{\frac{1-\alert{\gamma^{-2}}}{V^2}}\,.
 \end{align*}
-Por las dimensiones de $\Gamma$ podemos definir
+Por consiguiente, podemos definir la cantidad 
+\begin{align*}
+  \Gamma\equiv\frac{1-\alert{\gamma^{-2}(V^2)}}{\alert{V^2}}=\text{constante} \alert{\text{\qquad Independiete de $V^2$}!!!}
+\end{align*}
+
+Invirtiende esta ecuación, podemos definir finalmente el factor de
+contracción $\gamma$, en términos de la constante $\Gamma$,
+\begin{align}
+ \gamma^2(V^2)=\frac{1}{1-\Gamma V^2}\,.
+\end{align}
+
+Por las dimensiones de $\Gamma$ podemos definir también
 \begin{align*}
   \Gamma=\frac{1}{c^2}\,.
 \end{align*}
 
+Estudiemos las diferentes posibilidades para $\Gamma$
 \subsection{$\Gamma >0$}
 %detalles
 \begin{align*}
   \gamma=&\frac{1}{\sqrt{1-\Gamma V^2}}\nonumber\\
   \alert{\gamma=}&\alert{\frac{1}{\sqrt{1-V^2/c^2}}}\,,
 \end{align*}
-de modo que si $\Gamma>0$ entonces $\gamma>1$. las \emph{Transformaciones de Lorentz} quedan
+de modo que si $\Gamma>0$ entonces $\gamma>1$. Además, para que el
+argumento de la raiz cuadrada sea positivo se requiere que
+\begin{align*}
+  1-V^2/c^2>&0 \nonumber\\
+  V^2/c^2<&1 \nonumber\\
+  V^2<&c^2 \nonumber\\
+\end{align*}
+de modo que la velocidad relativa entre dos sistemas inerciales esta
+acotada al valor superior $c$, que se constituye en una velocidad
+\emph{límite} de la naturaleza, y por consiguiente en una constante
+universal a ser determinada experimentalmente. En la actualidad,
+identificamos dicha velocidad con la velocidad de la luz en el vacío.
+
+Las \emph{Transformaciones de Lorentz} quedan
 \begin{align}
   \label{eq:lorentz}
   x'=&\alert{\gamma}(x-V t)\nonumber\\
@@ -207,6 +323,33 @@ x'=  ct\sinh{\xi}+x\cosh\xi=\alert{\gamma}(-Vt+ x)=&\frac{x-Vt}{\sqrt{1-V^2/c^2}
 \end{align}
 
 \end{frame}
+
+\subsection{$\Gamma <0$}
+Genera paradoja inmediatas, como por ejemplo, que la suma de dos
+velocidades positivas de lugar a una velocidad negativa
+\subsection{$\Gamma=0$}
+Con esta condición,
+\begin{align}
+  v_x=v_{x'}+V\,,
+\end{align}
+que constituye la ley de adición de velocidades de las
+transformaciones de Galileo. Con la definición
+\begin{align*}
+  \Gamma V^2=\frac{V^2}{c^2}\,,
+\end{align*}
+el límite de Galileo se puede recuperar bien sea considerando el caso
+$V\ll c$, o asumiendo que la velocidad límite es infinita, $c\to
+\infty$. 
+
+Esta solución de lugar también a paradojas relacionada con la
+información viniendo de cualquier lugar remotamente alejado del
+universo sin limitaciones de velocidad. 
+
+
+Por consiguiente, la única solución matemáticamente consistente y que
+respeta los postulados de la relatividad especial y la homogeneidad y
+estructura del \emph{espaciotiempo} es la solución con $0<c^2<\infty$.
+
 \subsection{Ley de adición de velocidades}
 \begin{frame}[fragile,allowframebreaks]
 Teniendo en cuenta que
