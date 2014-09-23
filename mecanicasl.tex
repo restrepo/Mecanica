@@ -1,0 +1,103 @@
+\documentclass[12pt,letterpaper]{book}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Force pdflatex processing even with "$ latex" (required by arXiv)
+%\pdfoutput=1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{preamble}
+
+%acroread /usr/share/doc/texlive-science-doc/latex/SIunits/SIunits.pdf
+%\usepackage[squaren,mediumspace,mediumqspace]{SIunits} 
+%\newcommand{\SI}[2]{#1#2}
+%\newcommand{\si}[1]{#1}
+%/usr/share/doc/texlive-doc/latex/siunitx/siunitx.pdf
+\usepackage{siunitx} 
+\sisetup{group-minimum-digits=4} %compatibility with PDG
+
+%%%%%%%%%%%%%%%%%
+\newcommand{\tofc}[1]{#1} % if full
+%%comment the following two lines for full document
+%\renewcommand{\tofc}[1]{} %if  \includeonly{chapter1}
+\includeonly{preliminares}
+%\includeonly{intermov}
+%\includeonly{dinamica}
+%\includeonly{momentum}
+%\includeonly{energia}
+%\includeonly{rigido}
+%\includeonly{centrales}
+%\includeonly{oscilador}
+%\includeonly{relatividad}
+
+
+%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\tofc{
+\renewcommand{\thepage}{\roman{page}}
+\tableofcontents{}
+
+\newpage{}
+}
+
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+
+%$x^2$
+\include{introduccion}
+\include{preliminares}
+\include{intermov}
+\include{dinamica}
+\include{momentum}
+\include{energia}
+%\include{cinematica}
+\include{rigido}
+\include{centrales}
+\include{oscilador}
+\include{relatividad}
+\include{problemasresueltos}
+%\include{bibliografia}
+
+
+%changes in bibliografia.tex: C-x i: bibliografia.tex
+\begin{thebibliography}{99}
+\bibitem{mit2003}
+\bibitem{mit2009} MIT OCW, Physics I, Classical Mechanics,  \url{http://goo.gl/jJSb3}\footnote{These MIT OpenCourseWare course materials have been translated into Spanish by DR. The MIT faculty authors, MIT, or MIT OpenCourseWare have not reviewed or approved these translations, and MIT and MIT OpenCourseWare makes no representations or warranties of any kind concerning the translated materials, express or implied, including, without limitation, warranties of merchantability, fitness for a particular purpose, non-infringement, or the absence of errors, whether or not discoverable. MIT OpenCourseWare bears no responsibility for any inaccuracies in translation. Any inaccuracies or other defects contained in this material, due to inaccuracies in language translation, are the sole responsibility of DR and not MIT OpenCourseWare.}
+\bibitem{Kleppner} D. Kleppner, R.J Kolenkow, An Introduction To Mechanics, McGrawHill
+\bibitem{Morin} David Morin, Introduction to Classical Mechanics, Cambridge
+\bibitem{Young} Young, Hugh D., Roger A. Freedman, and A. Lewis Ford.
+\bibitem{Sears} Sears and Zemansky's University Physics: with Modern Physics. 12th ed. San Francisco, CA: Addison-Wesley, 2007. ISBN: 9780805321876.
+\bibitem{MI} Ruth W. Chabay, Bruce A. Sherwood, Matter \& Interactions, Volume I: Moder Mechanics, John Wiley \& Sons, Inc, 3rd ed., 2011. ISBN: 9780470503478
+\bibitem{gabriel} Teoría y Problemas de Física I, Gabriel Jaime Pérez Lince, disponible en la fotocopiadora de Ingeniería (Con muchos problemas resueltos!)
+\end{thebibliography}
+
+\end{document}
+
+
+\section{Problemas resueltos}
+\begin{enumerate}
+\item enunciado 
+
+  \begin{minipage}{0.45\linewidth}
+    \includegraphics[scale=0.75]{figura}
+  \end{minipage}
+  \begin{minipage}{0.55\linewidth}
+    \begin{enumerate}
+    \item pregunta 1
+      \label{item:c1a}
+    \item pregunta 2
+      \label{item:c1b}
+    \end{enumerate}
+  \end{minipage}
+%sln pag 183
+
+  \begin{itemize}
+  \item[\textbf{Solución}]
+  \item[\ref{item:c1a}] 
+    \end{itemize}
+
+
+\end{enumerate}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "mecanica"
+%%% End: 
