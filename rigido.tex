@@ -69,6 +69,19 @@ $\mathbf{r}\cdot\mathbf{a}=-1$, de modo que los vectores son antiparalelos.
 
 \end{frame}
 
+\subsubsection*{Ejemplo}
+
+\subsubsection*{Ejemplo}
+Cálcule la aceleración gravitacional de la Tierra sobre un satélite en una órbita geostacionario a una altura de $\SI{35786}{Km}$ sobre el nivel del mar. 
+
+Teniendo en cuenta que el radio de la Tierra es de $\SI{6371}{Km}$, y que la perído de rotación es de $\SI{24}{h}$:
+\begin{align*}
+  a=r \omega^2=r \left( 2\pi\omega \right)^2=&4\pi^2 r \nu^2 \nonumber\\
+              \approx&4\pi^2 (\num{35786}+\num{6371})\si{Km} \frac{\SI{1000}{m}}{\si{Km}}\times \left(  \frac{1}{\SI{24}{h}}\frac{\si{h}}{\SI{3600}{s}}\right)^2 \nonumber\\
+              \approx&\SI{0.28}{m/s^2}
+\end{align*}
+
+
 \subsection{Movimiento generalizado en coordenadas polares}
 
 %Hacer una figura con los ejes rotados con hat theta a pi/2+theta 
@@ -116,8 +129,8 @@ Las ecuaciones \eqref{eq:runit} y \eqref{eq:thetaunit} pueden escribirse en form
 \begin{align}
   \label{eq:polinv}
   \begin{pmatrix}
-    \hat{\mathbf{r}}\\
-    \hat{\boldsymbol{\theta}}
+    \hat{\mathbf{r}}(t)\\
+    \hat{\boldsymbol{\theta}}(t)
   \end{pmatrix}=
   \begin{pmatrix}
     \cos\theta&\sin\theta\\
@@ -139,8 +152,8 @@ con inverso
     \sin\theta&\cos\theta\\
   \end{pmatrix}
   \begin{pmatrix}
-    \hat{\mathbf{r}}\\
-    \hat{\boldsymbol{\theta}}
+    \hat{\mathbf{r}}(t)\\
+    \hat{\boldsymbol{\theta}}(t)
   \end{pmatrix}.
 \end{align}
 
@@ -178,7 +191,7 @@ Además
 \label{eq:dht}
   \dot{\hat{\boldsymbol{\theta}}}(t)=&
   -\hat{\mathbf{i}}\dot{\theta}(t)\cos[\theta(t)]-\hat{\mathbf{j}}\dot{\theta}(t)\sin[\theta(t)]\nonumber\\
-  =&-\hat{\mathbf{r}}(t)\,.
+  =&-\dot{\theta}(t)\hat{\mathbf{r}}(t)\,.
 \end{align}
 
 Usando (\ref{eq:vpol}) con (\ref{eq:dhr})  y (\ref{eq:dht}), la aceleraci\'on es %ver notas
@@ -652,6 +665,7 @@ El producto escalar cruzado de
   \sum_{i=1}^N m_i \mathbf{v}_i'\cdot\mathbf{V}'=0\,,
 \end{align*}
 si se sigue el mismo análisis que en la ec.~\eqref{eq:rmr}.
+
 \begin{align*}
  K =&\frac{1}{2}M V^2+\frac{1}{2}\sum_{i=1}^N m_i \mathbf{v}_i'\cdot\mathbf{v}_i'\nonumber\\
  =&\frac{1}{2}M V^2+\frac{1}{2}\sum_{i=1}^N m_i (\boldsymbol{\omega}\times \mathbf{r}_i')\cdot\mathbf{v}_i'\,,
