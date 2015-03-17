@@ -1,7 +1,7 @@
 \documentclass[12pt,letterpaper]{book}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Force pdflatex processing even with "$ latex" (required by arXiv)
-%\pdfoutput=1
+%\pdfoutput=1 %compatibility with LaTeX Online
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{preamble}
 
@@ -11,8 +11,7 @@
 %\newcommand{\si}[1]{#1}
 %/usr/share/doc/texlive-doc/latex/siunitx/siunitx.pdf
 \usepackage{siunitx} 
-\sisetup{group-minimum-digits=4} %compatibility with PDG
-
+%\sisetup{group-minimum-digits=4} %compatibility with PDG
 %%%%%%%%%%%%%%%%%
 \newcommand{\tofc}[1]{#1} % if full
 %%comment the following two lines for full document
@@ -22,6 +21,7 @@
 %\includeonly{dinamica}
 %\includeonly{momentum}
 %\includeonly{energia}
+%%\includeonly{cinematica}
 %\includeonly{rigido}
 %\includeonly{centrales}
 %\includeonly{oscilador}
@@ -47,7 +47,7 @@
 \include{dinamica}
 \include{momentum}
 \include{energia}
-%\include{cinematica}
+\include{cinematica}
 \include{rigido}
 \include{centrales}
 \include{oscilador}
